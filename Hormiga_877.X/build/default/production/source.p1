@@ -1991,481 +1991,505 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 228 ]
 }
 "435
-[; ;source.c: 435: char SerialBegin(const long int baudrate)
+[; ;source.c: 435: char SerialBegin(const long int BaudRate)
 [v _SerialBegin `(uc ~T0 @X0 1 ef1`Cl ]
 "436
 [; ;source.c: 436: {
 {
 [e :U _SerialBegin ]
 "435
-[; ;source.c: 435: char SerialBegin(const long int baudrate)
-[v _baudrate `Cl ~T0 @X0 1 r1 ]
+[; ;source.c: 435: char SerialBegin(const long int BaudRate)
+[v _BaudRate `Cl ~T0 @X0 1 r1 ]
 "436
 [; ;source.c: 436: {
 [f ]
-"437
-[; ;source.c: 437:     unsigned long int x;
-[v _x `ul ~T0 @X0 1 a ]
-"438
-[; ;source.c: 438:      x = (20000000 - baudrate*64)/(baudrate*64);
-[e = _x -> / - -> 20000000 `l * _baudrate -> -> 64 `i `l * _baudrate -> -> 64 `i `l `ul ]
-"439
-[; ;source.c: 439:   if(x>255)
-[e $ ! > _x -> -> -> 255 `i `l `ul 230  ]
 "440
-[; ;source.c: 440:   {
-{
+[; ;source.c: 440:  unsigned int x;
+[v _x `ui ~T0 @X0 1 a ]
 "441
-[; ;source.c: 441:     x = (20000000 - baudrate*16)/(baudrate*16);
-[e = _x -> / - -> 20000000 `l * _baudrate -> -> 16 `i `l * _baudrate -> -> 16 `i `l `ul ]
+[; ;source.c: 441:  BRGH = 0;
+[e = _BRGH -> -> 0 `i `b ]
 "442
-[; ;source.c: 442:     BRGH = 1;
-[e = _BRGH -> -> 1 `i `b ]
+[; ;source.c: 442:  x = (20000000 / (64 * BaudRate)) - 1;
+[e = _x -> - / -> 20000000 `l * -> -> 64 `i `l _BaudRate -> -> 1 `i `l `ui ]
 "443
-[; ;source.c: 443:   }
-}
-[e :U 230 ]
+[; ;source.c: 443:  if(x > 255)
+[e $ ! > _x -> -> 255 `i `ui 230  ]
 "444
-[; ;source.c: 444:   if(x<256)
-[e $ ! < _x -> -> -> 256 `i `l `ul 231  ]
-"445
-[; ;source.c: 445:   {
+[; ;source.c: 444:  {
 {
+"445
+[; ;source.c: 445:   BRGH = 1;
+[e = _BRGH -> -> 1 `i `b ]
 "446
-[; ;source.c: 446:     SPBRG = x;
-[e = _SPBRG -> _x `uc ]
+[; ;source.c: 446:   x = (20000000 / (16 * BaudRate)) - 1;
+[e = _x -> - / -> 20000000 `l * -> -> 16 `i `l _BaudRate -> -> 1 `i `l `ui ]
 "447
-[; ;source.c: 447:     SYNC = 0;
-[e = _SYNC -> -> 0 `i `b ]
+[; ;source.c: 447:   SPBRG = x;
+[e = _SPBRG -> _x `uc ]
 "448
-[; ;source.c: 448:     SPEN = 1;
-[e = _SPEN -> -> 1 `i `b ]
+[; ;source.c: 448:   SYNC = 0;
+[e = _SYNC -> -> 0 `i `b ]
 "449
-[; ;source.c: 449:     TRISC7 = 1;
-[e = _TRISC7 -> -> 1 `i `b ]
+[; ;source.c: 449:   SPEN = 1;
+[e = _SPEN -> -> 1 `i `b ]
 "450
-[; ;source.c: 450:     TRISC6 = 1;
-[e = _TRISC6 -> -> 1 `i `b ]
+[; ;source.c: 450:   TRISC7 = 1;
+[e = _TRISC7 -> -> 1 `i `b ]
 "451
-[; ;source.c: 451:     CREN = 1;
-[e = _CREN -> -> 1 `i `b ]
+[; ;source.c: 451:   TRISC6 = 1;
+[e = _TRISC6 -> -> 1 `i `b ]
 "452
-[; ;source.c: 452:     TXEN = 1;
-[e = _TXEN -> -> 1 `i `b ]
+[; ;source.c: 452:   CREN = 1;
+[e = _CREN -> -> 1 `i `b ]
 "453
-[; ;source.c: 453:     return 1;
-[e ) -> -> 1 `i `uc ]
-[e $UE 229  ]
+[; ;source.c: 453:   TXEN = 1;
+[e = _TXEN -> -> 1 `i `b ]
 "454
-[; ;source.c: 454:   }
-}
-[e :U 231 ]
-"455
-[; ;source.c: 455:   return 0;
+[; ;source.c: 454:   return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 229  ]
-"510
-[; ;source.c: 510: }
+"455
+[; ;source.c: 455:  }
+}
+[e $U 231  ]
+"456
+[; ;source.c: 456:  else
+[e :U 230 ]
+"457
+[; ;source.c: 457:  {
+{
+"458
+[; ;source.c: 458:   SPBRG = x;
+[e = _SPBRG -> _x `uc ]
+"459
+[; ;source.c: 459:   SYNC = 0;
+[e = _SYNC -> -> 0 `i `b ]
+"460
+[; ;source.c: 460:   SPEN = 1;
+[e = _SPEN -> -> 1 `i `b ]
+"461
+[; ;source.c: 461:   TRISC7 = 1;
+[e = _TRISC7 -> -> 1 `i `b ]
+"462
+[; ;source.c: 462:   TRISC6 = 1;
+[e = _TRISC6 -> -> 1 `i `b ]
+"463
+[; ;source.c: 463:   CREN = 1;
+[e = _CREN -> -> 1 `i `b ]
+"464
+[; ;source.c: 464:   TXEN = 1;
+[e = _TXEN -> -> 1 `i `b ]
+"465
+[; ;source.c: 465:   return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 229  ]
+"466
+[; ;source.c: 466:  }
+}
+[e :U 231 ]
+"467
+[; ;source.c: 467: }
 [e :UE 229 ]
 }
-"512
-[; ;source.c: 512: char TxRegisterFull(void)
+"469
+[; ;source.c: 469: char TxRegisterFull(void)
 [v _TxRegisterFull `(uc ~T0 @X0 1 ef ]
-"513
-[; ;source.c: 513: {
+"470
+[; ;source.c: 470: {
 {
 [e :U _TxRegisterFull ]
 [f ]
-"514
-[; ;source.c: 514:     return TRMT;
+"471
+[; ;source.c: 471:     return TRMT;
 [e ) -> _TRMT `uc ]
 [e $UE 232  ]
-"515
-[; ;source.c: 515: }
+"472
+[; ;source.c: 472: }
 [e :UE 232 ]
 }
-"516
-[; ;source.c: 516: char SerialErrors(void)
+"473
+[; ;source.c: 473: char SerialErrors(void)
 [v _SerialErrors `(uc ~T0 @X0 1 ef ]
-"517
-[; ;source.c: 517: {
+"474
+[; ;source.c: 474: {
 {
 [e :U _SerialErrors ]
 [f ]
-"518
-[; ;source.c: 518:     if((FERR == 1) && (FERR || OERR))
+"475
+[; ;source.c: 475:     if((FERR == 1) && (FERR || OERR))
 [e $ ! && == -> _FERR `i -> 1 `i || _FERR _OERR 234  ]
-"519
-[; ;source.c: 519:     {
+"476
+[; ;source.c: 476:     {
 {
-"520
-[; ;source.c: 520:         return 1;
+"477
+[; ;source.c: 477:         return 1;
 [e ) -> -> 1 `i `uc ]
 [e $UE 233  ]
-"521
-[; ;source.c: 521:     }
+"478
+[; ;source.c: 478:     }
 }
 [e $U 235  ]
-"522
-[; ;source.c: 522:     else if((OERR == 1) && (FERR || OERR))
+"479
+[; ;source.c: 479:     else if((OERR == 1) && (FERR || OERR))
 [e :U 234 ]
 [e $ ! && == -> _OERR `i -> 1 `i || _FERR _OERR 236  ]
-"523
-[; ;source.c: 523:     {
+"480
+[; ;source.c: 480:     {
 {
-"524
-[; ;source.c: 524:         return 2;
+"481
+[; ;source.c: 481:         return 2;
 [e ) -> -> 2 `i `uc ]
 [e $UE 233  ]
-"525
-[; ;source.c: 525:     }
+"482
+[; ;source.c: 482:     }
 }
 [e $U 237  ]
-"526
-[; ;source.c: 526:     else if(OERR && FERR)
+"483
+[; ;source.c: 483:     else if(OERR && FERR)
 [e :U 236 ]
 [e $ ! && _OERR _FERR 238  ]
-"527
-[; ;source.c: 527:     {
+"484
+[; ;source.c: 484:     {
 {
-"528
-[; ;source.c: 528:         return 3;
+"485
+[; ;source.c: 485:         return 3;
 [e ) -> -> 3 `i `uc ]
 [e $UE 233  ]
-"529
-[; ;source.c: 529:     }
+"486
+[; ;source.c: 486:     }
 }
 [e $U 239  ]
-"530
-[; ;source.c: 530:     else
+"487
+[; ;source.c: 487:     else
 [e :U 238 ]
-"531
-[; ;source.c: 531:     {
+"488
+[; ;source.c: 488:     {
 {
-"532
-[; ;source.c: 532:         return 0;
+"489
+[; ;source.c: 489:         return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 233  ]
-"533
-[; ;source.c: 533:     }
+"490
+[; ;source.c: 490:     }
 }
 [e :U 239 ]
 [e :U 237 ]
 [e :U 235 ]
-"534
-[; ;source.c: 534: }
+"491
+[; ;source.c: 491: }
 [e :UE 233 ]
 }
-"535
-[; ;source.c: 535: void SerialWrite(char dataWrite)
+"492
+[; ;source.c: 492: void SerialWrite(char dataWrite)
 [v _SerialWrite `(v ~T0 @X0 1 ef1`uc ]
-"536
-[; ;source.c: 536: {
+"493
+[; ;source.c: 493: {
 {
 [e :U _SerialWrite ]
-"535
-[; ;source.c: 535: void SerialWrite(char dataWrite)
+"492
+[; ;source.c: 492: void SerialWrite(char dataWrite)
 [v _dataWrite `uc ~T0 @X0 1 r1 ]
-"536
-[; ;source.c: 536: {
+"493
+[; ;source.c: 493: {
 [f ]
-"537
-[; ;source.c: 537:     while(!TXIF);
+"494
+[; ;source.c: 494:     while(!TXIF);
 [e $U 241  ]
 [e :U 242 ]
 [e :U 241 ]
 [e $ ! _TXIF 242  ]
 [e :U 243 ]
-"538
-[; ;source.c: 538:     TXREG = dataWrite;
+"495
+[; ;source.c: 495:     TXREG = dataWrite;
 [e = _TXREG -> _dataWrite `uc ]
-"539
-[; ;source.c: 539: }
+"496
+[; ;source.c: 496: }
 [e :UE 240 ]
 }
-"541
-[; ;source.c: 541: char SerialWriteText(char *dataText)
+"498
+[; ;source.c: 498: char SerialWriteText(char *dataText)
 [v _SerialWriteText `(uc ~T0 @X0 1 ef1`*uc ]
-"542
-[; ;source.c: 542: {
+"499
+[; ;source.c: 499: {
 {
 [e :U _SerialWriteText ]
-"541
-[; ;source.c: 541: char SerialWriteText(char *dataText)
+"498
+[; ;source.c: 498: char SerialWriteText(char *dataText)
 [v _dataText `*uc ~T0 @X0 1 r1 ]
-"542
-[; ;source.c: 542: {
+"499
+[; ;source.c: 499: {
 [f ]
-"543
-[; ;source.c: 543:     unsigned int i;
+"500
+[; ;source.c: 500:     unsigned int i;
 [v _i `ui ~T0 @X0 1 a ]
-"544
-[; ;source.c: 544:     for(i=0;dataText[i]!='\0';i++)
+"501
+[; ;source.c: 501:     for(i=0;dataText[i]!='\0';i++)
 {
 [e = _i -> -> 0 `i `ui ]
 [e $U 248  ]
 [e :U 245 ]
-"545
-[; ;source.c: 545:     {
+"502
+[; ;source.c: 502:     {
 {
-"546
-[; ;source.c: 546:        SerialWrite(dataText[i]);
+"503
+[; ;source.c: 503:        SerialWrite(dataText[i]);
 [e ( _SerialWrite (1 *U + _dataText * -> _i `ux -> -> # *U _dataText `ui `ux ]
-"547
-[; ;source.c: 547:     }
+"504
+[; ;source.c: 504:     }
 }
 [e ++ _i -> -> 1 `i `ui ]
 [e :U 248 ]
 [e $ != -> *U + _dataText * -> _i `ux -> -> # *U _dataText `ui `ux `ui -> 0 `ui 245  ]
 [e :U 246 ]
 }
-"548
-[; ;source.c: 548: }
+"505
+[; ;source.c: 505: }
 [e :UE 244 ]
 }
-"549
-[; ;source.c: 549: void SerialPrint(char *dataText)
+"506
+[; ;source.c: 506: void SerialPrint(char *dataText)
 [v _SerialPrint `(v ~T0 @X0 1 ef1`*uc ]
-"550
-[; ;source.c: 550: {
+"507
+[; ;source.c: 507: {
 {
 [e :U _SerialPrint ]
-"549
-[; ;source.c: 549: void SerialPrint(char *dataText)
+"506
+[; ;source.c: 506: void SerialPrint(char *dataText)
 [v _dataText `*uc ~T0 @X0 1 r1 ]
-"550
-[; ;source.c: 550: {
+"507
+[; ;source.c: 507: {
 [f ]
-"551
-[; ;source.c: 551:     for(unsigned int i=0;dataText[i]!='\0';i++)
+"508
+[; ;source.c: 508:     for(unsigned int i=0;dataText[i]!='\0';i++)
 {
 [v _i `ui ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `ui ]
 [e $U 253  ]
 [e :U 250 ]
-"552
-[; ;source.c: 552:     {
+"509
+[; ;source.c: 509:     {
 {
-"553
-[; ;source.c: 553:         SerialWrite(dataText[i]);
+"510
+[; ;source.c: 510:         SerialWrite(dataText[i]);
 [e ( _SerialWrite (1 *U + _dataText * -> _i `ux -> -> # *U _dataText `ui `ux ]
-"554
-[; ;source.c: 554:     }
+"511
+[; ;source.c: 511:     }
 }
 [e ++ _i -> -> 1 `i `ui ]
 [e :U 253 ]
 [e $ != -> *U + _dataText * -> _i `ux -> -> # *U _dataText `ui `ux `ui -> 0 `ui 250  ]
 [e :U 251 ]
 }
-"555
-[; ;source.c: 555: }
+"512
+[; ;source.c: 512: }
 [e :UE 249 ]
 }
-"556
-[; ;source.c: 556: void SerialPrintLn(char *dataText)
+"513
+[; ;source.c: 513: void SerialPrintLn(char *dataText)
 [v _SerialPrintLn `(v ~T0 @X0 1 ef1`*uc ]
-"557
-[; ;source.c: 557: {
+"514
+[; ;source.c: 514: {
 {
 [e :U _SerialPrintLn ]
-"556
-[; ;source.c: 556: void SerialPrintLn(char *dataText)
+"513
+[; ;source.c: 513: void SerialPrintLn(char *dataText)
 [v _dataText `*uc ~T0 @X0 1 r1 ]
-"557
-[; ;source.c: 557: {
+"514
+[; ;source.c: 514: {
 [f ]
-"558
-[; ;source.c: 558:     unsigned int i;
+"515
+[; ;source.c: 515:     unsigned int i;
 [v _i `ui ~T0 @X0 1 a ]
-"559
-[; ;source.c: 559:         for(i=0;dataText[i]!='\0';i++)
+"516
+[; ;source.c: 516:         for(i=0;dataText[i]!='\0';i++)
 {
 [e = _i -> -> 0 `i `ui ]
 [e $U 258  ]
 [e :U 255 ]
-"560
-[; ;source.c: 560:         {
+"517
+[; ;source.c: 517:         {
 {
-"561
-[; ;source.c: 561:             SerialWrite(dataText[i]);
+"518
+[; ;source.c: 518:             SerialWrite(dataText[i]);
 [e ( _SerialWrite (1 *U + _dataText * -> _i `ux -> -> # *U _dataText `ui `ux ]
-"562
-[; ;source.c: 562:         }
+"519
+[; ;source.c: 519:         }
 }
 [e ++ _i -> -> 1 `i `ui ]
 [e :U 258 ]
 [e $ != -> *U + _dataText * -> _i `ux -> -> # *U _dataText `ui `ux `ui -> 0 `ui 255  ]
 [e :U 256 ]
 }
-"563
-[; ;source.c: 563:         SerialWrite(0x0A);
+"520
+[; ;source.c: 520:         SerialWrite(0x0A);
 [e ( _SerialWrite (1 -> -> 10 `i `uc ]
-"564
-[; ;source.c: 564: }
+"521
+[; ;source.c: 521: }
 [e :UE 254 ]
 }
-"565
-[; ;source.c: 565: char SerialAvailable(void)
+"522
+[; ;source.c: 522: char SerialAvailable(void)
 [v _SerialAvailable `(uc ~T0 @X0 1 ef ]
-"566
-[; ;source.c: 566: {
+"523
+[; ;source.c: 523: {
 {
 [e :U _SerialAvailable ]
 [f ]
-"567
-[; ;source.c: 567:     return RCIF || (TXIF && TRMT);
+"524
+[; ;source.c: 524:     return RCIF || (TXIF && TRMT);
 [e ) -> -> || _RCIF && _TXIF _TRMT `i `uc ]
 [e $UE 259  ]
-"568
-[; ;source.c: 568: }
+"525
+[; ;source.c: 525: }
 [e :UE 259 ]
 }
-"570
-[; ;source.c: 570: char SerialRead(void)
+"527
+[; ;source.c: 527: char SerialRead(void)
 [v _SerialRead `(uc ~T0 @X0 1 ef ]
-"571
-[; ;source.c: 571: {
+"528
+[; ;source.c: 528: {
 {
 [e :U _SerialRead ]
 [f ]
-"572
-[; ;source.c: 572:     while(!RCIF);
+"529
+[; ;source.c: 529:     while(!RCIF);
 [e $U 261  ]
 [e :U 262 ]
 [e :U 261 ]
 [e $ ! _RCIF 262  ]
 [e :U 263 ]
-"573
-[; ;source.c: 573:     return RCREG;
+"530
+[; ;source.c: 530:     return RCREG;
 [e ) -> _RCREG `uc ]
 [e $UE 260  ]
-"574
-[; ;source.c: 574: }
+"531
+[; ;source.c: 531: }
 [e :UE 260 ]
 }
-"576
-[; ;source.c: 576: void SerialReadText(char *Output, unsigned int lenght)
+"533
+[; ;source.c: 533: void SerialReadText(char *Output, unsigned int lenght)
 [v _SerialReadText `(v ~T0 @X0 1 ef2`*uc`ui ]
-"577
-[; ;source.c: 577: {
+"534
+[; ;source.c: 534: {
 {
 [e :U _SerialReadText ]
-"576
-[; ;source.c: 576: void SerialReadText(char *Output, unsigned int lenght)
+"533
+[; ;source.c: 533: void SerialReadText(char *Output, unsigned int lenght)
 [v _Output `*uc ~T0 @X0 1 r1 ]
 [v _lenght `ui ~T0 @X0 1 r2 ]
-"577
-[; ;source.c: 577: {
+"534
+[; ;source.c: 534: {
 [f ]
-"578
-[; ;source.c: 578:     unsigned int i;
+"535
+[; ;source.c: 535:     unsigned int i;
 [v _i `ui ~T0 @X0 1 a ]
-"579
-[; ;source.c: 579:     for(i=0;i<lenght;i++)
+"536
+[; ;source.c: 536:     for(i=0;i<lenght;i++)
 {
 [e = _i -> -> 0 `i `ui ]
 [e $U 268  ]
 [e :U 265 ]
-"580
-[; ;source.c: 580:     {
+"537
+[; ;source.c: 537:     {
 {
-"581
-[; ;source.c: 581:         Output[i] = SerialRead();
+"538
+[; ;source.c: 538:         Output[i] = SerialRead();
 [e = *U + _Output * -> _i `ux -> -> # *U _Output `ui `ux ( _SerialRead ..  ]
-"582
-[; ;source.c: 582:     }
+"539
+[; ;source.c: 539:     }
 }
 [e ++ _i -> -> 1 `i `ui ]
 [e :U 268 ]
 [e $ < _i _lenght 265  ]
 [e :U 266 ]
 }
-"583
-[; ;source.c: 583: }
+"540
+[; ;source.c: 540: }
 [e :UE 264 ]
 }
-"585
-[; ;source.c: 585: void I2CBegin(char Operation, const unsigned long param)
+"542
+[; ;source.c: 542: void I2CBegin(char Operation, const unsigned long param)
 [v _I2CBegin `(v ~T0 @X0 1 ef2`uc`Cul ]
-"586
-[; ;source.c: 586: {
+"543
+[; ;source.c: 543: {
 {
 [e :U _I2CBegin ]
-"585
-[; ;source.c: 585: void I2CBegin(char Operation, const unsigned long param)
+"542
+[; ;source.c: 542: void I2CBegin(char Operation, const unsigned long param)
 [v _Operation `uc ~T0 @X0 1 r1 ]
 [v _param `Cul ~T0 @X0 1 r2 ]
-"586
-[; ;source.c: 586: {
+"543
+[; ;source.c: 543: {
 [f ]
-"587
-[; ;source.c: 587:     switch(Operation)
+"544
+[; ;source.c: 544:     switch(Operation)
 [e $U 271  ]
-"588
-[; ;source.c: 588:     {
+"545
+[; ;source.c: 545:     {
 {
-"589
-[; ;source.c: 589:         case 0x01:
+"546
+[; ;source.c: 546:         case 0x01:
 [e :U 272 ]
-"590
-[; ;source.c: 590:             SSPCON = 0b00101000;
+"547
+[; ;source.c: 547:             SSPCON = 0b00101000;
 [e = _SSPCON -> -> 40 `i `uc ]
-"591
-[; ;source.c: 591:             SSPCON2 = 0;
+"548
+[; ;source.c: 548:             SSPCON2 = 0;
 [e = _SSPCON2 -> -> 0 `i `uc ]
-"592
-[; ;source.c: 592:             SSPADD = (20000000/(4*param))-1;
+"549
+[; ;source.c: 549:             SSPADD = (20000000/(4*param))-1;
 [e = _SSPADD -> - / -> -> 20000000 `l `ul * -> -> -> 4 `i `l `ul _param -> -> -> 1 `i `l `ul `uc ]
-"593
-[; ;source.c: 593:             SSPSTAT = 0;
+"550
+[; ;source.c: 550:             SSPSTAT = 0;
 [e = _SSPSTAT -> -> 0 `i `uc ]
-"594
-[; ;source.c: 594:             TRISC3 = 1;
+"551
+[; ;source.c: 551:             TRISC3 = 1;
 [e = _TRISC3 -> -> 1 `i `b ]
-"595
-[; ;source.c: 595:             TRISC4 = 1;
+"552
+[; ;source.c: 552:             TRISC4 = 1;
 [e = _TRISC4 -> -> 1 `i `b ]
-"596
-[; ;source.c: 596:             break;
+"553
+[; ;source.c: 553:             break;
 [e $U 270  ]
-"597
-[; ;source.c: 597:         case 0x02:
+"554
+[; ;source.c: 554:         case 0x02:
 [e :U 273 ]
-"598
-[; ;source.c: 598:             SSPSTAT = 0x80;
+"555
+[; ;source.c: 555:             SSPSTAT = 0x80;
 [e = _SSPSTAT -> -> 128 `i `uc ]
-"599
-[; ;source.c: 599:             SSPADD = param;
+"556
+[; ;source.c: 556:             SSPADD = param;
 [e = _SSPADD -> _param `uc ]
-"600
-[; ;source.c: 600:             SSPCON = 0x36;
+"557
+[; ;source.c: 557:             SSPCON = 0x36;
 [e = _SSPCON -> -> 54 `i `uc ]
-"601
-[; ;source.c: 601:             SSPCON2 = 0x01;
+"558
+[; ;source.c: 558:             SSPCON2 = 0x01;
 [e = _SSPCON2 -> -> 1 `i `uc ]
-"602
-[; ;source.c: 602:             TRISC3 = 1;
+"559
+[; ;source.c: 559:             TRISC3 = 1;
 [e = _TRISC3 -> -> 1 `i `b ]
-"603
-[; ;source.c: 603:             TRISC4 = 1;
+"560
+[; ;source.c: 560:             TRISC4 = 1;
 [e = _TRISC4 -> -> 1 `i `b ]
-"604
-[; ;source.c: 604:             GIE = 1;
+"561
+[; ;source.c: 561:             GIE = 1;
 [e = _GIE -> -> 1 `i `b ]
-"605
-[; ;source.c: 605:             PEIE = 1;
+"562
+[; ;source.c: 562:             PEIE = 1;
 [e = _PEIE -> -> 1 `i `b ]
-"606
-[; ;source.c: 606:             SSPIF = 0;
+"563
+[; ;source.c: 563:             SSPIF = 0;
 [e = _SSPIF -> -> 0 `i `b ]
-"607
-[; ;source.c: 607:             SSPIE = 1;
+"564
+[; ;source.c: 564:             SSPIE = 1;
 [e = _SSPIE -> -> 1 `i `b ]
-"608
-[; ;source.c: 608:             break;
+"565
+[; ;source.c: 565:             break;
 [e $U 270  ]
-"609
-[; ;source.c: 609:     }
+"566
+[; ;source.c: 566:     }
 }
 [e $U 270  ]
 [e :U 271 ]
@@ -2473,242 +2497,242 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 273
  270 ]
 [e :U 270 ]
-"610
-[; ;source.c: 610: }
+"567
+[; ;source.c: 567: }
 [e :UE 269 ]
 }
-"611
-[; ;source.c: 611: void I2CMasterWaiting()
+"568
+[; ;source.c: 568: void I2CMasterWaiting()
 [v _I2CMasterWaiting `(v ~T0 @X0 1 ef ]
-"612
-[; ;source.c: 612: {
+"569
+[; ;source.c: 569: {
 {
 [e :U _I2CMasterWaiting ]
 [f ]
-"613
-[; ;source.c: 613:   while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+"570
+[; ;source.c: 570:   while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
 [e $U 275  ]
 [e :U 276 ]
 [e :U 275 ]
 [e $ || != & -> _SSPSTAT `i -> 4 `i -> 0 `i != & -> _SSPCON2 `i -> 31 `i -> 0 `i 276  ]
 [e :U 277 ]
-"614
-[; ;source.c: 614: }
+"571
+[; ;source.c: 571: }
 [e :UE 274 ]
 }
-"616
-[; ;source.c: 616: void I2CMasterStart()
+"573
+[; ;source.c: 573: void I2CMasterStart()
 [v _I2CMasterStart `(v ~T0 @X0 1 ef ]
-"617
-[; ;source.c: 617: {
+"574
+[; ;source.c: 574: {
 {
 [e :U _I2CMasterStart ]
 [f ]
-"618
-[; ;source.c: 618:   I2CMasterWaiting();
+"575
+[; ;source.c: 575:   I2CMasterWaiting();
 [e ( _I2CMasterWaiting ..  ]
-"619
-[; ;source.c: 619:   SEN = 1;
+"576
+[; ;source.c: 576:   SEN = 1;
 [e = _SEN -> -> 1 `i `b ]
-"620
-[; ;source.c: 620: }
+"577
+[; ;source.c: 577: }
 [e :UE 278 ]
 }
-"621
-[; ;source.c: 621: void I2CMasterRepeatedStart()
+"578
+[; ;source.c: 578: void I2CMasterRepeatedStart()
 [v _I2CMasterRepeatedStart `(v ~T0 @X0 1 ef ]
-"622
-[; ;source.c: 622: {
+"579
+[; ;source.c: 579: {
 {
 [e :U _I2CMasterRepeatedStart ]
 [f ]
-"623
-[; ;source.c: 623:   I2CMasterWaiting();
+"580
+[; ;source.c: 580:   I2CMasterWaiting();
 [e ( _I2CMasterWaiting ..  ]
-"624
-[; ;source.c: 624:   RSEN = 1;
+"581
+[; ;source.c: 581:   RSEN = 1;
 [e = _RSEN -> -> 1 `i `b ]
-"625
-[; ;source.c: 625: }
+"582
+[; ;source.c: 582: }
 [e :UE 279 ]
 }
-"626
-[; ;source.c: 626: void I2CMasterStop()
+"583
+[; ;source.c: 583: void I2CMasterStop()
 [v _I2CMasterStop `(v ~T0 @X0 1 ef ]
-"627
-[; ;source.c: 627: {
+"584
+[; ;source.c: 584: {
 {
 [e :U _I2CMasterStop ]
 [f ]
-"628
-[; ;source.c: 628:   I2CMasterWaiting();
+"585
+[; ;source.c: 585:   I2CMasterWaiting();
 [e ( _I2CMasterWaiting ..  ]
-"629
-[; ;source.c: 629:   PEN = 1;
+"586
+[; ;source.c: 586:   PEN = 1;
 [e = _PEN -> -> 1 `i `b ]
-"630
-[; ;source.c: 630: }
+"587
+[; ;source.c: 587: }
 [e :UE 280 ]
 }
-"631
-[; ;source.c: 631: void I2CMasterWrite(unsigned d)
+"588
+[; ;source.c: 588: void I2CMasterWrite(unsigned d)
 [v _I2CMasterWrite `(v ~T0 @X0 1 ef1`ui ]
-"632
-[; ;source.c: 632: {
+"589
+[; ;source.c: 589: {
 {
 [e :U _I2CMasterWrite ]
-"631
-[; ;source.c: 631: void I2CMasterWrite(unsigned d)
+"588
+[; ;source.c: 588: void I2CMasterWrite(unsigned d)
 [v _d `ui ~T0 @X0 1 r1 ]
-"632
-[; ;source.c: 632: {
+"589
+[; ;source.c: 589: {
 [f ]
-"633
-[; ;source.c: 633:   I2CMasterWaiting();
+"590
+[; ;source.c: 590:   I2CMasterWaiting();
 [e ( _I2CMasterWaiting ..  ]
-"634
-[; ;source.c: 634:   SSPBUF = d;
+"591
+[; ;source.c: 591:   SSPBUF = d;
 [e = _SSPBUF -> _d `uc ]
-"635
-[; ;source.c: 635: }
+"592
+[; ;source.c: 592: }
 [e :UE 281 ]
 }
-"637
-[; ;source.c: 637: unsigned short I2CMasterRead(unsigned short a)
+"594
+[; ;source.c: 594: unsigned short I2CMasterRead(unsigned short a)
 [v _I2CMasterRead `(us ~T0 @X0 1 ef1`us ]
-"638
-[; ;source.c: 638: {
+"595
+[; ;source.c: 595: {
 {
 [e :U _I2CMasterRead ]
-"637
-[; ;source.c: 637: unsigned short I2CMasterRead(unsigned short a)
+"594
+[; ;source.c: 594: unsigned short I2CMasterRead(unsigned short a)
 [v _a `us ~T0 @X0 1 r1 ]
-"638
-[; ;source.c: 638: {
+"595
+[; ;source.c: 595: {
 [f ]
-"639
-[; ;source.c: 639:   unsigned short temp;
+"596
+[; ;source.c: 596:   unsigned short temp;
 [v _temp `us ~T0 @X0 1 a ]
-"640
-[; ;source.c: 640:   I2CMasterWaiting();
+"597
+[; ;source.c: 597:   I2CMasterWaiting();
 [e ( _I2CMasterWaiting ..  ]
-"641
-[; ;source.c: 641:   RCEN = 1;
+"598
+[; ;source.c: 598:   RCEN = 1;
 [e = _RCEN -> -> 1 `i `b ]
-"642
-[; ;source.c: 642:   I2CMasterWaiting();
+"599
+[; ;source.c: 599:   I2CMasterWaiting();
 [e ( _I2CMasterWaiting ..  ]
-"643
-[; ;source.c: 643:   temp = SSPBUF;
+"600
+[; ;source.c: 600:   temp = SSPBUF;
 [e = _temp -> _SSPBUF `us ]
-"644
-[; ;source.c: 644:   I2CMasterWaiting();
+"601
+[; ;source.c: 601:   I2CMasterWaiting();
 [e ( _I2CMasterWaiting ..  ]
-"645
-[; ;source.c: 645:   ACKDT = (a)?0:1;
+"602
+[; ;source.c: 602:   ACKDT = (a)?0:1;
 [e = _ACKDT -> ? != -> _a `ui -> -> 0 `i `ui : -> 0 `i -> 1 `i `b ]
-"646
-[; ;source.c: 646:   ACKEN = 1;
+"603
+[; ;source.c: 603:   ACKEN = 1;
 [e = _ACKEN -> -> 1 `i `b ]
-"647
-[; ;source.c: 647:   return temp;
+"604
+[; ;source.c: 604:   return temp;
 [e ) _temp ]
 [e $UE 282  ]
-"648
-[; ;source.c: 648: }
+"605
+[; ;source.c: 605: }
 [e :UE 282 ]
 }
-"650
-[; ;source.c: 650: void delay(const int milis)
+"607
+[; ;source.c: 607: void delay(const int milis)
 [v _delay `(v ~T0 @X0 1 ef1`Ci ]
-"651
-[; ;source.c: 651: {
+"608
+[; ;source.c: 608: {
 {
 [e :U _delay ]
-"650
-[; ;source.c: 650: void delay(const int milis)
+"607
+[; ;source.c: 607: void delay(const int milis)
 [v _milis `Ci ~T0 @X0 1 r1 ]
-"651
-[; ;source.c: 651: {
+"608
+[; ;source.c: 608: {
 [f ]
-"652
-[; ;source.c: 652:     for(int j=0;j<milis;j++)
+"609
+[; ;source.c: 609:     for(int j=0;j<milis;j++)
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 0 `i ]
 [e $ < _j _milis 284  ]
 [e $U 285  ]
 [e :U 284 ]
-"653
-[; ;source.c: 653:     {
+"610
+[; ;source.c: 610:     {
 {
-"655
-[; ;source.c: 655:         for(int i=0;i<400;i++)
+"612
+[; ;source.c: 612:         for(int i=0;i<400;i++)
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $ < _i -> 400 `i 287  ]
 [e $U 288  ]
 [e :U 287 ]
-"656
-[; ;source.c: 656:         {
+"613
+[; ;source.c: 613:         {
 {
-"657
-[; ;source.c: 657:             __asm("NOP");
+"614
+[; ;source.c: 614:             __asm("NOP");
 [; <" NOP ;# ">
-"658
-[; ;source.c: 658:         }
+"615
+[; ;source.c: 615:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 400 `i 287  ]
 [e :U 288 ]
 }
-"659
-[; ;source.c: 659:     }
+"616
+[; ;source.c: 616:     }
 }
 [e ++ _j -> 1 `i ]
 [e $ < _j _milis 284  ]
 [e :U 285 ]
 }
-"660
-[; ;source.c: 660: }
+"617
+[; ;source.c: 617: }
 [e :UE 283 ]
 }
-"662
-[; ;source.c: 662: void delayMicroseconds(const int us)
+"619
+[; ;source.c: 619: void delayMicroseconds(const int us)
 [v _delayMicroseconds `(v ~T0 @X0 1 ef1`Ci ]
-"663
-[; ;source.c: 663: {
+"620
+[; ;source.c: 620: {
 {
 [e :U _delayMicroseconds ]
-"662
-[; ;source.c: 662: void delayMicroseconds(const int us)
+"619
+[; ;source.c: 619: void delayMicroseconds(const int us)
 [v _us `Ci ~T0 @X0 1 r1 ]
-"663
-[; ;source.c: 663: {
+"620
+[; ;source.c: 620: {
 [f ]
-"664
-[; ;source.c: 664:     for(char i=0;i<us;i++)
+"621
+[; ;source.c: 621:     for(char i=0;i<us;i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i _us 291  ]
 [e $U 292  ]
 [e :U 291 ]
-"665
-[; ;source.c: 665:     {
+"622
+[; ;source.c: 622:     {
 {
-"666
-[; ;source.c: 666:         __asm("NOP");
+"623
+[; ;source.c: 623:         __asm("NOP");
 [; <" NOP ;# ">
-"667
-[; ;source.c: 667:     }
+"624
+[; ;source.c: 624:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i _us 291  ]
 [e :U 292 ]
 }
-"668
-[; ;source.c: 668: }
+"625
+[; ;source.c: 625: }
 [e :UE 290 ]
 }
