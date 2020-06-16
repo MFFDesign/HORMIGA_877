@@ -3,9 +3,9 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 6 ]
-"16 D:\Documents\Hormiga_877_RevA.X\application.c
+"3 C:\Users\user\Downloads\HORMIGA_877-master\Hormiga_877_RevA.X\application.c
 [v _setup setup `(v  1 e 1 0 ]
-"26
+"9
 [v _loop loop `(v  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -25,15 +25,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"63 D:\Documents\Hormiga_877_RevA.X\LCD16x2.c
-[v _lcdWrite lcdWrite `(v  1 e 1 0 ]
-"124
-[v _WriteInstruction WriteInstruction `(v  1 e 1 0 ]
-"147
-[v _WriteData WriteData `(v  1 e 1 0 ]
-"170
-[v _ByteByNibble ByteByNibble `(v  1 e 1 0 ]
-"7 D:\Documents\Hormiga_877_RevA.X\source.c
+"7 C:\Users\user\Downloads\HORMIGA_877-master\Hormiga_877_RevA.X\source.c
 [v _main main `(i  1 e 2 0 ]
 "18
 [v _Initialization Initialization `(v  1 e 1 0 ]
@@ -41,26 +33,12 @@
 [v _CCP1Configuration CCP1Configuration `(v  1 e 1 0 ]
 "55
 [v _CCP2Configuration CCP2Configuration `(v  1 e 1 0 ]
-"63
-[v _pinMode pinMode `(v  1 e 1 0 ]
-"169
-[v _digitalWrite digitalWrite `(v  1 e 1 0 ]
-"260
-[v _digitalRead digitalRead `(uc  1 e 1 0 ]
-"430
-[v _PBRead PBRead `(uc  1 e 1 0 ]
 "511
 [v _SerialWrite SerialWrite `(v  1 e 1 0 ]
 "546
 [v _SerialRead SerialRead `(uc  1 e 1 0 ]
 "587
 [v _I2CMasterWaiting I2CMasterWaiting `(v  1 e 1 0 ]
-"626
-[v _delay delay `(v  1 e 1 0 ]
-"638
-[v _delayMicroseconds delayMicroseconds `(v  1 e 1 0 ]
-"14 D:\Documents\Hormiga_877_RevA.X\application.c
-[v _Terminales Terminales `[7]uc  1 e 7 0 ]
 [s S193 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
@@ -279,85 +257,22 @@
 [v _TXEN TXEN `VEb  1 e 0 @1221 ]
 "3037
 [v _TXIF TXIF `VEb  1 e 0 @100 ]
-"4 D:\Documents\Hormiga_877_RevA.X\Keypad4x4.c
-[v _characters characters `[4][4]uc  1 s 16 characters ]
-"11
-[v _RowPins RowPins `[4]i  1 s 8 RowPins ]
-"12
-[v _ColPins ColPins `[4]i  1 s 8 ColPins ]
-"13
-[v _delaying delaying `i  1 e 2 0 ]
-"10 D:\Documents\Hormiga_877_RevA.X\LCD16x2.c
-[v _RSPin RSPin `i  1 e 2 0 ]
-"11
-[v _ENPin ENPin `i  1 e 2 0 ]
-"12
-[v _RWPin RWPin `i  1 e 2 0 ]
-"13
-[v _d4Pin d4Pin `i  1 e 2 0 ]
-"14
-[v _d5Pin d5Pin `i  1 e 2 0 ]
-"15
-[v _d6Pin d6Pin `i  1 e 2 0 ]
-"16
-[v _d7Pin d7Pin `i  1 e 2 0 ]
-"3 D:\Documents\Hormiga_877_RevA.X\Servo.c
-[v _ServoValue ServoValue `uc  1 e 1 0 ]
-"7 D:\Documents\Hormiga_877_RevA.X\source.c
+"7 C:\Users\user\Downloads\HORMIGA_877-master\Hormiga_877_RevA.X\source.c
 [v _main main `(i  1 e 2 0 ]
 {
 "16
 } 0
-"16 D:\Documents\Hormiga_877_RevA.X\application.c
+"3 C:\Users\user\Downloads\HORMIGA_877-master\Hormiga_877_RevA.X\application.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"18
-[v setup@i i `i  1 a 2 4 ]
-"23
+"6
 } 0
-"63 D:\Documents\Hormiga_877_RevA.X\source.c
-[v _pinMode pinMode `(v  1 e 1 0 ]
-{
-[v pinMode@pin pin `uc  1 a 1 wreg ]
-[v pinMode@pin pin `uc  1 a 1 wreg ]
-[v pinMode@mode mode `uc  1 p 1 0 ]
-[v pinMode@pin pin `uc  1 a 1 3 ]
-"168
-} 0
-"26 D:\Documents\Hormiga_877_RevA.X\application.c
+"9
 [v _loop loop `(v  1 e 1 0 ]
 {
-"70
+"12
 } 0
-"169 D:\Documents\Hormiga_877_RevA.X\source.c
-[v _digitalWrite digitalWrite `(v  1 e 1 0 ]
-{
-[v digitalWrite@pin pin `uc  1 a 1 wreg ]
-[v digitalWrite@pin pin `uc  1 a 1 wreg ]
-[v digitalWrite@value value `uc  1 p 1 0 ]
-[v digitalWrite@pin pin `uc  1 a 1 3 ]
-"259
-} 0
-"626
-[v _delay delay `(v  1 e 1 0 ]
-{
-"631
-[v delay@i i `i  1 a 2 5 ]
-"628
-[v delay@j j `i  1 a 2 3 ]
-"626
-[v delay@milis milis `DCi  1 p 2 0 ]
-"636
-} 0
-"430
-[v _PBRead PBRead `(uc  1 e 1 0 ]
-{
-[v PBRead@pin pin `uc  1 a 1 wreg ]
-[v PBRead@pin pin `uc  1 a 1 wreg ]
-[v PBRead@pin pin `uc  1 a 1 2 ]
-"444
-} 0
-"18
+"18 C:\Users\user\Downloads\HORMIGA_877-master\Hormiga_877_RevA.X\source.c
 [v _Initialization Initialization `(v  1 e 1 0 ]
 {
 "43

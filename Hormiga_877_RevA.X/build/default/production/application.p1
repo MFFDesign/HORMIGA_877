@@ -1,16 +1,4 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"37 ./system.h
-[; ;./system.h: 37: void pinMode(char pin, char mode);
-[v _pinMode `(v ~T0 @X0 0 ef2`uc`uc ]
-"38
-[; ;./system.h: 38: void digitalWrite(char pin, char value);
-[v _digitalWrite `(v ~T0 @X0 0 ef2`uc`uc ]
-"36
-[; ;./system.h: 36: char PBRead(char pin);
-[v _PBRead `(uc ~T0 @X0 0 ef1`uc ]
-"69
-[; ;./system.h: 69: void delay(const int milis);
-[v _delay `(v ~T0 @X0 0 ef1`Ci ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -207,201 +195,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x WRT = OFF ]
 "21
 [p x CP = OFF ]
-"14 application.c
-[; ;application.c: 14: char Terminales[7] = {7,8,9,10,11,12,13};
-[v _Terminales `uc ~T0 @X0 -> 7 `i e ]
-[i _Terminales
-:U ..
--> -> 7 `i `uc
--> -> 8 `i `uc
--> -> 9 `i `uc
--> -> 10 `i `uc
--> -> 11 `i `uc
--> -> 12 `i `uc
--> -> 13 `i `uc
-..
-]
-"16
-[; ;application.c: 16: void setup()
+"3 application.c
+[; ;application.c: 3: void setup()
 [v _setup `(v ~T0 @X0 1 ef ]
-"17
-[; ;application.c: 17: {
+"4
+[; ;application.c: 4: {
 {
 [e :U _setup ]
 [f ]
-"18
-[; ;application.c: 18:     for(int i=0;i<7;i++)
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 7 `i 97  ]
-[e $U 98  ]
-[e :U 97 ]
-"19
-[; ;application.c: 19:     {
-{
-"20
-[; ;application.c: 20:         pinMode(Terminales[i],0);
-[e ( _pinMode (2 , *U + &U _Terminales * -> -> _i `ui `ux -> -> # *U &U _Terminales `ui `ux -> -> 0 `i `uc ]
-"21
-[; ;application.c: 21:         digitalWrite(Terminales[i],0);
-[e ( _digitalWrite (2 , *U + &U _Terminales * -> -> _i `ui `ux -> -> # *U &U _Terminales `ui `ux -> -> 0 `i `uc ]
-"22
-[; ;application.c: 22:     }
+"6
+[; ;application.c: 6: }
+[e :UE 95 ]
 }
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 7 `i 97  ]
-[e :U 98 ]
-}
-"23
-[; ;application.c: 23: }
-[e :UE 96 ]
-}
-"26
-[; ;application.c: 26: void loop()
+"9
+[; ;application.c: 9: void loop()
 [v _loop `(v ~T0 @X0 1 ef ]
-"27
-[; ;application.c: 27: {
+"10
+[; ;application.c: 10: {
 {
 [e :U _loop ]
 [f ]
-"28
-[; ;application.c: 28:     if(PBRead(0) == 1)
-[e $ ! == -> ( _PBRead (1 -> -> 0 `i `uc `i -> 1 `i 101  ]
-"29
-[; ;application.c: 29:     {
-{
-"30
-[; ;application.c: 30:         delay(50);
-[e ( _delay (1 -> 50 `i ]
-"31
-[; ;application.c: 31:         if(PBRead(0) == 1)
-[e $ ! == -> ( _PBRead (1 -> -> 0 `i `uc `i -> 1 `i 102  ]
-"32
-[; ;application.c: 32:         {
-{
-"33
-[; ;application.c: 33:             digitalWrite(7,1);
-[e ( _digitalWrite (2 , -> -> 7 `i `uc -> -> 1 `i `uc ]
-"34
-[; ;application.c: 34:             digitalWrite(8,1);
-[e ( _digitalWrite (2 , -> -> 8 `i `uc -> -> 1 `i `uc ]
-"35
-[; ;application.c: 35:             digitalWrite(9,1);
-[e ( _digitalWrite (2 , -> -> 9 `i `uc -> -> 1 `i `uc ]
-"36
-[; ;application.c: 36:             digitalWrite(10,1);
-[e ( _digitalWrite (2 , -> -> 10 `i `uc -> -> 1 `i `uc ]
-"37
-[; ;application.c: 37:             digitalWrite(11,1);
-[e ( _digitalWrite (2 , -> -> 11 `i `uc -> -> 1 `i `uc ]
-"38
-[; ;application.c: 38:             digitalWrite(12,1);
-[e ( _digitalWrite (2 , -> -> 12 `i `uc -> -> 1 `i `uc ]
-"39
-[; ;application.c: 39:             digitalWrite(13,1);
-[e ( _digitalWrite (2 , -> -> 13 `i `uc -> -> 1 `i `uc ]
-"40
-[; ;application.c: 40:         }
-}
-[e :U 102 ]
-"41
-[; ;application.c: 41:     }
-}
-[e $U 103  ]
-"42
-[; ;application.c: 42:     else if(PBRead(1) == 1)
-[e :U 101 ]
-[e $ ! == -> ( _PBRead (1 -> -> 1 `i `uc `i -> 1 `i 104  ]
-"43
-[; ;application.c: 43:     {
-{
-"44
-[; ;application.c: 44:         delay(50);
-[e ( _delay (1 -> 50 `i ]
-"45
-[; ;application.c: 45:         if(PBRead(1) == 1)
-[e $ ! == -> ( _PBRead (1 -> -> 1 `i `uc `i -> 1 `i 105  ]
-"46
-[; ;application.c: 46:         {
-{
-"47
-[; ;application.c: 47:             digitalWrite(7,1);
-[e ( _digitalWrite (2 , -> -> 7 `i `uc -> -> 1 `i `uc ]
-"48
-[; ;application.c: 48:             digitalWrite(8,1);
-[e ( _digitalWrite (2 , -> -> 8 `i `uc -> -> 1 `i `uc ]
-"49
-[; ;application.c: 49:             digitalWrite(9,0);
-[e ( _digitalWrite (2 , -> -> 9 `i `uc -> -> 0 `i `uc ]
-"50
-[; ;application.c: 50:             digitalWrite(10,0);
-[e ( _digitalWrite (2 , -> -> 10 `i `uc -> -> 0 `i `uc ]
-"51
-[; ;application.c: 51:             digitalWrite(11,0);
-[e ( _digitalWrite (2 , -> -> 11 `i `uc -> -> 0 `i `uc ]
-"52
-[; ;application.c: 52:             digitalWrite(12,0);
-[e ( _digitalWrite (2 , -> -> 12 `i `uc -> -> 0 `i `uc ]
-"53
-[; ;application.c: 53:             digitalWrite(13,0);
-[e ( _digitalWrite (2 , -> -> 13 `i `uc -> -> 0 `i `uc ]
-"54
-[; ;application.c: 54:         }
-}
-[e :U 105 ]
-"55
-[; ;application.c: 55:     }
-}
-[e $U 106  ]
-"56
-[; ;application.c: 56:     else if(PBRead(2) == 1)
-[e :U 104 ]
-[e $ ! == -> ( _PBRead (1 -> -> 2 `i `uc `i -> 1 `i 107  ]
-"57
-[; ;application.c: 57:     {
-{
-"58
-[; ;application.c: 58:         delay(50);
-[e ( _delay (1 -> 50 `i ]
-"59
-[; ;application.c: 59:         if(PBRead(2) == 1)
-[e $ ! == -> ( _PBRead (1 -> -> 2 `i `uc `i -> 1 `i 108  ]
-"60
-[; ;application.c: 60:         {
-{
-"61
-[; ;application.c: 61:             digitalWrite(7,0);
-[e ( _digitalWrite (2 , -> -> 7 `i `uc -> -> 0 `i `uc ]
-"62
-[; ;application.c: 62:             digitalWrite(8,1);
-[e ( _digitalWrite (2 , -> -> 8 `i `uc -> -> 1 `i `uc ]
-"63
-[; ;application.c: 63:             digitalWrite(9,1);
-[e ( _digitalWrite (2 , -> -> 9 `i `uc -> -> 1 `i `uc ]
-"64
-[; ;application.c: 64:             digitalWrite(10,1);
-[e ( _digitalWrite (2 , -> -> 10 `i `uc -> -> 1 `i `uc ]
-"65
-[; ;application.c: 65:             digitalWrite(11,1);
-[e ( _digitalWrite (2 , -> -> 11 `i `uc -> -> 1 `i `uc ]
-"66
-[; ;application.c: 66:             digitalWrite(12,1);
-[e ( _digitalWrite (2 , -> -> 12 `i `uc -> -> 1 `i `uc ]
-"67
-[; ;application.c: 67:             digitalWrite(13,1);
-[e ( _digitalWrite (2 , -> -> 13 `i `uc -> -> 1 `i `uc ]
-"68
-[; ;application.c: 68:         }
-}
-[e :U 108 ]
-"69
-[; ;application.c: 69:     }
-}
-[e :U 107 ]
-[e :U 106 ]
-[e :U 103 ]
-"70
-[; ;application.c: 70: }
-[e :UE 100 ]
+"12
+[; ;application.c: 12: }
+[e :UE 96 ]
 }
