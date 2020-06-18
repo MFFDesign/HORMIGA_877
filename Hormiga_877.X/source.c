@@ -432,38 +432,81 @@ double rescale(double x, double in_min, double in_max, double out_min, double ou
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-char SerialBegin(const long int BaudRate)
+char SerialBegin(const long int baudrate)
 {
-	/*
-		BaudRate = _XTAL_FREQ / (64 * (SPBRG + 1))
-	*/
-	unsigned  int x;
-	BRGH = 0;
-	x = (_XTAL_FREQ / (64 * BaudRate)) - 1;
-	if(x > 255)
-	{
-		BRGH = 1;
-		x = (_XTAL_FREQ / (16 * BaudRate)) - 1;
-		SPBRG = x;
-		SYNC = 0;
-		SPEN = 1;                                     //Enables Serial Port
-		TRISC7 = 1;                                   //As Prescribed in Datasheet
-		TRISC6 = 1;                                   //As Prescribed in Datasheet
-		CREN = 1;                                     //Enables Continuous Reception
-		TXEN = 1;
-		return 0;
-	}
-	else
-	{
-		SPBRG = x;
-		SYNC = 0;
-		SPEN = 1;                                     //Enables Serial Port
-		TRISC7 = 1;                                   //As Prescribed in Datasheet
-		TRISC6 = 1;                                   //As Prescribed in Datasheet
-		CREN = 1;                                     //Enables Continuous Reception
-		TXEN = 1;
-		return 1;
-	}
+    unsigned long int x;
+     x = (_XTAL_FREQ - baudrate*64)/(baudrate*64);   //SPBRG for Low Baud Rate
+  if(x>255)                                       //If High Baud Rage Required
+  {
+    x = (_XTAL_FREQ - baudrate*16)/(baudrate*16); //SPBRG for High Baud Rate
+    BRGH = 1;                                     //Setting High Baud Rate
+  }
+  if(x<256)
+  {
+    SPBRG = x;                                    //Writing SPBRG Register
+    SYNC = 0;                                     //Setting Asynchronous Mode, ie UART
+    SPEN = 1;                                     //Enables Serial Port
+    TRISC7 = 1;                                   //As Prescribed in Datasheet
+    TRISC6 = 1;                                   //As Prescribed in Datasheet
+    CREN = 1;                                     //Enables Continuous Reception
+    TXEN = 1;                                     //Enables Transmission
+    return 1;                                     //Returns 1 to indicate Successful Completion
+  }
+  return 0;       
+//    SYNC = 0;
+//    SPEN = 1;
+//    TRISC6 = 1;
+//    TRISC7 = 1;
+//    CREN = 1;
+//    TXEN = 1;
+//    if(baudRate == 300)
+//    {
+//        
+//    }
+//    else if(baudRate == 1200)
+//    {
+//        BRGH = 1;
+//        SPBRG = 0xC0;
+//    }
+//    else if(baudRate == 2400)
+//    {
+//        BRGH = 1;
+//        SPBRG = 0x60;
+//    }
+//    else if( baudRate == 4800)
+//    {
+//        BRGH = 1;
+//        SPBRG = 0x30;
+//    }
+//    else if(baudRate == 9600)
+//    {
+//        SPBRG = 0x98;
+//    }
+//    else if(baudRate == 19200)
+//    {
+//        SPBRG = 0x4C;
+//    }
+//    else if(baudRate == 38400)
+//    {
+//        SPBRG = 0x26;
+//    }
+//    else if(baudRate == 57600)
+//    {
+//        SPBRG = 0x13;
+//    }
+//    else if(baudRate == 74880)
+//    {
+//        SPBRG = 0x09;
+//    }
+//    else if(baudRate == 115200)
+//    {
+//        SPBRG = 0x04;
+//    }
+////    if(x > 255)
+////    {
+////        x = ((_XTAL_FREQ / baudRate)/16) - 1;
+////        BRGH = 1;
+////    }
 }
 
 char TxRegisterFull(void)

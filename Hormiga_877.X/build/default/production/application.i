@@ -1777,26 +1777,15 @@ void delayMicroseconds(const int us);
 # 1 "application.c" 2
 
 
-const int LED = 13;
-char state = 0;
-char data[4];
+
 void setup()
 {
-    state = SerialBegin(9600);
-    pinMode(LED,0);
-    digitalWrite(LED,state);
-    for(char i=0;i<256;i++)
-    {
-        SerialPrint(";");
-        SerialPrintLn(i);
-
-    }
+    pinMode(13,0);
 }
 
 
 void loop()
 {
-    SerialPrintLn("HI");
     digitalWrite(13,1);
     delay(500);
     digitalWrite(13,0);

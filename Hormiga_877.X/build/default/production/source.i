@@ -2209,38 +2209,28 @@ double rescale(double x, double in_min, double in_max, double out_min, double ou
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-char SerialBegin(const long int BaudRate)
+char SerialBegin(const long int baudrate)
 {
-
-
-
- unsigned int x;
- BRGH = 0;
- x = (20000000 / (64 * BaudRate)) - 1;
- if(x > 255)
- {
-  BRGH = 1;
-  x = (20000000 / (16 * BaudRate)) - 1;
-  SPBRG = x;
-  SYNC = 0;
-  SPEN = 1;
-  TRISC7 = 1;
-  TRISC6 = 1;
-  CREN = 1;
-  TXEN = 1;
+    unsigned long int x;
+     x = (20000000 - baudrate*64)/(baudrate*64);
+  if(x>255)
+  {
+    x = (20000000 - baudrate*16)/(baudrate*16);
+    BRGH = 1;
+  }
+  if(x<256)
+  {
+    SPBRG = x;
+    SYNC = 0;
+    SPEN = 1;
+    TRISC7 = 1;
+    TRISC6 = 1;
+    CREN = 1;
+    TXEN = 1;
+    return 1;
+  }
   return 0;
- }
- else
- {
-  SPBRG = x;
-  SYNC = 0;
-  SPEN = 1;
-  TRISC7 = 1;
-  TRISC6 = 1;
-  CREN = 1;
-  TXEN = 1;
-  return 1;
- }
+# 510 "source.c"
 }
 
 char TxRegisterFull(void)

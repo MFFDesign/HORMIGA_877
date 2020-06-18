@@ -1,19 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"45 ./system.h
-[; ;./system.h: 45: char SerialBegin(const long int baudRate);
-[v _SerialBegin `(uc ~T0 @X0 0 ef1`Cl ]
-"36
+"36 ./system.h
 [; ;./system.h: 36: void pinMode(char pin, char mode);
 [v _pinMode `(v ~T0 @X0 0 ef2`uc`uc ]
 "37
 [; ;./system.h: 37: void digitalWrite(char pin, char value);
 [v _digitalWrite `(v ~T0 @X0 0 ef2`uc`uc ]
-"50
-[; ;./system.h: 50: void SerialPrint(char *dataText);
-[v _SerialPrint `(v ~T0 @X0 0 ef1`*uc ]
-"51
-[; ;./system.h: 51: void SerialPrintLn(char *dataText);
-[v _SerialPrintLn `(v ~T0 @X0 0 ef1`*uc ]
 "68
 [; ;./system.h: 68: void delay(const int milis);
 [v _delay `(v ~T0 @X0 0 ef1`Ci ]
@@ -213,92 +204,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x WRT = OFF ]
 "20
 [p x CP = OFF ]
-"3 application.c
-[; ;application.c: 3: const int LED = 13;
-[v _LED `Ci ~T0 @X0 1 e ]
-[i _LED
--> 13 `i
-]
-"4
-[; ;application.c: 4: char state = 0;
-[v _state `uc ~T0 @X0 1 e ]
-[i _state
--> -> 0 `i `uc
-]
-"5
-[; ;application.c: 5: char data[4];
-[v _data `uc ~T0 @X0 -> 4 `i e ]
-"6
-[; ;application.c: 6: void setup()
+"4 application.c
+[; ;application.c: 4: void setup()
 [v _setup `(v ~T0 @X0 1 ef ]
-"7
-[; ;application.c: 7: {
+"5
+[; ;application.c: 5: {
 {
 [e :U _setup ]
 [f ]
-"8
-[; ;application.c: 8:     state = SerialBegin(9600);
-[e = _state ( _SerialBegin (1 -> -> 9600 `i `l ]
-"9
-[; ;application.c: 9:     pinMode(LED,0);
-[e ( _pinMode (2 , -> _LED `uc -> -> 0 `i `uc ]
-"10
-[; ;application.c: 10:     digitalWrite(LED,state);
-[e ( _digitalWrite (2 , -> _LED `uc _state ]
-"11
-[; ;application.c: 11:     for(char i=0;i<256;i++)
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 256 `i 96  ]
-[e $U 97  ]
-[e :U 96 ]
-"12
-[; ;application.c: 12:     {
-{
-"13
-[; ;application.c: 13:         SerialPrint(";");
-[e ( _SerialPrint (1 :s 1C ]
-"14
-[; ;application.c: 14:         SerialPrintLn(i);
-[e ( _SerialPrintLn (1 -> _i `*uc ]
-"16
-[; ;application.c: 16:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 256 `i 96  ]
-[e :U 97 ]
-}
-"17
-[; ;application.c: 17: }
+"6
+[; ;application.c: 6:     pinMode(13,0);
+[e ( _pinMode (2 , -> -> 13 `i `uc -> -> 0 `i `uc ]
+"7
+[; ;application.c: 7: }
 [e :UE 95 ]
 }
-"20
-[; ;application.c: 20: void loop()
+"10
+[; ;application.c: 10: void loop()
 [v _loop `(v ~T0 @X0 1 ef ]
-"21
-[; ;application.c: 21: {
+"11
+[; ;application.c: 11: {
 {
 [e :U _loop ]
 [f ]
-"22
-[; ;application.c: 22:     SerialPrintLn("HI");
-[e ( _SerialPrintLn (1 :s 2C ]
-"23
-[; ;application.c: 23:     digitalWrite(13,1);
+"12
+[; ;application.c: 12:     digitalWrite(13,1);
 [e ( _digitalWrite (2 , -> -> 13 `i `uc -> -> 1 `i `uc ]
-"24
-[; ;application.c: 24:     delay(500);
+"13
+[; ;application.c: 13:     delay(500);
 [e ( _delay (1 -> 500 `i ]
-"25
-[; ;application.c: 25:     digitalWrite(13,0);
+"14
+[; ;application.c: 14:     digitalWrite(13,0);
 [e ( _digitalWrite (2 , -> -> 13 `i `uc -> -> 0 `i `uc ]
-"26
-[; ;application.c: 26:     delay(500);
+"15
+[; ;application.c: 15:     delay(500);
 [e ( _delay (1 -> 500 `i ]
-"27
-[; ;application.c: 27: }
-[e :UE 99 ]
+"16
+[; ;application.c: 16: }
+[e :UE 96 ]
 }
-[a 2C 72 73 0 ]
-[a 1C 59 0 ]
