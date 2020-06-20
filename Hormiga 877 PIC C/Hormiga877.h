@@ -26,6 +26,7 @@ void pinMode(unsigned int pin,unsigned int direction);
 void digitalWrite(unsigned int pin, unsigned int value);
 void pinMode(unsigned int pin,unsigned int direction);
 unsigned int digitalRead(unsigned int pin);
+unsigned int PBRead(unsigned int button, unsigned int invert);
 int analogWrite(unsigned int channel, unsigned int value);
 unsigned int analogRead(unsigned int channel);
 int main(void)
@@ -119,6 +120,29 @@ unsigned int digitalRead(unsigned int pin)
       break;
    }
 }
+
+unsigned int PBRead(unsigned int button, unsigned int invert = 0) // PBRead(<Numero de Boton>, <OPCIONAL 1 si es necesario invertir la señal>)
+{
+   int state;
+   switch(button)
+   {
+      case 0:
+         state = input_state(PIN_E0); 
+      break;
+      case 1:
+         state = input_state(PIN_E1);
+      break;
+      case 2:
+         state = input_state(PIN_E2);
+      break;
+   }
+   if(invert){
+      return !state;
+   } else{
+      return state;
+   }
+}
+
 void pinMode(unsigned int pin,unsigned int direction)
 {
    switch(pin)
