@@ -1870,10 +1870,8 @@ typedef uint16_t uintptr_t;
 #pragma config CP = OFF
 # 31 "./system.h"
 void Initialization(void);
-void CCP1Configuration(void);
-void PWM2Stop(void);
-void PWM1Stop(void);
-void CCP2Configuration(void);
+void PWMConfiguration(void);
+void PWMStop(void);
 char PBRead(char pin);
 void pinMode(char pin, char mode);
 void digitalWrite(char pin, char value);
@@ -1897,15 +1895,7 @@ void SerialReadText(char *Output, unsigned int lenght);
 
 
 double rescale(double x, double in_min, double in_max, double out_min, double out_max);
-char residuo(unsigned int numerator, unsigned int denominator);
-char cocienteEntero(unsigned int numerator, unsigned int denominator);
 
-
-void I2CMasterStart(void);
-void I2CMasterRepeatedStart(void);
-void I2CMasterStop(void);
-void I2CMasterWrite(unsigned d);
-unsigned short I2CMasterRead(unsigned short a);
 
 void delay(const int milis);
 void delayMicroseconds(const int us);
@@ -1914,11 +1904,17 @@ void delayMicroseconds(const int us);
 
 void setup()
 {
-
+ pinMode(6,0);
+    pinMode(5,0);
 }
 
 
 void loop()
 {
-
+    analogWrite(6,200);
+    analogWrite(5,200);
+    delay(100);
+    analogWrite(6,500);
+    analogWrite(5,500);
+    delay(100);
 }

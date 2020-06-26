@@ -1870,10 +1870,8 @@ typedef uint16_t uintptr_t;
 #pragma config CP = OFF
 # 31 "./system.h"
 void Initialization(void);
-void CCP1Configuration(void);
-void PWM2Stop(void);
-void PWM1Stop(void);
-void CCP2Configuration(void);
+void PWMConfiguration(void);
+void PWMStop(void);
 char PBRead(char pin);
 void pinMode(char pin, char mode);
 void digitalWrite(char pin, char value);
@@ -1897,15 +1895,7 @@ void SerialReadText(char *Output, unsigned int lenght);
 
 
 double rescale(double x, double in_min, double in_max, double out_min, double out_max);
-char residuo(unsigned int numerator, unsigned int denominator);
-char cocienteEntero(unsigned int numerator, unsigned int denominator);
 
-
-void I2CMasterStart(void);
-void I2CMasterRepeatedStart(void);
-void I2CMasterStop(void);
-void I2CMasterWrite(unsigned d);
-unsigned short I2CMasterRead(unsigned short a);
 
 void delay(const int milis);
 void delayMicroseconds(const int us);
@@ -1940,38 +1930,36 @@ void Initialization(void)
     __asm("CLRF PORTB");
     __asm("MOVLW 0x00");
     __asm("MOVWF TRISB");
+    __asm("CLRF PORTB");
 
     __asm("CLRF PORTC");
     __asm("MOVLW 0x00");
     __asm("MOVWF TRISC");
-    CCP1Configuration();
-    CCP2Configuration();
+    __asm("CLRF PORTC");
+    PWMConfiguration();
 
     __asm("CLRF PORTD");
     __asm("MOVLW 0x00");
     __asm("MOVF TRISD");
+    __asm("CLRF PORTD");
     PORTE = 0x00;
     TRISE = 0x07;
 }
-void CCP1Configuration(void)
+
+void PWMConfiguration(void)
 {
     PR2 = 0xFF;
     T2CON = 0x05;
-    CCP1CON = 0x4F;
+    CCP1CON = 0x0C;
+    CCP2CON = 0x0C;
 }
 
-void PWM2Stop(void)
+void PWMStop(void)
 {
     CCP2CON = 0x00;
-}
-void CCP2Configuration(void)
-{
-    CCP2CON = 0x4F;
-}
-void PWM1Stop(void)
-{
     CCP1CON = 0x00;
 }
+
 void pinMode(char pin, char mode)
 {
     switch(pin)
@@ -2040,7 +2028,7 @@ void pinMode(char pin, char mode)
             break;
         case 20:
    TRISDbits.TRISD4 = mode;
-# 140 "source.c"
+# 138 "source.c"
    break;
         case 21:
             TRISDbits.TRISD5 = mode;
@@ -2054,7 +2042,7 @@ void pinMode(char pin, char mode)
         case 24:
             TRISAbits.TRISA4 = mode;
             break;
-# 167 "source.c"
+# 165 "source.c"
     }
 }
 void digitalWrite(char pin, char value)
@@ -2138,7 +2126,7 @@ void digitalWrite(char pin, char value)
         case 24:
             PORTAbits.RA4 = value;
             break;
-# 258 "source.c"
+# 256 "source.c"
     }
 }
 char digitalRead(char pin)
@@ -2220,7 +2208,7 @@ char digitalRead(char pin)
         case 24:
             return PORTAbits.RA4;
             break;
-# 347 "source.c"
+# 345 "source.c"
     }
 }
 unsigned int analogRead(char channel)
@@ -2286,17 +2274,14 @@ unsigned int analogRead(char channel)
 }
 uint8_t analogWrite(char pin, unsigned int value)
 {
-    char MSB = 0;
     switch(pin)
     {
         case 6:
-
             CCPR2L = value >> 2;
             CCP2X = value & 2;
             CCP2Y = value & 1;
             break;
         case 5:
-            TRISCbits.TRISC2 = 0;
             CCPR1L = value >> 2;
             CCP1X = value & 2;
             CCP1Y = value & 1;
@@ -2433,71 +2418,6 @@ void SerialReadText(char *Output, unsigned int lenght)
     {
         Output[i] = SerialRead();
     }
-}
-
-void I2CBegin(char Operation, const unsigned long param)
-{
-    switch(Operation)
-    {
-        case 0x01:
-            SSPCON = 0b00101000;
-            SSPCON2 = 0;
-            SSPADD = (20000000/(4*param))-1;
-            SSPSTAT = 0;
-            TRISC3 = 1;
-            TRISC4 = 1;
-            break;
-        case 0x02:
-            SSPSTAT = 0x80;
-            SSPADD = param;
-            SSPCON = 0x36;
-            SSPCON2 = 0x01;
-            TRISC3 = 1;
-            TRISC4 = 1;
-            GIE = 1;
-            PEIE = 1;
-            SSPIF = 0;
-            SSPIE = 1;
-            break;
-    }
-}
-void I2CMasterWaiting()
-{
-  while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
-}
-
-void I2CMasterStart()
-{
-  I2CMasterWaiting();
-  SEN = 1;
-}
-void I2CMasterRepeatedStart()
-{
-  I2CMasterWaiting();
-  RSEN = 1;
-}
-void I2CMasterStop()
-{
-  I2CMasterWaiting();
-  PEN = 1;
-}
-void I2CMasterWrite(unsigned d)
-{
-  I2CMasterWaiting();
-  SSPBUF = d;
-}
-
-unsigned short I2CMasterRead(unsigned short a)
-{
-  unsigned short temp;
-  I2CMasterWaiting();
-  RCEN = 1;
-  I2CMasterWaiting();
-  temp = SSPBUF;
-  I2CMasterWaiting();
-  ACKDT = (a)?0:1;
-  ACKEN = 1;
-  return temp;
 }
 
 void delay(const int milis)

@@ -1,4 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"35 ./system.h
+[; ;./system.h: 35: void pinMode(char pin, char mode);
+[v _pinMode `(v ~T0 @X0 0 ef2`uc`uc ]
+"39
+[; ;./system.h: 39: uint8_t analogWrite(char pin, unsigned int value);
+[v _analogWrite `(uc ~T0 @X0 0 ef2`uc`ui ]
+"59
+[; ;./system.h: 59: void delay(const int milis);
+[v _delay `(v ~T0 @X0 0 ef1`Ci ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -203,19 +212,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _setup ]
 [f ]
+"5
+[; ;application.c: 5:  pinMode(6,0);
+[e ( _pinMode (2 , -> -> 6 `i `uc -> -> 0 `i `uc ]
 "6
-[; ;application.c: 6: }
+[; ;application.c: 6:     pinMode(5,0);
+[e ( _pinMode (2 , -> -> 5 `i `uc -> -> 0 `i `uc ]
+"7
+[; ;application.c: 7: }
 [e :UE 95 ]
 }
-"9
-[; ;application.c: 9: void loop()
-[v _loop `(v ~T0 @X0 1 ef ]
 "10
-[; ;application.c: 10: {
+[; ;application.c: 10: void loop()
+[v _loop `(v ~T0 @X0 1 ef ]
+"11
+[; ;application.c: 11: {
 {
 [e :U _loop ]
 [f ]
 "12
-[; ;application.c: 12: }
+[; ;application.c: 12:     analogWrite(6,200);
+[e ( _analogWrite (2 , -> -> 6 `i `uc -> -> 200 `i `ui ]
+"13
+[; ;application.c: 13:     analogWrite(5,200);
+[e ( _analogWrite (2 , -> -> 5 `i `uc -> -> 200 `i `ui ]
+"14
+[; ;application.c: 14:     delay(100);
+[e ( _delay (1 -> 100 `i ]
+"15
+[; ;application.c: 15:     analogWrite(6,500);
+[e ( _analogWrite (2 , -> -> 6 `i `uc -> -> 500 `i `ui ]
+"16
+[; ;application.c: 16:     analogWrite(5,500);
+[e ( _analogWrite (2 , -> -> 5 `i `uc -> -> 500 `i `ui ]
+"17
+[; ;application.c: 17:     delay(100);
+[e ( _delay (1 -> 100 `i ]
+"18
+[; ;application.c: 18: }
 [e :UE 96 ]
 }

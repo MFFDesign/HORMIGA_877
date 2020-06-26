@@ -28,38 +28,36 @@ void Initialization(void)
     asm("CLRF PORTB");
     asm("MOVLW 0x00");
     asm("MOVWF TRISB");
+    asm("CLRF PORTB");
     //PORTC Configuration
     asm("CLRF PORTC");
     asm("MOVLW 0x00");
     asm("MOVWF TRISC");
-    CCP1Configuration();
-    CCP2Configuration();
+    asm("CLRF PORTC");
+    PWMConfiguration();
     //PORTD Configuration
     asm("CLRF PORTD");
     asm("MOVLW 0x00");
     asm("MOVF TRISD");
+    asm("CLRF PORTD");
     PORTE = 0x00;
     TRISE = 0x07;
 }
-void CCP1Configuration(void)
+
+void PWMConfiguration(void)
 {
     PR2 = 0xFF;
     T2CON = 0x05; //Tmier 2 prescaler equals 
-    CCP1CON = 0x4F;
+    CCP1CON = 0x0C;//0x4F; //0100 1111 //New Value 0000 1100
+    CCP2CON = 0x0C;//0x4F;
 }
 
-void PWM2Stop(void)
+void PWMStop(void)
 {
     CCP2CON = 0x00;
-}
-void CCP2Configuration(void)
-{
-    CCP2CON = 0x4F;
-}
-void PWM1Stop(void)
-{
     CCP1CON = 0x00;
 }
+
 void pinMode(char pin, char mode)
 {
     switch(pin)
@@ -409,17 +407,14 @@ unsigned int analogRead(char channel)
 }
 uint8_t analogWrite(char pin, unsigned int value)
 {
-    char MSB = 0;
     switch(pin)
     {
         case 6://CCP2
-            //TRISCbits.TRISC1 = 0;
             CCPR2L = value >> 2;
             CCP2X = value & 2;
             CCP2Y = value & 1;  
             break;
         case 5://CCP1
-            TRISCbits.TRISC2 = 0;
             CCPR1L = value >> 2;
             CCP1X = value & 2;
             CCP1Y = value & 1;
@@ -556,71 +551,6 @@ void SerialReadText(char *Output, unsigned int lenght)
     {
         Output[i] = SerialRead();
     }
-}
-
-void I2CBegin(char Operation, const unsigned long param)
-{
-    switch(Operation)
-    {
-        case MASTER:
-            SSPCON = 0b00101000;            //SSP Module as Master
-            SSPCON2 = 0;
-            SSPADD = (_XTAL_FREQ/(4*param))-1; //Setting Clock Speed
-            SSPSTAT = 0;
-            TRISC3 = 1;                   //Setting as input as given in datasheet
-            TRISC4 = 1;    
-            break;
-        case SLAVE:
-            SSPSTAT = 0x80;    
-            SSPADD = param; //Setting address
-            SSPCON = 0x36;    //As a slave device
-            SSPCON2 = 0x01;
-            TRISC3 = 1;       //Setting as input as given in datasheet
-            TRISC4 = 1;       //Setting as input as given in datasheet
-            GIE = 1;          //Global interrupt enable
-            PEIE = 1;         //Peripheral interrupt enable
-            SSPIF = 0;        //Clear interrupt flag
-            SSPIE = 1;        //Synchronous serial port interrupt enable
-            break;
-    }
-}
-void I2CMasterWaiting()
-{
-  while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F)); //Transmit is in progress
-}
-
-void I2CMasterStart()
-{
-  I2CMasterWaiting();    
-  SEN = 1;             //Initiate start condition
-}
-void I2CMasterRepeatedStart()
-{
-  I2CMasterWaiting();
-  RSEN = 1;           //Initiate repeated start condition
-}
-void I2CMasterStop()
-{
-  I2CMasterWaiting();
-  PEN = 1;           //Initiate stop condition
-}
-void I2CMasterWrite(unsigned d)
-{
-  I2CMasterWaiting();
-  SSPBUF = d;         //Write data to SSPBUF
-}
-
-unsigned short I2CMasterRead(unsigned short a)
-{
-  unsigned short temp;
-  I2CMasterWaiting();
-  RCEN = 1;
-  I2CMasterWaiting();
-  temp = SSPBUF;      //Read data from SSPBUF
-  I2CMasterWaiting();
-  ACKDT = (a)?0:1;    //Acknowledge bit
-  ACKEN = 1;          //Acknowledge sequence
-  return temp;
 }
 
 void delay(const int milis)

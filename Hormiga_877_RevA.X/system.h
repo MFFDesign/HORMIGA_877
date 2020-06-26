@@ -29,10 +29,8 @@
 
 // System Configuration
 void Initialization(void);
-void CCP1Configuration(void);
-void PWM2Stop(void);
-void PWM1Stop(void);
-void CCP2Configuration(void);
+void PWMConfiguration(void);
+void PWMStop(void);
 char PBRead(char pin);
 void pinMode(char pin, char mode);
 void digitalWrite(char pin, char value);
@@ -56,15 +54,7 @@ void SerialReadText(char *Output, unsigned int lenght);
 //PWM
 //Math 
 double rescale(double x, double in_min, double in_max, double out_min, double out_max);
-char residuo(unsigned int numerator, unsigned int denominator);
-char cocienteEntero(unsigned int numerator, unsigned int denominator);
 
-//I2C Module
-void I2CMasterStart(void);
-void I2CMasterRepeatedStart(void);
-void I2CMasterStop(void);
-void I2CMasterWrite(unsigned d);
-unsigned short I2CMasterRead(unsigned short a);
 //time
 void delay(const int milis);
 void delayMicroseconds(const int us);
