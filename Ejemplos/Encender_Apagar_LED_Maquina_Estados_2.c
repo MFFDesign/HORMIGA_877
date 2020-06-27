@@ -3,7 +3,7 @@
 //Paso 1. Defeinir y declarar los estados posibles de la maquina.
 enum LED{Encendido, Apagado};
 //Paso 2. Declara la Vairable Monitor de la Maquina de Estados.
-LED Estado;
+enum LED Estado;
 
 const int Foco = 13;
 const int Boton = 2;
