@@ -1,0 +1,580 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"11 ./I2CWire.h
+[; ;./I2CWire.h: 11: void I2CStartTransaction(void);
+[v _I2CStartTransaction `(v ~T0 @X0 0 ef ]
+"15
+[; ;./I2CWire.h: 15: void I2CRepeatTransaction(void);
+[v _I2CRepeatTransaction `(v ~T0 @X0 0 ef ]
+"13
+[; ;./I2CWire.h: 13: char I2CWriteByte(char databyte);
+[v _I2CWriteByte `(uc ~T0 @X0 0 ef1`uc ]
+"16
+[; ;./I2CWire.h: 16: void I2CStopTransaction(void);
+[v _I2CStopTransaction `(v ~T0 @X0 0 ef ]
+"14
+[; ;./I2CWire.h: 14: char I2CReadByte(void);
+[v _I2CReadByte `(uc ~T0 @X0 0 ef ]
+"19
+[; ;./I2CWire.h: 19: void I2CNACK(void);
+[v _I2CNACK `(v ~T0 @X0 0 ef ]
+"18
+[; ;./I2CWire.h: 18: void I2CACK(void);
+[v _I2CACK `(v ~T0 @X0 0 ef ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"14 ./Hormiga877.h
+[; ;./Hormiga877.h: 14: void digitalWrite(char pin, char value);
+[p x FOSC = HS ]
+"15
+[; ;./Hormiga877.h: 15: char digitalRead(char pin);
+[p x WDTE = OFF ]
+"16
+[; ;./Hormiga877.h: 16: unsigned int analogRead(char channel);
+[p x PWRTE = OFF ]
+"17
+[; ;./Hormiga877.h: 17: uint8_t analogWrite(char pin, unsigned int value);
+[p x BOREN = OFF ]
+"18
+[; ;./Hormiga877.h: 18: void setup(void);
+[p x LVP = ON ]
+"19
+[; ;./Hormiga877.h: 19: void loop(void);
+[p x CPD = OFF ]
+"20
+[; ;./Hormiga877.h: 20: 
+[p x WRT = OFF ]
+"21
+[; ;./Hormiga877.h: 21: 
+[p x CP = OFF ]
+"4 I2CEEPROM.c
+[; ;I2CEEPROM.c: 4: char bufferMemory = 0;
+[v _bufferMemory `uc ~T0 @X0 1 e ]
+[i _bufferMemory
+-> -> 0 `i `uc
+]
+"6
+[; ;I2CEEPROM.c: 6: void I2CEEPROMWrite(char MemSlct, unsigned int address, char data)
+[v _I2CEEPROMWrite `(v ~T0 @X0 1 ef3`uc`ui`uc ]
+"7
+[; ;I2CEEPROM.c: 7: {
+{
+[e :U _I2CEEPROMWrite ]
+"6
+[; ;I2CEEPROM.c: 6: void I2CEEPROMWrite(char MemSlct, unsigned int address, char data)
+[v _MemSlct `uc ~T0 @X0 1 r1 ]
+[v _address `ui ~T0 @X0 1 r2 ]
+[v _data `uc ~T0 @X0 1 r3 ]
+"7
+[; ;I2CEEPROM.c: 7: {
+[f ]
+"8
+[; ;I2CEEPROM.c: 8:     I2CStartTransaction();
+[e ( _I2CStartTransaction ..  ]
+"11
+[; ;I2CEEPROM.c: 11:     bufferMemory = MemSlct;
+[e = _bufferMemory _MemSlct ]
+"12
+[; ;I2CEEPROM.c: 12:     bufferMemory = bufferMemory << 1;
+[e = _bufferMemory -> << -> _bufferMemory `i -> 1 `i `uc ]
+"13
+[; ;I2CEEPROM.c: 13:     bufferMemory &= 0xFE;
+[e =& _bufferMemory -> -> 254 `i `uc ]
+"14
+[; ;I2CEEPROM.c: 14:     while(I2CWriteByte(bufferMemory))
+[e $U 96  ]
+[e :U 97 ]
+"15
+[; ;I2CEEPROM.c: 15:     {
+{
+"16
+[; ;I2CEEPROM.c: 16:         I2CRepeatTransaction();
+[e ( _I2CRepeatTransaction ..  ]
+"17
+[; ;I2CEEPROM.c: 17:     }
+}
+[e :U 96 ]
+"14
+[; ;I2CEEPROM.c: 14:     while(I2CWriteByte(bufferMemory))
+[e $ != -> ( _I2CWriteByte (1 _bufferMemory `i -> 0 `i 97  ]
+[e :U 98 ]
+"18
+[; ;I2CEEPROM.c: 18:     bufferMemory = address >> 8;
+[e = _bufferMemory -> >> _address -> 8 `i `uc ]
+"19
+[; ;I2CEEPROM.c: 19:     I2CWriteByte(bufferMemory);
+[e ( _I2CWriteByte (1 _bufferMemory ]
+"20
+[; ;I2CEEPROM.c: 20:     bufferMemory &= 0xFF;
+[e =& _bufferMemory -> -> 255 `i `uc ]
+"21
+[; ;I2CEEPROM.c: 21:     I2CWriteByte(bufferMemory);
+[e ( _I2CWriteByte (1 _bufferMemory ]
+"22
+[; ;I2CEEPROM.c: 22:     I2CWriteByte(data);
+[e ( _I2CWriteByte (1 _data ]
+"23
+[; ;I2CEEPROM.c: 23:     I2CStopTransaction();
+[e ( _I2CStopTransaction ..  ]
+"24
+[; ;I2CEEPROM.c: 24: }
+[e :UE 95 ]
+}
+"26
+[; ;I2CEEPROM.c: 26: void I2CEEPROMWritePage(char MemSlct, unsigned int address, char *data, unsigned int lenght )
+[v _I2CEEPROMWritePage `(v ~T0 @X0 1 ef4`uc`ui`*uc`ui ]
+"27
+[; ;I2CEEPROM.c: 27: {
+{
+[e :U _I2CEEPROMWritePage ]
+"26
+[; ;I2CEEPROM.c: 26: void I2CEEPROMWritePage(char MemSlct, unsigned int address, char *data, unsigned int lenght )
+[v _MemSlct `uc ~T0 @X0 1 r1 ]
+[v _address `ui ~T0 @X0 1 r2 ]
+[v _data `*uc ~T0 @X0 1 r3 ]
+[v _lenght `ui ~T0 @X0 1 r4 ]
+"27
+[; ;I2CEEPROM.c: 27: {
+[f ]
+"28
+[; ;I2CEEPROM.c: 28:     I2CStartTransaction();
+[e ( _I2CStartTransaction ..  ]
+"29
+[; ;I2CEEPROM.c: 29:     bufferMemory = MemSlct;
+[e = _bufferMemory _MemSlct ]
+"30
+[; ;I2CEEPROM.c: 30:     bufferMemory = bufferMemory << 1;
+[e = _bufferMemory -> << -> _bufferMemory `i -> 1 `i `uc ]
+"31
+[; ;I2CEEPROM.c: 31:     bufferMemory &= 0xFE;
+[e =& _bufferMemory -> -> 254 `i `uc ]
+"32
+[; ;I2CEEPROM.c: 32:     while(I2CWriteByte(bufferMemory))
+[e $U 100  ]
+[e :U 101 ]
+"33
+[; ;I2CEEPROM.c: 33:     {
+{
+"34
+[; ;I2CEEPROM.c: 34:         I2CRepeatTransaction();
+[e ( _I2CRepeatTransaction ..  ]
+"35
+[; ;I2CEEPROM.c: 35:     }
+}
+[e :U 100 ]
+"32
+[; ;I2CEEPROM.c: 32:     while(I2CWriteByte(bufferMemory))
+[e $ != -> ( _I2CWriteByte (1 _bufferMemory `i -> 0 `i 101  ]
+[e :U 102 ]
+"36
+[; ;I2CEEPROM.c: 36:     bufferMemory = address >> 8;
+[e = _bufferMemory -> >> _address -> 8 `i `uc ]
+"37
+[; ;I2CEEPROM.c: 37:     I2CWriteByte(bufferMemory);
+[e ( _I2CWriteByte (1 _bufferMemory ]
+"38
+[; ;I2CEEPROM.c: 38:     bufferMemory &= 0xFF;
+[e =& _bufferMemory -> -> 255 `i `uc ]
+"39
+[; ;I2CEEPROM.c: 39:     I2CWriteByte(bufferMemory);
+[e ( _I2CWriteByte (1 _bufferMemory ]
+"40
+[; ;I2CEEPROM.c: 40:     for(unsigned int i=0;i<lenght;i++)
+{
+[v _i `ui ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `ui ]
+[e $U 106  ]
+[e :U 103 ]
+"41
+[; ;I2CEEPROM.c: 41:     {
+{
+"42
+[; ;I2CEEPROM.c: 42:         I2CWriteByte(data[i]);
+[e ( _I2CWriteByte (1 *U + _data * -> _i `ux -> -> # *U _data `ui `ux ]
+"43
+[; ;I2CEEPROM.c: 43:     }
+}
+[e ++ _i -> -> 1 `i `ui ]
+[e :U 106 ]
+[e $ < _i _lenght 103  ]
+[e :U 104 ]
+}
+"44
+[; ;I2CEEPROM.c: 44:     I2CStopTransaction();
+[e ( _I2CStopTransaction ..  ]
+"45
+[; ;I2CEEPROM.c: 45: }
+[e :UE 99 ]
+}
+"47
+[; ;I2CEEPROM.c: 47: char I2CEEPROMRead(char MemSlct, unsigned int address)
+[v _I2CEEPROMRead `(uc ~T0 @X0 1 ef2`uc`ui ]
+"48
+[; ;I2CEEPROM.c: 48: {
+{
+[e :U _I2CEEPROMRead ]
+"47
+[; ;I2CEEPROM.c: 47: char I2CEEPROMRead(char MemSlct, unsigned int address)
+[v _MemSlct `uc ~T0 @X0 1 r1 ]
+[v _address `ui ~T0 @X0 1 r2 ]
+"48
+[; ;I2CEEPROM.c: 48: {
+[f ]
+"49
+[; ;I2CEEPROM.c: 49:     char data;
+[v _data `uc ~T0 @X0 1 a ]
+"50
+[; ;I2CEEPROM.c: 50:     I2CStartTransaction();
+[e ( _I2CStartTransaction ..  ]
+"51
+[; ;I2CEEPROM.c: 51:     bufferMemory = MemSlct;
+[e = _bufferMemory _MemSlct ]
+"52
+[; ;I2CEEPROM.c: 52:     bufferMemory = bufferMemory << 1;
+[e = _bufferMemory -> << -> _bufferMemory `i -> 1 `i `uc ]
+"53
+[; ;I2CEEPROM.c: 53:     bufferMemory &= 0xFE;
+[e =& _bufferMemory -> -> 254 `i `uc ]
+"54
+[; ;I2CEEPROM.c: 54:     while(I2CWriteByte(bufferMemory))
+[e $U 108  ]
+[e :U 109 ]
+"55
+[; ;I2CEEPROM.c: 55:     {
+{
+"56
+[; ;I2CEEPROM.c: 56:         I2CRepeatTransaction();
+[e ( _I2CRepeatTransaction ..  ]
+"57
+[; ;I2CEEPROM.c: 57:     }
+}
+[e :U 108 ]
+"54
+[; ;I2CEEPROM.c: 54:     while(I2CWriteByte(bufferMemory))
+[e $ != -> ( _I2CWriteByte (1 _bufferMemory `i -> 0 `i 109  ]
+[e :U 110 ]
+"58
+[; ;I2CEEPROM.c: 58:     bufferMemory = address >> 8;
+[e = _bufferMemory -> >> _address -> 8 `i `uc ]
+"59
+[; ;I2CEEPROM.c: 59:     I2CWriteByte(bufferMemory);
+[e ( _I2CWriteByte (1 _bufferMemory ]
+"60
+[; ;I2CEEPROM.c: 60:     bufferMemory &= 0xFF;
+[e =& _bufferMemory -> -> 255 `i `uc ]
+"61
+[; ;I2CEEPROM.c: 61:     I2CWriteByte(bufferMemory);
+[e ( _I2CWriteByte (1 _bufferMemory ]
+"62
+[; ;I2CEEPROM.c: 62:     bufferMemory = MemSlct;
+[e = _bufferMemory _MemSlct ]
+"63
+[; ;I2CEEPROM.c: 63:     bufferMemory = bufferMemory << 1;
+[e = _bufferMemory -> << -> _bufferMemory `i -> 1 `i `uc ]
+"64
+[; ;I2CEEPROM.c: 64:     bufferMemory |= 0x01;
+[e =| _bufferMemory -> -> 1 `i `uc ]
+"65
+[; ;I2CEEPROM.c: 65:     I2CRepeatTransaction();
+[e ( _I2CRepeatTransaction ..  ]
+"66
+[; ;I2CEEPROM.c: 66:     I2CWriteByte(bufferMemory);
+[e ( _I2CWriteByte (1 _bufferMemory ]
+"67
+[; ;I2CEEPROM.c: 67:     data = I2CReadByte();
+[e = _data ( _I2CReadByte ..  ]
+"68
+[; ;I2CEEPROM.c: 68:     I2CNACK();
+[e ( _I2CNACK ..  ]
+"69
+[; ;I2CEEPROM.c: 69:     I2CStopTransaction();
+[e ( _I2CStopTransaction ..  ]
+"70
+[; ;I2CEEPROM.c: 70:     return data;
+[e ) _data ]
+[e $UE 107  ]
+"72
+[; ;I2CEEPROM.c: 72: }
+[e :UE 107 ]
+}
+"74
+[; ;I2CEEPROM.c: 74: void I2CEEPROMReadPage(char MemSlct, unsigned int address, char *data, unsigned int lenght)
+[v _I2CEEPROMReadPage `(v ~T0 @X0 1 ef4`uc`ui`*uc`ui ]
+"75
+[; ;I2CEEPROM.c: 75: {
+{
+[e :U _I2CEEPROMReadPage ]
+"74
+[; ;I2CEEPROM.c: 74: void I2CEEPROMReadPage(char MemSlct, unsigned int address, char *data, unsigned int lenght)
+[v _MemSlct `uc ~T0 @X0 1 r1 ]
+[v _address `ui ~T0 @X0 1 r2 ]
+[v _data `*uc ~T0 @X0 1 r3 ]
+[v _lenght `ui ~T0 @X0 1 r4 ]
+"75
+[; ;I2CEEPROM.c: 75: {
+[f ]
+"76
+[; ;I2CEEPROM.c: 76:     I2CStartTransaction();
+[e ( _I2CStartTransaction ..  ]
+"77
+[; ;I2CEEPROM.c: 77:     bufferMemory = MemSlct;
+[e = _bufferMemory _MemSlct ]
+"78
+[; ;I2CEEPROM.c: 78:     bufferMemory = bufferMemory << 1;
+[e = _bufferMemory -> << -> _bufferMemory `i -> 1 `i `uc ]
+"79
+[; ;I2CEEPROM.c: 79:     bufferMemory &= 0xFE;
+[e =& _bufferMemory -> -> 254 `i `uc ]
+"80
+[; ;I2CEEPROM.c: 80:     while(I2CWriteByte(bufferMemory))
+[e $U 112  ]
+[e :U 113 ]
+"81
+[; ;I2CEEPROM.c: 81:     {
+{
+"82
+[; ;I2CEEPROM.c: 82:         I2CRepeatTransaction();
+[e ( _I2CRepeatTransaction ..  ]
+"83
+[; ;I2CEEPROM.c: 83:     }
+}
+[e :U 112 ]
+"80
+[; ;I2CEEPROM.c: 80:     while(I2CWriteByte(bufferMemory))
+[e $ != -> ( _I2CWriteByte (1 _bufferMemory `i -> 0 `i 113  ]
+[e :U 114 ]
+"84
+[; ;I2CEEPROM.c: 84:     bufferMemory = address >> 8;
+[e = _bufferMemory -> >> _address -> 8 `i `uc ]
+"85
+[; ;I2CEEPROM.c: 85:     I2CWriteByte(bufferMemory);
+[e ( _I2CWriteByte (1 _bufferMemory ]
+"86
+[; ;I2CEEPROM.c: 86:     bufferMemory &= 0xFF;
+[e =& _bufferMemory -> -> 255 `i `uc ]
+"87
+[; ;I2CEEPROM.c: 87:     I2CWriteByte(bufferMemory);
+[e ( _I2CWriteByte (1 _bufferMemory ]
+"88
+[; ;I2CEEPROM.c: 88:     I2CRepeatTransaction();
+[e ( _I2CRepeatTransaction ..  ]
+"89
+[; ;I2CEEPROM.c: 89:     bufferMemory = MemSlct;
+[e = _bufferMemory _MemSlct ]
+"90
+[; ;I2CEEPROM.c: 90:     bufferMemory = bufferMemory << 1;
+[e = _bufferMemory -> << -> _bufferMemory `i -> 1 `i `uc ]
+"91
+[; ;I2CEEPROM.c: 91:     bufferMemory |= 0x01;
+[e =| _bufferMemory -> -> 1 `i `uc ]
+"92
+[; ;I2CEEPROM.c: 92:     I2CWriteByte(bufferMemory);
+[e ( _I2CWriteByte (1 _bufferMemory ]
+"93
+[; ;I2CEEPROM.c: 93:     for(unsigned int i=0;i<lenght;i++)
+{
+[v _i `ui ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `ui ]
+[e $U 118  ]
+[e :U 115 ]
+"94
+[; ;I2CEEPROM.c: 94:     {
+{
+"95
+[; ;I2CEEPROM.c: 95:         data[i] = I2CReadByte();
+[e = *U + _data * -> _i `ux -> -> # *U _data `ui `ux ( _I2CReadByte ..  ]
+"96
+[; ;I2CEEPROM.c: 96:         I2CACK();
+[e ( _I2CACK ..  ]
+"97
+[; ;I2CEEPROM.c: 97:     }
+}
+[e ++ _i -> -> 1 `i `ui ]
+[e :U 118 ]
+[e $ < _i _lenght 115  ]
+[e :U 116 ]
+}
+"98
+[; ;I2CEEPROM.c: 98:     I2CStopTransaction();
+[e ( _I2CStopTransaction ..  ]
+"99
+[; ;I2CEEPROM.c: 99: }
+[e :UE 111 ]
+}

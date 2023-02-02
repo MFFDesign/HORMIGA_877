@@ -1,0 +1,950 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"36 ./Hormiga877.h
+[; ;./Hormiga877.h: 36: void delay(const int milis);
+[v _pinMode `(v ~T0 @X0 0 ef2`uc`uc ]
+"37
+[; ;./Hormiga877.h: 37: void delayMicroseconds(const unsigned int us);
+[v _digitalWrite `(v ~T0 @X0 0 ef2`uc`uc ]
+"59
+[v _delay `(v ~T0 @X0 0 ef1`Ci ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"14 ./Hormiga877.h
+[; ;./Hormiga877.h: 14: void digitalWrite(char pin, char value);
+[p x FOSC = HS ]
+"15
+[; ;./Hormiga877.h: 15: char digitalRead(char pin);
+[p x WDTE = OFF ]
+"16
+[; ;./Hormiga877.h: 16: unsigned int analogRead(char channel);
+[p x PWRTE = OFF ]
+"17
+[; ;./Hormiga877.h: 17: uint8_t analogWrite(char pin, unsigned int value);
+[p x BOREN = OFF ]
+"18
+[; ;./Hormiga877.h: 18: void setup(void);
+[p x LVP = ON ]
+"19
+[; ;./Hormiga877.h: 19: void loop(void);
+[p x CPD = OFF ]
+"20
+[; ;./Hormiga877.h: 20: 
+[p x WRT = OFF ]
+"21
+[; ;./Hormiga877.h: 21: 
+[p x CP = OFF ]
+"5 ShiftRegister.c
+[; ;ShiftRegister.c: 5: char M1FWD = 0x04;
+[v _M1FWD `uc ~T0 @X0 1 e ]
+[i _M1FWD
+-> -> 4 `i `uc
+]
+"6
+[; ;ShiftRegister.c: 6: char M1BWD = 0x08;
+[v _M1BWD `uc ~T0 @X0 1 e ]
+[i _M1BWD
+-> -> 8 `i `uc
+]
+"8
+[; ;ShiftRegister.c: 8: char M2FWD = 0x02;
+[v _M2FWD `uc ~T0 @X0 1 e ]
+[i _M2FWD
+-> -> 2 `i `uc
+]
+"9
+[; ;ShiftRegister.c: 9: char M2BWD = 0x01;
+[v _M2BWD `uc ~T0 @X0 1 e ]
+[i _M2BWD
+-> -> 1 `i `uc
+]
+"11
+[; ;ShiftRegister.c: 11: char M3FWD = 0x40;
+[v _M3FWD `uc ~T0 @X0 1 e ]
+[i _M3FWD
+-> -> 64 `i `uc
+]
+"12
+[; ;ShiftRegister.c: 12: char M3BWD = 0x80;
+[v _M3BWD `uc ~T0 @X0 1 e ]
+[i _M3BWD
+-> -> 128 `i `uc
+]
+"14
+[; ;ShiftRegister.c: 14: char M4FWD = 0x10;
+[v _M4FWD `uc ~T0 @X0 1 e ]
+[i _M4FWD
+-> -> 16 `i `uc
+]
+"15
+[; ;ShiftRegister.c: 15: char M4BWD = 0x20;
+[v _M4BWD `uc ~T0 @X0 1 e ]
+[i _M4BWD
+-> -> 32 `i `uc
+]
+"17
+[; ;ShiftRegister.c: 17: char dataInB = 0;
+[v _dataInB `uc ~T0 @X0 1 e ]
+[i _dataInB
+-> -> 0 `i `uc
+]
+"18
+[; ;ShiftRegister.c: 18: char clkB = 0;
+[v _clkB `uc ~T0 @X0 1 e ]
+[i _clkB
+-> -> 0 `i `uc
+]
+"19
+[; ;ShiftRegister.c: 19: char latchB = 0;
+[v _latchB `uc ~T0 @X0 1 e ]
+[i _latchB
+-> -> 0 `i `uc
+]
+"20
+[; ;ShiftRegister.c: 20: char clrPortB = 0;
+[v _clrPortB `uc ~T0 @X0 1 e ]
+[i _clrPortB
+-> -> 0 `i `uc
+]
+"21
+[; ;ShiftRegister.c: 21: char OEB = 0;
+[v _OEB `uc ~T0 @X0 1 e ]
+[i _OEB
+-> -> 0 `i `uc
+]
+"23
+[; ;ShiftRegister.c: 23: void ShiftRegisterBegin(char dataInA,char clkA, char latchA, char clrPortA, char OEA)
+[v _ShiftRegisterBegin `(v ~T0 @X0 1 ef5`uc`uc`uc`uc`uc ]
+"24
+[; ;ShiftRegister.c: 24: {
+{
+[e :U _ShiftRegisterBegin ]
+"23
+[; ;ShiftRegister.c: 23: void ShiftRegisterBegin(char dataInA,char clkA, char latchA, char clrPortA, char OEA)
+[v _dataInA `uc ~T0 @X0 1 r1 ]
+[v _clkA `uc ~T0 @X0 1 r2 ]
+[v _latchA `uc ~T0 @X0 1 r3 ]
+[v _clrPortA `uc ~T0 @X0 1 r4 ]
+[v _OEA `uc ~T0 @X0 1 r5 ]
+"24
+[; ;ShiftRegister.c: 24: {
+[f ]
+"25
+[; ;ShiftRegister.c: 25:     dataInB = dataInA;
+[e = _dataInB _dataInA ]
+"26
+[; ;ShiftRegister.c: 26:  clkB = clkA;
+[e = _clkB _clkA ]
+"27
+[; ;ShiftRegister.c: 27:  latchB = latchA;
+[e = _latchB _latchA ]
+"28
+[; ;ShiftRegister.c: 28:  clrPortB = clrPortA;
+[e = _clrPortB _clrPortA ]
+"29
+[; ;ShiftRegister.c: 29:  OEB = OEA;
+[e = _OEB _OEA ]
+"30
+[; ;ShiftRegister.c: 30:  pinMode(OEB,0);
+[e ( _pinMode (2 , _OEB -> -> 0 `i `uc ]
+"31
+[; ;ShiftRegister.c: 31:  pinMode(clrPortB,0);
+[e ( _pinMode (2 , _clrPortB -> -> 0 `i `uc ]
+"32
+[; ;ShiftRegister.c: 32:  pinMode(latchB,0);
+[e ( _pinMode (2 , _latchB -> -> 0 `i `uc ]
+"33
+[; ;ShiftRegister.c: 33:  pinMode(clkB,0);
+[e ( _pinMode (2 , _clkB -> -> 0 `i `uc ]
+"34
+[; ;ShiftRegister.c: 34:  pinMode(dataInB,0);
+[e ( _pinMode (2 , _dataInB -> -> 0 `i `uc ]
+"35
+[; ;ShiftRegister.c: 35:  digitalWrite(dataInB,0);
+[e ( _digitalWrite (2 , _dataInB -> -> 0 `i `uc ]
+"36
+[; ;ShiftRegister.c: 36:  digitalWrite(latchB,0);
+[e ( _digitalWrite (2 , _latchB -> -> 0 `i `uc ]
+"37
+[; ;ShiftRegister.c: 37:  digitalWrite(clkB,0);
+[e ( _digitalWrite (2 , _clkB -> -> 0 `i `uc ]
+"38
+[; ;ShiftRegister.c: 38:  digitalWrite(clrPortB,1);
+[e ( _digitalWrite (2 , _clrPortB -> -> 1 `i `uc ]
+"39
+[; ;ShiftRegister.c: 39:  digitalWrite(OEB,0);
+[e ( _digitalWrite (2 , _OEB -> -> 0 `i `uc ]
+"40
+[; ;ShiftRegister.c: 40: }
+[e :UE 95 ]
+}
+"42
+[; ;ShiftRegister.c: 42: void WriteRegister(char data,char bits,char byteTransfer)
+[v _WriteRegister `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+"43
+[; ;ShiftRegister.c: 43: {
+{
+[e :U _WriteRegister ]
+"42
+[; ;ShiftRegister.c: 42: void WriteRegister(char data,char bits,char byteTransfer)
+[v _data `uc ~T0 @X0 1 r1 ]
+[v _bits `uc ~T0 @X0 1 r2 ]
+[v _byteTransfer `uc ~T0 @X0 1 r3 ]
+"43
+[; ;ShiftRegister.c: 43: {
+[f ]
+"44
+[; ;ShiftRegister.c: 44:  char buffer = 0;
+[v _buffer `uc ~T0 @X0 1 a ]
+[e = _buffer -> -> 0 `i `uc ]
+"45
+[; ;ShiftRegister.c: 45:     switch(byteTransfer)
+[e $U 98  ]
+"46
+[; ;ShiftRegister.c: 46:     {
+{
+"47
+[; ;ShiftRegister.c: 47:         case 0x07:
+[e :U 99 ]
+"48
+[; ;ShiftRegister.c: 48:             for(int i=0;i<bits;i++)
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 103  ]
+[e :U 100 ]
+"49
+[; ;ShiftRegister.c: 49:             {
+{
+"50
+[; ;ShiftRegister.c: 50:                 buffer = data << i;
+[e = _buffer -> << -> _data `i _i `uc ]
+"51
+[; ;ShiftRegister.c: 51:                 buffer &= 0x80;
+[e =& _buffer -> -> 128 `i `uc ]
+"52
+[; ;ShiftRegister.c: 52:                 if(buffer)
+[e $ ! != -> _buffer `i -> 0 `i 104  ]
+"53
+[; ;ShiftRegister.c: 53:                 {
+{
+"54
+[; ;ShiftRegister.c: 54:                     digitalWrite(dataInB,1);
+[e ( _digitalWrite (2 , _dataInB -> -> 1 `i `uc ]
+"55
+[; ;ShiftRegister.c: 55:                 }
+}
+[e $U 105  ]
+"56
+[; ;ShiftRegister.c: 56:                 else
+[e :U 104 ]
+"57
+[; ;ShiftRegister.c: 57:                 {
+{
+"58
+[; ;ShiftRegister.c: 58:                     digitalWrite(dataInB,0);
+[e ( _digitalWrite (2 , _dataInB -> -> 0 `i `uc ]
+"59
+[; ;ShiftRegister.c: 59:                 }
+}
+[e :U 105 ]
+"60
+[; ;ShiftRegister.c: 60:                 digitalWrite(clkB,1);
+[e ( _digitalWrite (2 , _clkB -> -> 1 `i `uc ]
+"61
+[; ;ShiftRegister.c: 61:                 delay(5);
+[e ( _delay (1 -> 5 `i ]
+"62
+[; ;ShiftRegister.c: 62:                 digitalWrite(clkB,0);
+[e ( _digitalWrite (2 , _clkB -> -> 0 `i `uc ]
+"63
+[; ;ShiftRegister.c: 63:                 delay(5);
+[e ( _delay (1 -> 5 `i ]
+"64
+[; ;ShiftRegister.c: 64:             }
+}
+[e ++ _i -> 1 `i ]
+[e :U 103 ]
+[e $ < _i -> _bits `i 100  ]
+[e :U 101 ]
+}
+"65
+[; ;ShiftRegister.c: 65:             break;
+[e $U 97  ]
+"66
+[; ;ShiftRegister.c: 66:         case 0x08:
+[e :U 106 ]
+"67
+[; ;ShiftRegister.c: 67:             for(int i=0;i<bits;i++)
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 110  ]
+[e :U 107 ]
+"68
+[; ;ShiftRegister.c: 68:             {
+{
+"69
+[; ;ShiftRegister.c: 69:                 buffer = data >> i;
+[e = _buffer -> >> -> _data `i _i `uc ]
+"70
+[; ;ShiftRegister.c: 70:                 buffer &= 0x01;
+[e =& _buffer -> -> 1 `i `uc ]
+"71
+[; ;ShiftRegister.c: 71:                 if(buffer)
+[e $ ! != -> _buffer `i -> 0 `i 111  ]
+"72
+[; ;ShiftRegister.c: 72:                 {
+{
+"73
+[; ;ShiftRegister.c: 73:                     digitalWrite(dataInB,1);
+[e ( _digitalWrite (2 , _dataInB -> -> 1 `i `uc ]
+"74
+[; ;ShiftRegister.c: 74:                 }
+}
+[e $U 112  ]
+"75
+[; ;ShiftRegister.c: 75:                 else
+[e :U 111 ]
+"76
+[; ;ShiftRegister.c: 76:                 {
+{
+"77
+[; ;ShiftRegister.c: 77:                     digitalWrite(dataInB,0);
+[e ( _digitalWrite (2 , _dataInB -> -> 0 `i `uc ]
+"78
+[; ;ShiftRegister.c: 78:                 }
+}
+[e :U 112 ]
+"79
+[; ;ShiftRegister.c: 79:                 digitalWrite(clkB,1);
+[e ( _digitalWrite (2 , _clkB -> -> 1 `i `uc ]
+"80
+[; ;ShiftRegister.c: 80:                 delay(5);
+[e ( _delay (1 -> 5 `i ]
+"81
+[; ;ShiftRegister.c: 81:                 digitalWrite(clkB,0);
+[e ( _digitalWrite (2 , _clkB -> -> 0 `i `uc ]
+"82
+[; ;ShiftRegister.c: 82:                 delay(5);
+[e ( _delay (1 -> 5 `i ]
+"83
+[; ;ShiftRegister.c: 83:             }
+}
+[e ++ _i -> 1 `i ]
+[e :U 110 ]
+[e $ < _i -> _bits `i 107  ]
+[e :U 108 ]
+}
+"84
+[; ;ShiftRegister.c: 84:             break;
+[e $U 97  ]
+"85
+[; ;ShiftRegister.c: 85:     }
+}
+[e $U 97  ]
+[e :U 98 ]
+[e [\ -> _byteTransfer `i , $ -> 7 `i 99
+ , $ -> 8 `i 106
+ 97 ]
+[e :U 97 ]
+"86
+[; ;ShiftRegister.c: 86:  digitalWrite(latchB,1);
+[e ( _digitalWrite (2 , _latchB -> -> 1 `i `uc ]
+"87
+[; ;ShiftRegister.c: 87:  delay(5);
+[e ( _delay (1 -> 5 `i ]
+"88
+[; ;ShiftRegister.c: 88:  digitalWrite(latchB,0);
+[e ( _digitalWrite (2 , _latchB -> -> 0 `i `uc ]
+"89
+[; ;ShiftRegister.c: 89: }
+[e :UE 96 ]
+}
+"91
+[; ;ShiftRegister.c: 91: char RegisterStatus(char status)
+[v _RegisterStatus `(uc ~T0 @X0 1 ef1`uc ]
+"92
+[; ;ShiftRegister.c: 92: {
+{
+[e :U _RegisterStatus ]
+"91
+[; ;ShiftRegister.c: 91: char RegisterStatus(char status)
+[v _status `uc ~T0 @X0 1 r1 ]
+"92
+[; ;ShiftRegister.c: 92: {
+[f ]
+"93
+[; ;ShiftRegister.c: 93:  switch(status)
+[e $U 115  ]
+"94
+[; ;ShiftRegister.c: 94:  {
+{
+"95
+[; ;ShiftRegister.c: 95:   case 0x04:
+[e :U 116 ]
+"96
+[; ;ShiftRegister.c: 96:    digitalWrite(OEB,1);
+[e ( _digitalWrite (2 , _OEB -> -> 1 `i `uc ]
+"97
+[; ;ShiftRegister.c: 97:    return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 113  ]
+"98
+[; ;ShiftRegister.c: 98:   break;
+[e $U 114  ]
+"99
+[; ;ShiftRegister.c: 99:   case 0x02:
+[e :U 117 ]
+"100
+[; ;ShiftRegister.c: 100:    digitalWrite(OEB,0);
+[e ( _digitalWrite (2 , _OEB -> -> 0 `i `uc ]
+"101
+[; ;ShiftRegister.c: 101:    return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 113  ]
+"102
+[; ;ShiftRegister.c: 102:   break;
+[e $U 114  ]
+"103
+[; ;ShiftRegister.c: 103:  }
+}
+[e $U 114  ]
+[e :U 115 ]
+[e [\ -> _status `i , $ -> 4 `i 116
+ , $ -> 2 `i 117
+ 114 ]
+[e :U 114 ]
+"104
+[; ;ShiftRegister.c: 104: }
+[e :UE 113 ]
+}
+"107
+[; ;ShiftRegister.c: 107: void MoveMotor(char motor,char Movement)
+[v _MoveMotor `(v ~T0 @X0 1 ef2`uc`uc ]
+"108
+[; ;ShiftRegister.c: 108: {
+{
+[e :U _MoveMotor ]
+"107
+[; ;ShiftRegister.c: 107: void MoveMotor(char motor,char Movement)
+[v _motor `uc ~T0 @X0 1 r1 ]
+[v _Movement `uc ~T0 @X0 1 r2 ]
+"108
+[; ;ShiftRegister.c: 108: {
+[f ]
+"109
+[; ;ShiftRegister.c: 109:  static char Register = 0;
+[v F971 `uc ~T0 @X0 1 s Register ]
+[i F971
+-> -> 0 `i `uc
+]
+"110
+[; ;ShiftRegister.c: 110:     char buffer = 0;
+[v _buffer `uc ~T0 @X0 1 a ]
+[e = _buffer -> -> 0 `i `uc ]
+"112
+[; ;ShiftRegister.c: 112:  switch(motor)
+[e $U 120  ]
+"113
+[; ;ShiftRegister.c: 113:  {
+{
+"114
+[; ;ShiftRegister.c: 114:   case 0x03:
+[e :U 121 ]
+"115
+[; ;ShiftRegister.c: 115:             switch(Movement)
+[e $U 123  ]
+"116
+[; ;ShiftRegister.c: 116:             {
+{
+"117
+[; ;ShiftRegister.c: 117:                 case 0x02:
+[e :U 124 ]
+"118
+[; ;ShiftRegister.c: 118:                     buffer = 0x04;
+[e = _buffer -> -> 4 `i `uc ]
+"119
+[; ;ShiftRegister.c: 119:                     Register &= 0xF3;
+[e =& F971 -> -> 243 `i `uc ]
+"120
+[; ;ShiftRegister.c: 120:                     Register |= buffer;
+[e =| F971 -> _buffer `uc ]
+"121
+[; ;ShiftRegister.c: 121:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"122
+[; ;ShiftRegister.c: 122:                     break;
+[e $U 122  ]
+"123
+[; ;ShiftRegister.c: 123:                 case 0x01:
+[e :U 125 ]
+"124
+[; ;ShiftRegister.c: 124:                     buffer = 0x08;
+[e = _buffer -> -> 8 `i `uc ]
+"125
+[; ;ShiftRegister.c: 125:                     Register &= 0xF3;
+[e =& F971 -> -> 243 `i `uc ]
+"126
+[; ;ShiftRegister.c: 126:                     Register |= buffer;
+[e =| F971 -> _buffer `uc ]
+"127
+[; ;ShiftRegister.c: 127:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"128
+[; ;ShiftRegister.c: 128:                     break;
+[e $U 122  ]
+"129
+[; ;ShiftRegister.c: 129:                 case 0x00:
+[e :U 126 ]
+"130
+[; ;ShiftRegister.c: 130:                     Register &= 0xF3;
+[e =& F971 -> -> 243 `i `uc ]
+"131
+[; ;ShiftRegister.c: 131:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"132
+[; ;ShiftRegister.c: 132:                     break;
+[e $U 122  ]
+"133
+[; ;ShiftRegister.c: 133:             }
+}
+[e $U 122  ]
+[e :U 123 ]
+[e [\ -> _Movement `i , $ -> 2 `i 124
+ , $ -> 1 `i 125
+ , $ -> 0 `i 126
+ 122 ]
+[e :U 122 ]
+"136
+[; ;ShiftRegister.c: 136:   break;
+[e $U 119  ]
+"137
+[; ;ShiftRegister.c: 137:   case 0x04:
+[e :U 127 ]
+"138
+[; ;ShiftRegister.c: 138:             switch(Movement)
+[e $U 129  ]
+"139
+[; ;ShiftRegister.c: 139:             {
+{
+"140
+[; ;ShiftRegister.c: 140:                 case 0x02:
+[e :U 130 ]
+"141
+[; ;ShiftRegister.c: 141:                     buffer = 0x02;
+[e = _buffer -> -> 2 `i `uc ]
+"142
+[; ;ShiftRegister.c: 142:                     Register &= 0xFC;
+[e =& F971 -> -> 252 `i `uc ]
+"143
+[; ;ShiftRegister.c: 143:                     Register |= buffer;
+[e =| F971 -> _buffer `uc ]
+"144
+[; ;ShiftRegister.c: 144:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"145
+[; ;ShiftRegister.c: 145:                     break;
+[e $U 128  ]
+"146
+[; ;ShiftRegister.c: 146:                 case 0x01:
+[e :U 131 ]
+"147
+[; ;ShiftRegister.c: 147:                     buffer = 0x01;
+[e = _buffer -> -> 1 `i `uc ]
+"148
+[; ;ShiftRegister.c: 148:                     Register &= 0xFC;
+[e =& F971 -> -> 252 `i `uc ]
+"149
+[; ;ShiftRegister.c: 149:                     Register |= buffer;
+[e =| F971 -> _buffer `uc ]
+"150
+[; ;ShiftRegister.c: 150:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"151
+[; ;ShiftRegister.c: 151:                     break;
+[e $U 128  ]
+"152
+[; ;ShiftRegister.c: 152:                 case 0x00:
+[e :U 132 ]
+"153
+[; ;ShiftRegister.c: 153:                     Register &= 0xFC;
+[e =& F971 -> -> 252 `i `uc ]
+"154
+[; ;ShiftRegister.c: 154:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"155
+[; ;ShiftRegister.c: 155:                     break;
+[e $U 128  ]
+"156
+[; ;ShiftRegister.c: 156:             }
+}
+[e $U 128  ]
+[e :U 129 ]
+[e [\ -> _Movement `i , $ -> 2 `i 130
+ , $ -> 1 `i 131
+ , $ -> 0 `i 132
+ 128 ]
+[e :U 128 ]
+"157
+[; ;ShiftRegister.c: 157:   break;
+[e $U 119  ]
+"158
+[; ;ShiftRegister.c: 158:   case 0x05:
+[e :U 133 ]
+"159
+[; ;ShiftRegister.c: 159:             switch(Movement)
+[e $U 135  ]
+"160
+[; ;ShiftRegister.c: 160:             {
+{
+"161
+[; ;ShiftRegister.c: 161:                 case 0x02:
+[e :U 136 ]
+"162
+[; ;ShiftRegister.c: 162:                     buffer = 0x40;
+[e = _buffer -> -> 64 `i `uc ]
+"163
+[; ;ShiftRegister.c: 163:                     Register &= 0x3F;
+[e =& F971 -> -> 63 `i `uc ]
+"164
+[; ;ShiftRegister.c: 164:                     Register |= buffer;
+[e =| F971 -> _buffer `uc ]
+"165
+[; ;ShiftRegister.c: 165:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"166
+[; ;ShiftRegister.c: 166:                     break;
+[e $U 134  ]
+"167
+[; ;ShiftRegister.c: 167:                 case 0x01:
+[e :U 137 ]
+"168
+[; ;ShiftRegister.c: 168:                     buffer = 0x80;
+[e = _buffer -> -> 128 `i `uc ]
+"169
+[; ;ShiftRegister.c: 169:                     Register &= 0x3F;
+[e =& F971 -> -> 63 `i `uc ]
+"170
+[; ;ShiftRegister.c: 170:                     Register |= buffer;
+[e =| F971 -> _buffer `uc ]
+"171
+[; ;ShiftRegister.c: 171:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"172
+[; ;ShiftRegister.c: 172:                     break;
+[e $U 134  ]
+"173
+[; ;ShiftRegister.c: 173:                 case 0x00:
+[e :U 138 ]
+"174
+[; ;ShiftRegister.c: 174:                     Register &= 0x3F;
+[e =& F971 -> -> 63 `i `uc ]
+"175
+[; ;ShiftRegister.c: 175:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"176
+[; ;ShiftRegister.c: 176:                     break;
+[e $U 134  ]
+"177
+[; ;ShiftRegister.c: 177:             }
+}
+[e $U 134  ]
+[e :U 135 ]
+[e [\ -> _Movement `i , $ -> 2 `i 136
+ , $ -> 1 `i 137
+ , $ -> 0 `i 138
+ 134 ]
+[e :U 134 ]
+"178
+[; ;ShiftRegister.c: 178:   break;
+[e $U 119  ]
+"179
+[; ;ShiftRegister.c: 179:   case 0x06:
+[e :U 139 ]
+"180
+[; ;ShiftRegister.c: 180:             switch(Movement)
+[e $U 141  ]
+"181
+[; ;ShiftRegister.c: 181:             {
+{
+"182
+[; ;ShiftRegister.c: 182:                 case 0x02:
+[e :U 142 ]
+"183
+[; ;ShiftRegister.c: 183:                     buffer = 0x10;
+[e = _buffer -> -> 16 `i `uc ]
+"184
+[; ;ShiftRegister.c: 184:                     Register &= 0xCF;
+[e =& F971 -> -> 207 `i `uc ]
+"185
+[; ;ShiftRegister.c: 185:                     Register |= buffer;
+[e =| F971 -> _buffer `uc ]
+"186
+[; ;ShiftRegister.c: 186:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"187
+[; ;ShiftRegister.c: 187:                     break;
+[e $U 140  ]
+"188
+[; ;ShiftRegister.c: 188:                 case 0x01:
+[e :U 143 ]
+"189
+[; ;ShiftRegister.c: 189:                     buffer = 0x20;
+[e = _buffer -> -> 32 `i `uc ]
+"190
+[; ;ShiftRegister.c: 190:                     Register &= 0xCF;
+[e =& F971 -> -> 207 `i `uc ]
+"191
+[; ;ShiftRegister.c: 191:                     Register |= buffer;
+[e =| F971 -> _buffer `uc ]
+"192
+[; ;ShiftRegister.c: 192:                     WriteRegister(Register,8,0x08);
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"193
+[; ;ShiftRegister.c: 193:                     break;
+[e $U 140  ]
+"194
+[; ;ShiftRegister.c: 194:                 case 0x00:
+[e :U 144 ]
+"195
+[; ;ShiftRegister.c: 195:                     Register &= 0xCF;
+[e =& F971 -> -> 207 `i `uc ]
+"196
+[; ;ShiftRegister.c: 196:                     WriteRegister(Register,8,0x08);;
+[e ( _WriteRegister (3 , , F971 -> -> 8 `i `uc -> -> 8 `i `uc ]
+"197
+[; ;ShiftRegister.c: 197:                     break;
+[e $U 140  ]
+"198
+[; ;ShiftRegister.c: 198:             }
+}
+[e $U 140  ]
+[e :U 141 ]
+[e [\ -> _Movement `i , $ -> 2 `i 142
+ , $ -> 1 `i 143
+ , $ -> 0 `i 144
+ 140 ]
+[e :U 140 ]
+"199
+[; ;ShiftRegister.c: 199:   break;
+[e $U 119  ]
+"200
+[; ;ShiftRegister.c: 200:  }
+}
+[e $U 119  ]
+[e :U 120 ]
+[e [\ -> _motor `i , $ -> 3 `i 121
+ , $ -> 4 `i 127
+ , $ -> 5 `i 133
+ , $ -> 6 `i 139
+ 119 ]
+[e :U 119 ]
+"201
+[; ;ShiftRegister.c: 201: }
+[e :UE 118 ]
+}
+"203
+[; ;ShiftRegister.c: 203: void StopAllMotor(void)
+[v _StopAllMotor `(v ~T0 @X0 1 ef ]
+"204
+[; ;ShiftRegister.c: 204: {
+{
+[e :U _StopAllMotor ]
+[f ]
+"205
+[; ;ShiftRegister.c: 205:  digitalWrite(clrPortB,0);
+[e ( _digitalWrite (2 , _clrPortB -> -> 0 `i `uc ]
+"206
+[; ;ShiftRegister.c: 206:  delay(10);
+[e ( _delay (1 -> 10 `i ]
+"207
+[; ;ShiftRegister.c: 207:  digitalWrite(clrPortB,1);
+[e ( _digitalWrite (2 , _clrPortB -> -> 1 `i `uc ]
+"208
+[; ;ShiftRegister.c: 208:     delay(10);
+[e ( _delay (1 -> 10 `i ]
+"209
+[; ;ShiftRegister.c: 209:     digitalWrite(clrPortB,0);
+[e ( _digitalWrite (2 , _clrPortB -> -> 0 `i `uc ]
+"210
+[; ;ShiftRegister.c: 210: }
+[e :UE 145 ]
+}

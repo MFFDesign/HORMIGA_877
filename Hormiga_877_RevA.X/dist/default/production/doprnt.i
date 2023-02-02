@@ -358,30 +358,23 @@ sprintf(char * sp, const char * f, ...)
 
   case 0:
    goto alldone;
-# 716 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
-  case 'd':
-  case 'i':
-   break;
 # 821 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
   default:
 # 832 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
    continue;
-# 841 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
+
+
+
+  case 'u':
+   flag |= 0xC0;
+   break;
+
+
   }
-# 1272 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
+# 1292 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
   {
-
-
-
-
-
-    val = (int)(*(int *)__va_arg((*(int **)ap), (int)0));
-
-   if((int)val < 0) {
-    flag |= 0x03;
-    val = -val;
-   }
-
+# 1305 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
+    val = (*(unsigned *)__va_arg((*(unsigned **)ap), (unsigned)0));
   }
 # 1324 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
    for(c = 1 ; c != sizeof dpowers/sizeof dpowers[0] ; c++)
@@ -389,9 +382,6 @@ sprintf(char * sp, const char * f, ...)
      break;
 # 1441 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
   {
-# 1457 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
-   if(flag & 0x03)
-    ((*sp++ = ('-')));
 # 1488 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c90\\common\\doprnt.c"
   }
 

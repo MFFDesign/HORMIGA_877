@@ -6,6 +6,28 @@
                    projectFiles="true">
       <itemPath>Hormiga877.h</itemPath>
       <itemPath>Stepper.h</itemPath>
+      <itemPath>AD9850.h</itemPath>
+      <itemPath>EEPROM.h</itemPath>
+      <itemPath>Encoder.h</itemPath>
+      <itemPath>I2CEEPROM.h</itemPath>
+      <itemPath>I2CNumberIO.h</itemPath>
+      <itemPath>I2CWire.h</itemPath>
+      <itemPath>Keypad4x4.h</itemPath>
+      <itemPath>LCD16x2.h</itemPath>
+      <itemPath>LCDI2C.h</itemPath>
+      <itemPath>LIFPIC.h</itemPath>
+      <itemPath>MAX6675.h</itemPath>
+      <itemPath>Matematica.h</itemPath>
+      <itemPath>NumberTreatment.h</itemPath>
+      <itemPath>PASControl_RevA.h</itemPath>
+      <itemPath>RobotMovimientos.h</itemPath>
+      <itemPath>SPDT.h</itemPath>
+      <itemPath>SPI.h</itemPath>
+      <itemPath>Servo.h</itemPath>
+      <itemPath>ShiftRegister.h</itemPath>
+      <itemPath>SieteSegmentos.h</itemPath>
+      <itemPath>Timers.h</itemPath>
+      <itemPath>Ultrasonico.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,6 +39,28 @@
       <itemPath>application.c</itemPath>
       <itemPath>Hormiga877.c</itemPath>
       <itemPath>Stepper.c</itemPath>
+      <itemPath>AD9850.c</itemPath>
+      <itemPath>EEPROM.c</itemPath>
+      <itemPath>Encoder.c</itemPath>
+      <itemPath>I2CEEPROM.c</itemPath>
+      <itemPath>I2CNumberIO.c</itemPath>
+      <itemPath>I2CWire.c</itemPath>
+      <itemPath>Keypad4x4.c</itemPath>
+      <itemPath>LCD16x2.c</itemPath>
+      <itemPath>LCDI2C.c</itemPath>
+      <itemPath>LIFPIC.c</itemPath>
+      <itemPath>MAX6675.c</itemPath>
+      <itemPath>Matematica.c</itemPath>
+      <itemPath>NumberTreatment.c</itemPath>
+      <itemPath>PASControl_RevA.c</itemPath>
+      <itemPath>RobotMovimientos.c</itemPath>
+      <itemPath>SPDT.c</itemPath>
+      <itemPath>SPI.c</itemPath>
+      <itemPath>Servo.c</itemPath>
+      <itemPath>ShiftRegister.c</itemPath>
+      <itemPath>SieteSegmentos.c</itemPath>
+      <itemPath>Timers.c</itemPath>
+      <itemPath>Ultrasonico.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

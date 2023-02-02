@@ -1,0 +1,1200 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"1754 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1754: extern volatile unsigned char SSPCON2 __attribute__((address(0x091)));
+[v _SSPCON2 `Vuc ~T0 @X0 0 e@145 ]
+"1830
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1830: extern volatile unsigned char SSPSTAT __attribute__((address(0x094)));
+[v _SSPSTAT `Vuc ~T0 @X0 0 e@148 ]
+"2806
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2806: extern volatile __bit SEN __attribute__((address(0x488)));
+[v _SEN `Vb ~T0 @X0 0 e@1160 ]
+"808
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 808: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
+[v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
+"59 ./Hormiga877.h
+[v _delay `(v ~T0 @X0 0 ef1`Ci ]
+"11 ./I2CWire.h
+[; ;./I2CWire.h: 11: void I2CStartTransaction(void);
+[v _I2CStartTransaction `(v ~T0 @X0 0 ef ]
+"15
+[; ;./I2CWire.h: 15: void I2CRepeatTransaction(void);
+[v _I2CRepeatTransaction `(v ~T0 @X0 0 ef ]
+"13
+[; ;./I2CWire.h: 13: char I2CWriteByte(char databyte);
+[v _I2CWriteByte `(uc ~T0 @X0 0 ef1`uc ]
+"16
+[; ;./I2CWire.h: 16: void I2CStopTransaction(void);
+[v _I2CStopTransaction `(v ~T0 @X0 0 ef ]
+"34 ./LCDI2C.h
+[; ;./LCDI2C.h: 34: void LCDSetCursor(char row, char column);
+[v _LCDSetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"36
+[; ;./LCDI2C.h: 36: void LCDPrint(char *string);
+[v _LCDPrint `(v ~T0 @X0 0 ef1`*uc ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"14 ./Hormiga877.h
+[; ;./Hormiga877.h: 14: void digitalWrite(char pin, char value);
+[p x FOSC = HS ]
+"15
+[; ;./Hormiga877.h: 15: char digitalRead(char pin);
+[p x WDTE = OFF ]
+"16
+[; ;./Hormiga877.h: 16: unsigned int analogRead(char channel);
+[p x PWRTE = OFF ]
+"17
+[; ;./Hormiga877.h: 17: uint8_t analogWrite(char pin, unsigned int value);
+[p x BOREN = OFF ]
+"18
+[; ;./Hormiga877.h: 18: void setup(void);
+[p x LVP = ON ]
+"19
+[; ;./Hormiga877.h: 19: void loop(void);
+[p x CPD = OFF ]
+"20
+[; ;./Hormiga877.h: 20: 
+[p x WRT = OFF ]
+"21
+[; ;./Hormiga877.h: 21: 
+[p x CP = OFF ]
+"5 LCDI2C.c
+[; ;LCDI2C.c: 5: char DisplayControl = 0xFF;
+[v _DisplayControl `uc ~T0 @X0 1 e ]
+[i _DisplayControl
+-> -> 255 `i `uc
+]
+"6
+[; ;LCDI2C.c: 6: char BacklightState = 0x08;
+[v _BacklightState `uc ~T0 @X0 1 e ]
+[i _BacklightState
+-> -> 8 `i `uc
+]
+"7
+[; ;LCDI2C.c: 7: char LCDDirection = 0;
+[v _LCDDirection `uc ~T0 @X0 1 e ]
+[i _LCDDirection
+-> -> 0 `i `uc
+]
+"8
+[; ;LCDI2C.c: 8: char MSNibble = 0;
+[v _MSNibble `uc ~T0 @X0 1 e ]
+[i _MSNibble
+-> -> 0 `i `uc
+]
+"9
+[; ;LCDI2C.c: 9: char LSNibble = 0;
+[v _LSNibble `uc ~T0 @X0 1 e ]
+[i _LSNibble
+-> -> 0 `i `uc
+]
+"12
+[; ;LCDI2C.c: 12: void Blinking(char mode)
+[v _Blinking `(v ~T0 @X0 1 ef1`uc ]
+"13
+[; ;LCDI2C.c: 13: {
+{
+[e :U _Blinking ]
+"12
+[; ;LCDI2C.c: 12: void Blinking(char mode)
+[v _mode `uc ~T0 @X0 1 r1 ]
+"13
+[; ;LCDI2C.c: 13: {
+[f ]
+"14
+[; ;LCDI2C.c: 14:      if(mode == 0x09)
+[e $ ! == -> _mode `i -> 9 `i 96  ]
+"15
+[; ;LCDI2C.c: 15:     {
+{
+"16
+[; ;LCDI2C.c: 16:         DisplayControl |= 0x09;
+[e =| _DisplayControl -> -> 9 `i `uc ]
+"17
+[; ;LCDI2C.c: 17:     }
+}
+[e $U 97  ]
+"18
+[; ;LCDI2C.c: 18:     else if(mode == 0x0E)
+[e :U 96 ]
+[e $ ! == -> _mode `i -> 14 `i 98  ]
+"19
+[; ;LCDI2C.c: 19:     {
+{
+"20
+[; ;LCDI2C.c: 20:         DisplayControl &= 0x0E;
+[e =& _DisplayControl -> -> 14 `i `uc ]
+"21
+[; ;LCDI2C.c: 21:     }
+}
+[e :U 98 ]
+[e :U 97 ]
+"22
+[; ;LCDI2C.c: 22:     while ((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 99  ]
+[e :U 100 ]
+[e :U 99 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 100  ]
+[e :U 101 ]
+"23
+[; ;LCDI2C.c: 23:     SEN = 1;
+[e = _SEN -> -> 1 `i `b ]
+"24
+[; ;LCDI2C.c: 24:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 102  ]
+[e :U 103 ]
+[e :U 102 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 103  ]
+[e :U 104 ]
+"25
+[; ;LCDI2C.c: 25:     SSPBUF = LCDDirection;
+[e = _SSPBUF -> _LCDDirection `uc ]
+"26
+[; ;LCDI2C.c: 26:     MSNibble = DisplayControl & 0xF0;
+[e = _MSNibble -> & -> _DisplayControl `i -> 240 `i `uc ]
+"27
+[; ;LCDI2C.c: 27:     MSNibble |= BacklightState;
+[e =| _MSNibble -> _BacklightState `uc ]
+"28
+[; ;LCDI2C.c: 28:     MSNibble &= 0xFE;
+[e =& _MSNibble -> -> 254 `i `uc ]
+"29
+[; ;LCDI2C.c: 29:     MSNibble |= 0x04;
+[e =| _MSNibble -> -> 4 `i `uc ]
+"30
+[; ;LCDI2C.c: 30:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 105  ]
+[e :U 106 ]
+[e :U 105 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 106  ]
+[e :U 107 ]
+"31
+[; ;LCDI2C.c: 31:     SSPBUF = MSNibble;
+[e = _SSPBUF -> _MSNibble `uc ]
+"32
+[; ;LCDI2C.c: 32:     MSNibble &= 0xFB;
+[e =& _MSNibble -> -> 251 `i `uc ]
+"33
+[; ;LCDI2C.c: 33:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 108  ]
+[e :U 109 ]
+[e :U 108 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 109  ]
+[e :U 110 ]
+"34
+[; ;LCDI2C.c: 34:     SSPBUF = MSNibble;
+[e = _SSPBUF -> _MSNibble `uc ]
+"35
+[; ;LCDI2C.c: 35:     LSNibble = DisplayControl << 4;
+[e = _LSNibble -> << -> _DisplayControl `i -> 4 `i `uc ]
+"36
+[; ;LCDI2C.c: 36:     LSNibble |=BacklightState;
+[e =| _LSNibble -> _BacklightState `uc ]
+"37
+[; ;LCDI2C.c: 37:     LSNibble &= 0xFE;
+[e =& _LSNibble -> -> 254 `i `uc ]
+"38
+[; ;LCDI2C.c: 38:     LSNibble |= 0x04;
+[e =| _LSNibble -> -> 4 `i `uc ]
+"39
+[; ;LCDI2C.c: 39:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 111  ]
+[e :U 112 ]
+[e :U 111 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 112  ]
+[e :U 113 ]
+"40
+[; ;LCDI2C.c: 40:     SSPBUF = LSNibble;
+[e = _SSPBUF -> _LSNibble `uc ]
+"41
+[; ;LCDI2C.c: 41:     LSNibble &= 0xFB;
+[e =& _LSNibble -> -> 251 `i `uc ]
+"42
+[; ;LCDI2C.c: 42:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 114  ]
+[e :U 115 ]
+[e :U 114 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 115  ]
+[e :U 116 ]
+"43
+[; ;LCDI2C.c: 43:     SSPBUF = LSNibble;
+[e = _SSPBUF -> _LSNibble `uc ]
+"44
+[; ;LCDI2C.c: 44: }
+[e :UE 95 ]
+}
+"46
+[; ;LCDI2C.c: 46: void Cursor(char mode)
+[v _Cursor `(v ~T0 @X0 1 ef1`uc ]
+"47
+[; ;LCDI2C.c: 47: {
+{
+[e :U _Cursor ]
+"46
+[; ;LCDI2C.c: 46: void Cursor(char mode)
+[v _mode `uc ~T0 @X0 1 r1 ]
+"47
+[; ;LCDI2C.c: 47: {
+[f ]
+"48
+[; ;LCDI2C.c: 48:      if(mode == 0x0A)
+[e $ ! == -> _mode `i -> 10 `i 118  ]
+"49
+[; ;LCDI2C.c: 49:     {
+{
+"50
+[; ;LCDI2C.c: 50:         DisplayControl &= 0x0D;
+[e =& _DisplayControl -> -> 13 `i `uc ]
+"51
+[; ;LCDI2C.c: 51:         DisplayControl |= 0x0A;
+[e =| _DisplayControl -> -> 10 `i `uc ]
+"52
+[; ;LCDI2C.c: 52:     }
+}
+[e $U 119  ]
+"53
+[; ;LCDI2C.c: 53:     else if(mode == 0x0D)
+[e :U 118 ]
+[e $ ! == -> _mode `i -> 13 `i 120  ]
+"54
+[; ;LCDI2C.c: 54:     {
+{
+"55
+[; ;LCDI2C.c: 55:         DisplayControl &= 0x0D;
+[e =& _DisplayControl -> -> 13 `i `uc ]
+"56
+[; ;LCDI2C.c: 56:     }
+}
+[e :U 120 ]
+[e :U 119 ]
+"57
+[; ;LCDI2C.c: 57:     while ((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 121  ]
+[e :U 122 ]
+[e :U 121 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 122  ]
+[e :U 123 ]
+"58
+[; ;LCDI2C.c: 58:     SEN = 1;
+[e = _SEN -> -> 1 `i `b ]
+"59
+[; ;LCDI2C.c: 59:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 124  ]
+[e :U 125 ]
+[e :U 124 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 125  ]
+[e :U 126 ]
+"60
+[; ;LCDI2C.c: 60:     SSPBUF = LCDDirection;
+[e = _SSPBUF -> _LCDDirection `uc ]
+"61
+[; ;LCDI2C.c: 61:     MSNibble = DisplayControl & 0xF0;
+[e = _MSNibble -> & -> _DisplayControl `i -> 240 `i `uc ]
+"62
+[; ;LCDI2C.c: 62:     MSNibble |= BacklightState;
+[e =| _MSNibble -> _BacklightState `uc ]
+"63
+[; ;LCDI2C.c: 63:     MSNibble &= 0xFE;
+[e =& _MSNibble -> -> 254 `i `uc ]
+"64
+[; ;LCDI2C.c: 64:     MSNibble |= 0x04;
+[e =| _MSNibble -> -> 4 `i `uc ]
+"65
+[; ;LCDI2C.c: 65:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 127  ]
+[e :U 128 ]
+[e :U 127 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 128  ]
+[e :U 129 ]
+"66
+[; ;LCDI2C.c: 66:     SSPBUF = MSNibble;
+[e = _SSPBUF -> _MSNibble `uc ]
+"67
+[; ;LCDI2C.c: 67:     MSNibble &= 0xFB;
+[e =& _MSNibble -> -> 251 `i `uc ]
+"68
+[; ;LCDI2C.c: 68:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 130  ]
+[e :U 131 ]
+[e :U 130 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 131  ]
+[e :U 132 ]
+"69
+[; ;LCDI2C.c: 69:     SSPBUF = MSNibble;
+[e = _SSPBUF -> _MSNibble `uc ]
+"70
+[; ;LCDI2C.c: 70:     LSNibble = DisplayControl << 4;
+[e = _LSNibble -> << -> _DisplayControl `i -> 4 `i `uc ]
+"71
+[; ;LCDI2C.c: 71:     LSNibble |=BacklightState;
+[e =| _LSNibble -> _BacklightState `uc ]
+"72
+[; ;LCDI2C.c: 72:     LSNibble &= 0xFE;
+[e =& _LSNibble -> -> 254 `i `uc ]
+"73
+[; ;LCDI2C.c: 73:     LSNibble |= 0x04;
+[e =| _LSNibble -> -> 4 `i `uc ]
+"74
+[; ;LCDI2C.c: 74:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 133  ]
+[e :U 134 ]
+[e :U 133 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 134  ]
+[e :U 135 ]
+"75
+[; ;LCDI2C.c: 75:     SSPBUF = LSNibble;
+[e = _SSPBUF -> _LSNibble `uc ]
+"76
+[; ;LCDI2C.c: 76:     LSNibble &= 0xFB;
+[e =& _LSNibble -> -> 251 `i `uc ]
+"77
+[; ;LCDI2C.c: 77:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 136  ]
+[e :U 137 ]
+[e :U 136 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 137  ]
+[e :U 138 ]
+"78
+[; ;LCDI2C.c: 78:     SSPBUF = LSNibble;
+[e = _SSPBUF -> _LSNibble `uc ]
+"79
+[; ;LCDI2C.c: 79: }
+[e :UE 117 ]
+}
+"81
+[; ;LCDI2C.c: 81: void Display(char mode)
+[v _Display `(v ~T0 @X0 1 ef1`uc ]
+"82
+[; ;LCDI2C.c: 82: {
+{
+[e :U _Display ]
+"81
+[; ;LCDI2C.c: 81: void Display(char mode)
+[v _mode `uc ~T0 @X0 1 r1 ]
+"82
+[; ;LCDI2C.c: 82: {
+[f ]
+"83
+[; ;LCDI2C.c: 83:     if(mode == 0x0C)
+[e $ ! == -> _mode `i -> 12 `i 140  ]
+"84
+[; ;LCDI2C.c: 84:     {
+{
+"85
+[; ;LCDI2C.c: 85:         DisplayControl |= 0x0C;
+[e =| _DisplayControl -> -> 12 `i `uc ]
+"86
+[; ;LCDI2C.c: 86:     }
+}
+[e $U 141  ]
+"87
+[; ;LCDI2C.c: 87:     else if(mode == 0x0B)
+[e :U 140 ]
+[e $ ! == -> _mode `i -> 11 `i 142  ]
+"88
+[; ;LCDI2C.c: 88:     {
+{
+"89
+[; ;LCDI2C.c: 89:         DisplayControl &= 0x0B;
+[e =& _DisplayControl -> -> 11 `i `uc ]
+"90
+[; ;LCDI2C.c: 90:     }
+}
+[e :U 142 ]
+[e :U 141 ]
+"91
+[; ;LCDI2C.c: 91:     while ((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 143  ]
+[e :U 144 ]
+[e :U 143 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 144  ]
+[e :U 145 ]
+"92
+[; ;LCDI2C.c: 92:     SEN = 1;
+[e = _SEN -> -> 1 `i `b ]
+"93
+[; ;LCDI2C.c: 93:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 146  ]
+[e :U 147 ]
+[e :U 146 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 147  ]
+[e :U 148 ]
+"94
+[; ;LCDI2C.c: 94:     SSPBUF = LCDDirection;
+[e = _SSPBUF -> _LCDDirection `uc ]
+"95
+[; ;LCDI2C.c: 95:     MSNibble = DisplayControl & 0xF0;
+[e = _MSNibble -> & -> _DisplayControl `i -> 240 `i `uc ]
+"96
+[; ;LCDI2C.c: 96:     MSNibble |= BacklightState;
+[e =| _MSNibble -> _BacklightState `uc ]
+"97
+[; ;LCDI2C.c: 97:     MSNibble &= 0xFE;
+[e =& _MSNibble -> -> 254 `i `uc ]
+"98
+[; ;LCDI2C.c: 98:     MSNibble |= 0x04;
+[e =| _MSNibble -> -> 4 `i `uc ]
+"99
+[; ;LCDI2C.c: 99:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 149  ]
+[e :U 150 ]
+[e :U 149 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 150  ]
+[e :U 151 ]
+"100
+[; ;LCDI2C.c: 100:     SSPBUF = MSNibble;
+[e = _SSPBUF -> _MSNibble `uc ]
+"101
+[; ;LCDI2C.c: 101:     MSNibble &= 0xFB;
+[e =& _MSNibble -> -> 251 `i `uc ]
+"102
+[; ;LCDI2C.c: 102:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 152  ]
+[e :U 153 ]
+[e :U 152 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 153  ]
+[e :U 154 ]
+"103
+[; ;LCDI2C.c: 103:     SSPBUF = MSNibble;
+[e = _SSPBUF -> _MSNibble `uc ]
+"104
+[; ;LCDI2C.c: 104:     LSNibble = DisplayControl << 4;
+[e = _LSNibble -> << -> _DisplayControl `i -> 4 `i `uc ]
+"105
+[; ;LCDI2C.c: 105:     LSNibble |=BacklightState;
+[e =| _LSNibble -> _BacklightState `uc ]
+"106
+[; ;LCDI2C.c: 106:     LSNibble &= 0xFE;
+[e =& _LSNibble -> -> 254 `i `uc ]
+"107
+[; ;LCDI2C.c: 107:     LSNibble |= 0x04;
+[e =| _LSNibble -> -> 4 `i `uc ]
+"108
+[; ;LCDI2C.c: 108:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 155  ]
+[e :U 156 ]
+[e :U 155 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 156  ]
+[e :U 157 ]
+"109
+[; ;LCDI2C.c: 109:     SSPBUF = LSNibble;
+[e = _SSPBUF -> _LSNibble `uc ]
+"110
+[; ;LCDI2C.c: 110:     LSNibble &= 0xFB;
+[e =& _LSNibble -> -> 251 `i `uc ]
+"111
+[; ;LCDI2C.c: 111:     while((SSPCON2 & 0x1F) || (SSPSTAT & 0x04)) ;
+[e $U 158  ]
+[e :U 159 ]
+[e :U 158 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != & -> _SSPSTAT `i -> 4 `i -> 0 `i 159  ]
+[e :U 160 ]
+"112
+[; ;LCDI2C.c: 112:     SSPBUF = LSNibble;
+[e = _SSPBUF -> _LSNibble `uc ]
+"113
+[; ;LCDI2C.c: 113: }
+[e :UE 139 ]
+}
+"115
+[; ;LCDI2C.c: 115: void LCDInit(char addrs)
+[v _LCDInit `(v ~T0 @X0 1 ef1`uc ]
+"116
+[; ;LCDI2C.c: 116: {
+{
+[e :U _LCDInit ]
+"115
+[; ;LCDI2C.c: 115: void LCDInit(char addrs)
+[v _addrs `uc ~T0 @X0 1 r1 ]
+"116
+[; ;LCDI2C.c: 116: {
+[f ]
+"117
+[; ;LCDI2C.c: 117:         delay(15);
+[e ( _delay (1 -> 15 `i ]
+[v F973 `uc ~T0 @X0 -> 5 `i s ]
+[i F973
+:U ..
+"118
+[; ;LCDI2C.c: 118:         char StringInit[5] = {0x02, 0x28,0x01, 0x0C, 0x06};
+-> -> 2 `i `uc
+-> -> 40 `i `uc
+-> -> 1 `i `uc
+-> -> 12 `i `uc
+-> -> 6 `i `uc
+..
+]
+[v _StringInit `uc ~T0 @X0 -> 5 `i a ]
+[e = _StringInit F973 ]
+"119
+[; ;LCDI2C.c: 119:         LCDDirection = addrs;
+[e = _LCDDirection _addrs ]
+"120
+[; ;LCDI2C.c: 120:         LCDDirection = LCDDirection << 1;
+[e = _LCDDirection -> << -> _LCDDirection `i -> 1 `i `uc ]
+"121
+[; ;LCDI2C.c: 121:         LCDDirection &= 0xFE;
+[e =& _LCDDirection -> -> 254 `i `uc ]
+"122
+[; ;LCDI2C.c: 122:         I2CStartTransaction();
+[e ( _I2CStartTransaction ..  ]
+"123
+[; ;LCDI2C.c: 123:         while(I2CWriteByte(LCDDirection))
+[e $U 162  ]
+[e :U 163 ]
+"124
+[; ;LCDI2C.c: 124:         {
+{
+"125
+[; ;LCDI2C.c: 125:             I2CRepeatTransaction();
+[e ( _I2CRepeatTransaction ..  ]
+"126
+[; ;LCDI2C.c: 126:         }
+}
+[e :U 162 ]
+"123
+[; ;LCDI2C.c: 123:         while(I2CWriteByte(LCDDirection))
+[e $ != -> ( _I2CWriteByte (1 _LCDDirection `i -> 0 `i 163  ]
+[e :U 164 ]
+"127
+[; ;LCDI2C.c: 127:         for(char i=0;i<5;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 165  ]
+[e $U 166  ]
+[e :U 165 ]
+"128
+[; ;LCDI2C.c: 128:         {
+{
+"129
+[; ;LCDI2C.c: 129:             MSNibble = StringInit[i] & 0xF0;
+[e = _MSNibble -> & -> *U + &U _StringInit * -> _i `ux -> -> # *U &U _StringInit `ui `ux `i -> 240 `i `uc ]
+"130
+[; ;LCDI2C.c: 130:             MSNibble |= BacklightState;
+[e =| _MSNibble -> _BacklightState `uc ]
+"131
+[; ;LCDI2C.c: 131:             MSNibble &= 0xFE;
+[e =& _MSNibble -> -> 254 `i `uc ]
+"132
+[; ;LCDI2C.c: 132:             MSNibble |= 0x04;
+[e =| _MSNibble -> -> 4 `i `uc ]
+"133
+[; ;LCDI2C.c: 133:             I2CWriteByte(MSNibble);
+[e ( _I2CWriteByte (1 _MSNibble ]
+"134
+[; ;LCDI2C.c: 134:             MSNibble &= 0xFB;
+[e =& _MSNibble -> -> 251 `i `uc ]
+"135
+[; ;LCDI2C.c: 135:             I2CWriteByte(MSNibble);
+[e ( _I2CWriteByte (1 _MSNibble ]
+"136
+[; ;LCDI2C.c: 136:             LSNibble = StringInit[i] << 4;
+[e = _LSNibble -> << -> *U + &U _StringInit * -> _i `ux -> -> # *U &U _StringInit `ui `ux `i -> 4 `i `uc ]
+"137
+[; ;LCDI2C.c: 137:             LSNibble |=BacklightState;
+[e =| _LSNibble -> _BacklightState `uc ]
+"138
+[; ;LCDI2C.c: 138:             LSNibble &= 0xFE;
+[e =& _LSNibble -> -> 254 `i `uc ]
+"139
+[; ;LCDI2C.c: 139:             LSNibble |= 0x04;
+[e =| _LSNibble -> -> 4 `i `uc ]
+"140
+[; ;LCDI2C.c: 140:             I2CWriteByte(LSNibble);
+[e ( _I2CWriteByte (1 _LSNibble ]
+"141
+[; ;LCDI2C.c: 141:             LSNibble &= 0xFB;
+[e =& _LSNibble -> -> 251 `i `uc ]
+"142
+[; ;LCDI2C.c: 142:             I2CWriteByte(LSNibble);
+[e ( _I2CWriteByte (1 _LSNibble ]
+"143
+[; ;LCDI2C.c: 143:             delay(5);
+[e ( _delay (1 -> 5 `i ]
+"144
+[; ;LCDI2C.c: 144:         }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 165  ]
+[e :U 166 ]
+}
+"145
+[; ;LCDI2C.c: 145:         I2CStopTransaction();
+[e ( _I2CStopTransaction ..  ]
+"146
+[; ;LCDI2C.c: 146: }
+[e :UE 161 ]
+}
+"148
+[; ;LCDI2C.c: 148: void Backlight(char mode)
+[v _Backlight `(v ~T0 @X0 1 ef1`uc ]
+"149
+[; ;LCDI2C.c: 149: {
+{
+[e :U _Backlight ]
+"148
+[; ;LCDI2C.c: 148: void Backlight(char mode)
+[v _mode `uc ~T0 @X0 1 r1 ]
+"149
+[; ;LCDI2C.c: 149: {
+[f ]
+"150
+[; ;LCDI2C.c: 150:     BacklightState = mode;
+[e = _BacklightState _mode ]
+"151
+[; ;LCDI2C.c: 151: }
+[e :UE 168 ]
+}
+"154
+[; ;LCDI2C.c: 154: void SendInstruction(char instr)
+[v _SendInstruction `(v ~T0 @X0 1 ef1`uc ]
+"155
+[; ;LCDI2C.c: 155: {
+{
+[e :U _SendInstruction ]
+"154
+[; ;LCDI2C.c: 154: void SendInstruction(char instr)
+[v _instr `uc ~T0 @X0 1 r1 ]
+"155
+[; ;LCDI2C.c: 155: {
+[f ]
+"156
+[; ;LCDI2C.c: 156:     I2CStartTransaction();
+[e ( _I2CStartTransaction ..  ]
+"157
+[; ;LCDI2C.c: 157:     while(I2CWriteByte(LCDDirection))
+[e $U 170  ]
+[e :U 171 ]
+"158
+[; ;LCDI2C.c: 158:     {
+{
+"159
+[; ;LCDI2C.c: 159:         I2CRepeatTransaction();
+[e ( _I2CRepeatTransaction ..  ]
+"160
+[; ;LCDI2C.c: 160:     }
+}
+[e :U 170 ]
+"157
+[; ;LCDI2C.c: 157:     while(I2CWriteByte(LCDDirection))
+[e $ != -> ( _I2CWriteByte (1 _LCDDirection `i -> 0 `i 171  ]
+[e :U 172 ]
+"161
+[; ;LCDI2C.c: 161:     MSNibble = instr & 0xF0;
+[e = _MSNibble -> & -> _instr `i -> 240 `i `uc ]
+"162
+[; ;LCDI2C.c: 162:     MSNibble |= BacklightState;
+[e =| _MSNibble -> _BacklightState `uc ]
+"163
+[; ;LCDI2C.c: 163:     MSNibble &= 0xFE;
+[e =& _MSNibble -> -> 254 `i `uc ]
+"164
+[; ;LCDI2C.c: 164:     MSNibble |= 0x04;
+[e =| _MSNibble -> -> 4 `i `uc ]
+"165
+[; ;LCDI2C.c: 165:     I2CWriteByte(MSNibble);
+[e ( _I2CWriteByte (1 _MSNibble ]
+"166
+[; ;LCDI2C.c: 166:     MSNibble &= 0xFB;
+[e =& _MSNibble -> -> 251 `i `uc ]
+"167
+[; ;LCDI2C.c: 167:      I2CWriteByte(MSNibble);
+[e ( _I2CWriteByte (1 _MSNibble ]
+"168
+[; ;LCDI2C.c: 168:     LSNibble = instr << 4;
+[e = _LSNibble -> << -> _instr `i -> 4 `i `uc ]
+"169
+[; ;LCDI2C.c: 169:     LSNibble |=BacklightState;
+[e =| _LSNibble -> _BacklightState `uc ]
+"170
+[; ;LCDI2C.c: 170:     LSNibble &= 0xFE;
+[e =& _LSNibble -> -> 254 `i `uc ]
+"171
+[; ;LCDI2C.c: 171:     LSNibble |= 0x04;
+[e =| _LSNibble -> -> 4 `i `uc ]
+"172
+[; ;LCDI2C.c: 172:      I2CWriteByte(LSNibble);
+[e ( _I2CWriteByte (1 _LSNibble ]
+"173
+[; ;LCDI2C.c: 173:     LSNibble &= 0xFB;
+[e =& _LSNibble -> -> 251 `i `uc ]
+"174
+[; ;LCDI2C.c: 174:      I2CWriteByte(LSNibble);
+[e ( _I2CWriteByte (1 _LSNibble ]
+"175
+[; ;LCDI2C.c: 175:      I2CStopTransaction();
+[e ( _I2CStopTransaction ..  ]
+"176
+[; ;LCDI2C.c: 176: }
+[e :UE 169 ]
+}
+"178
+[; ;LCDI2C.c: 178: void SendData(char databyte)
+[v _SendData `(v ~T0 @X0 1 ef1`uc ]
+"179
+[; ;LCDI2C.c: 179: {
+{
+[e :U _SendData ]
+"178
+[; ;LCDI2C.c: 178: void SendData(char databyte)
+[v _databyte `uc ~T0 @X0 1 r1 ]
+"179
+[; ;LCDI2C.c: 179: {
+[f ]
+"180
+[; ;LCDI2C.c: 180:     I2CStartTransaction();
+[e ( _I2CStartTransaction ..  ]
+"181
+[; ;LCDI2C.c: 181:     while(I2CWriteByte(LCDDirection))
+[e $U 174  ]
+[e :U 175 ]
+"182
+[; ;LCDI2C.c: 182:     {
+{
+"183
+[; ;LCDI2C.c: 183:         I2CRepeatTransaction();
+[e ( _I2CRepeatTransaction ..  ]
+"184
+[; ;LCDI2C.c: 184:     }
+}
+[e :U 174 ]
+"181
+[; ;LCDI2C.c: 181:     while(I2CWriteByte(LCDDirection))
+[e $ != -> ( _I2CWriteByte (1 _LCDDirection `i -> 0 `i 175  ]
+[e :U 176 ]
+"185
+[; ;LCDI2C.c: 185:     MSNibble = databyte & 0xF0;
+[e = _MSNibble -> & -> _databyte `i -> 240 `i `uc ]
+"186
+[; ;LCDI2C.c: 186:     MSNibble |= BacklightState;
+[e =| _MSNibble -> _BacklightState `uc ]
+"187
+[; ;LCDI2C.c: 187:     MSNibble |= 0x01;
+[e =| _MSNibble -> -> 1 `i `uc ]
+"188
+[; ;LCDI2C.c: 188:     MSNibble |= 0x04;
+[e =| _MSNibble -> -> 4 `i `uc ]
+"189
+[; ;LCDI2C.c: 189:     I2CWriteByte(MSNibble);
+[e ( _I2CWriteByte (1 _MSNibble ]
+"190
+[; ;LCDI2C.c: 190:     MSNibble &= 0xFB;
+[e =& _MSNibble -> -> 251 `i `uc ]
+"191
+[; ;LCDI2C.c: 191:     I2CWriteByte(MSNibble);
+[e ( _I2CWriteByte (1 _MSNibble ]
+"192
+[; ;LCDI2C.c: 192:     LSNibble = databyte << 4;
+[e = _LSNibble -> << -> _databyte `i -> 4 `i `uc ]
+"193
+[; ;LCDI2C.c: 193:     LSNibble |=BacklightState;
+[e =| _LSNibble -> _BacklightState `uc ]
+"194
+[; ;LCDI2C.c: 194:     LSNibble |= 0x01;
+[e =| _LSNibble -> -> 1 `i `uc ]
+"195
+[; ;LCDI2C.c: 195:     LSNibble |= 0x04;
+[e =| _LSNibble -> -> 4 `i `uc ]
+"196
+[; ;LCDI2C.c: 196:     I2CWriteByte(LSNibble);
+[e ( _I2CWriteByte (1 _LSNibble ]
+"197
+[; ;LCDI2C.c: 197:     LSNibble &= 0xFB;
+[e =& _LSNibble -> -> 251 `i `uc ]
+"198
+[; ;LCDI2C.c: 198:     I2CWriteByte(LSNibble);
+[e ( _I2CWriteByte (1 _LSNibble ]
+"199
+[; ;LCDI2C.c: 199:     I2CStopTransaction();
+[e ( _I2CStopTransaction ..  ]
+"200
+[; ;LCDI2C.c: 200: }
+[e :UE 173 ]
+}
+"202
+[; ;LCDI2C.c: 202: void LCDClear(void)
+[v _LCDClear `(v ~T0 @X0 1 ef ]
+"203
+[; ;LCDI2C.c: 203: {
+{
+[e :U _LCDClear ]
+[f ]
+"204
+[; ;LCDI2C.c: 204:     LCDSetCursor(1,1);
+[e ( _LCDSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"205
+[; ;LCDI2C.c: 205:     LCDPrint("                ");
+[e ( _LCDPrint (1 :s 1C ]
+"206
+[; ;LCDI2C.c: 206:     LCDSetCursor(2,1);
+[e ( _LCDSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"207
+[; ;LCDI2C.c: 207:     LCDPrint("                ");
+[e ( _LCDPrint (1 :s 2C ]
+"208
+[; ;LCDI2C.c: 208:     LCDSetCursor(1,1);
+[e ( _LCDSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"209
+[; ;LCDI2C.c: 209: }
+[e :UE 177 ]
+}
+"211
+[; ;LCDI2C.c: 211: void LCDSetCursor(char row, char column)
+[v _LCDSetCursor `(v ~T0 @X0 1 ef2`uc`uc ]
+"212
+[; ;LCDI2C.c: 212: {
+{
+[e :U _LCDSetCursor ]
+"211
+[; ;LCDI2C.c: 211: void LCDSetCursor(char row, char column)
+[v _row `uc ~T0 @X0 1 r1 ]
+[v _column `uc ~T0 @X0 1 r2 ]
+"212
+[; ;LCDI2C.c: 212: {
+[f ]
+"213
+[; ;LCDI2C.c: 213:     char location = 0;
+[v _location `uc ~T0 @X0 1 a ]
+[e = _location -> -> 0 `i `uc ]
+"214
+[; ;LCDI2C.c: 214:     if(row == 1)
+[e $ ! == -> _row `i -> 1 `i 179  ]
+"215
+[; ;LCDI2C.c: 215:     {
+{
+"216
+[; ;LCDI2C.c: 216:         location = (0x80) + (column - 1);
+[e = _location -> + -> 128 `i - -> _column `i -> 1 `i `uc ]
+"217
+[; ;LCDI2C.c: 217:         SendInstruction(location);
+[e ( _SendInstruction (1 _location ]
+"218
+[; ;LCDI2C.c: 218:     }
+}
+[e $U 180  ]
+"219
+[; ;LCDI2C.c: 219:     else if(row == 2)
+[e :U 179 ]
+[e $ ! == -> _row `i -> 2 `i 181  ]
+"220
+[; ;LCDI2C.c: 220:     {
+{
+"221
+[; ;LCDI2C.c: 221:         location = 0xC0 + (column);
+[e = _location -> + -> 192 `i -> _column `i `uc ]
+"222
+[; ;LCDI2C.c: 222:         SendInstruction(location);
+[e ( _SendInstruction (1 _location ]
+"223
+[; ;LCDI2C.c: 223:     }
+}
+[e :U 181 ]
+[e :U 180 ]
+"224
+[; ;LCDI2C.c: 224: }
+[e :UE 178 ]
+}
+"226
+[; ;LCDI2C.c: 226: void LCDWrite(char data)
+[v _LCDWrite `(v ~T0 @X0 1 ef1`uc ]
+"227
+[; ;LCDI2C.c: 227: {
+{
+[e :U _LCDWrite ]
+"226
+[; ;LCDI2C.c: 226: void LCDWrite(char data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"227
+[; ;LCDI2C.c: 227: {
+[f ]
+"228
+[; ;LCDI2C.c: 228:     delay(4);
+[e ( _delay (1 -> 4 `i ]
+"229
+[; ;LCDI2C.c: 229:     SendData(data);
+[e ( _SendData (1 _data ]
+"230
+[; ;LCDI2C.c: 230: }
+[e :UE 182 ]
+}
+"232
+[; ;LCDI2C.c: 232: void LCDPrint(char *string)
+[v _LCDPrint `(v ~T0 @X0 1 ef1`*uc ]
+"233
+[; ;LCDI2C.c: 233: {
+{
+[e :U _LCDPrint ]
+"232
+[; ;LCDI2C.c: 232: void LCDPrint(char *string)
+[v _string `*uc ~T0 @X0 1 r1 ]
+"233
+[; ;LCDI2C.c: 233: {
+[f ]
+"234
+[; ;LCDI2C.c: 234:     I2CStartTransaction();
+[e ( _I2CStartTransaction ..  ]
+"235
+[; ;LCDI2C.c: 235:     while(I2CWriteByte(LCDDirection))
+[e $U 184  ]
+[e :U 185 ]
+"236
+[; ;LCDI2C.c: 236:     {
+{
+"237
+[; ;LCDI2C.c: 237:         I2CRepeatTransaction();
+[e ( _I2CRepeatTransaction ..  ]
+"238
+[; ;LCDI2C.c: 238:     }
+}
+[e :U 184 ]
+"235
+[; ;LCDI2C.c: 235:     while(I2CWriteByte(LCDDirection))
+[e $ != -> ( _I2CWriteByte (1 _LCDDirection `i -> 0 `i 185  ]
+[e :U 186 ]
+"239
+[; ;LCDI2C.c: 239:     for(int i=0;string[i] != '\0';i++)
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 190  ]
+[e :U 187 ]
+"240
+[; ;LCDI2C.c: 240:     {
+{
+"241
+[; ;LCDI2C.c: 241:         MSNibble = string[i] & 0xF0;
+[e = _MSNibble -> & -> *U + _string * -> _i `x -> -> # *U _string `i `x `i -> 240 `i `uc ]
+"242
+[; ;LCDI2C.c: 242:         MSNibble |= BacklightState;
+[e =| _MSNibble -> _BacklightState `uc ]
+"243
+[; ;LCDI2C.c: 243:         MSNibble |= 0x01;
+[e =| _MSNibble -> -> 1 `i `uc ]
+"244
+[; ;LCDI2C.c: 244:         MSNibble |= 0x04;
+[e =| _MSNibble -> -> 4 `i `uc ]
+"245
+[; ;LCDI2C.c: 245:         I2CWriteByte(MSNibble);
+[e ( _I2CWriteByte (1 _MSNibble ]
+"246
+[; ;LCDI2C.c: 246:         MSNibble &= 0xFB;
+[e =& _MSNibble -> -> 251 `i `uc ]
+"247
+[; ;LCDI2C.c: 247:         I2CWriteByte(MSNibble);
+[e ( _I2CWriteByte (1 _MSNibble ]
+"248
+[; ;LCDI2C.c: 248:         LSNibble = string[i] << 4;
+[e = _LSNibble -> << -> *U + _string * -> _i `x -> -> # *U _string `i `x `i -> 4 `i `uc ]
+"249
+[; ;LCDI2C.c: 249:         LSNibble |=BacklightState;
+[e =| _LSNibble -> _BacklightState `uc ]
+"250
+[; ;LCDI2C.c: 250:         LSNibble |= 0x01;
+[e =| _LSNibble -> -> 1 `i `uc ]
+"251
+[; ;LCDI2C.c: 251:         LSNibble |= 0x04;
+[e =| _LSNibble -> -> 4 `i `uc ]
+"252
+[; ;LCDI2C.c: 252:         I2CWriteByte(LSNibble);
+[e ( _I2CWriteByte (1 _LSNibble ]
+"253
+[; ;LCDI2C.c: 253:         LSNibble &= 0xFB;
+[e =& _LSNibble -> -> 251 `i `uc ]
+"254
+[; ;LCDI2C.c: 254:         I2CWriteByte(LSNibble);
+[e ( _I2CWriteByte (1 _LSNibble ]
+"255
+[; ;LCDI2C.c: 255:     }
+}
+[e ++ _i -> 1 `i ]
+[e :U 190 ]
+[e $ != -> *U + _string * -> _i `x -> -> # *U _string `i `x `ui -> 0 `ui 187  ]
+[e :U 188 ]
+}
+"256
+[; ;LCDI2C.c: 256:     I2CStopTransaction();
+[e ( _I2CStopTransaction ..  ]
+"257
+[; ;LCDI2C.c: 257: }
+[e :UE 183 ]
+}
+[a 1C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 2C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]

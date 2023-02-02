@@ -7,8 +7,8 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "LCD16x2.c" 2
-# 1 "./system.h" 1
-# 11 "./system.h"
+# 1 "./Hormiga877.h" 1
+# 11 "./Hormiga877.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1722,7 +1722,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 11 "./system.h" 2
+# 11 "./Hormiga877.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdint.h" 3
@@ -1857,7 +1857,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 12 "./system.h" 2
+# 12 "./Hormiga877.h" 2
 
 
 #pragma config FOSC = HS
@@ -1868,12 +1868,19 @@ typedef uint16_t uintptr_t;
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-# 31 "./system.h"
+
+
+
+
+
+
+
+
+void Positioner(unsigned int Count);
+
 void Initialization(void);
-void CCP1Configuration(void);
-void PWM2Stop(void);
-void PWM1Stop(void);
-void CCP2Configuration(void);
+void PWMConfiguration(void);
+void PWMStop(void);
 char PBRead(char pin);
 void pinMode(char pin, char mode);
 void digitalWrite(char pin, char value);
@@ -1896,26 +1903,26 @@ char SerialRead(void);
 void SerialReadText(char *Output, unsigned int lenght);
 
 
-double rescale(double x, double in_min, double in_max, double out_min, double out_max);
-char residuo(unsigned int numerator, unsigned int denominator);
-char cocienteEntero(unsigned int numerator, unsigned int denominator);
 
-
-void I2CMasterStart(void);
-void I2CMasterRepeatedStart(void);
-void I2CMasterStop(void);
-void I2CMasterWrite(unsigned d);
-unsigned short I2CMasterRead(unsigned short a);
 
 void delay(const int milis);
-void delayMicroseconds(const int us);
+void delayMicroseconds(const unsigned int us);
+void __attribute__((picinterrupt(""))) TimeCounter(void);
+void TimerOneInterruptEnable(void);
+void TimerOneInterruptDisable(void);
 # 1 "LCD16x2.c" 2
 
 # 1 "./LCD16x2.h" 1
 # 12 "./LCD16x2.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdint.h" 1 3
 # 12 "./LCD16x2.h" 2
-# 33 "./LCD16x2.h"
+
+
+
+
+
+
+
     void lcdClear(void);
 
 
@@ -1929,14 +1936,11 @@ void delayMicroseconds(const int us);
 
     void lcdWrite(char data);
     void lcdPrint(char *string);
-    void lcdShiftRight(void);
-    void lcdShiftLeft(void);
     void lcdWritePort(char a);
     void lcdCommand(char data, char mode);
     void lcdBegin(char RS, char EN, char R_W, char d4, char d5, char d6,char d7);
     void LcdWriteNibble(char data , char mode);
     void ByteByNibble(char NibbleValue);
-
     void WriteData(char data);
     void WriteInstruction(char instruction);
 # 2 "LCD16x2.c" 2
@@ -1948,13 +1952,13 @@ void delayMicroseconds(const int us);
 
 
 
-int RSPin = 0;
-int ENPin = 0;
-int RWPin = 0;
-int d4Pin = 0;
-int d5Pin = 0;
-int d6Pin = 0;
-int d7Pin = 0;
+uint8_t RSPin = 0;
+uint8_t ENPin = 0;
+uint8_t RWPin = 0;
+uint8_t d4Pin = 0;
+uint8_t d5Pin = 0;
+uint8_t d6Pin = 0;
+uint8_t d7Pin = 0;
 
 void lcdBegin(char RS, char EN, char R_W, char d4, char d5, char d6,char d7)
 {
@@ -2006,6 +2010,7 @@ void lcdWrite(char data)
     delay(8);
     WriteData(data);
 }
+
 void lcdPrint(char *string)
 {
     for(int i=0;string[i] != '\0';i++)
@@ -2014,53 +2019,6 @@ void lcdPrint(char *string)
     }
 }
 
-
-void lcdShiftRight(void)
-{
-    lcdCommand(0x01,0x00);
-    lcdCommand(0x0C,0x00);
-}
-void lcdShiftLeft(void)
-{
-    lcdCommand(0x01,0x00);
-    lcdCommand(0x08,0x00);
-}
-void lcdWritePort(char data)
-{
-    if(data & 0x01)
-    {
-        digitalWrite(d4Pin,1);
-    }
-    else
-    {
-        digitalWrite(d4Pin,0);
-    }
-    if(data & 0x02)
-    {
-        digitalWrite(d5Pin,1);
-    }
-    else
-    {
-        digitalWrite(d5Pin,0);
-    }
-    if(data & 0x04)
-    {
-        digitalWrite(d6Pin, 1);
-    }
-    else
-    {
-        digitalWrite(d6Pin,0);
-    }
-    if(data & 0x08)
-    {
-        digitalWrite(d7Pin,1);
-    }
-    else
-    {
-        digitalWrite(d7Pin,0);
-    }
-
-}
 
 void WriteInstruction(char instruction)
 {

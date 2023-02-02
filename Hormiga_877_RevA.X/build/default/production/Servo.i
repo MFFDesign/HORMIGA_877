@@ -7,8 +7,8 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "Servo.c" 2
-# 1 "./system.h" 1
-# 11 "./system.h"
+# 1 "./Hormiga877.h" 1
+# 11 "./Hormiga877.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1722,7 +1722,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 11 "./system.h" 2
+# 11 "./Hormiga877.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdint.h" 3
@@ -1857,7 +1857,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 12 "./system.h" 2
+# 12 "./Hormiga877.h" 2
 
 
 #pragma config FOSC = HS
@@ -1868,12 +1868,19 @@ typedef uint16_t uintptr_t;
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-# 31 "./system.h"
+
+
+
+
+
+
+
+
+void Positioner(unsigned int Count);
+
 void Initialization(void);
-void CCP1Configuration(void);
-void PWM2Stop(void);
-void PWM1Stop(void);
-void CCP2Configuration(void);
+void PWMConfiguration(void);
+void PWMStop(void);
 char PBRead(char pin);
 void pinMode(char pin, char mode);
 void digitalWrite(char pin, char value);
@@ -1896,19 +1903,13 @@ char SerialRead(void);
 void SerialReadText(char *Output, unsigned int lenght);
 
 
-double rescale(double x, double in_min, double in_max, double out_min, double out_max);
-char residuo(unsigned int numerator, unsigned int denominator);
-char cocienteEntero(unsigned int numerator, unsigned int denominator);
 
-
-void I2CMasterStart(void);
-void I2CMasterRepeatedStart(void);
-void I2CMasterStop(void);
-void I2CMasterWrite(unsigned d);
-unsigned short I2CMasterRead(unsigned short a);
 
 void delay(const int milis);
-void delayMicroseconds(const int us);
+void delayMicroseconds(const unsigned int us);
+void __attribute__((picinterrupt(""))) TimeCounter(void);
+void TimerOneInterruptEnable(void);
+void TimerOneInterruptDisable(void);
 # 1 "Servo.c" 2
 
 

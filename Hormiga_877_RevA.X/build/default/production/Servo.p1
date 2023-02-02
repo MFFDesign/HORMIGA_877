@@ -1,17 +1,16 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"37 ./system.h
-[; ;./system.h: 37: void pinMode(char pin, char mode);
+"36 ./Hormiga877.h
+[; ;./Hormiga877.h: 36: void delay(const int milis);
 [v _pinMode `(v ~T0 @X0 0 ef2`uc`uc ]
-"38
-[; ;./system.h: 38: void digitalWrite(char pin, char value);
+"37
+[; ;./Hormiga877.h: 37: void delayMicroseconds(const unsigned int us);
 [v _digitalWrite `(v ~T0 @X0 0 ef2`uc`uc ]
 [v F842 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h
 [v __delay `JF842 ~T0 @X0 0 e ]
 [p i __delay ]
-"70 ./system.h
-[; ;./system.h: 70: void delayMicroseconds(const int us);
-[v _delayMicroseconds `(v ~T0 @X0 0 ef1`Ci ]
+"60 ./Hormiga877.h
+[v _delayMicroseconds `(v ~T0 @X0 0 ef1`Cui ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -192,21 +191,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"14 ./system.h
+"14 ./Hormiga877.h
+[; ;./Hormiga877.h: 14: void digitalWrite(char pin, char value);
 [p x FOSC = HS ]
 "15
+[; ;./Hormiga877.h: 15: char digitalRead(char pin);
 [p x WDTE = OFF ]
 "16
+[; ;./Hormiga877.h: 16: unsigned int analogRead(char channel);
 [p x PWRTE = OFF ]
 "17
+[; ;./Hormiga877.h: 17: uint8_t analogWrite(char pin, unsigned int value);
 [p x BOREN = OFF ]
 "18
+[; ;./Hormiga877.h: 18: void setup(void);
 [p x LVP = ON ]
 "19
+[; ;./Hormiga877.h: 19: void loop(void);
 [p x CPD = OFF ]
 "20
+[; ;./Hormiga877.h: 20: 
 [p x WRT = OFF ]
 "21
+[; ;./Hormiga877.h: 21: 
 [p x CP = OFF ]
 "3 Servo.c
 [; ;Servo.c: 3: uint8_t ServoValue = 0;
@@ -361,13 +368,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _digitalWrite (2 , -> _ServoValue `uc -> -> 1 `i `uc ]
 "41
 [; ;Servo.c: 41:         delayMicroseconds(800);
-[e ( _delayMicroseconds (1 -> 800 `i ]
+[e ( _delayMicroseconds (1 -> -> 800 `i `ui ]
 "42
 [; ;Servo.c: 42:         digitalWrite(ServoValue,0);
 [e ( _digitalWrite (2 , -> _ServoValue `uc -> -> 0 `i `uc ]
 "43
 [; ;Servo.c: 43:         delayMicroseconds(19200);
-[e ( _delayMicroseconds (1 -> 19200 `i ]
+[e ( _delayMicroseconds (1 -> -> 19200 `i `ui ]
 "44
 [; ;Servo.c: 44:     }
 }
@@ -410,13 +417,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _digitalWrite (2 , -> _ServoValue `uc -> -> 1 `i `uc ]
 "52
 [; ;Servo.c: 52:         delayMicroseconds(1500);
-[e ( _delayMicroseconds (1 -> 1500 `i ]
+[e ( _delayMicroseconds (1 -> -> 1500 `i `ui ]
 "53
 [; ;Servo.c: 53:         digitalWrite(ServoValue,0);
 [e ( _digitalWrite (2 , -> _ServoValue `uc -> -> 0 `i `uc ]
 "54
 [; ;Servo.c: 54:         delayMicroseconds(18500);
-[e ( _delayMicroseconds (1 -> 18500 `i ]
+[e ( _delayMicroseconds (1 -> -> 18500 `i `ui ]
 "55
 [; ;Servo.c: 55:     }
 }

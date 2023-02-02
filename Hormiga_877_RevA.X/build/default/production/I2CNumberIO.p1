@@ -1,0 +1,1406 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"34 ./LCDI2C.h
+[; ;./LCDI2C.h: 34: void LCDSetCursor(char row, char column);
+[v _LCDSetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"35
+[; ;./LCDI2C.h: 35: void LCDWrite(char data);
+[v _LCDWrite `(v ~T0 @X0 0 ef1`uc ]
+"35 ./Hormiga877.h
+[; ;./Hormiga877.h: 35: 
+[v _PBRead `(uc ~T0 @X0 0 ef1`uc ]
+"194 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"36 ./LCDI2C.h
+[; ;./LCDI2C.h: 36: void LCDPrint(char *string);
+[v _LCDPrint `(v ~T0 @X0 0 ef1`*uc ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"14 ./Hormiga877.h
+[; ;./Hormiga877.h: 14: void digitalWrite(char pin, char value);
+[p x FOSC = HS ]
+"15
+[; ;./Hormiga877.h: 15: char digitalRead(char pin);
+[p x WDTE = OFF ]
+"16
+[; ;./Hormiga877.h: 16: unsigned int analogRead(char channel);
+[p x PWRTE = OFF ]
+"17
+[; ;./Hormiga877.h: 17: uint8_t analogWrite(char pin, unsigned int value);
+[p x BOREN = OFF ]
+"18
+[; ;./Hormiga877.h: 18: void setup(void);
+[p x LVP = ON ]
+"19
+[; ;./Hormiga877.h: 19: void loop(void);
+[p x CPD = OFF ]
+"20
+[; ;./Hormiga877.h: 20: 
+[p x WRT = OFF ]
+"21
+[; ;./Hormiga877.h: 21: 
+[p x CP = OFF ]
+"6 I2CNumberIO.c
+[; ;I2CNumberIO.c: 6: void I2CPrintNumber(float number, char *DataVector)
+[v _I2CPrintNumber `(v ~T0 @X0 1 ef2`f`*uc ]
+"7
+[; ;I2CNumberIO.c: 7: {
+{
+[e :U _I2CPrintNumber ]
+"6
+[; ;I2CNumberIO.c: 6: void I2CPrintNumber(float number, char *DataVector)
+[v _number `f ~T0 @X0 1 r1 ]
+[v _DataVector `*uc ~T0 @X0 1 r2 ]
+"7
+[; ;I2CNumberIO.c: 7: {
+[f ]
+"8
+[; ;I2CNumberIO.c: 8:     unsigned int BufferNumber = (int)number;
+[v _BufferNumber `ui ~T0 @X0 1 a ]
+[e = _BufferNumber -> -> _number `i `ui ]
+"9
+[; ;I2CNumberIO.c: 9:     unsigned int Buffer = 0;
+[v _Buffer `ui ~T0 @X0 1 a ]
+[e = _Buffer -> -> 0 `i `ui ]
+"10
+[; ;I2CNumberIO.c: 10:     DataVector[0] = (int)((BufferNumber - Buffer)/1000);
+[e = *U + _DataVector * -> -> 0 `i `x -> -> # *U _DataVector `i `x -> -> / - _BufferNumber _Buffer -> -> 1000 `i `ui `i `uc ]
+"11
+[; ;I2CNumberIO.c: 11:     Buffer =(DataVector[0] * 1000);
+[e = _Buffer -> * -> *U + _DataVector * -> -> 0 `i `x -> -> # *U _DataVector `i `x `i -> 1000 `i `ui ]
+"12
+[; ;I2CNumberIO.c: 12:     DataVector[0] += 48;
+[e =+ *U + _DataVector * -> -> 0 `i `x -> -> # *U _DataVector `i `x -> -> 48 `i `uc ]
+"13
+[; ;I2CNumberIO.c: 13:     DataVector[1] = (int)((BufferNumber - Buffer)/100);
+[e = *U + _DataVector * -> -> 1 `i `x -> -> # *U _DataVector `i `x -> -> / - _BufferNumber _Buffer -> -> 100 `i `ui `i `uc ]
+"14
+[; ;I2CNumberIO.c: 14:     Buffer += (DataVector[1] * 100);
+[e =+ _Buffer -> * -> *U + _DataVector * -> -> 1 `i `x -> -> # *U _DataVector `i `x `i -> 100 `i `ui ]
+"15
+[; ;I2CNumberIO.c: 15:     DataVector[1] += 48;
+[e =+ *U + _DataVector * -> -> 1 `i `x -> -> # *U _DataVector `i `x -> -> 48 `i `uc ]
+"16
+[; ;I2CNumberIO.c: 16:     DataVector[2] = (int)((BufferNumber - Buffer)/10);
+[e = *U + _DataVector * -> -> 2 `i `x -> -> # *U _DataVector `i `x -> -> / - _BufferNumber _Buffer -> -> 10 `i `ui `i `uc ]
+"17
+[; ;I2CNumberIO.c: 17:     Buffer += (DataVector[2] * 10);
+[e =+ _Buffer -> * -> *U + _DataVector * -> -> 2 `i `x -> -> # *U _DataVector `i `x `i -> 10 `i `ui ]
+"18
+[; ;I2CNumberIO.c: 18:     DataVector[2] += 48;
+[e =+ *U + _DataVector * -> -> 2 `i `x -> -> # *U _DataVector `i `x -> -> 48 `i `uc ]
+"19
+[; ;I2CNumberIO.c: 19:     DataVector[3] = (int)((BufferNumber - Buffer));
+[e = *U + _DataVector * -> -> 3 `i `x -> -> # *U _DataVector `i `x -> -> - _BufferNumber _Buffer `i `uc ]
+"20
+[; ;I2CNumberIO.c: 20:     DataVector[3] += 48;
+[e =+ *U + _DataVector * -> -> 3 `i `x -> -> # *U _DataVector `i `x -> -> 48 `i `uc ]
+"21
+[; ;I2CNumberIO.c: 21:     DataVector[4] = 0x2E;
+[e = *U + _DataVector * -> -> 4 `i `x -> -> # *U _DataVector `i `x -> -> 46 `i `uc ]
+"23
+[; ;I2CNumberIO.c: 23:     BufferNumber = (number - (int)number) * 1000;
+[e = _BufferNumber -> * - _number -> -> _number `i `f -> -> 1000 `i `f `ui ]
+"24
+[; ;I2CNumberIO.c: 24:     Buffer = 0;
+[e = _Buffer -> -> 0 `i `ui ]
+"25
+[; ;I2CNumberIO.c: 25:     DataVector[5] = (int)((BufferNumber - Buffer)/100);
+[e = *U + _DataVector * -> -> 5 `i `x -> -> # *U _DataVector `i `x -> -> / - _BufferNumber _Buffer -> -> 100 `i `ui `i `uc ]
+"26
+[; ;I2CNumberIO.c: 26:     Buffer += DataVector[5] * 100;
+[e =+ _Buffer -> * -> *U + _DataVector * -> -> 5 `i `x -> -> # *U _DataVector `i `x `i -> 100 `i `ui ]
+"27
+[; ;I2CNumberIO.c: 27:     DataVector[5] += 48;
+[e =+ *U + _DataVector * -> -> 5 `i `x -> -> # *U _DataVector `i `x -> -> 48 `i `uc ]
+"28
+[; ;I2CNumberIO.c: 28:     DataVector[6] = (int)((BufferNumber - Buffer)/10);
+[e = *U + _DataVector * -> -> 6 `i `x -> -> # *U _DataVector `i `x -> -> / - _BufferNumber _Buffer -> -> 10 `i `ui `i `uc ]
+"29
+[; ;I2CNumberIO.c: 29:     Buffer += DataVector[6] * 10;
+[e =+ _Buffer -> * -> *U + _DataVector * -> -> 6 `i `x -> -> # *U _DataVector `i `x `i -> 10 `i `ui ]
+"30
+[; ;I2CNumberIO.c: 30:     DataVector[6] += 48;
+[e =+ *U + _DataVector * -> -> 6 `i `x -> -> # *U _DataVector `i `x -> -> 48 `i `uc ]
+"31
+[; ;I2CNumberIO.c: 31:     DataVector[7] = (int)((BufferNumber - Buffer));
+[e = *U + _DataVector * -> -> 7 `i `x -> -> # *U _DataVector `i `x -> -> - _BufferNumber _Buffer `i `uc ]
+"32
+[; ;I2CNumberIO.c: 32:     DataVector[7] += 48;
+[e =+ *U + _DataVector * -> -> 7 `i `x -> -> # *U _DataVector `i `x -> -> 48 `i `uc ]
+"33
+[; ;I2CNumberIO.c: 33:     for(char i=0;i<8;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 97  ]
+[e $U 98  ]
+[e :U 97 ]
+"34
+[; ;I2CNumberIO.c: 34:     {
+{
+"35
+[; ;I2CNumberIO.c: 35:         DataVector[i] = DataVector[i+1];
+[e = *U + _DataVector * -> _i `ux -> -> # *U _DataVector `ui `ux *U + _DataVector * -> + -> _i `i -> 1 `i `x -> -> # *U _DataVector `i `x ]
+"36
+[; ;I2CNumberIO.c: 36:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 97  ]
+[e :U 98 ]
+}
+"37
+[; ;I2CNumberIO.c: 37: }
+[e :UE 96 ]
+}
+"39
+[; ;I2CNumberIO.c: 39: void I2CShowNumber(float number, float resolution, char *DataVector)
+[v _I2CShowNumber `(v ~T0 @X0 1 ef3`f`f`*uc ]
+"40
+[; ;I2CNumberIO.c: 40: {
+{
+[e :U _I2CShowNumber ]
+"39
+[; ;I2CNumberIO.c: 39: void I2CShowNumber(float number, float resolution, char *DataVector)
+[v _number `f ~T0 @X0 1 r1 ]
+[v _resolution `f ~T0 @X0 1 r2 ]
+[v _DataVector `*uc ~T0 @X0 1 r3 ]
+"40
+[; ;I2CNumberIO.c: 40: {
+[f ]
+"42
+[; ;I2CNumberIO.c: 42:     unsigned int PteEntera = 0;
+[v _PteEntera `ui ~T0 @X0 1 a ]
+[e = _PteEntera -> -> 0 `i `ui ]
+"43
+[; ;I2CNumberIO.c: 43:     unsigned int PteFraccion = 0;
+[v _PteFraccion `ui ~T0 @X0 1 a ]
+[e = _PteFraccion -> -> 0 `i `ui ]
+"44
+[; ;I2CNumberIO.c: 44:     char UnidadesMillar = 0;
+[v _UnidadesMillar `uc ~T0 @X0 1 a ]
+[e = _UnidadesMillar -> -> 0 `i `uc ]
+"45
+[; ;I2CNumberIO.c: 45:     char Centenas = 0;
+[v _Centenas `uc ~T0 @X0 1 a ]
+[e = _Centenas -> -> 0 `i `uc ]
+"46
+[; ;I2CNumberIO.c: 46:     char Decenas = 0;
+[v _Decenas `uc ~T0 @X0 1 a ]
+[e = _Decenas -> -> 0 `i `uc ]
+"47
+[; ;I2CNumberIO.c: 47:     char Unidades = 0;
+[v _Unidades `uc ~T0 @X0 1 a ]
+[e = _Unidades -> -> 0 `i `uc ]
+"48
+[; ;I2CNumberIO.c: 48:     char Decimas = 0;
+[v _Decimas `uc ~T0 @X0 1 a ]
+[e = _Decimas -> -> 0 `i `uc ]
+"49
+[; ;I2CNumberIO.c: 49:     char Centesimas = 0;
+[v _Centesimas `uc ~T0 @X0 1 a ]
+[e = _Centesimas -> -> 0 `i `uc ]
+"50
+[; ;I2CNumberIO.c: 50:     char Milesimas = 0;
+[v _Milesimas `uc ~T0 @X0 1 a ]
+[e = _Milesimas -> -> 0 `i `uc ]
+"51
+[; ;I2CNumberIO.c: 51:     float buffer = 0;
+[v _buffer `f ~T0 @X0 1 a ]
+[e = _buffer -> -> 0 `i `f ]
+"52
+[; ;I2CNumberIO.c: 52:     PteEntera = (int)number;
+[e = _PteEntera -> -> _number `i `ui ]
+"53
+[; ;I2CNumberIO.c: 53:     PteFraccion = (number - PteEntera) / resolution;
+[e = _PteFraccion -> / - _number -> _PteEntera `f _resolution `ui ]
+"54
+[; ;I2CNumberIO.c: 54:     UnidadesMillar = (int)(PteEntera/1000);
+[e = _UnidadesMillar -> -> / _PteEntera -> -> 1000 `i `ui `i `uc ]
+"55
+[; ;I2CNumberIO.c: 55:     Centenas = (int)((PteEntera - (UnidadesMillar * 1000))/100);
+[e = _Centenas -> -> / - _PteEntera -> * -> _UnidadesMillar `i -> 1000 `i `ui -> -> 100 `i `ui `i `uc ]
+"56
+[; ;I2CNumberIO.c: 56:     Decenas =(int)( (PteEntera - (UnidadesMillar * 1000) - (Centenas *100)) / 10);
+[e = _Decenas -> -> / - - _PteEntera -> * -> _UnidadesMillar `i -> 1000 `i `ui -> * -> _Centenas `i -> 100 `i `ui -> -> 10 `i `ui `i `uc ]
+"57
+[; ;I2CNumberIO.c: 57:     Unidades = (int)(PteEntera - (UnidadesMillar *1000) - (Centenas *100) - (Decenas * 10));
+[e = _Unidades -> -> - - - _PteEntera -> * -> _UnidadesMillar `i -> 1000 `i `ui -> * -> _Centenas `i -> 100 `i `ui -> * -> _Decenas `i -> 10 `i `ui `i `uc ]
+"58
+[; ;I2CNumberIO.c: 58:     Decimas = (int)(PteFraccion/100);
+[e = _Decimas -> -> / _PteFraccion -> -> 100 `i `ui `i `uc ]
+"59
+[; ;I2CNumberIO.c: 59:     Centesimas = (int)(PteFraccion - (Decimas * 100))/10;
+[e = _Centesimas -> / -> - _PteFraccion -> * -> _Decimas `i -> 100 `i `ui `i -> 10 `i `uc ]
+"60
+[; ;I2CNumberIO.c: 60:     Milesimas = (int)(PteFraccion - (Decimas*100) - (Centesimas * 10));
+[e = _Milesimas -> -> - - _PteFraccion -> * -> _Decimas `i -> 100 `i `ui -> * -> _Centesimas `i -> 10 `i `ui `i `uc ]
+"61
+[; ;I2CNumberIO.c: 61:     DataVector[0] = UnidadesMillar + 48;
+[e = *U + _DataVector * -> -> 0 `i `x -> -> # *U _DataVector `i `x -> + -> _UnidadesMillar `i -> 48 `i `uc ]
+"62
+[; ;I2CNumberIO.c: 62:     DataVector[1] = Centenas + 48;
+[e = *U + _DataVector * -> -> 1 `i `x -> -> # *U _DataVector `i `x -> + -> _Centenas `i -> 48 `i `uc ]
+"63
+[; ;I2CNumberIO.c: 63:     DataVector[2] = Decenas + 48;
+[e = *U + _DataVector * -> -> 2 `i `x -> -> # *U _DataVector `i `x -> + -> _Decenas `i -> 48 `i `uc ]
+"64
+[; ;I2CNumberIO.c: 64:     DataVector[3] = Unidades + 48;
+[e = *U + _DataVector * -> -> 3 `i `x -> -> # *U _DataVector `i `x -> + -> _Unidades `i -> 48 `i `uc ]
+"65
+[; ;I2CNumberIO.c: 65:     DataVector[4] = 0x2E;
+[e = *U + _DataVector * -> -> 4 `i `x -> -> # *U _DataVector `i `x -> -> 46 `i `uc ]
+"66
+[; ;I2CNumberIO.c: 66:     DataVector[5] = Decimas + 48;
+[e = *U + _DataVector * -> -> 5 `i `x -> -> # *U _DataVector `i `x -> + -> _Decimas `i -> 48 `i `uc ]
+"67
+[; ;I2CNumberIO.c: 67:     DataVector[6] = Centesimas + 48;
+[e = *U + _DataVector * -> -> 6 `i `x -> -> # *U _DataVector `i `x -> + -> _Centesimas `i -> 48 `i `uc ]
+"68
+[; ;I2CNumberIO.c: 68:     DataVector[7] = Milesimas + 48;
+[e = *U + _DataVector * -> -> 7 `i `x -> -> # *U _DataVector `i `x -> + -> _Milesimas `i -> 48 `i `uc ]
+"69
+[; ;I2CNumberIO.c: 69: }
+[e :UE 100 ]
+}
+"71
+[; ;I2CNumberIO.c: 71: unsigned int I2CParteEntera(float number )
+[v _I2CParteEntera `(ui ~T0 @X0 1 ef1`f ]
+"72
+[; ;I2CNumberIO.c: 72: {
+{
+[e :U _I2CParteEntera ]
+"71
+[; ;I2CNumberIO.c: 71: unsigned int I2CParteEntera(float number )
+[v _number `f ~T0 @X0 1 r1 ]
+"72
+[; ;I2CNumberIO.c: 72: {
+[f ]
+"73
+[; ;I2CNumberIO.c: 73:     return (int)number;
+[e ) -> -> _number `i `ui ]
+[e $UE 101  ]
+"74
+[; ;I2CNumberIO.c: 74: }
+[e :UE 101 ]
+}
+"76
+[; ;I2CNumberIO.c: 76: unsigned int I2CParteFraccional(float number, float resolution)
+[v _I2CParteFraccional `(ui ~T0 @X0 1 ef2`f`f ]
+"77
+[; ;I2CNumberIO.c: 77: {
+{
+[e :U _I2CParteFraccional ]
+"76
+[; ;I2CNumberIO.c: 76: unsigned int I2CParteFraccional(float number, float resolution)
+[v _number `f ~T0 @X0 1 r1 ]
+[v _resolution `f ~T0 @X0 1 r2 ]
+"77
+[; ;I2CNumberIO.c: 77: {
+[f ]
+"78
+[; ;I2CNumberIO.c: 78:     float buffer = 0;
+[v _buffer `f ~T0 @X0 1 a ]
+[e = _buffer -> -> 0 `i `f ]
+"79
+[; ;I2CNumberIO.c: 79:     buffer =(number - (int) number) / resolution;
+[e = _buffer / - _number -> -> _number `i `f _resolution ]
+"80
+[; ;I2CNumberIO.c: 80:     return buffer;
+[e ) -> _buffer `ui ]
+[e $UE 102  ]
+"81
+[; ;I2CNumberIO.c: 81: }
+[e :UE 102 ]
+}
+"83
+[; ;I2CNumberIO.c: 83: double I2CMakeDoubleNumber(char row, char col)
+[v _I2CMakeDoubleNumber `(d ~T0 @X0 1 ef2`uc`uc ]
+"84
+[; ;I2CNumberIO.c: 84: {
+{
+[e :U _I2CMakeDoubleNumber ]
+"83
+[; ;I2CNumberIO.c: 83: double I2CMakeDoubleNumber(char row, char col)
+[v _row `uc ~T0 @X0 1 r1 ]
+[v _col `uc ~T0 @X0 1 r2 ]
+"84
+[; ;I2CNumberIO.c: 84: {
+[f ]
+"85
+[; ;I2CNumberIO.c: 85:     double VarValue = 0;
+[v _VarValue `d ~T0 @X0 1 a ]
+[e = _VarValue -> -> 0 `i `d ]
+"86
+[; ;I2CNumberIO.c: 86:     char Done = 0;
+[v _Done `uc ~T0 @X0 1 a ]
+[e = _Done -> -> 0 `i `uc ]
+"87
+[; ;I2CNumberIO.c: 87:     char counter = 0;
+[v _counter `uc ~T0 @X0 1 a ]
+[e = _counter -> -> 0 `i `uc ]
+"88
+[; ;I2CNumberIO.c: 88:     while(Done < 3)
+[e $U 104  ]
+[e :U 105 ]
+"89
+[; ;I2CNumberIO.c: 89:     {
+{
+"90
+[; ;I2CNumberIO.c: 90:         LCDSetCursor(row,(col + 8 - Done));
+[e ( _LCDSetCursor (2 , _row -> - + -> _col `i -> 8 `i -> _Done `i `uc ]
+"91
+[; ;I2CNumberIO.c: 91:         LCDWrite(counter+48);
+[e ( _LCDWrite (1 -> + -> _counter `i -> 48 `i `uc ]
+"92
+[; ;I2CNumberIO.c: 92:         if(!PBRead(0))
+[e $ ! ! != -> ( _PBRead (1 -> -> 0 `i `uc `i -> 0 `i 107  ]
+"93
+[; ;I2CNumberIO.c: 93:         {
+{
+"94
+[; ;I2CNumberIO.c: 94:             if(counter >= 9)
+[e $ ! >= -> _counter `i -> 9 `i 108  ]
+"95
+[; ;I2CNumberIO.c: 95:             {
+{
+"96
+[; ;I2CNumberIO.c: 96:                 counter = 9;
+[e = _counter -> -> 9 `i `uc ]
+"97
+[; ;I2CNumberIO.c: 97:             }
+}
+[e $U 109  ]
+"98
+[; ;I2CNumberIO.c: 98:             else
+[e :U 108 ]
+"99
+[; ;I2CNumberIO.c: 99:             {
+{
+"100
+[; ;I2CNumberIO.c: 100:                 counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+"101
+[; ;I2CNumberIO.c: 101:             }
+}
+[e :U 109 ]
+"102
+[; ;I2CNumberIO.c: 102:         }
+}
+[e $U 110  ]
+"103
+[; ;I2CNumberIO.c: 103:         else if(!PBRead(1))
+[e :U 107 ]
+[e $ ! ! != -> ( _PBRead (1 -> -> 1 `i `uc `i -> 0 `i 111  ]
+"104
+[; ;I2CNumberIO.c: 104:         {
+{
+"105
+[; ;I2CNumberIO.c: 105:             switch(Done)
+[e $U 113  ]
+"106
+[; ;I2CNumberIO.c: 106:             {
+{
+"107
+[; ;I2CNumberIO.c: 107:                 case 0:
+[e :U 114 ]
+"108
+[; ;I2CNumberIO.c: 108:                     VarValue += (counter * 0.001);
+[e =+ _VarValue * -> -> _counter `i `d .0.001 ]
+"109
+[; ;I2CNumberIO.c: 109:                     break;
+[e $U 112  ]
+"110
+[; ;I2CNumberIO.c: 110:                 case 1:
+[e :U 115 ]
+"111
+[; ;I2CNumberIO.c: 111:                     VarValue += (counter * 0.01);
+[e =+ _VarValue * -> -> _counter `i `d .0.01 ]
+"112
+[; ;I2CNumberIO.c: 112:                     break;
+[e $U 112  ]
+"113
+[; ;I2CNumberIO.c: 113:                 case 2:
+[e :U 116 ]
+"114
+[; ;I2CNumberIO.c: 114:                     VarValue += (counter * 0.1);
+[e =+ _VarValue * -> -> _counter `i `d .0.1 ]
+"115
+[; ;I2CNumberIO.c: 115:                     break;
+[e $U 112  ]
+"116
+[; ;I2CNumberIO.c: 116:             }
+}
+[e $U 112  ]
+[e :U 113 ]
+[e [\ -> _Done `i , $ -> 0 `i 114
+ , $ -> 1 `i 115
+ , $ -> 2 `i 116
+ 112 ]
+[e :U 112 ]
+"117
+[; ;I2CNumberIO.c: 117:             Done++;
+[e ++ _Done -> -> 1 `i `uc ]
+"118
+[; ;I2CNumberIO.c: 118:         }
+}
+[e $U 117  ]
+"119
+[; ;I2CNumberIO.c: 119:         else if(!PBRead(2))
+[e :U 111 ]
+[e $ ! ! != -> ( _PBRead (1 -> -> 2 `i `uc `i -> 0 `i 118  ]
+"120
+[; ;I2CNumberIO.c: 120:         {
+{
+"121
+[; ;I2CNumberIO.c: 121:             if(counter <= 0)
+[e $ ! <= -> _counter `i -> 0 `i 119  ]
+"122
+[; ;I2CNumberIO.c: 122:             {
+{
+"123
+[; ;I2CNumberIO.c: 123:                 counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+"124
+[; ;I2CNumberIO.c: 124:             }
+}
+[e $U 120  ]
+"125
+[; ;I2CNumberIO.c: 125:             else
+[e :U 119 ]
+"126
+[; ;I2CNumberIO.c: 126:             {
+{
+"127
+[; ;I2CNumberIO.c: 127:                 counter--;
+[e -- _counter -> -> 1 `i `uc ]
+"128
+[; ;I2CNumberIO.c: 128:             }
+}
+[e :U 120 ]
+"129
+[; ;I2CNumberIO.c: 129:         }
+}
+[e :U 118 ]
+[e :U 117 ]
+[e :U 110 ]
+"130
+[; ;I2CNumberIO.c: 130:     }
+}
+[e :U 104 ]
+"88
+[; ;I2CNumberIO.c: 88:     while(Done < 3)
+[e $ < -> _Done `i -> 3 `i 105  ]
+[e :U 106 ]
+"131
+[; ;I2CNumberIO.c: 131:     Done = 0;
+[e = _Done -> -> 0 `i `uc ]
+"132
+[; ;I2CNumberIO.c: 132:     LCDSetCursor(row,col + 5);
+[e ( _LCDSetCursor (2 , _row -> + -> _col `i -> 5 `i `uc ]
+"133
+[; ;I2CNumberIO.c: 133:     LCDWrite(0x2E);
+[e ( _LCDWrite (1 -> -> 46 `i `uc ]
+"134
+[; ;I2CNumberIO.c: 134:     while(Done < 4)
+[e $U 121  ]
+[e :U 122 ]
+"135
+[; ;I2CNumberIO.c: 135:     {
+{
+"136
+[; ;I2CNumberIO.c: 136:         LCDSetCursor(row,(col + 4 - Done));
+[e ( _LCDSetCursor (2 , _row -> - + -> _col `i -> 4 `i -> _Done `i `uc ]
+"137
+[; ;I2CNumberIO.c: 137:         LCDWrite(counter+48);
+[e ( _LCDWrite (1 -> + -> _counter `i -> 48 `i `uc ]
+"138
+[; ;I2CNumberIO.c: 138:         if(!PBRead(0))
+[e $ ! ! != -> ( _PBRead (1 -> -> 0 `i `uc `i -> 0 `i 124  ]
+"139
+[; ;I2CNumberIO.c: 139:         {
+{
+"140
+[; ;I2CNumberIO.c: 140:             if(counter >= 9)
+[e $ ! >= -> _counter `i -> 9 `i 125  ]
+"141
+[; ;I2CNumberIO.c: 141:             {
+{
+"142
+[; ;I2CNumberIO.c: 142:                 counter = 9;
+[e = _counter -> -> 9 `i `uc ]
+"143
+[; ;I2CNumberIO.c: 143:             }
+}
+[e $U 126  ]
+"144
+[; ;I2CNumberIO.c: 144:             else
+[e :U 125 ]
+"145
+[; ;I2CNumberIO.c: 145:             {
+{
+"146
+[; ;I2CNumberIO.c: 146:                 counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+"147
+[; ;I2CNumberIO.c: 147:             }
+}
+[e :U 126 ]
+"148
+[; ;I2CNumberIO.c: 148:         }
+}
+[e $U 127  ]
+"149
+[; ;I2CNumberIO.c: 149:         else if(!PBRead(1))
+[e :U 124 ]
+[e $ ! ! != -> ( _PBRead (1 -> -> 1 `i `uc `i -> 0 `i 128  ]
+"150
+[; ;I2CNumberIO.c: 150:         {
+{
+"151
+[; ;I2CNumberIO.c: 151:             switch(Done)
+[e $U 130  ]
+"152
+[; ;I2CNumberIO.c: 152:             {
+{
+"153
+[; ;I2CNumberIO.c: 153:                 case 0:
+[e :U 131 ]
+"154
+[; ;I2CNumberIO.c: 154:                     VarValue += counter;
+[e =+ _VarValue -> -> _counter `i `d ]
+"155
+[; ;I2CNumberIO.c: 155:                     break;
+[e $U 129  ]
+"156
+[; ;I2CNumberIO.c: 156:                 case 1:
+[e :U 132 ]
+"157
+[; ;I2CNumberIO.c: 157:                     VarValue += (counter * 10);
+[e =+ _VarValue -> * -> _counter `i -> 10 `i `d ]
+"158
+[; ;I2CNumberIO.c: 158:                     break;
+[e $U 129  ]
+"159
+[; ;I2CNumberIO.c: 159:                 case 2:
+[e :U 133 ]
+"160
+[; ;I2CNumberIO.c: 160:                     VarValue += (counter *100);
+[e =+ _VarValue -> * -> _counter `i -> 100 `i `d ]
+"161
+[; ;I2CNumberIO.c: 161:                     break;
+[e $U 129  ]
+"162
+[; ;I2CNumberIO.c: 162:                 case 3:
+[e :U 134 ]
+"163
+[; ;I2CNumberIO.c: 163:                     VarValue += (counter * 1000);
+[e =+ _VarValue -> * -> _counter `i -> 1000 `i `d ]
+"164
+[; ;I2CNumberIO.c: 164:                     break;
+[e $U 129  ]
+"165
+[; ;I2CNumberIO.c: 165:             }
+}
+[e $U 129  ]
+[e :U 130 ]
+[e [\ -> _Done `i , $ -> 0 `i 131
+ , $ -> 1 `i 132
+ , $ -> 2 `i 133
+ , $ -> 3 `i 134
+ 129 ]
+[e :U 129 ]
+"166
+[; ;I2CNumberIO.c: 166:              Done++;
+[e ++ _Done -> -> 1 `i `uc ]
+"167
+[; ;I2CNumberIO.c: 167:         }
+}
+[e $U 135  ]
+"168
+[; ;I2CNumberIO.c: 168:         else if(!PBRead(2))
+[e :U 128 ]
+[e $ ! ! != -> ( _PBRead (1 -> -> 2 `i `uc `i -> 0 `i 136  ]
+"169
+[; ;I2CNumberIO.c: 169:         {
+{
+"170
+[; ;I2CNumberIO.c: 170:             if(counter <= 0)
+[e $ ! <= -> _counter `i -> 0 `i 137  ]
+"171
+[; ;I2CNumberIO.c: 171:             {
+{
+"172
+[; ;I2CNumberIO.c: 172:                 counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+"173
+[; ;I2CNumberIO.c: 173:             }
+}
+[e $U 138  ]
+"174
+[; ;I2CNumberIO.c: 174:             else
+[e :U 137 ]
+"175
+[; ;I2CNumberIO.c: 175:             {
+{
+"176
+[; ;I2CNumberIO.c: 176:                 counter--;
+[e -- _counter -> -> 1 `i `uc ]
+"177
+[; ;I2CNumberIO.c: 177:             }
+}
+[e :U 138 ]
+"178
+[; ;I2CNumberIO.c: 178:         }
+}
+[e :U 136 ]
+[e :U 135 ]
+[e :U 127 ]
+"179
+[; ;I2CNumberIO.c: 179:     }
+}
+[e :U 121 ]
+"134
+[; ;I2CNumberIO.c: 134:     while(Done < 4)
+[e $ < -> _Done `i -> 4 `i 122  ]
+[e :U 123 ]
+"180
+[; ;I2CNumberIO.c: 180:     return VarValue;
+[e ) _VarValue ]
+[e $UE 103  ]
+"181
+[; ;I2CNumberIO.c: 181: }
+[e :UE 103 ]
+}
+"183
+[; ;I2CNumberIO.c: 183: unsigned int I2CMakeIntegerNumber(char row, char col)
+[v _I2CMakeIntegerNumber `(ui ~T0 @X0 1 ef2`uc`uc ]
+"184
+[; ;I2CNumberIO.c: 184: {
+{
+[e :U _I2CMakeIntegerNumber ]
+"183
+[; ;I2CNumberIO.c: 183: unsigned int I2CMakeIntegerNumber(char row, char col)
+[v _row `uc ~T0 @X0 1 r1 ]
+[v _col `uc ~T0 @X0 1 r2 ]
+"184
+[; ;I2CNumberIO.c: 184: {
+[f ]
+"185
+[; ;I2CNumberIO.c: 185:     char Done = 0;
+[v _Done `uc ~T0 @X0 1 a ]
+[e = _Done -> -> 0 `i `uc ]
+"186
+[; ;I2CNumberIO.c: 186:     unsigned int VarValue = 0;
+[v _VarValue `ui ~T0 @X0 1 a ]
+[e = _VarValue -> -> 0 `i `ui ]
+"187
+[; ;I2CNumberIO.c: 187:     char counter = 0;
+[v _counter `uc ~T0 @X0 1 a ]
+[e = _counter -> -> 0 `i `uc ]
+"188
+[; ;I2CNumberIO.c: 188:     while(Done <= 2)
+[e $U 140  ]
+[e :U 141 ]
+"189
+[; ;I2CNumberIO.c: 189:     {
+{
+"190
+[; ;I2CNumberIO.c: 190:         LCDSetCursor(row,(col + 3 -Done));
+[e ( _LCDSetCursor (2 , _row -> - + -> _col `i -> 3 `i -> _Done `i `uc ]
+"191
+[; ;I2CNumberIO.c: 191:         LCDWrite(counter+48);
+[e ( _LCDWrite (1 -> + -> _counter `i -> 48 `i `uc ]
+"192
+[; ;I2CNumberIO.c: 192:         if(PBRead(0))
+[e $ ! != -> ( _PBRead (1 -> -> 0 `i `uc `i -> 0 `i 143  ]
+"193
+[; ;I2CNumberIO.c: 193:         {
+{
+"194
+[; ;I2CNumberIO.c: 194:             if(counter >= 9)
+[e $ ! >= -> _counter `i -> 9 `i 144  ]
+"195
+[; ;I2CNumberIO.c: 195:             {
+{
+"196
+[; ;I2CNumberIO.c: 196:                 counter = 9;
+[e = _counter -> -> 9 `i `uc ]
+"197
+[; ;I2CNumberIO.c: 197:             }
+}
+[e $U 145  ]
+"198
+[; ;I2CNumberIO.c: 198:             else
+[e :U 144 ]
+"199
+[; ;I2CNumberIO.c: 199:             {
+{
+"200
+[; ;I2CNumberIO.c: 200:                 counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+"201
+[; ;I2CNumberIO.c: 201:             }
+}
+[e :U 145 ]
+"202
+[; ;I2CNumberIO.c: 202:         }
+}
+[e $U 146  ]
+"203
+[; ;I2CNumberIO.c: 203:         else if(PBRead(1))
+[e :U 143 ]
+[e $ ! != -> ( _PBRead (1 -> -> 1 `i `uc `i -> 0 `i 147  ]
+"204
+[; ;I2CNumberIO.c: 204:         {
+{
+"205
+[; ;I2CNumberIO.c: 205:             if(Done == 0)
+[e $ ! == -> _Done `i -> 0 `i 148  ]
+"206
+[; ;I2CNumberIO.c: 206:             {
+{
+"207
+[; ;I2CNumberIO.c: 207:                 VarValue += counter;
+[e =+ _VarValue -> _counter `ui ]
+"208
+[; ;I2CNumberIO.c: 208:             }
+}
+[e $U 149  ]
+"209
+[; ;I2CNumberIO.c: 209:             else if(Done == 1)
+[e :U 148 ]
+[e $ ! == -> _Done `i -> 1 `i 150  ]
+"210
+[; ;I2CNumberIO.c: 210:             {
+{
+"211
+[; ;I2CNumberIO.c: 211:                 VarValue += (counter * 10);
+[e =+ _VarValue -> * -> _counter `i -> 10 `i `ui ]
+"212
+[; ;I2CNumberIO.c: 212:             }
+}
+[e $U 151  ]
+"213
+[; ;I2CNumberIO.c: 213:             else if(Done == 2)
+[e :U 150 ]
+[e $ ! == -> _Done `i -> 2 `i 152  ]
+"214
+[; ;I2CNumberIO.c: 214:             {
+{
+"215
+[; ;I2CNumberIO.c: 215:                 VarValue += (counter * 100);
+[e =+ _VarValue -> * -> _counter `i -> 100 `i `ui ]
+"216
+[; ;I2CNumberIO.c: 216:             }
+}
+[e $U 153  ]
+"217
+[; ;I2CNumberIO.c: 217:             else if(Done == 3)
+[e :U 152 ]
+[e $ ! == -> _Done `i -> 3 `i 154  ]
+"218
+[; ;I2CNumberIO.c: 218:             {
+{
+"219
+[; ;I2CNumberIO.c: 219:                 VarValue += (counter * 10000);
+[e =+ _VarValue -> * -> _counter `i -> 10000 `i `ui ]
+"220
+[; ;I2CNumberIO.c: 220:             }
+}
+[e :U 154 ]
+[e :U 153 ]
+[e :U 151 ]
+[e :U 149 ]
+"221
+[; ;I2CNumberIO.c: 221:             Done++;
+[e ++ _Done -> -> 1 `i `uc ]
+"222
+[; ;I2CNumberIO.c: 222:         }
+}
+[e $U 155  ]
+"223
+[; ;I2CNumberIO.c: 223:         else if(PBRead(2))
+[e :U 147 ]
+[e $ ! != -> ( _PBRead (1 -> -> 2 `i `uc `i -> 0 `i 156  ]
+"224
+[; ;I2CNumberIO.c: 224:         {
+{
+"225
+[; ;I2CNumberIO.c: 225:             if(counter <= 0)
+[e $ ! <= -> _counter `i -> 0 `i 157  ]
+"226
+[; ;I2CNumberIO.c: 226:             {
+{
+"227
+[; ;I2CNumberIO.c: 227:                 counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+"228
+[; ;I2CNumberIO.c: 228:             }
+}
+[e $U 158  ]
+"229
+[; ;I2CNumberIO.c: 229:             else
+[e :U 157 ]
+"230
+[; ;I2CNumberIO.c: 230:             {
+{
+"231
+[; ;I2CNumberIO.c: 231:                 counter--;
+[e -- _counter -> -> 1 `i `uc ]
+"232
+[; ;I2CNumberIO.c: 232:             }
+}
+[e :U 158 ]
+"233
+[; ;I2CNumberIO.c: 233:         }
+}
+[e :U 156 ]
+[e :U 155 ]
+[e :U 146 ]
+"234
+[; ;I2CNumberIO.c: 234:     }
+}
+[e :U 140 ]
+"188
+[; ;I2CNumberIO.c: 188:     while(Done <= 2)
+[e $ <= -> _Done `i -> 2 `i 141  ]
+[e :U 142 ]
+"235
+[; ;I2CNumberIO.c: 235:     return VarValue;
+[e ) _VarValue ]
+[e $UE 139  ]
+"236
+[; ;I2CNumberIO.c: 236: }
+[e :UE 139 ]
+}
+"239
+[; ;I2CNumberIO.c: 239: char I2CMakeByteNumber(char row, char col)
+[v _I2CMakeByteNumber `(uc ~T0 @X0 1 ef2`uc`uc ]
+"240
+[; ;I2CNumberIO.c: 240: {
+{
+[e :U _I2CMakeByteNumber ]
+"239
+[; ;I2CNumberIO.c: 239: char I2CMakeByteNumber(char row, char col)
+[v _row `uc ~T0 @X0 1 r1 ]
+[v _col `uc ~T0 @X0 1 r2 ]
+"240
+[; ;I2CNumberIO.c: 240: {
+[f ]
+[v F1067 `uc ~T0 @X0 -> 3 `i s ]
+[i F1067
+:U ..
+"241
+[; ;I2CNumberIO.c: 241:     char Number[3] = {0};
+-> -> 0 `i `uc
+..
+]
+[v _Number `uc ~T0 @X0 -> 3 `i a ]
+[e = _Number F1067 ]
+"242
+[; ;I2CNumberIO.c: 242:     char counter = 0;
+[v _counter `uc ~T0 @X0 1 a ]
+[e = _counter -> -> 0 `i `uc ]
+"243
+[; ;I2CNumberIO.c: 243:     char positions = 3;
+[v _positions `uc ~T0 @X0 1 a ]
+[e = _positions -> -> 3 `i `uc ]
+"244
+[; ;I2CNumberIO.c: 244:     char Done = 0;
+[v _Done `uc ~T0 @X0 1 a ]
+[e = _Done -> -> 0 `i `uc ]
+"245
+[; ;I2CNumberIO.c: 245:     while(Done < positions)
+[e $U 160  ]
+[e :U 161 ]
+"246
+[; ;I2CNumberIO.c: 246:     {
+{
+"247
+[; ;I2CNumberIO.c: 247:         LCDSetCursor(row,(col + positions - Done));
+[e ( _LCDSetCursor (2 , _row -> - + -> _col `i -> _positions `i -> _Done `i `uc ]
+"248
+[; ;I2CNumberIO.c: 248:         LCDWrite(counter+48);
+[e ( _LCDWrite (1 -> + -> _counter `i -> 48 `i `uc ]
+"249
+[; ;I2CNumberIO.c: 249:         if(PBRead(0))
+[e $ ! != -> ( _PBRead (1 -> -> 0 `i `uc `i -> 0 `i 163  ]
+"250
+[; ;I2CNumberIO.c: 250:         {
+{
+"251
+[; ;I2CNumberIO.c: 251:             if(counter >= 9)
+[e $ ! >= -> _counter `i -> 9 `i 164  ]
+"252
+[; ;I2CNumberIO.c: 252:             {
+{
+"253
+[; ;I2CNumberIO.c: 253:                 counter = 9;
+[e = _counter -> -> 9 `i `uc ]
+"254
+[; ;I2CNumberIO.c: 254:             }
+}
+[e $U 165  ]
+"255
+[; ;I2CNumberIO.c: 255:             else
+[e :U 164 ]
+"256
+[; ;I2CNumberIO.c: 256:             {
+{
+"257
+[; ;I2CNumberIO.c: 257:                 counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+"258
+[; ;I2CNumberIO.c: 258:             }
+}
+[e :U 165 ]
+"259
+[; ;I2CNumberIO.c: 259:         }
+}
+[e $U 166  ]
+"260
+[; ;I2CNumberIO.c: 260:         else if(PBRead(1))
+[e :U 163 ]
+[e $ ! != -> ( _PBRead (1 -> -> 1 `i `uc `i -> 0 `i 167  ]
+"261
+[; ;I2CNumberIO.c: 261:         {
+{
+"262
+[; ;I2CNumberIO.c: 262:                 Number[Done] = counter;
+[e = *U + &U _Number * -> _Done `ux -> -> # *U &U _Number `ui `ux _counter ]
+"263
+[; ;I2CNumberIO.c: 263:                 Done++;
+[e ++ _Done -> -> 1 `i `uc ]
+"264
+[; ;I2CNumberIO.c: 264:         }
+}
+[e $U 168  ]
+"265
+[; ;I2CNumberIO.c: 265:         else if(PBRead(2))
+[e :U 167 ]
+[e $ ! != -> ( _PBRead (1 -> -> 2 `i `uc `i -> 0 `i 169  ]
+"266
+[; ;I2CNumberIO.c: 266:         {
+{
+"267
+[; ;I2CNumberIO.c: 267:             if(counter <= 0)
+[e $ ! <= -> _counter `i -> 0 `i 170  ]
+"268
+[; ;I2CNumberIO.c: 268:             {
+{
+"269
+[; ;I2CNumberIO.c: 269:                 counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+"270
+[; ;I2CNumberIO.c: 270:             }
+}
+[e $U 171  ]
+"271
+[; ;I2CNumberIO.c: 271:             else
+[e :U 170 ]
+"272
+[; ;I2CNumberIO.c: 272:             {
+{
+"273
+[; ;I2CNumberIO.c: 273:                 counter--;
+[e -- _counter -> -> 1 `i `uc ]
+"274
+[; ;I2CNumberIO.c: 274:             }
+}
+[e :U 171 ]
+"275
+[; ;I2CNumberIO.c: 275:         }
+}
+[e :U 169 ]
+[e :U 168 ]
+[e :U 166 ]
+"276
+[; ;I2CNumberIO.c: 276:     }
+}
+[e :U 160 ]
+"245
+[; ;I2CNumberIO.c: 245:     while(Done < positions)
+[e $ < -> _Done `i -> _positions `i 161  ]
+[e :U 162 ]
+"277
+[; ;I2CNumberIO.c: 277:     if(Number[2] >= 2)
+[e $ ! >= -> *U + &U _Number * -> -> -> 2 `i `ui `ux -> -> # *U &U _Number `ui `ux `i -> 2 `i 172  ]
+"278
+[; ;I2CNumberIO.c: 278:     {
+{
+"279
+[; ;I2CNumberIO.c: 279:         Number[2] = 2;
+[e = *U + &U _Number * -> -> -> 2 `i `ui `ux -> -> # *U &U _Number `ui `ux -> -> 2 `i `uc ]
+"280
+[; ;I2CNumberIO.c: 280:         if(Number[1] >= 5)
+[e $ ! >= -> *U + &U _Number * -> -> -> 1 `i `ui `ux -> -> # *U &U _Number `ui `ux `i -> 5 `i 173  ]
+"281
+[; ;I2CNumberIO.c: 281:         {
+{
+"282
+[; ;I2CNumberIO.c: 282:             Number[1] = 5;
+[e = *U + &U _Number * -> -> -> 1 `i `ui `ux -> -> # *U &U _Number `ui `ux -> -> 5 `i `uc ]
+"283
+[; ;I2CNumberIO.c: 283:             if(Number[0] >= 5)
+[e $ ! >= -> *U + &U _Number * -> -> -> 0 `i `ui `ux -> -> # *U &U _Number `ui `ux `i -> 5 `i 174  ]
+"284
+[; ;I2CNumberIO.c: 284:             {
+{
+"285
+[; ;I2CNumberIO.c: 285:                 Number[0] = 5;
+[e = *U + &U _Number * -> -> -> 0 `i `ui `ux -> -> # *U &U _Number `ui `ux -> -> 5 `i `uc ]
+"286
+[; ;I2CNumberIO.c: 286:             }
+}
+[e :U 174 ]
+"287
+[; ;I2CNumberIO.c: 287:         }
+}
+[e :U 173 ]
+"288
+[; ;I2CNumberIO.c: 288:     }
+}
+[e :U 172 ]
+"289
+[; ;I2CNumberIO.c: 289:     return Number[0] + (Number[1] * 10) + (Number[2] * 100);
+[e ) -> + + -> *U + &U _Number * -> -> -> 0 `i `ui `ux -> -> # *U &U _Number `ui `ux `i * -> *U + &U _Number * -> -> -> 1 `i `ui `ux -> -> # *U &U _Number `ui `ux `i -> 10 `i * -> *U + &U _Number * -> -> -> 2 `i `ui `ux -> -> # *U &U _Number `ui `ux `i -> 100 `i `uc ]
+[e $UE 159  ]
+"290
+[; ;I2CNumberIO.c: 290: }
+[e :UE 159 ]
+}
+"293
+[; ;I2CNumberIO.c: 293: char I2CCaseSelector(char *Vector, char SizeValues, char row, char col)
+[v _I2CCaseSelector `(uc ~T0 @X0 1 ef4`*uc`uc`uc`uc ]
+"294
+[; ;I2CNumberIO.c: 294: {
+{
+[e :U _I2CCaseSelector ]
+"293
+[; ;I2CNumberIO.c: 293: char I2CCaseSelector(char *Vector, char SizeValues, char row, char col)
+[v _Vector `*uc ~T0 @X0 1 r1 ]
+[v _SizeValues `uc ~T0 @X0 1 r2 ]
+[v _row `uc ~T0 @X0 1 r3 ]
+[v _col `uc ~T0 @X0 1 r4 ]
+"294
+[; ;I2CNumberIO.c: 294: {
+[f ]
+"295
+[; ;I2CNumberIO.c: 295:     char counter = 0;
+[v _counter `uc ~T0 @X0 1 a ]
+[e = _counter -> -> 0 `i `uc ]
+[v F1078 `uc ~T0 @X0 -> 4 `i s ]
+[i F1078
+:U ..
+"296
+[; ;I2CNumberIO.c: 296:     char buffer[4] = {0};
+-> -> 0 `i `uc
+..
+]
+[v _buffer `uc ~T0 @X0 -> 4 `i a ]
+[e = _buffer F1078 ]
+"297
+[; ;I2CNumberIO.c: 297:     char Done = 0;
+[v _Done `uc ~T0 @X0 1 a ]
+[e = _Done -> -> 0 `i `uc ]
+"298
+[; ;I2CNumberIO.c: 298:     while(Done != 1)
+[e $U 176  ]
+[e :U 177 ]
+"299
+[; ;I2CNumberIO.c: 299:     {
+{
+"300
+[; ;I2CNumberIO.c: 300:         if(PBRead(0))
+[e $ ! != -> ( _PBRead (1 -> -> 0 `i `uc `i -> 0 `i 179  ]
+"301
+[; ;I2CNumberIO.c: 301:         {
+{
+"302
+[; ;I2CNumberIO.c: 302:             if(counter >= (SizeValues - 1))
+[e $ ! >= -> _counter `i - -> _SizeValues `i -> 1 `i 180  ]
+"303
+[; ;I2CNumberIO.c: 303:             {
+{
+"304
+[; ;I2CNumberIO.c: 304:                 counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+"305
+[; ;I2CNumberIO.c: 305:             }
+}
+[e $U 181  ]
+"306
+[; ;I2CNumberIO.c: 306:             else
+[e :U 180 ]
+"307
+[; ;I2CNumberIO.c: 307:             {
+{
+"308
+[; ;I2CNumberIO.c: 308:                 counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+"309
+[; ;I2CNumberIO.c: 309:             }
+}
+[e :U 181 ]
+"310
+[; ;I2CNumberIO.c: 310:         }
+}
+[e $U 182  ]
+"311
+[; ;I2CNumberIO.c: 311:         else if(PBRead(1))
+[e :U 179 ]
+[e $ ! != -> ( _PBRead (1 -> -> 1 `i `uc `i -> 0 `i 183  ]
+"312
+[; ;I2CNumberIO.c: 312:         {
+{
+"313
+[; ;I2CNumberIO.c: 313:             Done = 1;
+[e = _Done -> -> 1 `i `uc ]
+"314
+[; ;I2CNumberIO.c: 314:         }
+}
+[e $U 184  ]
+"315
+[; ;I2CNumberIO.c: 315:         else if(PBRead(2))
+[e :U 183 ]
+[e $ ! != -> ( _PBRead (1 -> -> 2 `i `uc `i -> 0 `i 185  ]
+"316
+[; ;I2CNumberIO.c: 316:         {
+{
+"317
+[; ;I2CNumberIO.c: 317:             if(counter == 0)
+[e $ ! == -> _counter `i -> 0 `i 186  ]
+"318
+[; ;I2CNumberIO.c: 318:             {
+{
+"319
+[; ;I2CNumberIO.c: 319:                 counter = SizeValues - 1;
+[e = _counter -> - -> _SizeValues `i -> 1 `i `uc ]
+"320
+[; ;I2CNumberIO.c: 320:             }
+}
+[e $U 187  ]
+"321
+[; ;I2CNumberIO.c: 321:             else
+[e :U 186 ]
+"322
+[; ;I2CNumberIO.c: 322:             {
+{
+"323
+[; ;I2CNumberIO.c: 323:                 counter--;
+[e -- _counter -> -> 1 `i `uc ]
+"324
+[; ;I2CNumberIO.c: 324:             }
+}
+[e :U 187 ]
+"325
+[; ;I2CNumberIO.c: 325:         }
+}
+[e :U 185 ]
+[e :U 184 ]
+[e :U 182 ]
+"326
+[; ;I2CNumberIO.c: 326:         LCDSetCursor(row,col);
+[e ( _LCDSetCursor (2 , _row _col ]
+"327
+[; ;I2CNumberIO.c: 327:         sprintf(buffer,"%u",Vector[counter]);
+[e ( _sprintf (1 , (. , &U _buffer :s 1C -> *U + _Vector * -> _counter `ux -> -> # *U _Vector `ui `ux `i ]
+"328
+[; ;I2CNumberIO.c: 328:         LCDPrint(buffer);
+[e ( _LCDPrint (1 &U _buffer ]
+"329
+[; ;I2CNumberIO.c: 329:     }
+}
+[e :U 176 ]
+"298
+[; ;I2CNumberIO.c: 298:     while(Done != 1)
+[e $ != -> _Done `i -> 1 `i 177  ]
+[e :U 178 ]
+"330
+[; ;I2CNumberIO.c: 330:     return Vector[counter];
+[e ) *U + _Vector * -> _counter `ux -> -> # *U _Vector `ui `ux ]
+[e $UE 175  ]
+"331
+[; ;I2CNumberIO.c: 331: }
+[e :UE 175 ]
+}
+[p f _sprintf 8389632 ]
+[a 1C 37 117 0 ]

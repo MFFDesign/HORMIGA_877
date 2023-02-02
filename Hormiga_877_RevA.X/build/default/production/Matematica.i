@@ -1,4 +1,4 @@
-# 1 "source.c"
+# 1 "Matematica.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,9 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "source.c" 2
-# 1 "./system.h" 1
-# 11 "./system.h"
+# 1 "Matematica.c" 2
+# 1 "./Hormiga877.h" 1
+# 11 "./Hormiga877.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1722,7 +1722,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 11 "./system.h" 2
+# 11 "./Hormiga877.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdint.h" 3
@@ -1857,7 +1857,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 12 "./system.h" 2
+# 12 "./Hormiga877.h" 2
 
 
 #pragma config FOSC = HS
@@ -1868,7 +1868,16 @@ typedef uint16_t uintptr_t;
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-# 31 "./system.h"
+
+
+
+
+
+
+
+
+void Positioner(unsigned int Count);
+
 void Initialization(void);
 void PWMConfiguration(void);
 void PWMStop(void);
@@ -1894,548 +1903,172 @@ char SerialRead(void);
 void SerialReadText(char *Output, unsigned int lenght);
 
 
-double rescale(double x, double in_min, double in_max, double out_min, double out_max);
 
 
 void delay(const int milis);
-void delayMicroseconds(const int us);
-# 1 "source.c" 2
+void delayMicroseconds(const unsigned int us);
+void __attribute__((picinterrupt(""))) TimeCounter(void);
+void TimerOneInterruptEnable(void);
+void TimerOneInterruptDisable(void);
+# 1 "Matematica.c" 2
+
+# 1 "./Matematica.h" 1
+# 10 "./Matematica.h"
+unsigned int Suma(unsigned int a, unsigned int b);
+unsigned int Resta(unsigned int a, unsigned int b);
+unsigned int Multiplicacion(unsigned int a, unsigned int b);
+unsigned int Modulo(unsigned int Num, unsigned int Den);
+unsigned int Residuo(unsigned int Num, unsigned int Den);
+unsigned int RaizCuadrada(unsigned int numero);
+double derivar(double now, double dt);
+double Integrar(double now,double dt) ;
+double IntegralTrapezoidal(double now, double dt);
+double IntegralSimpson(double now, double dt);
+unsigned int Potencia(unsigned int Base, unsigned int Exponente);
+double map(double data, double X2, double X1, double Y2, double Y1);
+# 2 "Matematica.c" 2
 
 
-
-
-
-
-int main(void)
+unsigned int Suma(unsigned int a, unsigned int b)
 {
-    Initialization();
-    setup();
-    while(1)
+    return a + b;
+}
+
+unsigned int Resta(unsigned int a, unsigned int b)
+{
+    return a - b;
+}
+
+unsigned int Multiplicacion(unsigned int a, unsigned int b)
+{
+    unsigned int Resultado = 0;
+    for(int i=1;i<=b;i++)
     {
-        loop();
+        Resultado += a;
     }
-    return 0;
+    return Resultado;
 }
 
-void Initialization(void)
+unsigned int Modulo(unsigned int Num, unsigned int Den)
 {
-
-    ADCON0 = 0x81;
-    ADCON1 = 0xC2;
-
-    __asm("CLRF PORTA");
-    __asm("MOVLW 0x3F");
-    __asm("MOVWF TRISA");
-
-    __asm("CLRF PORTB");
-    __asm("MOVLW 0x00");
-    __asm("MOVWF TRISB");
-    __asm("CLRF PORTB");
-
-    __asm("CLRF PORTC");
-    __asm("MOVLW 0x00");
-    __asm("MOVWF TRISC");
-    __asm("CLRF PORTC");
-    PWMConfiguration();
-
-    __asm("CLRF PORTD");
-    __asm("MOVLW 0x00");
-    __asm("MOVF TRISD");
-    __asm("CLRF PORTD");
-    PORTE = 0x00;
-    TRISE = 0x07;
-}
-
-void PWMConfiguration(void)
-{
-    PR2 = 0xFF;
-    T2CON = 0x05;
-    CCP1CON = 0x0C;
-    CCP2CON = 0x0C;
-}
-
-void PWMStop(void)
-{
-    CCP2CON = 0x00;
-    CCP1CON = 0x00;
-}
-
-void pinMode(char pin, char mode)
-{
-    switch(pin)
+    unsigned int Residuo = Num;
+    unsigned int Cnt = 0;
+    while(Residuo >= Den)
     {
-        case 0:
-            TRISCbits.TRISC7 = mode;
-            break;
-        case 1:
-            TRISCbits.TRISC6 = mode;
-            break;
-        case 2:
-            TRISCbits.TRISC5 = mode;
-            break;
-        case 3:
-            TRISCbits.TRISC4 = mode;
-            break;
-        case 4:
-            TRISCbits.TRISC3 = mode;
-            break;
-        case 5:
-            TRISCbits.TRISC2 = mode;
-
-            break;
-        case 6:
-            TRISCbits.TRISC1 = mode;
-
-            break;
-        case 7:
-            TRISCbits.TRISC0 = mode;
-            break;
-        case 8:
-            TRISBbits.TRISB0 = mode;
-            break;
-        case 9:
-            TRISBbits.TRISB1 = mode;
-            break;
-        case 10:
-            TRISBbits.TRISB2 = mode;
-            break;
-        case 11:
-            TRISBbits.TRISB3 = mode;
-            break;
-        case 12:
-            TRISBbits.TRISB4 = mode;
-            break;
-        case 13:
-            TRISBbits.TRISB5 = mode;
-            break;
-        case 14:
-            TRISBbits.TRISB6 = mode;
-            break;
-        case 15:
-            TRISBbits.TRISB7 = mode;
-            break;
-        case 16:
-            TRISDbits.TRISD0 = mode;
-            break;
-        case 17:
-            TRISDbits.TRISD1 = mode;
-            break;
-        case 18:
-            TRISDbits.TRISD2 = mode;
-            break;
-        case 19:
-            TRISDbits.TRISD3 = mode;
-            break;
-        case 20:
-   TRISDbits.TRISD4 = mode;
-# 138 "source.c"
-   break;
-        case 21:
-            TRISDbits.TRISD5 = mode;
-            break;
-        case 22:
-            TRISDbits.TRISD6 = mode;
-            break;
-        case 23:
-            TRISDbits.TRISD7 = mode;
-            break;
-        case 24:
-            TRISAbits.TRISA4 = mode;
-            break;
-# 165 "source.c"
+        Residuo = Residuo - Den;
+        Cnt++;
     }
+    return Cnt;
 }
-void digitalWrite(char pin, char value)
+
+
+unsigned int Residuo(unsigned int Num, unsigned int Den)
 {
-    switch(pin)
+    unsigned int Residuo = Num;
+    while(Residuo >= Den)
     {
-        case 0:
-            PORTCbits.RC7 = value;
-            break;
-        case 1:
-            PORTCbits.RC6 = value;
-            break;
-        case 2:
-            PORTCbits.RC5 = value;
-            break;
-        case 3:
-            PORTCbits.RC4 = value;
-            break;
-        case 4:
-            PORTCbits.RC3 = value;
-            break;
-        case 5:
-            CCP1CON = 0x00;
-            PORTCbits.RC2 = value;
-            break;
-        case 6:
-            CCP2CON = 0x00;
-            PORTCbits.RC1 = value;
-            break;
-        case 7:
-            PORTCbits.RC0 = value;
-            break;
-        case 8:
-            PORTBbits.RB0 = value;
-            break;
-        case 9:
-            PORTBbits.RB1 = value;
-            break;
-        case 10:
-            PORTBbits.RB2 = value;
-            break;
-        case 11:
-            PORTBbits.RB3 = value;
-            break;
-        case 12:
-            PORTBbits.RB4 = value;
-            break;
-        case 13:
-            PORTBbits.RB5 = value;
-            break;
-        case 14:
-            PORTBbits.RB6 = value;
-            break;
-        case 15:
-            PORTBbits.RB7 = value;
-            break;
-        case 16:
-            PORTDbits.RD0 = value;
-            break;
-        case 17:
-            PORTDbits.RD1 = value;
-            break;
-        case 18:
-            PORTDbits.RD2 = value;
-            break;
-        case 19:
-            PORTDbits.RD3 = value;
-            break;
-        case 20:
-            PORTDbits.RD4 = value;
-            break;
-        case 21:
-            PORTDbits.RD5 = value;
-            break;
-        case 22:
-            PORTDbits.RD6 = value;
-            break;
-        case 23:
-            PORTDbits.RD7 = value;
-            break;
-        case 24:
-            PORTAbits.RA4 = value;
-            break;
-# 256 "source.c"
+        Residuo = Residuo - Den;
     }
+    return Residuo;
 }
-char digitalRead(char pin)
+unsigned int RaizCuadrada(unsigned int numero)
 {
-    switch(pin)
+    unsigned int residuo = 0;
+    unsigned int cont = 0;
+    for(int i=0;i<=numero;i++)
     {
-        case 0:
-             return PORTCbits.RC7;
+        residuo = i * i;
+
+        if(residuo > numero)
+        {
+            cont = i - 1;
             break;
-        case 1:
-            return PORTCbits.RC6;
+        }
+        else if(residuo == numero)
+        {
+            cont = i;
             break;
-        case 2:
-            return PORTCbits.RC5;
-            break;
-        case 3:
-            return PORTCbits.RC4;
-            break;
-        case 4:
-            return PORTCbits.RC3;
-            break;
-        case 5:
-            return PORTCbits.RC2;
-            break;
-        case 6:
-            return PORTCbits.RC1;
-            break;
-        case 7:
-            return PORTCbits.RC0;
-            break;
-        case 8:
-            return PORTBbits.RB0;
-            break;
-        case 9:
-            return PORTBbits.RB1;
-            break;
-        case 10:
-            return PORTBbits.RB2;
-            break;
-        case 11:
-            return PORTBbits.RB3;
-            break;
-        case 12:
-            return PORTBbits.RB4;
-            break;
-        case 13:
-            return PORTBbits.RB5;
-            break;
-        case 14:
-            return PORTBbits.RB6;
-            break;
-        case 15:
-            return PORTBbits.RB7;
-            break;
-        case 16:
-            return PORTDbits.RD0;
-            break;
-        case 17:
-            return PORTDbits.RD1;
-            break;
-        case 18:
-            return PORTDbits.RD2;
-            break;
-        case 19:
-            return PORTDbits.RD3;
-            break;
-        case 20:
-            return PORTDbits.RD4;
-            break;
-        case 21:
-            return PORTDbits.RD5;
-            break;
-        case 22:
-            return PORTDbits.RD6;
-            break;
-        case 23:
-            return PORTDbits.RD7;
-            break;
-        case 24:
-            return PORTAbits.RA4;
-            break;
-# 345 "source.c"
+        }
     }
+    return cont;
 }
-unsigned int analogRead(char channel)
+
+double derivar(double now, double dt)
 {
-    switch(channel)
+    static double Last = 0;
+    double derivada = 0;
+    derivada = (now - Last)/dt;
+    Last = now;
+    return derivada;
+}
+
+
+double Integrar(double now,double dt)
+{
+    static double Integral = 0;
+    if(dt == -1)
     {
-        case 0:
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 0;
-            ADCON0bits.GO_DONE = 1;
-            while(ADCON0bits.GO_DONE != 0)
-            {
-
-            }
-            return (ADRESH << 8)+ ADRESL;
-            break;
-        case 1:
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 1;
-            ADCON0bits.GO_DONE = 1;
-            while(ADCON0bits.GO_DONE != 0)
-            {
-
-            }
-            return (ADRESH << 8)+ ADRESL;
-            break;
-        case 2:
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 1;
-            ADCON0bits.CHS0 = 0;
-            ADCON0bits.GO_DONE = 1;
-            while(ADCON0bits.GO_DONE != 0)
-            {
-
-            }
-            return (ADRESH << 8)+ ADRESL;
-            break;
-        case 3:
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 1;
-            ADCON0bits.CHS0 = 1;
-            ADCON0bits.GO_DONE = 1;
-            while(ADCON0bits.GO_DONE != 0)
-            {
-
-            }
-            return (ADRESH << 8)+ ADRESL;
-            break;
-        case 4:
-            ADCON0bits.CHS2 = 1;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 0;
-            ADCON0bits.GO_DONE = 1;
-            while(ADCON0bits.GO_DONE != 0)
-            {
-
-            }
-            return (ADRESH << 8)+ ADRESL;
-            break;
-    }
-}
-uint8_t analogWrite(char pin, unsigned int value)
-{
-    switch(pin)
-    {
-        case 6:
-            CCPR2L = value >> 2;
-            CCP2X = value & 2;
-            CCP2Y = value & 1;
-            break;
-        case 5:
-            CCPR1L = value >> 2;
-            CCP1X = value & 2;
-            CCP1Y = value & 1;
-            break;
-    }
-    return 0;
-}
-char PBRead(char pin)
-{
-    switch(pin)
-    {
-        case 0:
-            return PORTEbits.RE0;
-            break;
-        case 1:
-            return PORTEbits.RE1;
-            break;
-        case 2:
-            return PORTEbits.RE2;
-            break;
-    }
-}
-double rescale(double x, double in_min, double in_max, double out_min, double out_max)
-{
-    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
-
-char SerialBegin(const long int BaudRate)
-{
-
-
-
- unsigned int x;
- BRGH = 0;
- x = (20000000 / (64 * BaudRate)) - 1;
- if(x > 255)
- {
-  BRGH = 1;
-  x = (20000000 / (16 * BaudRate)) - 1;
-  SPBRG = x;
-  SYNC = 0;
-  SPEN = 1;
-  TRISC7 = 1;
-  TRISC6 = 1;
-  CREN = 1;
-  TXEN = 1;
-        TXREG = 0x00;
-        RCREG = 0x00;
-  return 0;
- }
- else
- {
-  SPBRG = x;
-  SYNC = 0;
-  SPEN = 1;
-  TRISC7 = 1;
-  TRISC6 = 1;
-  CREN = 1;
-  TXEN = 1;
-        TXREG = 0x00;
-        RCREG = 0x00;
-  return 1;
- }
-}
-
-char TxRegisterFull(void)
-{
-    return TRMT;
-}
-char SerialErrors(void)
-{
-    if((FERR == 1) && (FERR || OERR))
-    {
-        return 1;
-    }
-    else if((OERR == 1) && (FERR || OERR))
-    {
-        return 2;
-    }
-    else if(OERR && FERR)
-    {
-        return 3;
+        Integral = 0;
+        return 0;
     }
     else
     {
+        Integral += now * dt;
+    }
+    return Integral;
+}
+
+double IntegralTrapezoidal(double now, double dt)
+{
+    static double Integral = 0;
+    static double last = 0;
+    if(dt == -1)
+    {
+        Integral = 0;
+        now = 0;
+        last = 0;
         return 0;
     }
-}
-void SerialWrite(char dataWrite)
-{
-    while(!TXIF);
-    TXREG = dataWrite;
-}
-
-char SerialWriteText(char *dataText)
-{
-    unsigned int i;
-    for(i=0;dataText[i]!='\0';i++)
+    else
     {
-       SerialWrite(dataText[i]);
-    }
-}
-void SerialPrint(char *dataText)
-{
-    for(unsigned int i=0;dataText[i]!='\0';i++)
-    {
-        SerialWrite(dataText[i]);
-    }
-}
-void SerialPrintLn(char *dataText)
-{
-    unsigned int i;
-        for(i=0;dataText[i]!='\0';i++)
-        {
-            SerialWrite(dataText[i]);
-        }
-        SerialWrite(0x0A);
-}
-char SerialAvailable(void)
-{
-    return RCIF || (TXIF && TRMT);
-}
-
-char SerialRead(void)
-{
-    while(!RCIF);
-    return RCREG;
-}
-
-void SerialReadText(char *Output, unsigned int lenght)
-{
-    unsigned int i;
-    for(i=0;i<lenght;i++)
-    {
-        Output[i] = SerialRead();
+        Integral += (dt * (now + last)) / 2;
+        last = now;
+        return Integral;
     }
 }
 
-void delay(const int milis)
+double IntegralSimpson(double now, double dt)
 {
-    for(int j=0;j<milis;j++)
+    static double last[2] = {0,0};
+    static double Integral = 0;
+    if(dt == -1)
     {
-
-        for(int i=0;i<400;i++)
-        {
-            __asm("NOP");
-        }
+        Integral = 0;
+        last[0] = 0;
+        last[1] = 0;
+        return 0;
+    }
+    else
+    {
+        Integral += (dt * (now + (4 * last[0]) + last[1])) / 3;
+        last[1] = last[0];
+        last[0] = now;
+        return Integral;
     }
 }
 
-void delayMicroseconds(const int us)
+unsigned int Potencia(unsigned int Base, unsigned int Exponente)
 {
-    for(char i=0;i<us;i++)
+    unsigned int Resultado = 1;
+    for(int i=0;i<Exponente-1;i++)
     {
-        __asm("NOP");
+        Resultado += Multiplicacion(Base,Base);
     }
+    return Resultado;
+}
+
+double map(double data, double X2, double X1, double Y2, double Y1)
+{
+    double m = (Y2 - Y1) / (X2 - X1);
+    return (m * data) - (m * X1) + Y1;
 }

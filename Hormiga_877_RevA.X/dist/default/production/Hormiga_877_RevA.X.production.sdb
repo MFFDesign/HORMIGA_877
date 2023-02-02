@@ -3,6 +3,12 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 6 ]
+"16 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LIFPIC.c
+[e E931 MaquinaEstados `uc
+Enviar 0
+Recibir 1
+Decode 2
+]
 "3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
 [v _setup setup `(v  1 e 1 0 ]
 "10
@@ -13,6 +19,10 @@
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
+"500 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\flge.c
 [v ___flge __flge `(b  1 e 0 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\flneg.c
@@ -21,6 +31,8 @@
 [v ___fltol __fltol `(l  1 e 4 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcdiv.c
@@ -29,6 +41,8 @@
 [v ___flmul __flmul `(d  1 e 4 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\xxtofl.c
@@ -37,6 +51,10 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"4 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\EEPROM.c
+[v _EEPROMSave EEPROMSave `(v  1 e 1 0 ]
+"19
+[v _EEPROMRead EEPROMRead `(uc  1 e 1 0 ]
 "3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
 [v _main main `(i  1 e 2 0 ]
 "14
@@ -47,16 +65,84 @@
 [v _pinMode pinMode `(v  1 e 1 0 ]
 "166
 [v _digitalWrite digitalWrite `(v  1 e 1 0 ]
+"257
+[v _digitalRead digitalRead `(uc  1 e 1 0 ]
+"346
+[v _analogRead analogRead `(ui  1 e 2 0 ]
 "407
 [v _analogWrite analogWrite `(uc  1 e 1 0 ]
+"425
+[v _PBRead PBRead `(uc  1 e 1 0 ]
+"465
+[v _SerialBegin SerialBegin `(uc  1 e 1 0 ]
 "526
 [v _SerialWrite SerialWrite `(v  1 e 1 0 ]
+"556
+[v _SerialAvailable SerialAvailable `(uc  1 e 1 0 ]
 "561
 [v _SerialRead SerialRead `(uc  1 e 1 0 ]
 "576
 [v _delay delay `(v  1 e 1 0 ]
 "588
 [v _delayMicroseconds delayMicroseconds `(v  1 e 1 0 ]
+"15 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\I2CWire.c
+[v _I2CStartTransaction I2CStartTransaction `(v  1 e 1 0 ]
+"21
+[v _I2CIDLECheck I2CIDLECheck `(v  1 e 1 0 ]
+"25
+[v _I2CWriteByte I2CWriteByte `(uc  1 e 1 0 ]
+"34
+[v _I2CRepeatTransaction I2CRepeatTransaction `(v  1 e 1 0 ]
+"40
+[v _I2CStopTransaction I2CStopTransaction `(v  1 e 1 0 ]
+"46
+[v _I2CReadByte I2CReadByte `(uc  1 e 1 0 ]
+"57
+[v _I2CACK I2CACK `(v  1 e 1 0 ]
+"64
+[v _I2CNACK I2CNACK `(v  1 e 1 0 ]
+"45 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+[v _lcdSetCursor lcdSetCursor `(v  1 e 1 0 ]
+"63
+[v _lcdWrite lcdWrite `(v  1 e 1 0 ]
+"78
+[v _WriteInstruction WriteInstruction `(v  1 e 1 0 ]
+"101
+[v _WriteData WriteData `(v  1 e 1 0 ]
+"124
+[v _ByteByNibble ByteByNibble `(v  1 e 1 0 ]
+"154 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCDI2C.c
+[v _SendInstruction SendInstruction `(v  1 e 1 0 ]
+"178
+[v _SendData SendData `(v  1 e 1 0 ]
+"211
+[v _LCDSetCursor LCDSetCursor `(v  1 e 1 0 ]
+"226
+[v _LCDWrite LCDWrite `(v  1 e 1 0 ]
+"232
+[v _LCDPrint LCDPrint `(v  1 e 1 0 ]
+"115 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LIFPIC.c
+[v _ProcessCommand ProcessCommand `(ui  1 e 2 0 ]
+"14 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Matematica.c
+[v _Multiplicacion Multiplicacion `(ui  1 e 2 0 ]
+"42 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\ShiftRegister.c
+[v _WriteRegister WriteRegister `(v  1 e 1 0 ]
+"3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\SPI.c
+[v _spiRead spiRead `(uc  1 e 1 0 ]
+"23
+[v _spiWrite spiWrite `(v  1 e 1 0 ]
+"28
+[v _spiDataAvailable spiDataAvailable `(uc  1 e 1 0 ]
+"33 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\AD9850.c
+[v _DataPort DataPort `uc  1 e 1 0 ]
+"34
+[v _DDSRegister DDSRegister `[5]uc  1 e 5 0 ]
+"35
+[v _Reloj Reloj `uc  1 e 1 0 ]
+"36
+[v _FrUpdate FrUpdate `uc  1 e 1 0 ]
+"38
+[v _R R `ui  1 e 2 0 ]
 "59 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
 [s S208 . 1 `uc 1 RA0 1 0 :1:0 
@@ -97,6 +183,8 @@
 "295
 [u S154 . 1 `S145 1 . 1 0 ]
 [v _PORTCbits PORTCbits `VES154  1 e 1 @7 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
 [s S187 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
@@ -118,8 +206,37 @@
 "414
 [u S281 . 1 `S277 1 . 1 0 ]
 [v _PORTEbits PORTEbits `VES281  1 e 1 @9 ]
+[s S550 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"477
+[s S559 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S564 . 1 `S550 1 . 1 0 `S559 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES564  1 e 1 @11 ]
+"634
+[v _TMR1 TMR1 `VEus  1 e 2 @14 ]
+"641
+[v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
+"648
+[v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
+"655
+[v _T1CON T1CON `VEuc  1 e 1 @16 ]
 "737
 [v _T2CON T2CON `VEuc  1 e 1 @18 ]
+"808
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"815
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
 "892
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
 "906
@@ -199,6 +316,8 @@
 "1454
 [u S74 . 1 `S65 1 . 1 0 ]
 [v _TRISCbits TRISCbits `VES74  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
 [s S107 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
@@ -213,14 +332,85 @@
 [v _TRISDbits TRISDbits `VES116  1 e 1 @136 ]
 "1561
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"1754
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
 "1816
 [v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"1823
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"1830
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S1149 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"1884
+[s S1158 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S1163 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S1169 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S1174 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S1179 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S1184 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S1189 . 1 `S1149 1 . 1 0 `S1158 1 . 1 0 `S1163 1 . 1 0 `S1169 1 . 1 0 `S1174 1 . 1 0 `S1179 1 . 1 0 `S1184 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES1189  1 e 1 @148 ]
 "2080
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2222
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "2229
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2288
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"2295
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+[s S531 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"2331
+[u S538 . 1 `S531 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES538  1 e 1 @396 ]
+"2361
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2374
+[v _ACKDT ACKDT `VEb  1 e 0 @1165 ]
+"2377
+[v _ACKEN ACKEN `VEb  1 e 0 @1164 ]
+"2380
+[v _ACKSTAT ACKSTAT `VEb  1 e 0 @1166 ]
 "2416
 [v _BRGH BRGH `VEb  1 e 0 @1218 ]
 "2452
@@ -237,14 +427,34 @@
 [v _FERR FERR `VEb  1 e 0 @194 ]
 "2614
 [v _OERR OERR `VEb  1 e 0 @193 ]
+"2632
+[v _PEN PEN `VEb  1 e 0 @1162 ]
+"2737
+[v _RCEN RCEN `VEb  1 e 0 @1163 ]
 "2743
 [v _RCIF RCIF `VEb  1 e 0 @101 ]
+"2791
+[v _RSEN RSEN `VEb  1 e 0 @1161 ]
+"2806
+[v _SEN SEN `VEb  1 e 0 @1160 ]
 "2812
 [v _SPEN SPEN `VEb  1 e 0 @199 ]
+"2824
+[v _SSPIF SSPIF `VEb  1 e 0 @99 ]
 "2842
 [v _SYNC SYNC `VEb  1 e 0 @1220 ]
 "2881
 [v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"2890
+[v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
+"2893
+[v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
+"2968
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
+"2971
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
+"2974
+[v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
 "2977
 [v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
 "2980
@@ -255,6 +465,113 @@
 [v _TXEN TXEN `VEb  1 e 0 @1221 ]
 "3037
 [v _TXIF TXIF `VEb  1 e 0 @100 ]
+"3079
+[v _nRBPU nRBPU `VEb  1 e 0 @1039 ]
+"358 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
+[v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
+"5 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Encoder.c
+[v _pinA pinA `ui  1 s 2 pinA ]
+[v _pinB pinB `ui  1 s 2 pinB ]
+"6
+[v _EncoderMatrix EncoderMatrix `[4][4]c  1 e 16 0 ]
+"4 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\I2CEEPROM.c
+[v _bufferMemory bufferMemory `uc  1 e 1 0 ]
+"5 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Keypad4x4.c
+[v _KeypadAddress KeypadAddress `*.1uc  1 e 1 0 ]
+"6
+[v _TeclasVolValues TeclasVolValues `*.1ui  1 e 1 0 ]
+"7
+[v _RenROWS RenROWS `uc  1 e 1 0 ]
+"8
+[v _COLumns COLumns `uc  1 e 1 0 ]
+"10
+[v _MaxAndMinValues MaxAndMinValues `[16][2]ui  1 e 64 0 ]
+"28
+[v _Vmax Vmax `ui  1 e 2 0 ]
+"29
+[v _RowPins RowPins `*.1uc  1 e 1 0 ]
+"30
+[v _ColPins ColPins `*.1uc  1 e 1 0 ]
+"31
+[v _delaying delaying `uc  1 e 1 0 ]
+"32
+[v _ADeCeChannel ADeCeChannel `uc  1 e 1 0 ]
+"10 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+[v _RSPin RSPin `uc  1 e 1 0 ]
+"11
+[v _ENPin ENPin `uc  1 e 1 0 ]
+"12
+[v _RWPin RWPin `uc  1 e 1 0 ]
+"13
+[v _d4Pin d4Pin `uc  1 e 1 0 ]
+"14
+[v _d5Pin d5Pin `uc  1 e 1 0 ]
+"15
+[v _d6Pin d6Pin `uc  1 e 1 0 ]
+"16
+[v _d7Pin d7Pin `uc  1 e 1 0 ]
+"5 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCDI2C.c
+[v _DisplayControl DisplayControl `uc  1 e 1 0 ]
+"6
+[v _BacklightState BacklightState `uc  1 e 1 0 ]
+"7
+[v _LCDDirection LCDDirection `uc  1 e 1 0 ]
+"8
+[v _MSNibble MSNibble `uc  1 e 1 0 ]
+"9
+[v _LSNibble LSNibble `uc  1 e 1 0 ]
+"16 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LIFPIC.c
+[v _Estado Estado `E931  1 e 1 0 ]
+"18
+[v _BufferLenght BufferLenght `uc  1 e 1 0 ]
+"19
+[v _Informacion Informacion `[4]uc  1 e 4 0 ]
+"20
+[v _DataEnviar DataEnviar `[2]uc  1 e 2 0 ]
+"24
+[v _Dato Dato `ui  1 e 2 0 ]
+"27
+[v _Valor Valor `uc  1 e 1 0 ]
+"28
+[v _dada dada `uc  1 e 1 0 ]
+"6 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PASControl_RevA.c
+[v _sSrT sSrT `uc  1 e 1 0 ]
+"7
+[v _PASControlBuffer PASControlBuffer `uc  1 e 1 0 ]
+"2 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\RobotMovimientos.c
+[v _in1 in1 `uc  1 e 1 0 ]
+"3
+[v _in2 in2 `uc  1 e 1 0 ]
+"4
+[v _in3 in3 `uc  1 e 1 0 ]
+"5
+[v _in4 in4 `uc  1 e 1 0 ]
+"6
+[v _va va `uc  1 e 1 0 ]
+"7
+[v _vb vb `uc  1 e 1 0 ]
+"3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Servo.c
+[v _ServoValue ServoValue `uc  1 e 1 0 ]
+"17 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\ShiftRegister.c
+[v _dataInB dataInB `uc  1 e 1 0 ]
+"18
+[v _clkB clkB `uc  1 e 1 0 ]
+"19
+[v _latchB latchB `uc  1 e 1 0 ]
+"20
+[v _clrPortB clrPortB `uc  1 e 1 0 ]
+"21
+[v _OEB OEB `uc  1 e 1 0 ]
+"4 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\SieteSegmentos.c
+[v _ChPointer ChPointer `*.1ui  1 e 1 0 ]
+"5
+[v _dataPort dataPort `uc  1 e 1 0 ]
+"6
+[v _SegmentData SegmentData `[14]uc  1 e 14 0 ]
+"10 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\SPDT.c
+[v _Information Information `uc  1 e 1 0 ]
+"11
+[v _Clocking Clocking `uc  1 e 1 0 ]
 [s S433 Stepper 3 `uc 1 Step 1 0 `uc 1 Dir 1 1 `uc 1 Enable 1 2 ]
 "8 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Stepper.c
 [v _StepDriver StepDriver `S433  1 e 3 0 ]

@@ -1,0 +1,632 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"36 ./Hormiga877.h
+[; ;./Hormiga877.h: 36: void delay(const int milis);
+[v _pinMode `(v ~T0 @X0 0 ef2`uc`uc ]
+"37
+[; ;./Hormiga877.h: 37: void delayMicroseconds(const unsigned int us);
+[v _digitalWrite `(v ~T0 @X0 0 ef2`uc`uc ]
+"59
+[v _delay `(v ~T0 @X0 0 ef1`Ci ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"14 ./Hormiga877.h
+[; ;./Hormiga877.h: 14: void digitalWrite(char pin, char value);
+[p x FOSC = HS ]
+"15
+[; ;./Hormiga877.h: 15: char digitalRead(char pin);
+[p x WDTE = OFF ]
+"16
+[; ;./Hormiga877.h: 16: unsigned int analogRead(char channel);
+[p x PWRTE = OFF ]
+"17
+[; ;./Hormiga877.h: 17: uint8_t analogWrite(char pin, unsigned int value);
+[p x BOREN = OFF ]
+"18
+[; ;./Hormiga877.h: 18: void setup(void);
+[p x LVP = ON ]
+"19
+[; ;./Hormiga877.h: 19: void loop(void);
+[p x CPD = OFF ]
+"20
+[; ;./Hormiga877.h: 20: 
+[p x WRT = OFF ]
+"21
+[; ;./Hormiga877.h: 21: 
+[p x CP = OFF ]
+"33 AD9850.c
+[; ;AD9850.c: 33: uint8_t DataPort = 0;
+[v _DataPort `uc ~T0 @X0 1 e ]
+[i _DataPort
+-> -> 0 `i `uc
+]
+"34
+[; ;AD9850.c: 34: uint8_t DDSRegister[5] = {0,0,0,0,0};
+[v _DDSRegister `uc ~T0 @X0 -> 5 `i e ]
+[i _DDSRegister
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"35
+[; ;AD9850.c: 35: uint8_t Reloj = 0;
+[v _Reloj `uc ~T0 @X0 1 e ]
+[i _Reloj
+-> -> 0 `i `uc
+]
+"36
+[; ;AD9850.c: 36: uint8_t FrUpdate = 0;
+[v _FrUpdate `uc ~T0 @X0 1 e ]
+[i _FrUpdate
+-> -> 0 `i `uc
+]
+"37
+[; ;AD9850.c: 37: uint8_t DDSPhase = 0;
+[v _DDSPhase `uc ~T0 @X0 1 e ]
+[i _DDSPhase
+-> -> 0 `i `uc
+]
+"38
+[; ;AD9850.c: 38: unsigned int R = 10;
+[v _R `ui ~T0 @X0 1 e ]
+[i _R
+-> -> 10 `i `ui
+]
+"40
+[; ;AD9850.c: 40: void DDSBegin(uint8_t PORT, uint8_t CLK, uint8_t FUD, uint8_t RST)
+[v _DDSBegin `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
+"41
+[; ;AD9850.c: 41: {
+{
+[e :U _DDSBegin ]
+"40
+[; ;AD9850.c: 40: void DDSBegin(uint8_t PORT, uint8_t CLK, uint8_t FUD, uint8_t RST)
+[v _PORT `uc ~T0 @X0 1 r1 ]
+[v _CLK `uc ~T0 @X0 1 r2 ]
+[v _FUD `uc ~T0 @X0 1 r3 ]
+[v _RST `uc ~T0 @X0 1 r4 ]
+"41
+[; ;AD9850.c: 41: {
+[f ]
+"42
+[; ;AD9850.c: 42:  DDSRegister[0] = 0x04;
+[e = *U + &U _DDSRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> -> 4 `i `uc ]
+"43
+[; ;AD9850.c: 43:  Reloj = CLK;
+[e = _Reloj _CLK ]
+"44
+[; ;AD9850.c: 44:  FrUpdate = FUD;
+[e = _FrUpdate _FUD ]
+"45
+[; ;AD9850.c: 45:  DataPort = PORT;
+[e = _DataPort _PORT ]
+"46
+[; ;AD9850.c: 46:  pinMode(RST,0);
+[e ( _pinMode (2 , -> _RST `uc -> -> 0 `i `uc ]
+"47
+[; ;AD9850.c: 47:  pinMode(FUD,0);
+[e ( _pinMode (2 , -> _FUD `uc -> -> 0 `i `uc ]
+"48
+[; ;AD9850.c: 48:  pinMode(CLK,0);
+[e ( _pinMode (2 , -> _CLK `uc -> -> 0 `i `uc ]
+"49
+[; ;AD9850.c: 49:     pinMode(PORT,0x00);
+[e ( _pinMode (2 , -> _PORT `uc -> -> 0 `i `uc ]
+"50
+[; ;AD9850.c: 50:     digitalWrite(PORT,0x00);
+[e ( _digitalWrite (2 , -> _PORT `uc -> -> 0 `i `uc ]
+"51
+[; ;AD9850.c: 51:     digitalWrite(RST,1);
+[e ( _digitalWrite (2 , -> _RST `uc -> -> 1 `i `uc ]
+"52
+[; ;AD9850.c: 52:     digitalWrite(FUD,0);
+[e ( _digitalWrite (2 , -> _FUD `uc -> -> 0 `i `uc ]
+"53
+[; ;AD9850.c: 53:     delay(R);
+[e ( _delay (1 -> _R `i ]
+"54
+[; ;AD9850.c: 54:     digitalWrite(RST,0);
+[e ( _digitalWrite (2 , -> _RST `uc -> -> 0 `i `uc ]
+"55
+[; ;AD9850.c: 55:     digitalWrite(FUD,1);
+[e ( _digitalWrite (2 , -> _FUD `uc -> -> 1 `i `uc ]
+"56
+[; ;AD9850.c: 56:     delay(R);
+[e ( _delay (1 -> _R `i ]
+"57
+[; ;AD9850.c: 57:     digitalWrite(FUD,0);
+[e ( _digitalWrite (2 , -> _FUD `uc -> -> 0 `i `uc ]
+"58
+[; ;AD9850.c: 58:  for(char i=0;i<5;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 96  ]
+[e $U 97  ]
+[e :U 96 ]
+"59
+[; ;AD9850.c: 59:  {
+{
+"60
+[; ;AD9850.c: 60:   digitalWrite(PORT,DDSRegister[i]);
+[e ( _digitalWrite (2 , -> _PORT `uc -> *U + &U _DDSRegister * -> _i `ux -> -> # *U &U _DDSRegister `ui `ux `uc ]
+"61
+[; ;AD9850.c: 61:   digitalWrite(CLK,1);
+[e ( _digitalWrite (2 , -> _CLK `uc -> -> 1 `i `uc ]
+"62
+[; ;AD9850.c: 62:   delay(R);
+[e ( _delay (1 -> _R `i ]
+"63
+[; ;AD9850.c: 63:   digitalWrite(CLK,0);
+[e ( _digitalWrite (2 , -> _CLK `uc -> -> 0 `i `uc ]
+"64
+[; ;AD9850.c: 64:   delay(R);
+[e ( _delay (1 -> _R `i ]
+"65
+[; ;AD9850.c: 65:  }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 96  ]
+[e :U 97 ]
+}
+"66
+[; ;AD9850.c: 66:  digitalWrite(FUD,1);
+[e ( _digitalWrite (2 , -> _FUD `uc -> -> 1 `i `uc ]
+"67
+[; ;AD9850.c: 67:  delay(R);
+[e ( _delay (1 -> _R `i ]
+"68
+[; ;AD9850.c: 68:  digitalWrite(FUD,0);
+[e ( _digitalWrite (2 , -> _FUD `uc -> -> 0 `i `uc ]
+"69
+[; ;AD9850.c: 69: }
+[e :UE 95 ]
+}
+"71
+[; ;AD9850.c: 71: void SetFreq(double Frequency)
+[v _SetFreq `(v ~T0 @X0 1 ef1`d ]
+"72
+[; ;AD9850.c: 72: {
+{
+[e :U _SetFreq ]
+"71
+[; ;AD9850.c: 71: void SetFreq(double Frequency)
+[v _Frequency `d ~T0 @X0 1 r1 ]
+"72
+[; ;AD9850.c: 72: {
+[f ]
+"73
+[; ;AD9850.c: 73:  uint32_t temp = 0;
+[v _temp `ul ~T0 @X0 1 a ]
+[e = _temp -> -> -> 0 `i `l `ul ]
+"74
+[; ;AD9850.c: 74:  temp = Frequency / 0.0291;
+[e = _temp -> / _Frequency .0.0291 `ul ]
+"75
+[; ;AD9850.c: 75:     DDSRegister[0] = 0x00;
+[e = *U + &U _DDSRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> -> 0 `i `uc ]
+"76
+[; ;AD9850.c: 76:  DDSRegister[4] = temp & 0xFF;
+[e = *U + &U _DDSRegister * -> -> -> 4 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> & _temp -> -> -> 255 `i `l `ul `uc ]
+"77
+[; ;AD9850.c: 77:  DDSRegister[3] = (temp >> 8);
+[e = *U + &U _DDSRegister * -> -> -> 3 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> >> _temp -> 8 `i `uc ]
+"78
+[; ;AD9850.c: 78:  DDSRegister[2] = (temp >> 16);
+[e = *U + &U _DDSRegister * -> -> -> 2 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> >> _temp -> 16 `i `uc ]
+"79
+[; ;AD9850.c: 79:  DDSRegister[1] = (temp >> 24);
+[e = *U + &U _DDSRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> >> _temp -> 24 `i `uc ]
+"80
+[; ;AD9850.c: 80:     digitalWrite(FrUpdate,1);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 1 `i `uc ]
+"81
+[; ;AD9850.c: 81:  delay(10);
+[e ( _delay (1 -> 10 `i ]
+"82
+[; ;AD9850.c: 82:  digitalWrite(FrUpdate,0);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 0 `i `uc ]
+"83
+[; ;AD9850.c: 83:  delay(10);
+[e ( _delay (1 -> 10 `i ]
+"84
+[; ;AD9850.c: 84:  for(uint8_t i=0;i<5;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 100  ]
+[e $U 101  ]
+[e :U 100 ]
+"85
+[; ;AD9850.c: 85:  {
+{
+"86
+[; ;AD9850.c: 86:   digitalWrite(DataPort,DDSRegister[i]);
+[e ( _digitalWrite (2 , -> _DataPort `uc -> *U + &U _DDSRegister * -> _i `ux -> -> # *U &U _DDSRegister `ui `ux `uc ]
+"87
+[; ;AD9850.c: 87:   digitalWrite(Reloj,1);
+[e ( _digitalWrite (2 , -> _Reloj `uc -> -> 1 `i `uc ]
+"88
+[; ;AD9850.c: 88:   delay(10);
+[e ( _delay (1 -> 10 `i ]
+"89
+[; ;AD9850.c: 89:   digitalWrite(Reloj,0);
+[e ( _digitalWrite (2 , -> _Reloj `uc -> -> 0 `i `uc ]
+"90
+[; ;AD9850.c: 90:   delay(10);
+[e ( _delay (1 -> 10 `i ]
+"91
+[; ;AD9850.c: 91:  }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 100  ]
+[e :U 101 ]
+}
+"92
+[; ;AD9850.c: 92:  digitalWrite(FrUpdate,1);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 1 `i `uc ]
+"93
+[; ;AD9850.c: 93:  delay(10);
+[e ( _delay (1 -> 10 `i ]
+"94
+[; ;AD9850.c: 94:  digitalWrite(FrUpdate,0);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 0 `i `uc ]
+"95
+[; ;AD9850.c: 95:  delay(10);
+[e ( _delay (1 -> 10 `i ]
+"96
+[; ;AD9850.c: 96: }
+[e :UE 99 ]
+}
+"98
+[; ;AD9850.c: 98: void SetSignalPhase(double phase)
+[v _SetSignalPhase `(v ~T0 @X0 1 ef1`d ]
+"99
+[; ;AD9850.c: 99: {
+{
+[e :U _SetSignalPhase ]
+"98
+[; ;AD9850.c: 98: void SetSignalPhase(double phase)
+[v _phase `d ~T0 @X0 1 r1 ]
+"99
+[; ;AD9850.c: 99: {
+[f ]
+"100
+[; ;AD9850.c: 100:  char temp = phase / 11.25;
+[v _temp `uc ~T0 @X0 1 a ]
+[e = _temp -> / _phase .11.25 `uc ]
+"101
+[; ;AD9850.c: 101:  temp = temp << 3;
+[e = _temp -> << -> _temp `i -> 3 `i `uc ]
+"102
+[; ;AD9850.c: 102:  DDSRegister[0] = temp;
+[e = *U + &U _DDSRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> _temp `uc ]
+"103
+[; ;AD9850.c: 103:     digitalWrite(FrUpdate,1);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 1 `i `uc ]
+"104
+[; ;AD9850.c: 104:  delay(10);
+[e ( _delay (1 -> 10 `i ]
+"105
+[; ;AD9850.c: 105:  digitalWrite(FrUpdate,0);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 0 `i `uc ]
+"106
+[; ;AD9850.c: 106:  delay(10);
+[e ( _delay (1 -> 10 `i ]
+"107
+[; ;AD9850.c: 107:  for(char i=0;i<5;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 104  ]
+[e $U 105  ]
+[e :U 104 ]
+"108
+[; ;AD9850.c: 108:  {
+{
+"109
+[; ;AD9850.c: 109:   digitalWrite(DataPort,DDSRegister[i]);
+[e ( _digitalWrite (2 , -> _DataPort `uc -> *U + &U _DDSRegister * -> _i `ux -> -> # *U &U _DDSRegister `ui `ux `uc ]
+"110
+[; ;AD9850.c: 110:   digitalWrite(Reloj,1);
+[e ( _digitalWrite (2 , -> _Reloj `uc -> -> 1 `i `uc ]
+"111
+[; ;AD9850.c: 111:   delay(10);
+[e ( _delay (1 -> 10 `i ]
+"112
+[; ;AD9850.c: 112:   digitalWrite(Reloj,0);
+[e ( _digitalWrite (2 , -> _Reloj `uc -> -> 0 `i `uc ]
+"113
+[; ;AD9850.c: 113:   delay(10);
+[e ( _delay (1 -> 10 `i ]
+"114
+[; ;AD9850.c: 114:  }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 104  ]
+[e :U 105 ]
+}
+"115
+[; ;AD9850.c: 115:  digitalWrite(FrUpdate,1);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 1 `i `uc ]
+"116
+[; ;AD9850.c: 116:  delay(10);
+[e ( _delay (1 -> 10 `i ]
+"117
+[; ;AD9850.c: 117:  digitalWrite(FrUpdate,0);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 0 `i `uc ]
+"118
+[; ;AD9850.c: 118:  delay(10);
+[e ( _delay (1 -> 10 `i ]
+"119
+[; ;AD9850.c: 119: }
+[e :UE 103 ]
+}
+"121
+[; ;AD9850.c: 121: void SetTunningWord(char Frequency[4], char phase)
+[v _SetTunningWord `(v ~T0 @X0 1 ef2`*uc`uc ]
+"122
+[; ;AD9850.c: 122: {
+{
+[e :U _SetTunningWord ]
+"121
+[; ;AD9850.c: 121: void SetTunningWord(char Frequency[4], char phase)
+[v _Frequency `*uc ~T0 @X0 1 r1 ]
+[v _phase `uc ~T0 @X0 1 r2 ]
+"122
+[; ;AD9850.c: 122: {
+[f ]
+"123
+[; ;AD9850.c: 123:  DDSRegister[0] = phase << 3;
+[e = *U + &U _DDSRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> << -> _phase `i -> 3 `i `uc ]
+"124
+[; ;AD9850.c: 124:  DDSRegister[1] = Frequency[0];
+[e = *U + &U _DDSRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> *U + _Frequency * -> -> 0 `i `x -> -> # *U _Frequency `i `x `uc ]
+"125
+[; ;AD9850.c: 125:  DDSRegister[2] = Frequency[1];
+[e = *U + &U _DDSRegister * -> -> -> 2 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> *U + _Frequency * -> -> 1 `i `x -> -> # *U _Frequency `i `x `uc ]
+"126
+[; ;AD9850.c: 126:  DDSRegister[3] = Frequency[2];
+[e = *U + &U _DDSRegister * -> -> -> 3 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> *U + _Frequency * -> -> 2 `i `x -> -> # *U _Frequency `i `x `uc ]
+"127
+[; ;AD9850.c: 127:  DDSRegister[4] = Frequency[3];
+[e = *U + &U _DDSRegister * -> -> -> 4 `i `ui `ux -> -> # *U &U _DDSRegister `ui `ux -> *U + _Frequency * -> -> 3 `i `x -> -> # *U _Frequency `i `x `uc ]
+"128
+[; ;AD9850.c: 128:     digitalWrite(FrUpdate,1);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 1 `i `uc ]
+"129
+[; ;AD9850.c: 129:  delay(R);
+[e ( _delay (1 -> _R `i ]
+"130
+[; ;AD9850.c: 130:  digitalWrite(FrUpdate,0);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 0 `i `uc ]
+"131
+[; ;AD9850.c: 131:  delay(R);
+[e ( _delay (1 -> _R `i ]
+"132
+[; ;AD9850.c: 132:  for(char i=0;i<5;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 108  ]
+[e $U 109  ]
+[e :U 108 ]
+"133
+[; ;AD9850.c: 133:  {
+{
+"134
+[; ;AD9850.c: 134:   digitalWrite(DataPort,DDSRegister[i]);
+[e ( _digitalWrite (2 , -> _DataPort `uc -> *U + &U _DDSRegister * -> _i `ux -> -> # *U &U _DDSRegister `ui `ux `uc ]
+"135
+[; ;AD9850.c: 135:   digitalWrite(Reloj,1);
+[e ( _digitalWrite (2 , -> _Reloj `uc -> -> 1 `i `uc ]
+"136
+[; ;AD9850.c: 136:   delay(R);
+[e ( _delay (1 -> _R `i ]
+"137
+[; ;AD9850.c: 137:   digitalWrite(Reloj,0);
+[e ( _digitalWrite (2 , -> _Reloj `uc -> -> 0 `i `uc ]
+"138
+[; ;AD9850.c: 138:   delay(R);
+[e ( _delay (1 -> _R `i ]
+"139
+[; ;AD9850.c: 139:  }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 108  ]
+[e :U 109 ]
+}
+"140
+[; ;AD9850.c: 140:  digitalWrite(FrUpdate,1);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 1 `i `uc ]
+"141
+[; ;AD9850.c: 141:  delay(R);
+[e ( _delay (1 -> _R `i ]
+"142
+[; ;AD9850.c: 142:  digitalWrite(FrUpdate,0);
+[e ( _digitalWrite (2 , -> _FrUpdate `uc -> -> 0 `i `uc ]
+"144
+[; ;AD9850.c: 144: }
+[e :UE 107 ]
+}
