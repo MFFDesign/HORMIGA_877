@@ -1,12 +1,11 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"35 ./system.h
-[; ;./system.h: 35: void pinMode(char pin, char mode);
+"36 ./Hormiga877.h
+[; ;./Hormiga877.h: 36: void delay(const int milis);
 [v _pinMode `(v ~T0 @X0 0 ef2`uc`uc ]
-"39
-[; ;./system.h: 39: uint8_t analogWrite(char pin, unsigned int value);
+"40
+[; ;./Hormiga877.h: 40: void TimerOneInterruptDisable(void);
 [v _analogWrite `(uc ~T0 @X0 0 ef2`uc`ui ]
 "59
-[; ;./system.h: 59: void delay(const int milis);
 [v _delay `(v ~T0 @X0 0 ef1`Ci ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
@@ -188,21 +187,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"14 ./system.h
+"14 ./Hormiga877.h
+[; ;./Hormiga877.h: 14: void digitalWrite(char pin, char value);
 [p x FOSC = HS ]
 "15
+[; ;./Hormiga877.h: 15: char digitalRead(char pin);
 [p x WDTE = OFF ]
 "16
+[; ;./Hormiga877.h: 16: unsigned int analogRead(char channel);
 [p x PWRTE = OFF ]
 "17
+[; ;./Hormiga877.h: 17: uint8_t analogWrite(char pin, unsigned int value);
 [p x BOREN = OFF ]
 "18
+[; ;./Hormiga877.h: 18: void setup(void);
 [p x LVP = ON ]
 "19
+[; ;./Hormiga877.h: 19: void loop(void);
 [p x CPD = OFF ]
 "20
+[; ;./Hormiga877.h: 20: 
 [p x WRT = OFF ]
 "21
+[; ;./Hormiga877.h: 21: 
 [p x CP = OFF ]
 "3 application.c
 [; ;application.c: 3: void setup()

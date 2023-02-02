@@ -1,4 +1,4 @@
-# 1 "application.c"
+# 1 "Stepper.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "application.c" 2
+# 1 "Stepper.c" 2
 # 1 "./Hormiga877.h" 1
 # 11 "./Hormiga877.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
@@ -1910,22 +1910,251 @@ void delayMicroseconds(const unsigned int us);
 void __attribute__((picinterrupt(""))) TimeCounter(void);
 void TimerOneInterruptEnable(void);
 void TimerOneInterruptDisable(void);
-# 1 "application.c" 2
+# 1 "Stepper.c" 2
+
+# 1 "./Stepper.h" 1
+# 18 "./Stepper.h"
+    unsigned int AccelProfile(const int ni, const int n);
+    void StepperExconBegin(char Step, char Dir, char Enable);
+    unsigned int Accelcalculation(unsigned int VelFinal, unsigned int TimeRamp);
+    unsigned int MoveStepper(unsigned int Steps, char Dir);
+    void MoveStepperHWD(unsigned int Steps, char Dir);
+    void HardwareDelay(unsigned char mode, unsigned char time);
+    unsigned long StepMove(char Dir, unsigned int dt);
+    void ResetStepsCount(void);
+    void VelProfile(unsigned long Steps, char Dir, unsigned int Vi, unsigned int Vf, unsigned long *StepsOut);
+    void MotorEnable(void);
+void MotorDisable(void);
+# 2 "Stepper.c" 2
 
 
-void setup()
+struct Stepper{
+    char Step;
+    char Dir;
+    char Enable;
+}StepDriver;
+
+struct VProfile{
+    unsigned int VFinal;
+    unsigned int TAccel;
+    char TWait;
+    unsigned long TotalSteps;
+}Profile;
+
+
+void StepperExconBegin(char Step, char Dir, char Enable)
 {
- pinMode(6,0);
-    pinMode(5,0);
+    StepDriver.Step = Step;
+    StepDriver.Dir = Dir;
+    StepDriver.Enable = Enable;
+    pinMode(StepDriver.Step,0);
+    digitalWrite(StepDriver.Step,0);
+    pinMode(StepDriver.Dir,0);
+    digitalWrite(StepDriver.Dir,0);
+    pinMode(StepDriver.Enable,0);
+    digitalWrite(StepDriver.Enable,1);
+}
+
+void HardwareDelay(unsigned char mode, unsigned char time)
+{
+    switch(mode)
+    {
+        case 0x13:
+            TMR0 &= 0x00;
+            TMR0IF = 0;
+            OPTION_REG &= 0xD7;
+            Profile.TWait = time;
+            break;
+        case 0x14:
+            OPTION_REG = 0xFF;
+            TMR0 &= 0x00;
+            TMR0IF = 0;
+            break;
+    }
+}
+
+void MoveStepperHWD(unsigned int Steps, char Dir)
+{
+    unsigned int Counter = 0;
+    switch(Dir)
+    {
+        case 0x01:
+            digitalWrite(StepDriver.Dir,1);
+            digitalWrite(StepDriver.Enable,0);
+            TMR0 = 0xFF - Profile.TWait;
+            while(Counter != Steps)
+            {
+                digitalWrite(StepDriver.Step,1);
+                while(!TMR0IF);
+                digitalWrite(StepDriver.Step,0);
+
+                TMR0IF = 0;
+                TMR0 = 0xFF - Profile.TWait;
+                Counter++;
+            }
+            digitalWrite(StepDriver.Enable,1);
+            break;
+        case 0x00:
+            digitalWrite(StepDriver.Dir,0);
+            digitalWrite(StepDriver.Enable,0);
+            TMR0 = 0xFF - Profile.TWait;
+            while(Counter != Steps)
+            {
+                digitalWrite(StepDriver.Step,1);
+                while(!TMR0IF);
+                digitalWrite(StepDriver.Step,0);
+                _delay((unsigned long)((250)*(20000000/4000000.0)));
+                TMR0IF = 0;
+                TMR0 = 0xFF - Profile.TWait;
+                Counter++;
+            }
+            digitalWrite(StepDriver.Enable,1);
+            break;
+    }
+}
+
+void MotorEnable(void)
+{
+    digitalWrite(StepDriver.Enable,0);
+}
+
+void MotorDisable(void)
+{
+    digitalWrite(StepDriver.Enable,1);
+}
+void ResetStepsCount(void)
+{
+    Profile.TotalSteps = 0;
+}
+unsigned long StepMove(char Dir, unsigned int dt)
+{
+    digitalWrite(StepDriver.Step,Dir);
+    digitalWrite(StepDriver.Step,1);
+    _delay((unsigned long)((250)*(20000000/4000000.0)));
+    delayMicroseconds(dt);
+    digitalWrite(StepDriver.Step,0);
+    _delay((unsigned long)((250)*(20000000/4000000.0)));
+    Profile.TotalSteps++;
+    return Profile.TotalSteps;
 }
 
 
-void loop()
+unsigned int MoveStepper(unsigned int Steps, char Dir)
 {
-    analogWrite(6,200);
-    analogWrite(5,200);
-    delay(100);
-    analogWrite(6,500);
-    analogWrite(5,500);
-    delay(100);
+    if(Dir == 0x01)
+    {
+        digitalWrite(StepDriver.Dir,0);
+        digitalWrite(StepDriver.Enable,0);
+        for(unsigned int i=0;i<=Steps;i++)
+        {
+            if(i < 800)
+            {
+                digitalWrite(StepDriver.Step,1);
+                _delay((unsigned long)((500)*(20000000/4000000.0)));
+                digitalWrite(StepDriver.Step,0);
+                _delay((unsigned long)((500)*(20000000/4000000.0)));
+            }
+            else
+            {
+                digitalWrite(StepDriver.Step,1);
+                _delay((unsigned long)((250)*(20000000/4000000.0)));
+                digitalWrite(StepDriver.Step,0);
+                _delay((unsigned long)((250)*(20000000/4000000.0)));
+            }
+        }
+        digitalWrite(StepDriver.Enable,1);
+
+    }
+    else if(Dir == 0x00)
+    {
+        digitalWrite(StepDriver.Dir,1);
+        digitalWrite(StepDriver.Enable,0);
+        for(unsigned int i=0;i<=Steps;i++)
+        {
+            if(i < 800)
+            {
+                digitalWrite(StepDriver.Step,1);
+                _delay((unsigned long)((500)*(20000000/4000000.0)));
+                digitalWrite(StepDriver.Step,0);
+                _delay((unsigned long)((500)*(20000000/4000000.0)));
+            }
+            else
+            {
+                digitalWrite(StepDriver.Step,1);
+                _delay((unsigned long)((250)*(20000000/4000000.0)));
+                digitalWrite(StepDriver.Step,0);
+                _delay((unsigned long)((250)*(20000000/4000000.0)));
+            }
+        }
+        digitalWrite(StepDriver.Enable,1);
+    }
+    else
+    {
+        digitalWrite(StepDriver.Enable,1);
+        digitalWrite(StepDriver.Step,0);
+    }
+    return Steps;
+}
+
+
+
+void VelProfile(unsigned long Steps, char Dir, unsigned int Vi, unsigned int Vf, unsigned long *StepsOut)
+{
+    unsigned int FirstPoint = 0;
+    unsigned int SecondPoint = 0;
+    unsigned int TimeSet = 0;
+    digitalWrite(StepDriver.Dir,Dir);
+    digitalWrite(StepDriver.Enable,0);
+    FirstPoint = (unsigned long)(Steps / 10);
+    SecondPoint = (unsigned long) (FirstPoint * 9);
+    for(unsigned long i=0;i<=Steps;i++)
+    {
+        if(i <= FirstPoint)
+        {
+            TimeSet = (unsigned int)(( Steps * ((Vf - Vi) / FirstPoint)) + Vi);
+
+        }
+        else if((i > FirstPoint) && (i <= SecondPoint))
+        {
+            TimeSet = Vf;
+        }
+        else if((i>SecondPoint) &&(i<= Steps))
+        {
+            TimeSet = (unsigned int)(((((Vi - Vf)/(i - SecondPoint))*(Steps-SecondPoint))+Vf));
+        }
+        digitalWrite(StepDriver.Step,1);
+        _delay((unsigned long)((250)*(20000000/4000000.0)));
+        delayMicroseconds(TimeSet);
+        digitalWrite(StepDriver.Step,0);
+        _delay((unsigned long)((250)*(20000000/4000000.0)));
+        StepsOut++;
+    }
+
+}
+
+
+unsigned int AccelProfile(const int ni, const int n)
+{
+  double FirstPoint = 0;
+  double SecondPoint = 0;
+  int Vmax = 700;
+  int Vmin = 1000;
+  FirstPoint = ni / 4;
+  SecondPoint = 3* FirstPoint;
+  if((n >=0) && (n <= FirstPoint))
+  {
+    return(unsigned int)(( n * ((Vmax - Vmin) / FirstPoint)) + Vmin);
+  }
+  else if((n > FirstPoint) && (n <= SecondPoint))
+  {
+    return (unsigned int)(Vmax);
+  }
+  else if((n > SecondPoint) && (n <= ni))
+  {
+    return (unsigned int)(((((Vmin - Vmax)/(ni - SecondPoint))*(n-SecondPoint))+Vmax));
+  }
+  else
+  {
+    return (unsigned int)(Vmin);
+  }
 }
