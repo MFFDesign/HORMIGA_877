@@ -168,6 +168,47 @@ unsigned int MoveStepper(unsigned int Steps, char Dir) //Funciona sin problemas
     }
     return Steps;
 }
+ void AccelStepping(unsigned int Steps, char Direccion, unsigned int VMax, unsigned int Vmin,unsigned int First, unsigned int Second)
+ {
+	unsigned int x=0;
+	unsigned int AccelSteps = 0;
+	digitalWrite(StepDriver.Dir,Direccion);
+	digitalWrite(StepDriver.Enable,LOW);
+	AccelSteps =(unsigned int)((Vmin - VMax) / First);
+	for(x = Vmin; x > VMax; x--) //Aceleracion del Motor
+	{
+		for(unsigned int i=0; i < AccelSteps; i++) 
+		{
+			digitalWrite(StepDriver.Step, HIGH);
+			__delay_us(250);
+			delayMicroseconds(x);
+			digitalWrite(StepDriver.Step, LOW);
+			__delay_us(250);
+		}
+	}
+	AccelSteps = Second - First;
+	for (x = 0; x < AccelSteps; x++) //Velocidad Constante
+	{
+		digitalWrite(StepDriver.Step, HIGH);
+		__delay_us(250);
+		delayMicroseconds(VMax);
+		digitalWrite(StepDriver.Step, LOW);
+		__delay_us(250);
+	}
+	AccelSteps = (int)((Vmin - VMax) / (Steps - Second));
+	for (x = VMax; x < Vmin; x++) //Desaceleracion
+	{
+		for (unsigned int i = 0; i < AccelSteps; i++) 
+		{
+			digitalWrite(StepDriver.Step, HIGH);
+			__delay_us(250);
+			delayMicroseconds(x);
+			digitalWrite(StepDriver.Step, LOW);
+			__delay_us(250);
+		}
+	}
+	digitalWrite(StepDriver.Enable,LOW);
+ }
 
 //LA funcion VelProfile no se ejecuta correctamenta, un fork anterior en arduino
 //la ejecutaba correctamnte, falla el procesador aparentemente.
