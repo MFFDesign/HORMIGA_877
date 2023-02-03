@@ -12,30 +12,29 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\Hormiga_877_RevA.X.production.o
-cinit CODE 0 7BB 7BB 45 2
-text1 CODE 0 535 535 F 2
-text2 CODE 0 69A 69A 121 2
-text3 CODE 0 5C9 5C9 3B 2
-text4 CODE 0 64C 64C 4E 2
-text5 CODE 0 604 604 48 2
-text6 CODE 0 59D 59D 2C 2
-text7 CODE 0 526 526 F 2
-idataCOMMON CODE 0 51D 51D 1 2
-maintext CODE 0 566 566 14 2
-cstackCOMMON COMMON 1 70 70 7 1
-inittext CODE 0 553 553 13 2
-bssBANK0 BANK0 1 20 20 40 1
-bssBANK1 BANK1 1 A0 A0 2C 1
-bssBANK3 BANK3 1 190 190 40 1
-idataBANK0 CODE 0 544 544 F 2
-idataBANK1 CODE 0 57A 57A 23 2
-strings STRING 0 3 3 2E 2
-dataBANK0 BANK0 1 60 60 F 1
-dataBANK1 BANK1 1 CC CC 23 1
-dataCOMMON COMMON 1 7D 7D 1 1
-clrtext CODE 0 51E 51E 8 2
-bssCOMMON COMMON 1 77 77 6 1
-$C:\Users\c4810\AppData\Local\Temp\snkk.o
+cinit CODE 0 7F3 7F3 D 2
+text1 CODE 0 11F 11F 59 2
+text2 CODE 0 A5 A5 2C 2
+text3 CODE 0 4E 4E 2B 2
+text4 CODE 0 29 29 11 2
+text5 CODE 0 1FA 1FA 83 2
+text6 CODE 0 27D 27D 84 2
+text7 CODE 0 301 301 121 2
+text8 CODE 0 178 178 82 2
+text9 CODE 0 D1 D1 4E 2
+text10 CODE 0 545 545 2AE 2
+text11 CODE 0 422 422 123 2
+text12 CODE 0 FF0 FF0 1 2
+text13 CODE 0 79 79 2C 2
+text14 CODE 0 FF1 FF1 F 2
+nvBANK0 BANK0 1 4B 4B 7 1
+maintext CODE 0 3A 3A 14 2
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK0 BANK0 1 3F 3F C 1
+bssBANK0 BANK0 1 20 20 1F 1
+strings STRING 0 3 3 1E 2
+clrtext CODE 0 21 21 8 2
+$C:\Users\c4810\AppData\Local\Temp\s7f0.o
 idloc IDLOC 0 2000 2000 4 2
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 1 2
@@ -45,30 +44,30 @@ config CONFIG 0 2007 2007 1 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 6F-6F 1
-RAM EF-EF 1
+RAM 52-6F 1
+RAM A0-EF 1
 RAM 110-16F 1
-RAM 1D0-1EF 1
-BANK0 6F-6F 1
-BANK1 EF-EF 1
+RAM 190-1EF 1
+BANK0 52-6F 1
+BANK1 A0-EF 1
 BANK2 110-16F 1
-BANK3 1D0-1EF 1
-CONST 31-51C 2
-CONST 800-1FFF 2
-ENTRY 31-51C 2
-ENTRY 800-1FFF 2
+BANK3 190-1EF 1
+CONST 800-FEF 2
+CONST 1000-1FFF 2
+ENTRY 800-FEF 2
+ENTRY 1000-1FFF 2
 STACK 110-16F 1
-CODE 31-51C 2
-CODE 800-1FFF 2
+CODE 800-FEF 2
+CODE 1000-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
-STRCODE 31-51C 2
-STRCODE 800-1FFF 2
-STRING 31-51C 2
-STRING 800-1FFF 2
+STRCODE 800-FEF 2
+STRCODE 1000-1FFF 2
+STRING 800-FEF 2
+STRING 1000-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -83,226 +82,418 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Hormiga_877_RevA.X.production.o
-7BB cinit CODE >3668:C:\Users\c4810\AppData\Local\Temp\snkk.
-7BB cinit CODE >3671:C:\Users\c4810\AppData\Local\Temp\snkk.
-7BB cinit CODE >4028:C:\Users\c4810\AppData\Local\Temp\snkk.
-7BC cinit CODE >4029:C:\Users\c4810\AppData\Local\Temp\snkk.
-7BD cinit CODE >4030:C:\Users\c4810\AppData\Local\Temp\snkk.
-7BE cinit CODE >4031:C:\Users\c4810\AppData\Local\Temp\snkk.
-7BF cinit CODE >4032:C:\Users\c4810\AppData\Local\Temp\snkk.
-7C0 cinit CODE >4033:C:\Users\c4810\AppData\Local\Temp\snkk.
-7C1 cinit CODE >4034:C:\Users\c4810\AppData\Local\Temp\snkk.
-7C2 cinit CODE >4035:C:\Users\c4810\AppData\Local\Temp\snkk.
-7C3 cinit CODE >4036:C:\Users\c4810\AppData\Local\Temp\snkk.
-7C4 cinit CODE >4037:C:\Users\c4810\AppData\Local\Temp\snkk.
-7C9 cinit CODE >4041:C:\Users\c4810\AppData\Local\Temp\snkk.
-7CA cinit CODE >4042:C:\Users\c4810\AppData\Local\Temp\snkk.
-7CB cinit CODE >4043:C:\Users\c4810\AppData\Local\Temp\snkk.
-7CC cinit CODE >4044:C:\Users\c4810\AppData\Local\Temp\snkk.
-7CD cinit CODE >4045:C:\Users\c4810\AppData\Local\Temp\snkk.
-7CE cinit CODE >4046:C:\Users\c4810\AppData\Local\Temp\snkk.
-7CF cinit CODE >4047:C:\Users\c4810\AppData\Local\Temp\snkk.
-7D0 cinit CODE >4048:C:\Users\c4810\AppData\Local\Temp\snkk.
-7D1 cinit CODE >4049:C:\Users\c4810\AppData\Local\Temp\snkk.
-7D6 cinit CODE >4053:C:\Users\c4810\AppData\Local\Temp\snkk.
-7DB cinit CODE >4054:C:\Users\c4810\AppData\Local\Temp\snkk.
-7DC cinit CODE >4073:C:\Users\c4810\AppData\Local\Temp\snkk.
-7DD cinit CODE >4074:C:\Users\c4810\AppData\Local\Temp\snkk.
-7DE cinit CODE >4075:C:\Users\c4810\AppData\Local\Temp\snkk.
-7DF cinit CODE >4076:C:\Users\c4810\AppData\Local\Temp\snkk.
-7E0 cinit CODE >4077:C:\Users\c4810\AppData\Local\Temp\snkk.
-7E5 cinit CODE >4080:C:\Users\c4810\AppData\Local\Temp\snkk.
-7E6 cinit CODE >4081:C:\Users\c4810\AppData\Local\Temp\snkk.
-7E7 cinit CODE >4082:C:\Users\c4810\AppData\Local\Temp\snkk.
-7E8 cinit CODE >4083:C:\Users\c4810\AppData\Local\Temp\snkk.
-7E9 cinit CODE >4084:C:\Users\c4810\AppData\Local\Temp\snkk.
-7EE cinit CODE >4087:C:\Users\c4810\AppData\Local\Temp\snkk.
-7EF cinit CODE >4088:C:\Users\c4810\AppData\Local\Temp\snkk.
-7F0 cinit CODE >4089:C:\Users\c4810\AppData\Local\Temp\snkk.
-7F1 cinit CODE >4090:C:\Users\c4810\AppData\Local\Temp\snkk.
-7F6 cinit CODE >4093:C:\Users\c4810\AppData\Local\Temp\snkk.
-7F7 cinit CODE >4094:C:\Users\c4810\AppData\Local\Temp\snkk.
-7F8 cinit CODE >4095:C:\Users\c4810\AppData\Local\Temp\snkk.
-7F9 cinit CODE >4096:C:\Users\c4810\AppData\Local\Temp\snkk.
-7FA cinit CODE >4097:C:\Users\c4810\AppData\Local\Temp\snkk.
-7FB cinit CODE >4098:C:\Users\c4810\AppData\Local\Temp\snkk.
-7FC cinit CODE >4104:C:\Users\c4810\AppData\Local\Temp\snkk.
-7FC cinit CODE >4106:C:\Users\c4810\AppData\Local\Temp\snkk.
-7FD cinit CODE >4107:C:\Users\c4810\AppData\Local\Temp\snkk.
-526 text7 CODE >44:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-526 text7 CODE >46:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-52A text7 CODE >47:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-52E text7 CODE >48:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-52F text7 CODE >49:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-530 text7 CODE >50:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-532 text7 CODE >51:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-534 text7 CODE >52:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-59D text6 CODE >14:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-59D text6 CODE >17:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5A1 text6 CODE >18:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5A5 text6 CODE >20:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5A6 text6 CODE >21:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5A7 text6 CODE >22:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5A8 text6 CODE >23:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5AB text6 CODE >24:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5AE text6 CODE >25:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5B1 text6 CODE >27:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5B2 text6 CODE >28:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5B5 text6 CODE >29:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5B8 text6 CODE >34:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5BD text6 CODE >36:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5BE text6 CODE >37:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5BF text6 CODE >38:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5C0 text6 CODE >39:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5C1 text6 CODE >40:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5C4 text6 CODE >41:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5C8 text6 CODE >42:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-604 text5 CODE >407:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-605 text5 CODE >409:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-606 text5 CODE >411:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-606 text5 CODE >412:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-614 text5 CODE >413:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-615 text5 CODE >414:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-61F text5 CODE >415:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-620 text5 CODE >416:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-620 text5 CODE >417:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-62E text5 CODE >418:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-62F text5 CODE >419:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-639 text5 CODE >420:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-63A text5 CODE >421:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-64B text5 CODE >423:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-64C text4 CODE >576:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-64C text4 CODE >578:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-65E text4 CODE >581:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-66F text4 CODE >583:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-670 text4 CODE >584:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-684 text4 CODE >585:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-699 text4 CODE >586:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-5C9 text3 CODE >10:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-5C9 text3 CODE >12:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-5D3 text3 CODE >13:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-5DD text3 CODE >14:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-5E6 text3 CODE >15:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-5F0 text3 CODE >16:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-5FA text3 CODE >17:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-603 text3 CODE >18:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-69A text2 CODE >60:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-69B text2 CODE >62:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-69C text2 CODE >64:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-69C text2 CODE >65:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6A3 text2 CODE >66:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6A4 text2 CODE >67:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6A4 text2 CODE >68:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6AB text2 CODE >69:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6AC text2 CODE >70:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6AC text2 CODE >71:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6B3 text2 CODE >72:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6B4 text2 CODE >73:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6B4 text2 CODE >74:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6BB text2 CODE >75:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6BC text2 CODE >76:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6BC text2 CODE >77:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6C3 text2 CODE >78:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6C4 text2 CODE >79:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6C4 text2 CODE >80:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6CB text2 CODE >82:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6CC text2 CODE >83:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6CC text2 CODE >84:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6D3 text2 CODE >86:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6D4 text2 CODE >87:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6D4 text2 CODE >88:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6DB text2 CODE >89:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6DC text2 CODE >90:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6DC text2 CODE >91:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6E3 text2 CODE >92:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6E4 text2 CODE >93:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6E4 text2 CODE >94:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6EB text2 CODE >95:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6EC text2 CODE >96:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6EC text2 CODE >97:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6F3 text2 CODE >98:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6F4 text2 CODE >99:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6F4 text2 CODE >100:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6FB text2 CODE >101:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6FC text2 CODE >102:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-6FC text2 CODE >103:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-703 text2 CODE >104:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-704 text2 CODE >105:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-704 text2 CODE >106:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-70B text2 CODE >107:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-70C text2 CODE >108:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-70C text2 CODE >109:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-713 text2 CODE >110:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-714 text2 CODE >111:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-714 text2 CODE >112:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-71B text2 CODE >113:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-71C text2 CODE >114:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-71C text2 CODE >115:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-723 text2 CODE >116:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-724 text2 CODE >117:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-724 text2 CODE >118:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-72B text2 CODE >119:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-72C text2 CODE >120:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-72C text2 CODE >121:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-733 text2 CODE >122:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-734 text2 CODE >123:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-734 text2 CODE >124:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-73B text2 CODE >125:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-73C text2 CODE >126:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-73C text2 CODE >127:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-743 text2 CODE >137:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-744 text2 CODE >138:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-744 text2 CODE >139:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-74B text2 CODE >140:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-74C text2 CODE >141:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-74C text2 CODE >142:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-753 text2 CODE >143:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-754 text2 CODE >144:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-754 text2 CODE >145:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-75B text2 CODE >146:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-75C text2 CODE >147:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-75C text2 CODE >148:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-763 text2 CODE >149:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-764 text2 CODE >164:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-7BA text2 CODE >165:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-535 text1 CODE >3:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-535 text1 CODE >5:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-53C text1 CODE >6:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-543 text1 CODE >7:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-566 maintext CODE >3:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-566 maintext CODE >5:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-56B maintext CODE >6:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-571 maintext CODE >7:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-571 maintext CODE >9:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-576 maintext CODE >10:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-577 maintext CODE >12:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
-51E clrtext CODE >4060:C:\Users\c4810\AppData\Local\Temp\snkk.
-51E clrtext CODE >4061:C:\Users\c4810\AppData\Local\Temp\snkk.
-51F clrtext CODE >4062:C:\Users\c4810\AppData\Local\Temp\snkk.
-51F clrtext CODE >4063:C:\Users\c4810\AppData\Local\Temp\snkk.
-520 clrtext CODE >4064:C:\Users\c4810\AppData\Local\Temp\snkk.
-521 clrtext CODE >4065:C:\Users\c4810\AppData\Local\Temp\snkk.
-522 clrtext CODE >4066:C:\Users\c4810\AppData\Local\Temp\snkk.
-523 clrtext CODE >4067:C:\Users\c4810\AppData\Local\Temp\snkk.
-524 clrtext CODE >4068:C:\Users\c4810\AppData\Local\Temp\snkk.
-525 clrtext CODE >4069:C:\Users\c4810\AppData\Local\Temp\snkk.
-553 inittext CODE >4002:C:\Users\c4810\AppData\Local\Temp\snkk.
-553 inittext CODE >4003:C:\Users\c4810\AppData\Local\Temp\snkk.
-554 inittext CODE >4004:C:\Users\c4810\AppData\Local\Temp\snkk.
-555 inittext CODE >4005:C:\Users\c4810\AppData\Local\Temp\snkk.
-556 inittext CODE >4006:C:\Users\c4810\AppData\Local\Temp\snkk.
-557 inittext CODE >4013:C:\Users\c4810\AppData\Local\Temp\snkk.
-557 inittext CODE >4014:C:\Users\c4810\AppData\Local\Temp\snkk.
-55C inittext CODE >4015:C:\Users\c4810\AppData\Local\Temp\snkk.
-55D inittext CODE >4016:C:\Users\c4810\AppData\Local\Temp\snkk.
-55E inittext CODE >4017:C:\Users\c4810\AppData\Local\Temp\snkk.
-55F inittext CODE >4018:C:\Users\c4810\AppData\Local\Temp\snkk.
-560 inittext CODE >4019:C:\Users\c4810\AppData\Local\Temp\snkk.
-561 inittext CODE >4020:C:\Users\c4810\AppData\Local\Temp\snkk.
-562 inittext CODE >4021:C:\Users\c4810\AppData\Local\Temp\snkk.
-563 inittext CODE >4022:C:\Users\c4810\AppData\Local\Temp\snkk.
-564 inittext CODE >4023:C:\Users\c4810\AppData\Local\Temp\snkk.
-565 inittext CODE >4024:C:\Users\c4810\AppData\Local\Temp\snkk.
+7F3 cinit CODE >961:C:\Users\c4810\AppData\Local\Temp\s7f0.
+7F3 cinit CODE >964:C:\Users\c4810\AppData\Local\Temp\s7f0.
+7F3 cinit CODE >993:C:\Users\c4810\AppData\Local\Temp\s7f0.
+7F4 cinit CODE >994:C:\Users\c4810\AppData\Local\Temp\s7f0.
+7F5 cinit CODE >995:C:\Users\c4810\AppData\Local\Temp\s7f0.
+7F6 cinit CODE >996:C:\Users\c4810\AppData\Local\Temp\s7f0.
+7F7 cinit CODE >997:C:\Users\c4810\AppData\Local\Temp\s7f0.
+7FC cinit CODE >1003:C:\Users\c4810\AppData\Local\Temp\s7f0.
+7FC cinit CODE >1005:C:\Users\c4810\AppData\Local\Temp\s7f0.
+7FD cinit CODE >1006:C:\Users\c4810\AppData\Local\Temp\s7f0.
+FF1 text14 CODE >44:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+FF1 text14 CODE >46:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+FF5 text14 CODE >47:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+FF9 text14 CODE >48:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+FFA text14 CODE >49:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+FFB text14 CODE >50:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+FFD text14 CODE >51:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+FFF text14 CODE >52:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+79 text13 CODE >14:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+79 text13 CODE >17:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+7D text13 CODE >18:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+81 text13 CODE >20:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+82 text13 CODE >21:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+83 text13 CODE >22:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+84 text13 CODE >23:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+87 text13 CODE >24:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+8A text13 CODE >25:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+8D text13 CODE >27:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+8E text13 CODE >28:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+91 text13 CODE >29:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+94 text13 CODE >34:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+99 text13 CODE >36:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+9A text13 CODE >37:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+9B text13 CODE >38:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+9C text13 CODE >39:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+9D text13 CODE >40:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+A0 text13 CODE >41:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+A4 text13 CODE >42:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+FF0 text12 CODE >22:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+FF0 text12 CODE >25:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+422 text11 CODE >166:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+423 text11 CODE >168:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+424 text11 CODE >170:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+424 text11 CODE >171:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+42B text11 CODE >172:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+42C text11 CODE >173:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+42C text11 CODE >174:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+433 text11 CODE >175:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+434 text11 CODE >176:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+434 text11 CODE >177:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+43B text11 CODE >178:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+43C text11 CODE >179:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+43C text11 CODE >180:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+443 text11 CODE >181:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+444 text11 CODE >182:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+444 text11 CODE >183:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+44B text11 CODE >184:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+44C text11 CODE >185:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+44C text11 CODE >186:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+44F text11 CODE >187:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+454 text11 CODE >188:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+455 text11 CODE >189:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+455 text11 CODE >190:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+458 text11 CODE >191:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+45D text11 CODE >192:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+45E text11 CODE >193:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+45E text11 CODE >194:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+465 text11 CODE >195:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+466 text11 CODE >196:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+466 text11 CODE >197:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+46D text11 CODE >198:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+46E text11 CODE >199:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+46E text11 CODE >200:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+475 text11 CODE >201:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+476 text11 CODE >202:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+476 text11 CODE >203:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+47D text11 CODE >204:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+47E text11 CODE >205:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+47E text11 CODE >206:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+485 text11 CODE >207:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+486 text11 CODE >208:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+486 text11 CODE >209:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+48D text11 CODE >210:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+48E text11 CODE >211:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+48E text11 CODE >212:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+495 text11 CODE >213:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+496 text11 CODE >214:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+496 text11 CODE >215:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+49D text11 CODE >216:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+49E text11 CODE >217:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+49E text11 CODE >218:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4A5 text11 CODE >219:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4A6 text11 CODE >220:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4A6 text11 CODE >221:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4AD text11 CODE >222:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4AE text11 CODE >223:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4AE text11 CODE >224:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4B5 text11 CODE >225:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4B6 text11 CODE >226:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4B6 text11 CODE >227:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4BD text11 CODE >228:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4BE text11 CODE >229:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4BE text11 CODE >230:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4C5 text11 CODE >231:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4C6 text11 CODE >232:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4C6 text11 CODE >233:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4CD text11 CODE >234:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4CE text11 CODE >235:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4CE text11 CODE >236:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4D5 text11 CODE >237:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4D6 text11 CODE >238:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4D6 text11 CODE >239:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4DD text11 CODE >240:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4DE text11 CODE >241:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4DE text11 CODE >242:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4E5 text11 CODE >243:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4E6 text11 CODE >244:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4E6 text11 CODE >245:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4ED text11 CODE >246:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4EE text11 CODE >255:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+544 text11 CODE >256:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+545 text10 CODE >124:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+546 text10 CODE >126:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+547 text10 CODE >128:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+547 text10 CODE >129:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+550 text10 CODE >130:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+559 text10 CODE >131:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+562 text10 CODE >132:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+56B text10 CODE >133:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+56C text10 CODE >134:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+56C text10 CODE >135:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+575 text10 CODE >136:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+57E text10 CODE >137:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+587 text10 CODE >138:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+591 text10 CODE >139:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+592 text10 CODE >140:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+592 text10 CODE >141:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+59B text10 CODE >142:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5A4 text10 CODE >143:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5AE text10 CODE >144:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5B7 text10 CODE >145:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5B8 text10 CODE >146:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5B8 text10 CODE >147:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5C1 text10 CODE >148:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5CA text10 CODE >149:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5D4 text10 CODE >150:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5DE text10 CODE >151:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5DF text10 CODE >152:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5DF text10 CODE >153:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5E8 text10 CODE >154:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5F2 text10 CODE >155:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+5FB text10 CODE >156:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+604 text10 CODE >157:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+605 text10 CODE >158:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+605 text10 CODE >159:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+60E text10 CODE >160:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+618 text10 CODE >161:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+621 text10 CODE >162:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+62B text10 CODE >163:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+62C text10 CODE >164:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+62C text10 CODE >165:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+635 text10 CODE >166:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+63F text10 CODE >167:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+649 text10 CODE >168:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+652 text10 CODE >169:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+653 text10 CODE >170:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+653 text10 CODE >171:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+65C text10 CODE >172:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+666 text10 CODE >173:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+670 text10 CODE >174:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+67A text10 CODE >175:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+67B text10 CODE >176:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+67B text10 CODE >177:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+685 text10 CODE >178:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+68E text10 CODE >179:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+697 text10 CODE >180:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6A0 text10 CODE >181:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6A1 text10 CODE >182:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6A1 text10 CODE >183:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6AB text10 CODE >184:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6B4 text10 CODE >185:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6BD text10 CODE >186:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6C7 text10 CODE >187:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6C8 text10 CODE >188:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6C8 text10 CODE >189:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6D2 text10 CODE >190:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6DB text10 CODE >191:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6E5 text10 CODE >192:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6EE text10 CODE >193:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6EF text10 CODE >194:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6EF text10 CODE >195:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+6F9 text10 CODE >196:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+702 text10 CODE >197:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+70C text10 CODE >198:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+716 text10 CODE >199:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+717 text10 CODE >200:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+717 text10 CODE >201:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+721 text10 CODE >202:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+72B text10 CODE >203:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+734 text10 CODE >204:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+73D text10 CODE >205:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+73E text10 CODE >206:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+73E text10 CODE >207:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+748 text10 CODE >208:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+752 text10 CODE >209:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+75B text10 CODE >210:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+765 text10 CODE >211:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+766 text10 CODE >212:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+766 text10 CODE >213:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+770 text10 CODE >214:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+77A text10 CODE >215:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+784 text10 CODE >216:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+78D text10 CODE >217:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+78E text10 CODE >218:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+78E text10 CODE >219:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+798 text10 CODE >220:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+7A2 text10 CODE >221:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+7AC text10 CODE >222:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+7B6 text10 CODE >223:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+7B7 text10 CODE >224:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+7F2 text10 CODE >225:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+D1 text9 CODE >576:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+D1 text9 CODE >578:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+E3 text9 CODE >581:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+F4 text9 CODE >583:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+F5 text9 CODE >584:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+109 text9 CODE >585:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+11E text9 CODE >586:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+178 text8 CODE >78:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+179 text8 CODE >80:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+17A text8 CODE >81:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+17B text8 CODE >82:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+180 text8 CODE >83:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+18C text8 CODE >84:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+191 text8 CODE >85:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+197 text8 CODE >86:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1A0 text8 CODE >87:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1A9 text8 CODE >88:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1B3 text8 CODE >89:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1BC text8 CODE >91:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1C5 text8 CODE >92:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1CE text8 CODE >93:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1D4 text8 CODE >94:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1DE text8 CODE >95:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1E7 text8 CODE >97:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1F0 text8 CODE >98:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1F9 text8 CODE >99:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+301 text7 CODE >60:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+302 text7 CODE >62:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+303 text7 CODE >64:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+303 text7 CODE >65:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+30A text7 CODE >66:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+30B text7 CODE >67:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+30B text7 CODE >68:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+312 text7 CODE >69:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+313 text7 CODE >70:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+313 text7 CODE >71:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+31A text7 CODE >72:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+31B text7 CODE >73:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+31B text7 CODE >74:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+322 text7 CODE >75:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+323 text7 CODE >76:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+323 text7 CODE >77:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+32A text7 CODE >78:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+32B text7 CODE >79:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+32B text7 CODE >80:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+332 text7 CODE >82:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+333 text7 CODE >83:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+333 text7 CODE >84:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+33A text7 CODE >86:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+33B text7 CODE >87:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+33B text7 CODE >88:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+342 text7 CODE >89:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+343 text7 CODE >90:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+343 text7 CODE >91:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+34A text7 CODE >92:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+34B text7 CODE >93:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+34B text7 CODE >94:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+352 text7 CODE >95:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+353 text7 CODE >96:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+353 text7 CODE >97:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+35A text7 CODE >98:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+35B text7 CODE >99:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+35B text7 CODE >100:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+362 text7 CODE >101:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+363 text7 CODE >102:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+363 text7 CODE >103:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+36A text7 CODE >104:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+36B text7 CODE >105:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+36B text7 CODE >106:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+372 text7 CODE >107:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+373 text7 CODE >108:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+373 text7 CODE >109:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+37A text7 CODE >110:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+37B text7 CODE >111:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+37B text7 CODE >112:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+382 text7 CODE >113:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+383 text7 CODE >114:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+383 text7 CODE >115:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+38A text7 CODE >116:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+38B text7 CODE >117:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+38B text7 CODE >118:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+392 text7 CODE >119:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+393 text7 CODE >120:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+393 text7 CODE >121:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+39A text7 CODE >122:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+39B text7 CODE >123:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+39B text7 CODE >124:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3A2 text7 CODE >125:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3A3 text7 CODE >126:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3A3 text7 CODE >127:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3AA text7 CODE >137:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3AB text7 CODE >138:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3AB text7 CODE >139:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3B2 text7 CODE >140:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3B3 text7 CODE >141:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3B3 text7 CODE >142:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3BA text7 CODE >143:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3BB text7 CODE >144:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3BB text7 CODE >145:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3C2 text7 CODE >146:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3C3 text7 CODE >147:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3C3 text7 CODE >148:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3CA text7 CODE >149:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3CB text7 CODE >164:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+421 text7 CODE >165:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+27D text6 CODE >18:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+27E text6 CODE >20:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+284 text6 CODE >21:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+288 text6 CODE >22:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+28C text6 CODE >23:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+290 text6 CODE >24:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+294 text6 CODE >25:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+298 text6 CODE >26:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+29C text6 CODE >27:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2A3 text6 CODE >28:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2AC text6 CODE >29:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2B5 text6 CODE >30:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2BE text6 CODE >31:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2C7 text6 CODE >32:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2D0 text6 CODE >33:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2D9 text6 CODE >34:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2E2 text6 CODE >35:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2E8 text6 CODE >36:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2EE text6 CODE >37:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2F4 text6 CODE >38:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2FA text6 CODE >39:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+300 text6 CODE >40:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1FA text5 CODE >101:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1FB text5 CODE >103:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1FC text5 CODE >104:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+1FD text5 CODE >105:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+202 text5 CODE >106:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+20E text5 CODE >107:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+213 text5 CODE >108:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+219 text5 CODE >109:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+223 text5 CODE >110:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+22C text5 CODE >111:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+236 text5 CODE >112:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+23F text5 CODE >114:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+248 text5 CODE >115:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+251 text5 CODE >116:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+257 text5 CODE >117:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+261 text5 CODE >118:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+26A text5 CODE >120:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+273 text5 CODE >121:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+27C text5 CODE >122:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+29 text4 CODE >63:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+2A text4 CODE >65:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+33 text4 CODE >66:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+39 text4 CODE >67:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+4E text3 CODE >69:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+51 text3 CODE >71:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+54 text3 CODE >73:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+61 text3 CODE >74:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+78 text3 CODE >75:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+A5 text2 CODE >45:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+A8 text2 CODE >47:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+A9 text2 CODE >48:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+AE text2 CODE >50:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+B3 text2 CODE >51:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+B9 text2 CODE >52:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+BA text2 CODE >53:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+C2 text2 CODE >55:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+C7 text2 CODE >56:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+CD text2 CODE >57:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+CE text2 CODE >58:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+CE text2 CODE >60:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+CF text2 CODE >61:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+D0 text2 CODE >62:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+11F text1 CODE >14:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+11F text1 CODE >16:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+169 text1 CODE >17:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+171 text1 CODE >18:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+177 text1 CODE >19:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+3A maintext CODE >3:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3A maintext CODE >5:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+3F maintext CODE >6:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+45 maintext CODE >7:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+45 maintext CODE >9:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4A maintext CODE >10:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+4B maintext CODE >12:C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+21 clrtext CODE >980:C:\Users\c4810\AppData\Local\Temp\s7f0.
+21 clrtext CODE >981:C:\Users\c4810\AppData\Local\Temp\s7f0.
+22 clrtext CODE >982:C:\Users\c4810\AppData\Local\Temp\s7f0.
+22 clrtext CODE >983:C:\Users\c4810\AppData\Local\Temp\s7f0.
+23 clrtext CODE >984:C:\Users\c4810\AppData\Local\Temp\s7f0.
+24 clrtext CODE >985:C:\Users\c4810\AppData\Local\Temp\s7f0.
+25 clrtext CODE >986:C:\Users\c4810\AppData\Local\Temp\s7f0.
+26 clrtext CODE >987:C:\Users\c4810\AppData\Local\Temp\s7f0.
+27 clrtext CODE >988:C:\Users\c4810\AppData\Local\Temp\s7f0.
+28 clrtext CODE >989:C:\Users\c4810\AppData\Local\Temp\s7f0.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -315,130 +506,98 @@ $dist/default/production\Hormiga_877_RevA.X.production.o
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_R 60 0 BANK0 1 dataBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-__LdataBANK0 0 0 ABS 0 dataBANK0 -
-__LdataBANK1 0 0 ABS 0 dataBANK1 -
-_LSNibble 4D 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 __Hspace_0 2008 0 ABS 0 - -
-__Hspace_1 1D0 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
-IntegralSimpson@last A9 0 BANK1 1 bssBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
-__HidataBANK0 0 0 ABS 0 idataBANK0 -
-__HidataBANK1 0 0 ABS 0 idataBANK1 -
 delay@i 75 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
 delay@j 73 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_StepDriver 29 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_COLumns 56 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_va 42 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_vb 41 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+_D4 18 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+_D5 16 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+_D6 14 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+_D7 12 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+_EN 1C 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+_RS 1E 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _BRGH 4C2 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _CREN C4 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_Dato 2C 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 _FERR C2 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _OERR C1 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_RCEN 48B 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _RCIF 65 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_RSEN 489 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _SPEN C7 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _SYNC 4C4 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_TMR1 E 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TRMT 4C1 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TXEN 4C5 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TXIF 64 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_Vmax 30 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\c4810\AppData\Local\Temp\snkk.o
-_clkB 3C 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_dada 49 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_loop B92 0 CODE 0 text3 dist/default/production\Hormiga_877_RevA.X.production.o
-_main ACC 0 CODE 0 maintext dist/default/production\Hormiga_877_RevA.X.production.o
-_pinA 34 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_pinB 32 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_sSrT 48 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\c4810\AppData\Local\Temp\s7f0.o
+_loop 1FE0 0 CODE 0 text12 dist/default/production\Hormiga_877_RevA.X.production.o
+_main 74 0 CODE 0 maintext dist/default/production\Hormiga_877_RevA.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-start 0 0 CODE 0 init C:\Users\c4810\AppData\Local\Temp\snkk.o
+start 0 0 CODE 0 init C:\Users\c4810\AppData\Local\Temp\s7f0.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __size_of_loop 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-__HbssCOMMON 0 0 ABS 0 bssCOMMON -
-_clrPortB 3A 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_PWMConfiguration A4C 0 CODE 0 text7 dist/default/production\Hormiga_877_RevA.X.production.o
-__LidataBANK0 0 0 ABS 0 idataBANK0 -
-__LidataBANK1 0 0 ABS 0 idataBANK1 -
-_BacklightState 6D 0 BANK0 1 dataBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+_PWMConfiguration 1FE2 0 CODE 0 text14 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_WriteInstruction 3F4 0 CODE 0 text8 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_WriteData 4FA 0 CODE 0 text5 dist/default/production\Hormiga_877_RevA.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-__HdataCOMMON 0 0 ABS 0 dataCOMMON -
-IntegralTrapezoidal@last B5 0 BANK1 1 bssBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\snkk.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\snkk.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\snkk.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\snkk.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\snkk.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\snkk.o
-__LbssCOMMON 0 0 ABS 0 bssCOMMON -
-_dataInB 3D 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_ADeCeChannel 55 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+__size_of_WriteData 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+__size_of_WriteInstruction 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+lcdSetCursor@location 40 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\s7f0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\s7f0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\s7f0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\s7f0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\s7f0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\c4810\AppData\Local\Temp\s7f0.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
+_WriteData 3F4 0 CODE 0 text5 dist/default/production\Hormiga_877_RevA.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__pidataCOMMON A3A 0 CODE 0 idataCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
-_MaxAndMinValues 190 0 BANK3 1 bssBANK3 dist/default/production\Hormiga_877_RevA.X.production.o
-_DataPort 5F 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+lcdPrint@string 41 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+_lcdSetCursor 14A 0 CODE 0 text2 dist/default/production\Hormiga_877_RevA.X.production.o
 _ADCON0 1F 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _ADCON1 9F 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _ADRESH 1E 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _ADRESL 9E 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-__LdataCOMMON 0 0 ABS 0 dataCOMMON -
-_EECON1bits 18C 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _CCPR1L 15 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _CCPR2L 1B 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_SegmentData DC 0 BANK1 1 dataBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
-_EECON2 18D 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_EEDATA 10C 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-LCDInit@F973 EA 0 BANK1 1 dataBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-_Estado 4C 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__end_of_PWMConfiguration A6A 0 CODE 0 text7 dist/default/production\Hormiga_877_RevA.X.production.o
-analogWrite@value 70 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
+__LnvBANK0 0 0 ABS 0 nvBANK0 -
+__end_of_PWMConfiguration 2000 0 CODE 0 text14 dist/default/production\Hormiga_877_RevA.X.production.o
 delay@milis 70 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
-_ChPointer 37 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 __size_of_pinMode 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _OPTION_REG 81 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_dpowers 26 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
 __size_of_PWMConfiguration 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_Profile A0 0 BANK1 1 bssBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
+__size_of_lcdSetCursor 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __size_of_delay 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-__LidataCOMMON 0 0 ABS 0 idataCOMMON -
 __size_of_setup 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-EncoderRead@actual 5A 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_KeypadAddress 58 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-start_initialization F76 0 CODE 0 cinit dist/default/production\Hormiga_877_RevA.X.production.o
-__end_of_analogWrite C98 0 CODE 0 text5 dist/default/production\Hormiga_877_RevA.X.production.o
+start_initialization FE6 0 CODE 0 cinit dist/default/production\Hormiga_877_RevA.X.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TRISBbits 86 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_ACKSTAT 48E 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TRISDbits 88 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_ColPins 79 0 COMMON 1 bssCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
+_digitalWrite 844 0 CODE 0 text11 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_lcdSetCursor 1A2 0 CODE 0 text2 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_D4 1A 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_D5 18 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_D6 16 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_D7 14 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_EN 1E 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_RS 20 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+lcdBegin@R_W 40 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 pinMode@pin 73 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
-clear_ram0 A3C 0 CODE 0 clrtext dist/default/production\Hormiga_877_RevA.X.production.o
-_SSPADD 93 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_SSPBUF 13 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_SSPCON 14 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+_ByteByNibble A8A 0 CODE 0 text10 dist/default/production\Hormiga_877_RevA.X.production.o
+clear_ram0 42 0 CODE 0 clrtext dist/default/production\Hormiga_877_RevA.X.production.o
+__pcstackBANK0 3F 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 _TMR0IF 5A 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_TMR1IF 60 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_TMR1ON 80 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_TRISC3 43B 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_TRISC4 43C 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_TRISC5 43D 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TRISC6 43E 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TRISC7 43F 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\c4810\AppData\Local\Temp\snkk.o
-_ServoValue 3E 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+lcdPrint@i 3F 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\c4810\AppData\Local\Temp\s7f0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -446,30 +605,29 @@ __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 1000 0 CODE 0 cinit -
 __Hidloc 4008 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
-__stringbase 24 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+__stringbase 10 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
+__size_of_lcdBegin 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+__size_of_lcdPrint 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+__size_of_lcdWrite 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __size_of_Initialization 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_Informacion 25 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_Information 40 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4010 0 CONFIG 0 config -
+__size_of_digitalWrite 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
-__Lcinit F76 0 CODE 0 cinit -
+__Lcinit FE6 0 CODE 0 cinit -
 __Lidloc 4000 0 IDLOC 0 idloc -
 __Lstack 0 0 STACK 2 stack -
-EncoderRead@previo 5B 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__Linittext 0 0 ABS 0 inittext -
-__end_of_pinMode F76 0 CODE 0 text2 dist/default/production\Hormiga_877_RevA.X.production.o
+__size_of_ByteByNibble 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_pinMode 844 0 CODE 0 text7 dist/default/production\Hormiga_877_RevA.X.production.o
 _PORTAbits 5 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _PORTBbits 6 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _PORTCbits 7 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_LCDDirection 4F 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 _PORTDbits 8 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _PORTEbits 9 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_INTCONbits B 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 0 0 CODE 0 init -
@@ -486,162 +644,135 @@ __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
-IntegralSimpson@Integral B1 0 BANK1 1 bssBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
-IntegralTrapezoidal@Integral B9 0 BANK1 1 bssBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
+__pnvBANK0 4B 0 BANK0 1 nvBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_OEB 39 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_PEN 48A 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+_PID 30 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 _PR2 92 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_SEN 488 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+_RnW 1A 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
 __S0 2008 0 ABS 0 - -
-__S1 1D0 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_in1 46 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_in2 45 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_in3 44 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_in4 43 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_DataEnviar 2E 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_EncoderMatrix CC 0 BANK1 1 dataBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
-I2CMakeByteNumber@F1067 C9 0 BANK1 1 bssBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
-_DisplayControl 6E 0 BANK0 1 dataBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_Clocking 3F 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__HidataCOMMON 0 0 ABS 0 idataCOMMON -
-analogWrite@pin 74 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_digitalWrite A8A 0 CODE 0 text11 dist/default/production\Hormiga_877_RevA.X.production.o
+lcdBegin@EN 3F 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+lcdBegin@RS 7D 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
+lcdBegin@d4 41 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+lcdBegin@d5 42 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+lcdBegin@d6 43 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+lcdBegin@d7 44 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_ByteByNibble FE6 0 CODE 0 text10 dist/default/production\Hormiga_877_RevA.X.production.o
+WriteData@MSNibble 7B 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_RnW 1C 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+_lcdBegin 4FA 0 CODE 0 text6 dist/default/production\Hormiga_877_RevA.X.production.o
+_lcdPrint 9C 0 CODE 0 text3 dist/default/production\Hormiga_877_RevA.X.production.o
+_lcdWrite 52 0 CODE 0 text4 dist/default/production\Hormiga_877_RevA.X.production.o
+__HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 6 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\c4810\AppData\Local\Temp\snkk.o
-EncoderRead@incremento 59 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__pdataBANK0 60 0 BANK0 1 dataBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__pdataBANK1 CC 0 BANK1 1 dataBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\c4810\AppData\Local\Temp\s7f0.o
+__end_of_lcdBegin 602 0 CODE 0 text6 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_lcdPrint F2 0 CODE 0 text3 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_lcdWrite 74 0 CODE 0 text4 dist/default/production\Hormiga_877_RevA.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-__LbssBANK1 0 0 ABS 0 bssBANK1 -
-__LbssBANK3 0 0 ABS 0 bssBANK3 -
-_latchB 3B 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__size_of_analogWrite 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-__pmaintext ACC 0 CODE 0 maintext dist/default/production\Hormiga_877_RevA.X.production.o
+WriteData@LSNibble 79 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
+WriteInstruction@MSNibble 7B 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext10 A8A 0 CODE 0 text10 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext11 844 0 CODE 0 text11 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext12 1FE0 0 CODE 0 text12 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext13 F2 0 CODE 0 text13 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext14 1FE2 0 CODE 0 text14 dist/default/production\Hormiga_877_RevA.X.production.o
+__pmaintext 74 0 CODE 0 maintext dist/default/production\Hormiga_877_RevA.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-__Hinittext 0 0 ABS 0 inittext -
-Integrar@Integral BD 0 BANK1 1 bssBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
-stackhi 0 0 ABS 0 - C:\Users\c4810\AppData\Local\Temp\snkk.o
-stacklo 0 0 ABS 0 - C:\Users\c4810\AppData\Local\Temp\snkk.o
+stackhi 0 0 ABS 0 - C:\Users\c4810\AppData\Local\Temp\s7f0.o
+stacklo 0 0 ABS 0 - C:\Users\c4810\AppData\Local\Temp\s7f0.o
 pinMode@mode 70 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
-_BufferLenght 6C 0 BANK0 1 dataBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+WriteInstruction@LSNibble 79 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-__end_of__stringtab 26 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of__stringtab 12 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__pbssCOMMON 77 0 COMMON 1 bssCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
-init_fetch0 AA6 0 CODE 0 inittext dist/default/production\Hormiga_877_RevA.X.production.o
-_dataPort 36 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+lcdSetCursor@column 7C 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
 __Lend_init 0 0 CODE 0 end_init -
 __CFG_LVP$ON 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization FF8 0 CODE 0 cinit dist/default/production\Hormiga_877_RevA.X.production.o
 __Hintentry 0 0 CODE 0 intentry -
+ByteByNibble@NibbleValue 76 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
 __Lstrings 0 0 ABS 0 strings -
+digitalWrite@pin 73 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
 __Hreset_vec 0 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__HbssBANK1 0 0 ABS 0 bssBANK1 -
-__HbssBANK3 0 0 ABS 0 bssBANK3 -
-_RenROWS 7B 0 COMMON 1 bssCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
-_TeclasVolValues 57 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__ptext1 A6A 0 CODE 0 text1 dist/default/production\Hormiga_877_RevA.X.production.o
-__ptext2 D34 0 CODE 0 text2 dist/default/production\Hormiga_877_RevA.X.production.o
-__ptext3 B92 0 CODE 0 text3 dist/default/production\Hormiga_877_RevA.X.production.o
-__ptext4 C98 0 CODE 0 text4 dist/default/production\Hormiga_877_RevA.X.production.o
-__ptext5 C08 0 CODE 0 text5 dist/default/production\Hormiga_877_RevA.X.production.o
-__ptext6 B3A 0 CODE 0 text6 dist/default/production\Hormiga_877_RevA.X.production.o
-__ptext7 A4C 0 CODE 0 text7 dist/default/production\Hormiga_877_RevA.X.production.o
-derivar@Last C1 0 BANK1 1 bssBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
-_DDSRegister 20 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext1 23E 0 CODE 0 text1 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext2 14A 0 CODE 0 text2 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext3 9C 0 CODE 0 text3 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext4 52 0 CODE 0 text4 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext5 3F4 0 CODE 0 text5 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext6 4FA 0 CODE 0 text6 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext7 602 0 CODE 0 text7 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext8 2F0 0 CODE 0 text8 dist/default/production\Hormiga_877_RevA.X.production.o
+__ptext9 1A2 0 CODE 0 text9 dist/default/production\Hormiga_877_RevA.X.production.o
+lcdSetCursor@row 3F 0 BANK0 1 cstackBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_bufferMemory 7C 0 COMMON 1 bssCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_pinMode D34 0 CODE 0 text2 dist/default/production\Hormiga_877_RevA.X.production.o
+_pinMode 602 0 CODE 0 text7 dist/default/production\Hormiga_877_RevA.X.production.o
 __CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __end_of__initialization FF8 0 CODE 0 cinit dist/default/production\Hormiga_877_RevA.X.production.o
-_delaying 7D 0 COMMON 1 dataCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
+WriteInstruction@instruction 7A 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK0 A88 0 CODE 0 idataBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__pidataBANK1 AF4 0 CODE 0 idataBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
-_RowPins 7A 0 COMMON 1 bssCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
-_FrUpdate 5D 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-_Initialization B3A 0 CODE 0 text6 dist/default/production\Hormiga_877_RevA.X.production.o
-MoveMotor@Register 38 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+WriteData@data 7A 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
+_Initialization F2 0 CODE 0 text13 dist/default/production\Hormiga_877_RevA.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
-_SSPCON2 91 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_SSPSTAT 94 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
-init_ram0 AAE 0 CODE 0 inittext dist/default/production\Hormiga_877_RevA.X.production.o
-__end_of_loop C08 0 CODE 0 text3 dist/default/production\Hormiga_877_RevA.X.production.o
-__end_of_main AF4 0 CODE 0 maintext dist/default/production\Hormiga_877_RevA.X.production.o
-_ACKDT 48D 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_ACKEN 48C 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+lcdWrite@data 7C 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_loop 1FE2 0 CODE 0 text12 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_main 9C 0 CODE 0 maintext dist/default/production\Hormiga_877_RevA.X.production.o
 _CCP1X BD 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _CCP1Y BC 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _CCP2X ED 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _CCP2Y EC 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-__end_of_dpowers 3A 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
-_EEADR 10D 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_ENPin 53 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__end_of_delay D34 0 CODE 0 text4 dist/default/production\Hormiga_877_RevA.X.production.o
+_ENPin 50 0 BANK0 1 nvBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_delay 23E 0 CODE 0 text9 dist/default/production\Hormiga_877_RevA.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_PORTD 8 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _PORTE 9 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _RCREG 1A 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_RSPin 54 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_RWPin 52 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_Reloj 5E 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+_RSPin 51 0 BANK0 1 nvBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+_RWPin 4F 0 BANK0 1 nvBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
 _SPBRG 99 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_T1CON 10 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _T2CON 12 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_SSPIF 63 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_TMR1H F 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_TMR1L E 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_TRISD 88 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TRISE 89 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _TXREG 19 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_Valor 4A 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__end_of_setup A88 0 CODE 0 text1 dist/default/production\Hormiga_877_RevA.X.production.o
+_WriteInstruction 2F0 0 CODE 0 text8 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_setup 2F0 0 CODE 0 text1 dist/default/production\Hormiga_877_RevA.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_d4Pin 78 0 COMMON 1 bssCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
-_d5Pin 77 0 COMMON 1 bssCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
-_d6Pin 51 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_d7Pin 50 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_delay C98 0 CODE 0 text4 dist/default/production\Hormiga_877_RevA.X.production.o
-_nRBPU 40F 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+_d4Pin 4E 0 BANK0 1 nvBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+_d5Pin 4D 0 BANK0 1 nvBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+_d6Pin 4C 0 BANK0 1 nvBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+_d7Pin 4B 0 BANK0 1 nvBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+_delay 1A2 0 CODE 0 text9 dist/default/production\Hormiga_877_RevA.X.production.o
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-_analogWrite C08 0 CODE 0 text5 dist/default/production\Hormiga_877_RevA.X.production.o
-_setup A6A 0 CODE 0 text1 dist/default/production\Hormiga_877_RevA.X.production.o
-_MSNibble 4E 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-_SSPSTATbits 94 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
+_setup 23E 0 CODE 0 text1 dist/default/production\Hormiga_877_RevA.X.production.o
 _CCP1CON 17 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 _CCP2CON 1D 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-__HdataBANK0 0 0 ABS 0 dataBANK0 -
-__HdataBANK1 0 0 ABS 0 dataBANK1 -
-__initialization F76 0 CODE 0 cinit dist/default/production\Hormiga_877_RevA.X.production.o
+__initialization FE6 0 CODE 0 cinit dist/default/production\Hormiga_877_RevA.X.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
-I2CCaseSelector@F1078 C5 0 BANK1 1 bssBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
-__pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\Hormiga_877_RevA.X.production.o
-__pbssBANK3 190 0 BANK3 1 bssBANK3 dist/default/production\Hormiga_877_RevA.X.production.o
-__pdataCOMMON 7D 0 COMMON 1 dataCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\Hormiga_877_RevA.X.production.o
 __pstrings 6 0 STRING 0 strings dist/default/production\Hormiga_877_RevA.X.production.o
-__end_of_Initialization B92 0 CODE 0 text6 dist/default/production\Hormiga_877_RevA.X.production.o
-_PASControlBuffer 47 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA.X.production.o
+__end_of_Initialization 14A 0 CODE 0 text13 dist/default/production\Hormiga_877_RevA.X.production.o
+digitalWrite@value 70 0 COMMON 1 cstackCOMMON dist/default/production\Hormiga_877_RevA.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -667,25 +798,26 @@ _PASControlBuffer 47 0 BANK0 1 bssBANK0 dist/default/production\Hormiga_877_RevA
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7BB F76 45 2
+cinit 0 7F3 FE6 D 2
 idloc 0 2000 4000 4 2
-text1 0 535 A6A F 2
-text2 0 69A D34 121 2
-text3 0 5C9 B92 3B 2
-text4 0 64C C98 4E 2
-text5 0 604 C08 48 2
-text6 0 59D B3A 2C 2
-text7 0 526 A4C F 2
-idataCOMMON 0 51D A3A 1 2
-maintext 0 566 ACC 14 2
+text1 0 11F 23E 59 2
+text2 0 A5 14A 2C 2
+text3 0 4E 9C 2B 2
+text4 0 29 52 11 2
+text5 0 1FA 3F4 83 2
+text6 0 27D 4FA 84 2
+text7 0 301 602 121 2
+text8 0 178 2F0 82 2
+text9 0 D1 1A2 4E 2
+text10 0 545 A8A 2AE 2
+text11 0 422 844 123 2
+text12 0 FF0 1FE0 1 2
+text13 0 79 F2 2C 2
+text14 0 FF1 1FE2 F 2
+maintext 0 3A 74 14 2
 cstackCOMMON 1 70 70 E 1
-inittext 0 553 AA6 13 2
 reset_vec 0 0 0 3 2
-bssBANK0 1 20 20 4F 1
-bssBANK1 1 A0 A0 4F 1
-bssBANK3 1 190 190 40 1
-idataBANK0 0 544 A88 F 2
-idataBANK1 0 57A AF4 23 2
-strings 0 3 6 2E 2
-clrtext 0 51E A3C 8 2
+bssBANK0 1 20 20 32 1
+strings 0 3 6 1E 2
+clrtext 0 21 42 8 2
 config 0 2007 400E 1 2
