@@ -8,6 +8,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "31
 [; ;./LCD16x2.h: 31:     void lcdPrint(char *string);
 [v _lcdPrint `(v ~T0 @X0 0 ef1`*uc ]
+"14 ./PIDController.h
+[; ;./PIDController.h: 14: void PIDSetSampleTime(char dt);
+[v _PIDSetSampleTime `(v ~T0 @X0 0 ef1`uc ]
+"15
+[; ;./PIDController.h: 15: unsigned int EventCounter(void);
+[v _EventCounter `(ui ~T0 @X0 0 ef ]
+"194 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -212,87 +220,147 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21
 [; ;./Hormiga877.h: 21: 
 [p x CP = OFF ]
-"5 application.c
-[; ;application.c: 5: const char RS = 20;
+"6 application.c
+[; ;application.c: 6: const char RS = 20;
 [v _RS `Cuc ~T0 @X0 1 e ]
 [i _RS
 -> -> 20 `i `uc
 ]
-"6
-[; ;application.c: 6: const char EN = 21;
+"7
+[; ;application.c: 7: const char EN = 21;
 [v _EN `Cuc ~T0 @X0 1 e ]
 [i _EN
 -> -> 21 `i `uc
 ]
-"7
-[; ;application.c: 7: const char RnW = 25;
+"8
+[; ;application.c: 8: const char RnW = 25;
 [v _RnW `Cuc ~T0 @X0 1 e ]
 [i _RnW
 -> -> 25 `i `uc
 ]
-"8
-[; ;application.c: 8: const char D4 = 16;
+"9
+[; ;application.c: 9: const char D4 = 16;
 [v _D4 `Cuc ~T0 @X0 1 e ]
 [i _D4
 -> -> 16 `i `uc
 ]
-"9
-[; ;application.c: 9: const char D5 = 17;
+"10
+[; ;application.c: 10: const char D5 = 17;
 [v _D5 `Cuc ~T0 @X0 1 e ]
 [i _D5
 -> -> 17 `i `uc
 ]
-"10
-[; ;application.c: 10: const char D6 = 18;
+"11
+[; ;application.c: 11: const char D6 = 18;
 [v _D6 `Cuc ~T0 @X0 1 e ]
 [i _D6
 -> -> 18 `i `uc
 ]
-"11
-[; ;application.c: 11: const char D7 = 19;
+"12
+[; ;application.c: 12: const char D7 = 19;
 [v _D7 `Cuc ~T0 @X0 1 e ]
 [i _D7
 -> -> 19 `i `uc
 ]
-"12
-[; ;application.c: 12: char ScreenROW[16] = {0};
+"13
+[; ;application.c: 13: char ScreenROW[16] = {0};
 [v _ScreenROW `uc ~T0 @X0 -> 16 `i e ]
 [i _ScreenROW
 :U ..
 -> -> 0 `i `uc
 ..
 ]
-"14
-[; ;application.c: 14: void setup()
-[v _setup `(v ~T0 @X0 1 ef ]
 "15
-[; ;application.c: 15: {
+[; ;application.c: 15: unsigned int Now = 0;
+[v _Now `ui ~T0 @X0 1 e ]
+[i _Now
+-> -> 0 `i `ui
+]
+"16
+[; ;application.c: 16: unsigned int Last = 0;
+[v _Last `ui ~T0 @X0 1 e ]
+[i _Last
+-> -> 0 `i `ui
+]
+"17
+[; ;application.c: 17: unsigned int dTime = 0;
+[v _dTime `ui ~T0 @X0 1 e ]
+[i _dTime
+-> -> 0 `i `ui
+]
+"19
+[; ;application.c: 19: unsigned int dt = 0;
+[v _dt `ui ~T0 @X0 1 e ]
+[i _dt
+-> -> 0 `i `ui
+]
+"20
+[; ;application.c: 20: void setup()
+[v _setup `(v ~T0 @X0 1 ef ]
+"21
+[; ;application.c: 21: {
 {
 [e :U _setup ]
 [f ]
-"16
-[; ;application.c: 16:     lcdBegin(RS,EN,RnW,D4,D5,D6,D7);
+"22
+[; ;application.c: 22:     lcdBegin(RS,EN,RnW,D4,D5,D6,D7);
 [e ( _lcdBegin (4 , , , , , , _RS _EN _RnW _D4 _D5 _D6 _D7 ]
-"17
-[; ;application.c: 17:     lcdSetCursor(1,1);
+"23
+[; ;application.c: 23:     lcdSetCursor(1,1);
 [e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"18
-[; ;application.c: 18:     lcdPrint("PID Control Test");
+"24
+[; ;application.c: 24:     lcdPrint("PID Control Test");
 [e ( _lcdPrint (1 :s 1C ]
-"19
-[; ;application.c: 19: }
+"25
+[; ;application.c: 25:     PIDSetSampleTime(127);
+[e ( _PIDSetSampleTime (1 -> -> 127 `i `uc ]
+"26
+[; ;application.c: 26:     lcdSetCursor(2,1);
+[e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"27
+[; ;application.c: 27: }
 [e :UE 96 ]
 }
-"22
-[; ;application.c: 22: void loop()
+"30
+[; ;application.c: 30: void loop()
 [v _loop `(v ~T0 @X0 1 ef ]
-"23
-[; ;application.c: 23: {
+"31
+[; ;application.c: 31: {
 {
 [e :U _loop ]
 [f ]
-"25
-[; ;application.c: 25: }
+"32
+[; ;application.c: 32:     Now = EventCounter();
+[e = _Now ( _EventCounter ..  ]
+"33
+[; ;application.c: 33:     dTime = Now - Last;
+[e = _dTime - _Now _Last ]
+"34
+[; ;application.c: 34:     if(dTime >= 153)
+[e $ ! >= _dTime -> -> 153 `i `ui 98  ]
+"35
+[; ;application.c: 35:     {
+{
+"36
+[; ;application.c: 36:         dt++;
+[e ++ _dt -> -> 1 `i `ui ]
+"37
+[; ;application.c: 37:         sprintf(ScreenROW,"Time = %u",dt);
+[e ( _sprintf (1 , (. , &U _ScreenROW :s 2C _dt ]
+"38
+[; ;application.c: 38:         lcdPrint(ScreenROW);
+[e ( _lcdPrint (1 &U _ScreenROW ]
+"39
+[; ;application.c: 39:     }
+}
+[e :U 98 ]
+"40
+[; ;application.c: 40:     Last = Now;
+[e = _Last _Now ]
+"41
+[; ;application.c: 41: }
 [e :UE 97 ]
 }
+[p f _sprintf 8389632 ]
+[a 2C 84 105 109 101 32 61 32 37 117 0 ]
 [a 1C 80 73 68 32 67 111 110 116 114 111 108 32 84 101 115 116 0 ]
