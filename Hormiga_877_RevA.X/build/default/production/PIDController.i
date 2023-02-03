@@ -1916,6 +1916,7 @@ void TimerOneInterruptDisable(void);
 # 14 "./PIDController.h"
 void PIDSetSampleTime(char dt);
 unsigned int EventCounter(void);
+unsigned char AccionControl(double SetPoint, double Feedback, double dt);
 # 2 "PIDController.c" 2
 
 
@@ -1926,6 +1927,14 @@ struct Controller{
     double Kd;
     char SampleT;
     unsigned int TotalEvents;
+    double Error;
+    double LastError;
+    double ErrorAcum;
+    double LastInput;
+    double I;
+    double P;
+    double D;
+    double AccionControl;
 }PID;
 
 void PIDSetSampleTime(char dt)
@@ -1934,6 +1943,32 @@ void PIDSetSampleTime(char dt)
     TMR0IF = 0;
     TMR0 = 0xFF - dt;
     PID.SampleT = dt;
+}
+
+void SetProportionalTune(double value)
+{
+    PID.Kp = value;
+}
+
+void SetIntegralTune(double value)
+{
+    PID.Ki = value;
+}
+
+void SetDerivativeTune(double value)
+{
+    PID.Kd = value;
+}
+
+unsigned char AccionControl(double SetPoint, double Feedback, double dt)
+{
+    PID.Error = SetPoint - Feedback;
+    PID.ErrorAcum += PID.Error;
+    PID.P = PID.Kp * PID.Error;
+    PID.I = PID.Ki * PID.ErrorAcum;
+    PID.D = PID.Kd * ((PID.Error - PID.LastError) / dt);
+    PID.AccionControl = PID.P + PID.I + PID.D;
+    return (char)PID.AccionControl;
 }
 
 unsigned int EventCounter(void)

@@ -1949,6 +1949,7 @@ void TimerOneInterruptDisable(void);
 # 14 "./PIDController.h"
 void PIDSetSampleTime(char dt);
 unsigned int EventCounter(void);
+unsigned char AccionControl(double SetPoint, double Feedback, double dt);
 # 3 "application.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 1 3
@@ -2062,8 +2063,9 @@ char ScreenROW[16] = {0};
 unsigned int dTime = 0;
 unsigned int Now = 0;
 unsigned int Last = 0;
-
 unsigned int dt = 0;
+double Control = 0;
+
 void setup()
 {
     lcdBegin(RS,EN,RnW,D4,D5,D6,D7);
@@ -2088,6 +2090,7 @@ void loop()
         lcdSetCursor(2,1);
         sprintf(ScreenROW,"Time=%u ",dt);
         lcdPrint(ScreenROW);
+        Control = AccionControl(3.14,2.71,0.01);
         dTime = 0;
         Last = Now;
     }

@@ -13,6 +13,7 @@ extern "C" {
 #endif
 void PIDSetSampleTime(char dt);
 unsigned int EventCounter(void);
+unsigned char AccionControl(double SetPoint, double Feedback, double dt);
 
 
 
