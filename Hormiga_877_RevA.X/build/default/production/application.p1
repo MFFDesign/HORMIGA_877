@@ -1,12 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"36 ./Hormiga877.h
-[; ;./Hormiga877.h: 36: void delay(const int milis);
-[v _pinMode `(v ~T0 @X0 0 ef2`uc`uc ]
-"40
-[; ;./Hormiga877.h: 40: void TimerOneInterruptDisable(void);
-[v _analogWrite `(uc ~T0 @X0 0 ef2`uc`ui ]
-"59
-[v _delay `(v ~T0 @X0 0 ef1`Ci ]
+"23 ./Timers.h
+[; ;./Timers.h: 23: void TimerCeroBegin(char mode, char prescaler);
+[v _TimerCeroBegin `(v ~T0 @X0 0 ef2`uc`uc ]
+"34 ./LCD16x2.h
+[; ;./LCD16x2.h: 34:     void lcdBegin(char RS, char EN, char R_W, char d4, char d5, char d6,char d7);
+[v _lcdBegin `(v ~T0 @X0 0 ef7`uc`uc`uc`uc`uc`uc`uc ]
+"19
+[; ;./LCD16x2.h: 19:     void lcdClear(void);
+[v _lcdClear `(v ~T0 @X0 0 ef ]
+"31
+[; ;./LCD16x2.h: 31:     void lcdPrint(char *string);
+[v _lcdPrint `(v ~T0 @X0 0 ef1`*uc ]
+"37 ./Hormiga877.h
+[; ;./Hormiga877.h: 37: void delayMicroseconds(const unsigned int us);
+[v _digitalWrite `(v ~T0 @X0 0 ef2`uc`uc ]
+"2881 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2881: extern volatile __bit TMR0IF __attribute__((address(0x5A)));
+[v _TMR0IF `Vb ~T0 @X0 0 e@90 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -211,51 +221,112 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21
 [; ;./Hormiga877.h: 21: 
 [p x CP = OFF ]
-"3 application.c
-[; ;application.c: 3: void setup()
+"5 application.c
+[; ;application.c: 5: const int RS=20;
+[v _RS `Ci ~T0 @X0 1 e ]
+[i _RS
+-> 20 `i
+]
+"6
+[; ;application.c: 6: const int En =21;
+[v _En `Ci ~T0 @X0 1 e ]
+[i _En
+-> 21 `i
+]
+"7
+[; ;application.c: 7: const int RnW=0;
+[v _RnW `Ci ~T0 @X0 1 e ]
+[i _RnW
+-> 0 `i
+]
+"8
+[; ;application.c: 8: const int D4=16;
+[v _D4 `Ci ~T0 @X0 1 e ]
+[i _D4
+-> 16 `i
+]
+"9
+[; ;application.c: 9: const int D5=17;
+[v _D5 `Ci ~T0 @X0 1 e ]
+[i _D5
+-> 17 `i
+]
+"10
+[; ;application.c: 10: const int D6=18;
+[v _D6 `Ci ~T0 @X0 1 e ]
+[i _D6
+-> 18 `i
+]
+"11
+[; ;application.c: 11: const int D7=19;
+[v _D7 `Ci ~T0 @X0 1 e ]
+[i _D7
+-> 19 `i
+]
+"12
+[; ;application.c: 12: const int led=12;
+[v _led `Ci ~T0 @X0 1 e ]
+[i _led
+-> 12 `i
+]
+"13
+[; ;application.c: 13: void setup()
 [v _setup `(v ~T0 @X0 1 ef ]
-"4
-[; ;application.c: 4: {
+"14
+[; ;application.c: 14: {
 {
 [e :U _setup ]
 [f ]
-"5
-[; ;application.c: 5:  pinMode(6,0);
-[e ( _pinMode (2 , -> -> 6 `i `uc -> -> 0 `i `uc ]
-"6
-[; ;application.c: 6:     pinMode(5,0);
-[e ( _pinMode (2 , -> -> 5 `i `uc -> -> 0 `i `uc ]
-"7
-[; ;application.c: 7: }
+"15
+[; ;application.c: 15:     TimerCeroBegin(0xE0,256);
+[e ( _TimerCeroBegin (2 , -> -> 224 `i `uc -> -> 256 `i `uc ]
+"16
+[; ;application.c: 16:  lcdBegin(RS,En,RnW,D4,D5,D6,D7);
+[e ( _lcdBegin (4 , , , , , , -> _RS `uc -> _En `uc -> _RnW `uc -> _D4 `uc -> _D5 `uc -> _D6 `uc -> _D7 `uc ]
+"17
+[; ;application.c: 17:     lcdClear();
+[e ( _lcdClear ..  ]
+"18
+[; ;application.c: 18:     lcdPrint("Prueba  4");
+[e ( _lcdPrint (1 :s 1C ]
+"19
+[; ;application.c: 19: }
 [e :UE 95 ]
 }
-"10
-[; ;application.c: 10: void loop()
+"22
+[; ;application.c: 22: void loop()
 [v _loop `(v ~T0 @X0 1 ef ]
-"11
-[; ;application.c: 11: {
+"23
+[; ;application.c: 23: {
 {
 [e :U _loop ]
 [f ]
-"12
-[; ;application.c: 12:     analogWrite(6,200);
-[e ( _analogWrite (2 , -> -> 6 `i `uc -> -> 200 `i `ui ]
-"13
-[; ;application.c: 13:     analogWrite(5,200);
-[e ( _analogWrite (2 , -> -> 5 `i `uc -> -> 200 `i `ui ]
-"14
-[; ;application.c: 14:     delay(100);
-[e ( _delay (1 -> 100 `i ]
-"15
-[; ;application.c: 15:     analogWrite(6,500);
-[e ( _analogWrite (2 , -> -> 6 `i `uc -> -> 500 `i `ui ]
-"16
-[; ;application.c: 16:     analogWrite(5,500);
-[e ( _analogWrite (2 , -> -> 5 `i `uc -> -> 500 `i `ui ]
-"17
-[; ;application.c: 17:     delay(100);
-[e ( _delay (1 -> 100 `i ]
-"18
-[; ;application.c: 18: }
+"24
+[; ;application.c: 24:     digitalWrite(led,1);
+[e ( _digitalWrite (2 , -> _led `uc -> -> 1 `i `uc ]
+"25
+[; ;application.c: 25:     while (!TMR0IF)
+[e $U 97  ]
+[e :U 98 ]
+"26
+[; ;application.c: 26:     {
+{
+"27
+[; ;application.c: 27:         digitalWrite(led,1);
+[e ( _digitalWrite (2 , -> _led `uc -> -> 1 `i `uc ]
+"28
+[; ;application.c: 28:         TMR0IF=0;
+[e = _TMR0IF -> -> 0 `i `b ]
+"29
+[; ;application.c: 29:     }
+}
+[e :U 97 ]
+"25
+[; ;application.c: 25:     while (!TMR0IF)
+[e $ ! _TMR0IF 98  ]
+[e :U 99 ]
+"31
+[; ;application.c: 31: }
 [e :UE 96 ]
 }
+[a 1C 80 114 117 101 98 97 32 32 52 0 ]

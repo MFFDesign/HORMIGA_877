@@ -1,18 +1,31 @@
 #include "Hormiga877.h"
+#include "LCD16x2.h"
+#include "Timers.h"
 
+const int RS=20;
+const int En  =21;
+const int RnW=0;
+const int D4=16;
+const int D5=17;
+const int D6=18;
+const int D7=19;
+const int led=12;
 void setup() 
 {
-	pinMode(6,OUTPUT);
-    pinMode(5,OUTPUT);
+    TimerCeroBegin(COUNTERRISE,256);
+	lcdBegin(RS,En,RnW,D4,D5,D6,D7);
+    lcdClear();
+    lcdPrint("Prueba  4");
 }
 
 
 void loop()
 {
-    analogWrite(6,200);
-    analogWrite(5,200);
-    delay(100);
-    analogWrite(6,500);
-    analogWrite(5,500);
-    delay(100);
+    digitalWrite(led,HIGH);
+    while (!TMR0IF)
+    {
+        digitalWrite(led,HIGH);
+        TMR0IF=0;
+    }
+        
 }

@@ -1912,20 +1912,81 @@ void TimerOneInterruptEnable(void);
 void TimerOneInterruptDisable(void);
 # 1 "application.c" 2
 
+# 1 "./LCD16x2.h" 1
+# 12 "./LCD16x2.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdint.h" 1 3
+# 12 "./LCD16x2.h" 2
 
+
+
+
+
+
+
+    void lcdClear(void);
+
+
+
+
+
+
+    void lcdSetCursor(char row, char column);
+
+
+
+    void lcdWrite(char data);
+    void lcdPrint(char *string);
+    void lcdWritePort(char a);
+    void lcdCommand(char data, char mode);
+    void lcdBegin(char RS, char EN, char R_W, char d4, char d5, char d6,char d7);
+    void LcdWriteNibble(char data , char mode);
+    void ByteByNibble(char NibbleValue);
+    void WriteData(char data);
+    void WriteInstruction(char instruction);
+# 2 "application.c" 2
+
+# 1 "./Timers.h" 1
+# 23 "./Timers.h"
+void TimerCeroBegin(char mode, char prescaler);
+void TimerEveryTenthMS(void);
+char TEveryTenthDone(char multiple);
+char CountCeroDone(char count);
+char ReadCounterCero(void);
+char TimerCeroDone(char offset);
+
+char TimerOneDone(unsigned int offset);
+unsigned int ReadTimerOne(void);
+char CounterOneDone(unsigned int count);
+void TimerOneEnable(char prescale);
+void TimerOneShutdown(void);
+void TimerOneBegin(char mode, char prescaler);
+# 3 "application.c" 2
+
+
+const int RS=20;
+const int En =21;
+const int RnW=0;
+const int D4=16;
+const int D5=17;
+const int D6=18;
+const int D7=19;
+const int led=12;
 void setup()
 {
- pinMode(6,0);
-    pinMode(5,0);
+    TimerCeroBegin(0xE0,256);
+ lcdBegin(RS,En,RnW,D4,D5,D6,D7);
+    lcdClear();
+    lcdPrint("Prueba  4");
 }
 
 
 void loop()
 {
-    analogWrite(6,200);
-    analogWrite(5,200);
-    delay(100);
-    analogWrite(6,500);
-    analogWrite(5,500);
-    delay(100);
+    digitalWrite(led,1);
+    while (!TMR0IF)
+    {
+        digitalWrite(led,1);
+        TMR0IF=0;
+    }
+
 }

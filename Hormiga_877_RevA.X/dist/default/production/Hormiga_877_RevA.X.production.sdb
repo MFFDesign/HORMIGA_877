@@ -3,15 +3,15 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 6 ]
-"16 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LIFPIC.c
+"16 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\LIFPIC.c
 [e E931 MaquinaEstados `uc
 Enviar 0
 Recibir 1
 Decode 2
 ]
-"3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+"13 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
 [v _setup setup `(v  1 e 1 0 ]
-"10
+"22
 [v _loop loop `(v  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -51,11 +51,11 @@ Decode 2
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"4 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\EEPROM.c
+"4 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\EEPROM.c
 [v _EEPROMSave EEPROMSave `(v  1 e 1 0 ]
 "19
 [v _EEPROMRead EEPROMRead `(uc  1 e 1 0 ]
-"3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+"3 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
 [v _main main `(i  1 e 2 0 ]
 "14
 [v _Initialization Initialization `(v  1 e 1 0 ]
@@ -85,7 +85,7 @@ Decode 2
 [v _delay delay `(v  1 e 1 0 ]
 "588
 [v _delayMicroseconds delayMicroseconds `(v  1 e 1 0 ]
-"15 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\I2CWire.c
+"15 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\I2CWire.c
 [v _I2CStartTransaction I2CStartTransaction `(v  1 e 1 0 ]
 "21
 [v _I2CIDLECheck I2CIDLECheck `(v  1 e 1 0 ]
@@ -101,17 +101,23 @@ Decode 2
 [v _I2CACK I2CACK `(v  1 e 1 0 ]
 "64
 [v _I2CNACK I2CNACK `(v  1 e 1 0 ]
-"45 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+"18 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+[v _lcdBegin lcdBegin `(v  1 e 1 0 ]
+"41
+[v _lcdClear lcdClear `(v  1 e 1 0 ]
+"45
 [v _lcdSetCursor lcdSetCursor `(v  1 e 1 0 ]
 "63
 [v _lcdWrite lcdWrite `(v  1 e 1 0 ]
+"69
+[v _lcdPrint lcdPrint `(v  1 e 1 0 ]
 "78
 [v _WriteInstruction WriteInstruction `(v  1 e 1 0 ]
 "101
 [v _WriteData WriteData `(v  1 e 1 0 ]
 "124
 [v _ByteByNibble ByteByNibble `(v  1 e 1 0 ]
-"154 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCDI2C.c
+"154 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCDI2C.c
 [v _SendInstruction SendInstruction `(v  1 e 1 0 ]
 "178
 [v _SendData SendData `(v  1 e 1 0 ]
@@ -121,19 +127,21 @@ Decode 2
 [v _LCDWrite LCDWrite `(v  1 e 1 0 ]
 "232
 [v _LCDPrint LCDPrint `(v  1 e 1 0 ]
-"115 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LIFPIC.c
+"115 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\LIFPIC.c
 [v _ProcessCommand ProcessCommand `(ui  1 e 2 0 ]
-"14 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Matematica.c
+"14 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Matematica.c
 [v _Multiplicacion Multiplicacion `(ui  1 e 2 0 ]
-"42 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\ShiftRegister.c
+"42 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\ShiftRegister.c
 [v _WriteRegister WriteRegister `(v  1 e 1 0 ]
-"3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\SPI.c
+"3 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\SPI.c
 [v _spiRead spiRead `(uc  1 e 1 0 ]
 "23
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
 "28
 [v _spiDataAvailable spiDataAvailable `(uc  1 e 1 0 ]
-"33 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\AD9850.c
+"5 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Timers.c
+[v _TimerCeroBegin TimerCeroBegin `(v  1 e 1 0 ]
+"33 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\AD9850.c
 [v _DataPort DataPort `uc  1 e 1 0 ]
 "34
 [v _DDSRegister DDSRegister `[5]uc  1 e 5 0 ]
@@ -143,9 +151,25 @@ Decode 2
 [v _FrUpdate FrUpdate `uc  1 e 1 0 ]
 "38
 [v _R R `ui  1 e 2 0 ]
+"5 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+[v _RS RS `DCi  1 e 2 0 ]
+"6
+[v _En En `DCi  1 e 2 0 ]
+"7
+[v _RnW RnW `DCi  1 e 2 0 ]
+"8
+[v _D4 D4 `DCi  1 e 2 0 ]
+"9
+[v _D5 D5 `DCi  1 e 2 0 ]
+"10
+[v _D6 D6 `DCi  1 e 2 0 ]
+"11
+[v _D7 D7 `DCi  1 e 2 0 ]
+"12
+[v _led led `DCi  1 e 2 0 ]
 "59 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
-[s S208 . 1 `uc 1 RA0 1 0 :1:0 
+[s S233 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -153,11 +177,11 @@ Decode 2
 `uc 1 RA5 1 0 :1:5 
 ]
 "181
-[u S215 . 1 `S208 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES215  1 e 1 @5 ]
+[u S240 . 1 `S233 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES240  1 e 1 @5 ]
 "216
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S166 . 1 `uc 1 RB0 1 0 :1:0 
+[s S191 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -167,11 +191,11 @@ Decode 2
 `uc 1 RB7 1 0 :1:7 
 ]
 "233
-[u S175 . 1 `S166 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES175  1 e 1 @6 ]
+[u S200 . 1 `S191 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES200  1 e 1 @6 ]
 "278
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S145 . 1 `uc 1 RC0 1 0 :1:0 
+[s S170 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -181,11 +205,11 @@ Decode 2
 `uc 1 RC7 1 0 :1:7 
 ]
 "295
-[u S154 . 1 `S145 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES154  1 e 1 @7 ]
+[u S179 . 1 `S170 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES179  1 e 1 @7 ]
 "340
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S187 . 1 `uc 1 RD0 1 0 :1:0 
+[s S212 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -195,18 +219,18 @@ Decode 2
 `uc 1 RD7 1 0 :1:7 
 ]
 "357
-[u S196 . 1 `S187 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES196  1 e 1 @8 ]
+[u S221 . 1 `S212 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES221  1 e 1 @8 ]
 "402
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S277 . 1 `uc 1 RE0 1 0 :1:0 
+[s S302 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 ]
 "414
-[u S281 . 1 `S277 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES281  1 e 1 @9 ]
-[s S550 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S306 . 1 `S302 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES306  1 e 1 @9 ]
+[s S579 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -216,13 +240,13 @@ Decode 2
 `uc 1 GIE 1 0 :1:7 
 ]
 "477
-[s S559 . 1 `uc 1 . 1 0 :2:0 
+[s S588 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S564 . 1 `S550 1 . 1 0 `S559 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES564  1 e 1 @11 ]
+[u S593 . 1 `S579 1 . 1 0 `S588 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES593  1 e 1 @11 ]
 "634
 [v _TMR1 TMR1 `VEus  1 e 2 @14 ]
 "641
@@ -253,14 +277,14 @@ Decode 2
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 "1159
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-[s S225 . 1 `uc 1 ADON 1 0 :1:0 
+[s S250 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 GO_nDONE 1 0 :1:2 
 `uc 1 CHS 1 0 :3:3 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1190
-[s S231 . 1 `uc 1 . 1 0 :2:0 
+[s S256 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GO 1 0 :1:2 
 `uc 1 CHS0 1 0 :1:3 
 `uc 1 CHS1 1 0 :1:4 
@@ -268,17 +292,17 @@ Decode 2
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S239 . 1 `uc 1 . 1 0 :2:0 
+[s S264 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nDONE 1 0 :1:2 
 ]
-[s S242 . 1 `uc 1 . 1 0 :2:0 
+[s S267 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GO_DONE 1 0 :1:2 
 ]
-[u S245 . 1 `S225 1 . 1 0 `S231 1 . 1 0 `S239 1 . 1 0 `S242 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES245  1 e 1 @31 ]
+[u S270 . 1 `S250 1 . 1 0 `S256 1 . 1 0 `S264 1 . 1 0 `S267 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES270  1 e 1 @31 ]
 "1255
 [v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
-[s S128 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S153 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -286,11 +310,11 @@ Decode 2
 `uc 1 TRISA5 1 0 :1:5 
 ]
 "1340
-[u S135 . 1 `S128 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES135  1 e 1 @133 ]
+[u S160 . 1 `S153 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES160  1 e 1 @133 ]
 "1375
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S86 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S111 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -300,11 +324,11 @@ Decode 2
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1392
-[u S95 . 1 `S86 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES95  1 e 1 @134 ]
+[u S120 . 1 `S111 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES120  1 e 1 @134 ]
 "1437
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
-[s S65 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S90 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -314,11 +338,11 @@ Decode 2
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1454
-[u S74 . 1 `S65 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES74  1 e 1 @135 ]
+[u S99 . 1 `S90 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES99  1 e 1 @135 ]
 "1499
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S107 . 1 `uc 1 TRISD0 1 0 :1:0 
+[s S132 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -328,8 +352,8 @@ Decode 2
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "1516
-[u S116 . 1 `S107 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES116  1 e 1 @136 ]
+[u S141 . 1 `S132 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES141  1 e 1 @136 ]
 "1561
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
 "1754
@@ -340,7 +364,7 @@ Decode 2
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "1830
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S1149 . 1 `uc 1 BF 1 0 :1:0 
+[s S1179 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -350,39 +374,39 @@ Decode 2
 `uc 1 SMP 1 0 :1:7 
 ]
 "1884
-[s S1158 . 1 `uc 1 . 1 0 :2:0 
+[s S1188 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S1163 . 1 `uc 1 . 1 0 :2:0 
+[s S1193 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DATA 1 0 :1:5 
 ]
-[s S1169 . 1 `uc 1 . 1 0 :2:0 
+[s S1199 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S1174 . 1 `uc 1 . 1 0 :2:0 
+[s S1204 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S1179 . 1 `uc 1 . 1 0 :2:0 
+[s S1209 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S1184 . 1 `uc 1 . 1 0 :2:0 
+[s S1214 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[u S1189 . 1 `S1149 1 . 1 0 `S1158 1 . 1 0 `S1163 1 . 1 0 `S1169 1 . 1 0 `S1174 1 . 1 0 `S1179 1 . 1 0 `S1184 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES1189  1 e 1 @148 ]
+[u S1219 . 1 `S1179 1 . 1 0 `S1188 1 . 1 0 `S1193 1 . 1 0 `S1199 1 . 1 0 `S1204 1 . 1 0 `S1209 1 . 1 0 `S1214 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES1219  1 e 1 @148 ]
 "2080
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2222
@@ -393,7 +417,7 @@ Decode 2
 [v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
 "2295
 [v _EEADR EEADR `VEuc  1 e 1 @269 ]
-[s S531 . 1 `uc 1 RD 1 0 :1:0 
+[s S560 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -401,8 +425,8 @@ Decode 2
 `uc 1 EEPGD 1 0 :1:7 
 ]
 "2331
-[u S538 . 1 `S531 1 . 1 0 ]
-[v _EECON1bits EECON1bits `VES538  1 e 1 @396 ]
+[u S567 . 1 `S560 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES567  1 e 1 @396 ]
 "2361
 [v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
 "2374
@@ -469,14 +493,14 @@ Decode 2
 [v _nRBPU nRBPU `VEb  1 e 0 @1039 ]
 "358 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
-"5 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Encoder.c
+"5 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Encoder.c
 [v _pinA pinA `ui  1 s 2 pinA ]
 [v _pinB pinB `ui  1 s 2 pinB ]
 "6
 [v _EncoderMatrix EncoderMatrix `[4][4]c  1 e 16 0 ]
-"4 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\I2CEEPROM.c
+"4 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\I2CEEPROM.c
 [v _bufferMemory bufferMemory `uc  1 e 1 0 ]
-"5 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Keypad4x4.c
+"5 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Keypad4x4.c
 [v _KeypadAddress KeypadAddress `*.1uc  1 e 1 0 ]
 "6
 [v _TeclasVolValues TeclasVolValues `*.1ui  1 e 1 0 ]
@@ -496,7 +520,7 @@ Decode 2
 [v _delaying delaying `uc  1 e 1 0 ]
 "32
 [v _ADeCeChannel ADeCeChannel `uc  1 e 1 0 ]
-"10 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+"10 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
 [v _RSPin RSPin `uc  1 e 1 0 ]
 "11
 [v _ENPin ENPin `uc  1 e 1 0 ]
@@ -510,7 +534,7 @@ Decode 2
 [v _d6Pin d6Pin `uc  1 e 1 0 ]
 "16
 [v _d7Pin d7Pin `uc  1 e 1 0 ]
-"5 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCDI2C.c
+"5 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCDI2C.c
 [v _DisplayControl DisplayControl `uc  1 e 1 0 ]
 "6
 [v _BacklightState BacklightState `uc  1 e 1 0 ]
@@ -520,7 +544,7 @@ Decode 2
 [v _MSNibble MSNibble `uc  1 e 1 0 ]
 "9
 [v _LSNibble LSNibble `uc  1 e 1 0 ]
-"16 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LIFPIC.c
+"16 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\LIFPIC.c
 [v _Estado Estado `E931  1 e 1 0 ]
 "18
 [v _BufferLenght BufferLenght `uc  1 e 1 0 ]
@@ -534,11 +558,11 @@ Decode 2
 [v _Valor Valor `uc  1 e 1 0 ]
 "28
 [v _dada dada `uc  1 e 1 0 ]
-"6 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PASControl_RevA.c
+"6 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\PASControl_RevA.c
 [v _sSrT sSrT `uc  1 e 1 0 ]
 "7
 [v _PASControlBuffer PASControlBuffer `uc  1 e 1 0 ]
-"2 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\RobotMovimientos.c
+"2 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\RobotMovimientos.c
 [v _in1 in1 `uc  1 e 1 0 ]
 "3
 [v _in2 in2 `uc  1 e 1 0 ]
@@ -550,9 +574,9 @@ Decode 2
 [v _va va `uc  1 e 1 0 ]
 "7
 [v _vb vb `uc  1 e 1 0 ]
-"3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Servo.c
+"3 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Servo.c
 [v _ServoValue ServoValue `uc  1 e 1 0 ]
-"17 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\ShiftRegister.c
+"17 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\ShiftRegister.c
 [v _dataInB dataInB `uc  1 e 1 0 ]
 "18
 [v _clkB clkB `uc  1 e 1 0 ]
@@ -562,33 +586,88 @@ Decode 2
 [v _clrPortB clrPortB `uc  1 e 1 0 ]
 "21
 [v _OEB OEB `uc  1 e 1 0 ]
-"4 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\SieteSegmentos.c
+"4 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\SieteSegmentos.c
 [v _ChPointer ChPointer `*.1ui  1 e 1 0 ]
 "5
 [v _dataPort dataPort `uc  1 e 1 0 ]
 "6
 [v _SegmentData SegmentData `[14]uc  1 e 14 0 ]
-"10 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\SPDT.c
+"10 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\SPDT.c
 [v _Information Information `uc  1 e 1 0 ]
 "11
 [v _Clocking Clocking `uc  1 e 1 0 ]
-[s S433 Stepper 3 `uc 1 Step 1 0 `uc 1 Dir 1 1 `uc 1 Enable 1 2 ]
-"8 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Stepper.c
-[v _StepDriver StepDriver `S433  1 e 3 0 ]
-[s S437 VProfile 9 `ui 1 VFinal 2 0 `ui 1 TAccel 2 2 `uc 1 TWait 1 4 `ul 1 TotalSteps 4 5 ]
+[s S462 Stepper 3 `uc 1 Step 1 0 `uc 1 Dir 1 1 `uc 1 Enable 1 2 ]
+"8 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Stepper.c
+[v _StepDriver StepDriver `S462  1 e 3 0 ]
+[s S466 VProfile 9 `ui 1 VFinal 2 0 `ui 1 TAccel 2 2 `uc 1 TWait 1 4 `ul 1 TotalSteps 4 5 ]
 "15
-[v _Profile Profile `S437  1 e 9 0 ]
-"3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+[v _Profile Profile `S466  1 e 9 0 ]
+"3 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
 [v _main main `(i  1 e 2 0 ]
 {
 "12
 } 0
-"3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+"13 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"7
+"19
 } 0
-"60 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+"69 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+[v _lcdPrint lcdPrint `(v  1 e 1 0 ]
+{
+[v lcdPrint@string string `*.24uc  1 a 1 wreg ]
+"71
+[v lcdPrint@i i `i  1 a 2 0 ]
+"69
+[v lcdPrint@string string `*.24uc  1 a 1 wreg ]
+"71
+[v lcdPrint@string string `*.24uc  1 a 1 2 ]
+"75
+} 0
+"63
+[v _lcdWrite lcdWrite `(v  1 e 1 0 ]
+{
+[v lcdWrite@data data `uc  1 a 1 wreg ]
+[v lcdWrite@data data `uc  1 a 1 wreg ]
+"65
+[v lcdWrite@data data `uc  1 a 1 12 ]
+"67
+} 0
+"101
+[v _WriteData WriteData `(v  1 e 1 0 ]
+{
+[v WriteData@data data `uc  1 a 1 wreg ]
+"103
+[v WriteData@MSNibble MSNibble `uc  1 a 1 11 ]
+"104
+[v WriteData@LSNibble LSNibble `uc  1 a 1 9 ]
+"101
+[v WriteData@data data `uc  1 a 1 wreg ]
+"103
+[v WriteData@data data `uc  1 a 1 10 ]
+"122
+} 0
+"41
+[v _lcdClear lcdClear `(v  1 e 1 0 ]
+{
+"44
+} 0
+"18
+[v _lcdBegin lcdBegin `(v  1 e 1 0 ]
+{
+[v lcdBegin@RS RS `uc  1 a 1 wreg ]
+[v lcdBegin@RS RS `uc  1 a 1 wreg ]
+[v lcdBegin@EN EN `uc  1 p 1 0 ]
+[v lcdBegin@R_W R_W `uc  1 p 1 1 ]
+[v lcdBegin@d4 d4 `uc  1 p 1 2 ]
+[v lcdBegin@d5 d5 `uc  1 p 1 3 ]
+[v lcdBegin@d6 d6 `uc  1 p 1 4 ]
+[v lcdBegin@d7 d7 `uc  1 p 1 5 ]
+"20
+[v lcdBegin@RS RS `uc  1 a 1 13 ]
+"40
+} 0
+"60 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
 [v _pinMode pinMode `(v  1 e 1 0 ]
 {
 [v pinMode@pin pin `uc  1 a 1 wreg ]
@@ -597,12 +676,21 @@ Decode 2
 [v pinMode@pin pin `uc  1 a 1 3 ]
 "165
 } 0
-"10 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
-[v _loop loop `(v  1 e 1 0 ]
+"78 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+[v _WriteInstruction WriteInstruction `(v  1 e 1 0 ]
 {
-"18
+[v WriteInstruction@instruction instruction `uc  1 a 1 wreg ]
+"80
+[v WriteInstruction@MSNibble MSNibble `uc  1 a 1 11 ]
+"81
+[v WriteInstruction@LSNibble LSNibble `uc  1 a 1 9 ]
+"78
+[v WriteInstruction@instruction instruction `uc  1 a 1 wreg ]
+"80
+[v WriteInstruction@instruction instruction `uc  1 a 1 10 ]
+"99
 } 0
-"576 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+"576 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
 [v _delay delay `(v  1 e 1 0 ]
 {
 "581
@@ -613,14 +701,36 @@ Decode 2
 [v delay@milis milis `DCi  1 p 2 0 ]
 "586
 } 0
-"407
-[v _analogWrite analogWrite `(uc  1 e 1 0 ]
+"124 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+[v _ByteByNibble ByteByNibble `(v  1 e 1 0 ]
 {
-[v analogWrite@pin pin `uc  1 a 1 wreg ]
-[v analogWrite@pin pin `uc  1 a 1 wreg ]
-[v analogWrite@value value `ui  1 p 2 0 ]
-[v analogWrite@pin pin `uc  1 a 1 4 ]
-"423
+[v ByteByNibble@NibbleValue NibbleValue `uc  1 a 1 wreg ]
+[v ByteByNibble@NibbleValue NibbleValue `uc  1 a 1 wreg ]
+[v ByteByNibble@NibbleValue NibbleValue `uc  1 a 1 6 ]
+"225
+} 0
+"5 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Timers.c
+[v _TimerCeroBegin TimerCeroBegin `(v  1 e 1 0 ]
+{
+[v TimerCeroBegin@mode mode `uc  1 a 1 wreg ]
+[v TimerCeroBegin@mode mode `uc  1 a 1 wreg ]
+[v TimerCeroBegin@prescaler prescaler `uc  1 p 1 0 ]
+[v TimerCeroBegin@mode mode `uc  1 a 1 3 ]
+"25
+} 0
+"22 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+[v _loop loop `(v  1 e 1 0 ]
+{
+"31
+} 0
+"166 C:\ProjectsRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
+[v _digitalWrite digitalWrite `(v  1 e 1 0 ]
+{
+[v digitalWrite@pin pin `uc  1 a 1 wreg ]
+[v digitalWrite@pin pin `uc  1 a 1 wreg ]
+[v digitalWrite@value value `uc  1 p 1 0 ]
+[v digitalWrite@pin pin `uc  1 a 1 3 ]
+"256
 } 0
 "14
 [v _Initialization Initialization `(v  1 e 1 0 ]
