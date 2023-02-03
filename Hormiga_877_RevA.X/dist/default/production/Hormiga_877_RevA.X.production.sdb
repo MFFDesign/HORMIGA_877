@@ -3,9 +3,9 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 6 ]
-"20 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+"19 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
 [v _setup setup `(v  1 e 1 0 ]
-"30
+"28
 [v _loop loop `(v  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
@@ -73,17 +73,17 @@
 [v _D7 D7 `DCuc  1 e 1 0 ]
 "13
 [v _ScreenROW ScreenROW `[16]uc  1 e 16 0 ]
+"14
+[v _dTime dTime `ui  1 e 2 0 ]
 "15
 [v _Now Now `ui  1 e 2 0 ]
 "16
 [v _Last Last `ui  1 e 2 0 ]
-"17
-[v _dTime dTime `ui  1 e 2 0 ]
-"19
+"18
 [v _dt dt `ui  1 e 2 0 ]
 "59 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
-[s S242 . 1 `uc 1 RA0 1 0 :1:0 
+[s S244 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -91,11 +91,11 @@
 `uc 1 RA5 1 0 :1:5 
 ]
 "181
-[u S249 . 1 `S242 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES249  1 e 1 @5 ]
+[u S251 . 1 `S244 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES251  1 e 1 @5 ]
 "216
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S200 . 1 `uc 1 RB0 1 0 :1:0 
+[s S202 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -105,11 +105,11 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "233
-[u S209 . 1 `S200 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES209  1 e 1 @6 ]
+[u S211 . 1 `S202 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES211  1 e 1 @6 ]
 "278
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S179 . 1 `uc 1 RC0 1 0 :1:0 
+[s S181 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -119,9 +119,9 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "295
-[u S188 . 1 `S179 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES188  1 e 1 @7 ]
-[s S221 . 1 `uc 1 RD0 1 0 :1:0 
+[u S190 . 1 `S181 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES190  1 e 1 @7 ]
+[s S223 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -131,17 +131,17 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "357
-[u S230 . 1 `S221 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES230  1 e 1 @8 ]
+[u S232 . 1 `S223 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES232  1 e 1 @8 ]
 "402
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S311 . 1 `uc 1 RE0 1 0 :1:0 
+[s S313 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 ]
 "414
-[u S315 . 1 `S311 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES315  1 e 1 @9 ]
+[u S317 . 1 `S313 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES317  1 e 1 @9 ]
 "737
 [v _T2CON T2CON `VEuc  1 e 1 @18 ]
 "892
@@ -160,14 +160,14 @@
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 "1159
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-[s S259 . 1 `uc 1 ADON 1 0 :1:0 
+[s S261 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 GO_nDONE 1 0 :1:2 
 `uc 1 CHS 1 0 :3:3 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1190
-[s S265 . 1 `uc 1 . 1 0 :2:0 
+[s S267 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GO 1 0 :1:2 
 `uc 1 CHS0 1 0 :1:3 
 `uc 1 CHS1 1 0 :1:4 
@@ -175,17 +175,17 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S273 . 1 `uc 1 . 1 0 :2:0 
+[s S275 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nDONE 1 0 :1:2 
 ]
-[s S276 . 1 `uc 1 . 1 0 :2:0 
+[s S278 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GO_DONE 1 0 :1:2 
 ]
-[u S279 . 1 `S259 1 . 1 0 `S265 1 . 1 0 `S273 1 . 1 0 `S276 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES279  1 e 1 @31 ]
+[u S281 . 1 `S261 1 . 1 0 `S267 1 . 1 0 `S275 1 . 1 0 `S278 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES281  1 e 1 @31 ]
 "1255
 [v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
-[s S162 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S164 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -193,11 +193,11 @@
 `uc 1 TRISA5 1 0 :1:5 
 ]
 "1340
-[u S169 . 1 `S162 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES169  1 e 1 @133 ]
+[u S171 . 1 `S164 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES171  1 e 1 @133 ]
 "1375
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S120 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S122 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -207,11 +207,11 @@
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1392
-[u S129 . 1 `S120 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES129  1 e 1 @134 ]
+[u S131 . 1 `S122 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES131  1 e 1 @134 ]
 "1437
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
-[s S99 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S101 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -221,9 +221,9 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1454
-[u S108 . 1 `S99 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES108  1 e 1 @135 ]
-[s S141 . 1 `uc 1 TRISD0 1 0 :1:0 
+[u S110 . 1 `S101 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES110  1 e 1 @135 ]
+[s S143 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -233,8 +233,8 @@
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "1516
-[u S150 . 1 `S141 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES150  1 e 1 @136 ]
+[u S152 . 1 `S143 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES152  1 e 1 @136 ]
 "1561
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
 "1816
@@ -295,33 +295,20 @@
 [v _d6Pin d6Pin `uc  1 e 1 0 ]
 "16
 [v _d7Pin d7Pin `uc  1 e 1 0 ]
-[s S471 Controller 15 `d 1 Kp 4 0 `d 1 Ki 4 4 `d 1 Kd 4 8 `uc 1 SampleT 1 12 `ui 1 TotalEvents 2 13 ]
+[s S473 Controller 15 `d 1 Kp 4 0 `d 1 Ki 4 4 `d 1 Kd 4 8 `uc 1 SampleT 1 12 `ui 1 TotalEvents 2 13 ]
 "11 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
-[v _PID PID `S471  1 e 15 0 ]
+[v _PID PID `S473  1 e 15 0 ]
 "3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
 [v _main main `(i  1 e 2 0 ]
 {
 "12
 } 0
-"20 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+"19 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"27
+"25
 } 0
-"45 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
-[v _lcdSetCursor lcdSetCursor `(v  1 e 1 0 ]
-{
-[v lcdSetCursor@row row `uc  1 a 1 wreg ]
-"47
-[v lcdSetCursor@location location `uc  1 a 1 1 ]
-"45
-[v lcdSetCursor@row row `uc  1 a 1 wreg ]
-[v lcdSetCursor@column column `uc  1 p 1 12 ]
-"47
-[v lcdSetCursor@row row `uc  1 a 1 0 ]
-"62
-} 0
-"18
+"18 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
 [v _lcdBegin lcdBegin `(v  1 e 1 0 ]
 {
 [v lcdBegin@RS RS `uc  1 a 1 wreg ]
@@ -345,20 +332,6 @@
 [v pinMode@pin pin `uc  1 a 1 3 ]
 "165
 } 0
-"78 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
-[v _WriteInstruction WriteInstruction `(v  1 e 1 0 ]
-{
-[v WriteInstruction@instruction instruction `uc  1 a 1 wreg ]
-"80
-[v WriteInstruction@MSNibble MSNibble `uc  1 a 1 11 ]
-"81
-[v WriteInstruction@LSNibble LSNibble `uc  1 a 1 9 ]
-"78
-[v WriteInstruction@instruction instruction `uc  1 a 1 wreg ]
-"80
-[v WriteInstruction@instruction instruction `uc  1 a 1 10 ]
-"99
-} 0
 "13 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
 [v _PIDSetSampleTime PIDSetSampleTime `(v  1 e 1 0 ]
 {
@@ -368,10 +341,10 @@
 [v PIDSetSampleTime@dt dt `uc  1 a 1 1 ]
 "19
 } 0
-"30 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
+"28 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
 [v _loop loop `(v  1 e 1 0 ]
 {
-"41
+"46
 } 0
 "500 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -416,7 +389,34 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"69 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+"45 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
+[v _lcdSetCursor lcdSetCursor `(v  1 e 1 0 ]
+{
+[v lcdSetCursor@row row `uc  1 a 1 wreg ]
+"47
+[v lcdSetCursor@location location `uc  1 a 1 1 ]
+"45
+[v lcdSetCursor@row row `uc  1 a 1 wreg ]
+[v lcdSetCursor@column column `uc  1 p 1 12 ]
+"47
+[v lcdSetCursor@row row `uc  1 a 1 0 ]
+"62
+} 0
+"78
+[v _WriteInstruction WriteInstruction `(v  1 e 1 0 ]
+{
+[v WriteInstruction@instruction instruction `uc  1 a 1 wreg ]
+"80
+[v WriteInstruction@MSNibble MSNibble `uc  1 a 1 11 ]
+"81
+[v WriteInstruction@LSNibble LSNibble `uc  1 a 1 9 ]
+"78
+[v WriteInstruction@instruction instruction `uc  1 a 1 wreg ]
+"80
+[v WriteInstruction@instruction instruction `uc  1 a 1 10 ]
+"99
+} 0
+"69
 [v _lcdPrint lcdPrint `(v  1 e 1 0 ]
 {
 "71
