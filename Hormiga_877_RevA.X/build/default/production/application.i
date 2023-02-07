@@ -1947,9 +1947,13 @@ void TimerOneInterruptDisable(void);
 
 # 1 "./PIDController.h" 1
 # 14 "./PIDController.h"
-void PIDSetSampleTime(char dt);
+void SetSampleTime(char dt);
+void SetProportionalTune(double value);
+void SetIntegralTune(double value);
+void SetDerivativeTune(double value);
+double AccionControl(double SetPoint, double Feedback);
 unsigned int EventCounter(void);
-unsigned char AccionControl(double SetPoint, double Feedback, double dt);
+double map(double data, double X2, double X1, double Y2, double Y1);
 # 3 "application.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 1 3
@@ -2071,7 +2075,7 @@ void setup()
     lcdBegin(RS,EN,RnW,D4,D5,D6,D7);
     lcdSetCursor(1,1);
     lcdPrint("PID Control Test");
-    PIDSetSampleTime(64);
+    SetSampleTime(64);
 }
 
 
@@ -2090,7 +2094,8 @@ void loop()
         lcdSetCursor(2,1);
         sprintf(ScreenROW,"Time=%u ",dt);
         lcdPrint(ScreenROW);
-        Control = AccionControl(3.14,2.71,0.01);
+        double Voltage = map(0xf043,0,1023,0,100);
+        Control = AccionControl(3.14,2.71);
         dTime = 0;
         Last = Now;
     }

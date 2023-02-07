@@ -22,7 +22,7 @@ void setup()
     lcdBegin(RS,EN,RnW,D4,D5,D6,D7);
     lcdSetCursor(1,1);
     lcdPrint("PID Control Test");
-    PIDSetSampleTime(64);
+    SetSampleTime(64);
 }
 
 
@@ -41,7 +41,8 @@ void loop()
         lcdSetCursor(2,1);
         sprintf(ScreenROW,"Time=%u ",dt);
         lcdPrint(ScreenROW);
-        Control = AccionControl(3.14,2.71,0.01);
+        double Voltage = map(0xf043,0,1023,0,100);
+        Control = AccionControl(3.14,2.71);
         dTime = 0;
         Last = Now;
     }

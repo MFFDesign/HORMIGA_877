@@ -9,16 +9,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./LCD16x2.h: 31:     void lcdPrint(char *string);
 [v _lcdPrint `(v ~T0 @X0 0 ef1`*uc ]
 "14 ./PIDController.h
-[; ;./PIDController.h: 14: void PIDSetSampleTime(char dt);
-[v _PIDSetSampleTime `(v ~T0 @X0 0 ef1`uc ]
-"15
-[; ;./PIDController.h: 15: unsigned int EventCounter(void);
+[; ;./PIDController.h: 14: void SetSampleTime(char dt);
+[v _SetSampleTime `(v ~T0 @X0 0 ef1`uc ]
+"19
+[; ;./PIDController.h: 19: unsigned int EventCounter(void);
 [v _EventCounter `(ui ~T0 @X0 0 ef ]
 "194 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"16 ./PIDController.h
-[; ;./PIDController.h: 16: unsigned char AccionControl(double SetPoint, double Feedback, double dt);
-[v _AccionControl `(uc ~T0 @X0 0 ef3`d`d`d ]
+"20 ./PIDController.h
+[; ;./PIDController.h: 20: double map(double data, double X2, double X1, double Y2, double Y1);
+[v _map `(d ~T0 @X0 0 ef5`d`d`d`d`d ]
+"18
+[; ;./PIDController.h: 18: double AccionControl(double SetPoint, double Feedback);
+[v _AccionControl `(d ~T0 @X0 0 ef2`d`d ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -321,8 +324,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;application.c: 24:     lcdPrint("PID Control Test");
 [e ( _lcdPrint (1 :s 1C ]
 "25
-[; ;application.c: 25:     PIDSetSampleTime(64);
-[e ( _PIDSetSampleTime (1 -> -> 64 `i `uc ]
+[; ;application.c: 25:     SetSampleTime(64);
+[e ( _SetSampleTime (1 -> -> 64 `i `uc ]
 "26
 [; ;application.c: 26: }
 [e :UE 96 ]
@@ -375,20 +378,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;application.c: 43:         lcdPrint(ScreenROW);
 [e ( _lcdPrint (1 &U _ScreenROW ]
 "44
-[; ;application.c: 44:         Control = AccionControl(3.14,2.71,0.01);
-[e = _Control -> ( _AccionControl (3 , , .3.14 .2.71 .0.01 `d ]
+[; ;application.c: 44:         double Voltage = map(0xf043,0,1023,0,100);
+[v _Voltage `d ~T0 @X0 1 a ]
+[e = _Voltage ( _map (4 , , , , -> -> 61507 `ui `d -> -> 0 `i `d -> -> 1023 `i `d -> -> 0 `i `d -> -> 100 `i `d ]
 "45
-[; ;application.c: 45:         dTime = 0;
-[e = _dTime -> -> 0 `i `ui ]
+[; ;application.c: 45:         Control = AccionControl(3.14,2.71);
+[e = _Control ( _AccionControl (2 , .3.14 .2.71 ]
 "46
-[; ;application.c: 46:         Last = Now;
-[e = _Last _Now ]
+[; ;application.c: 46:         dTime = 0;
+[e = _dTime -> -> 0 `i `ui ]
 "47
-[; ;application.c: 47:     }
+[; ;application.c: 47:         Last = Now;
+[e = _Last _Now ]
+"48
+[; ;application.c: 48:     }
 }
 [e :U 98 ]
-"48
-[; ;application.c: 48: }
+"49
+[; ;application.c: 49: }
 [e :UE 97 ]
 }
 [p f _sprintf 8389632 ]
