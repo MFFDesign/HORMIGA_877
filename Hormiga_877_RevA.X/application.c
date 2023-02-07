@@ -10,6 +10,8 @@ const char D4 = 16;
 const char D5 = 17;
 const char D6 = 18;
 const char D7 = 19;
+
+const char led=12;
 char ScreenROW[16] = {0};
 unsigned int dTime = 0;
 unsigned int Now = 0;
@@ -19,16 +21,18 @@ double Control = 0;
 
 void setup() 
 {
+    pinMode(led,OUTPUT);
     lcdBegin(RS,EN,RnW,D4,D5,D6,D7);
     lcdSetCursor(1,1);
     lcdPrint("PID Control Test");
-    PIDSetSampleTime(64);
+    PIDSetSampleTime(255);
 }
 
 
 void loop()
 {
-    Now = EventCounter();
+    digitalWrite(led,HIGH);
+    Now = EventCounters();
     sprintf(ScreenROW,"NOW=%u",dTime);
     lcdPrint(ScreenROW);
     lcdSetCursor(2,8);

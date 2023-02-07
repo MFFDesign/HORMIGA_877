@@ -52,7 +52,7 @@ unsigned char AccionControl(double SetPoint, double Feedback, double dt)
     return (char)PID.AccionControl;
 }
 
-unsigned int EventCounter(void)
+unsigned int EventCounters(void)
 {
     while(!TMR0IF);
     TMR0IF = 0;
