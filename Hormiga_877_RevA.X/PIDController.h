@@ -11,9 +11,13 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-void PIDSetSampleTime(char dt);
+void SetSampleTime(char dt);
+void SetProportionalTune(double value);
+void SetIntegralTune(double value);
+void SetDerivativeTune(double value);
+double AccionControl(double SetPoint, double Feedback);
 unsigned int EventCounter(void);
-unsigned char AccionControl(double SetPoint, double Feedback, double dt);
+double map(double data, double X2, double X1, double Y2, double Y1);
 
 
 
