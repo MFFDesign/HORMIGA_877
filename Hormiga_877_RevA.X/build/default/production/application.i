@@ -1912,20 +1912,192 @@ void TimerOneInterruptEnable(void);
 void TimerOneInterruptDisable(void);
 # 1 "application.c" 2
 
+# 1 "./LCD16x2.h" 1
+# 12 "./LCD16x2.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdint.h" 1 3
+# 12 "./LCD16x2.h" 2
+
+
+
+
+
+
+
+    void lcdClear(void);
+
+
+
+
+
+
+    void lcdSetCursor(char row, char column);
+
+
+
+    void lcdWrite(char data);
+    void lcdPrint(char *string);
+    void lcdWritePort(char a);
+    void lcdCommand(char data, char mode);
+    void lcdBegin(char RS, char EN, char R_W, char d4, char d5, char d6,char d7);
+    void LcdWriteNibble(char data , char mode);
+    void ByteByNibble(char NibbleValue);
+    void WriteData(char data);
+    void WriteInstruction(char instruction);
+# 2 "application.c" 2
+
+# 1 "./PIDController.h" 1
+# 14 "./PIDController.h"
+void SetSampleTime(double Sample);
+void SetProportionalTune(double value);
+void SetIntegralTune(double value);
+void SetDerivativeTune(double value);
+double AccionControl(double SetPoint, double Feedback);
+unsigned int EventCounter(void);
+double map(double data, double X2, double X1, double Y2, double Y1);
+void SetOutputRanges(double RangeMin, double RangMax);
+# 3 "application.c" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 1 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\__size_t.h" 1 3
+
+
+
+typedef unsigned size_t;
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 2 3
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\__null.h" 1 3
+# 5 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 2 3
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdarg.h" 1 3
+
+
+
+
+
+
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+# 11 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 2 3
+# 43 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 3
+struct __prbuf
+{
+ char * ptr;
+ void (* func)(char);
+};
+# 85 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\conio.h" 1 3
+
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\errno.h" 1 3
+# 29 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\errno.h" 3
+extern int errno;
+# 8 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\conio.h" 2 3
+
+
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+
+
+extern char * cgets(char *);
+extern void cputs(const char *);
+# 85 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 2 3
+
+
+
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+# 180 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 3
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+# 4 "application.c" 2
+
+
+const char RS = 20;
+const char EN = 21;
+const char RnW = 25;
+const char D4 = 16;
+const char D5 = 17;
+const char D6 = 18;
+const char D7 = 19;
+char ScreenROW[16] = {0};
+unsigned int dTime = 0;
+unsigned int Now = 0;
+unsigned int Last = 0;
+unsigned int dt = 0;
+double Control = 0;
 
 void setup()
 {
- pinMode(6,0);
-    pinMode(5,0);
+    lcdBegin(RS,EN,RnW,D4,D5,D6,D7);
+    lcdSetCursor(1,1);
+    lcdPrint("PID Control Test");
+    SetSampleTime(64);
 }
 
 
 void loop()
 {
-    analogWrite(6,200);
-    analogWrite(5,200);
-    delay(100);
-    analogWrite(6,500);
-    analogWrite(5,500);
-    delay(100);
+    Now = EventCounter();
+    sprintf(ScreenROW,"NOW=%u",dTime);
+    lcdPrint(ScreenROW);
+    lcdSetCursor(2,8);
+    dTime = Now - Last;
+    if(dTime >= 20)
+    {
+        dt++;
+        lcdSetCursor(2,1);
+        lcdPrint("                ");
+        lcdSetCursor(2,1);
+        sprintf(ScreenROW,"Time=%u ",dt);
+        lcdPrint(ScreenROW);
+        double Voltage = map(0xf043,0,1023,0,100);
+        Control = AccionControl(3.14,2.71);
+        dTime = 0;
+        Last = Now;
+    }
 }

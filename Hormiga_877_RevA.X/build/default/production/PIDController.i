@@ -1,4 +1,4 @@
-# 1 "Servo.c"
+# 1 "PIDController.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Servo.c" 2
+# 1 "PIDController.c" 2
 # 1 "./Hormiga877.h" 1
 # 11 "./Hormiga877.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
@@ -1910,60 +1910,104 @@ void delayMicroseconds(const unsigned int us);
 void __attribute__((picinterrupt(""))) TimeCounter(void);
 void TimerOneInterruptEnable(void);
 void TimerOneInterruptDisable(void);
-# 1 "Servo.c" 2
+# 1 "PIDController.c" 2
+
+# 1 "./PIDController.h" 1
+# 14 "./PIDController.h"
+void SetSampleTime(double Sample);
+void SetProportionalTune(double value);
+void SetIntegralTune(double value);
+void SetDerivativeTune(double value);
+double AccionControl(double SetPoint, double Feedback);
+unsigned int EventCounter(void);
+double map(double data, double X2, double X1, double Y2, double Y1);
+void SetOutputRanges(double RangeMin, double RangMax);
+# 2 "PIDController.c" 2
 
 
-uint8_t ServoValue = 0;
 
-void ServoAttach(uint8_t PinValue)
+struct Controller{
+    double Kp;
+    double Ki;
+    double Kd;
+    double HWdt;
+    char SampleT;
+    unsigned int TotalEvents;
+    double Error;
+    double LastError;
+    double ErrorAcum;
+    double LastInput;
+    double I;
+    double P;
+    double D;
+    double AccionControl;
+    double OutMin;
+    double OutMax;
+}PID;
+
+double map(double data, double X2, double X1, double Y2, double Y1)
 {
-    ServoValue = PinValue;
-    pinMode(PinValue,0);
+    double m = (Y2 - Y1) / (X2 - X1);
+    return (m * data) - (m * X1) + Y1;
 }
 
-void ServoWrite(unsigned int DegreesValue)
+void SetSampleTime(double Sample)
 {
-
-
-
-
-    unsigned int i,timeOn,timeOff;
-    timeOn = DegreesValue + 175;
-    timeOff = 4350 - timeOn;
-    for(i=0;i<10;i++)
-    {
-        digitalWrite(ServoValue,1);
-        for(uint16_t j=0;j<timeOn;j++)
-        {
-            _delay((unsigned long)((1)*(20000000/4000000.0)));
-        }
-        digitalWrite(ServoValue,0);
-        for(uint16_t k=0;k<timeOff;k++)
-        {
-            _delay((unsigned long)((1)*(20000000/4000000.0)));
-        }
-    }
+    PID.SampleT = Sample;
 }
 
-void ServoWriteCero(uint16_t deegres)
+void SetHWSampleTime(char dt)
 {
-    unsigned int i;
-    for(i=0;i<5;i++)
-    {
-        digitalWrite(ServoValue,1);
-        delayMicroseconds(800);
-        digitalWrite(ServoValue,0);
-        delayMicroseconds(19200);
-    }
+    OPTION_REG &= 0xD7;
+    TMR0IF = 0;
+    TMR0 = 0xFF - dt;
+    PID.HWdt = dt;
 }
-void ServoWriteNoventa(uint16_t deegres)
+
+unsigned char HWDelay(void)
 {
-    unsigned int i;
-    for(i=0;i<50;i++)
-    {
-        digitalWrite(ServoValue,1);
-        delayMicroseconds(1500);
-        digitalWrite(ServoValue,0);
-        delayMicroseconds(18500);
-    }
+    TMR0IF = 0;
+    TMR0 = 0xFF - PID.HWdt;
+    while(!TMR0IF);
+    return 1;
+}
+
+void SetProportionalTune(double value)
+{
+    PID.Kp = value;
+}
+
+void SetIntegralTune(double value)
+{
+    PID.Ki = value;
+}
+
+void SetDerivativeTune(double value)
+{
+    PID.Kd = value;
+}
+
+double AccionControl(double SetPoint, double Feedback)
+{
+    PID.Error = SetPoint - Feedback;
+    PID.ErrorAcum += (PID.Error * PID.SampleT) ;
+    PID.P = PID.Kp * PID.Error;
+    PID.I = PID.Ki * PID.ErrorAcum;
+    PID.D = PID.Kd * ((PID.Error - PID.LastError) / PID.SampleT);
+    PID.AccionControl = PID.P + PID.I + PID.D;
+    return PID.AccionControl;
+}
+
+unsigned int EventCounter(void)
+{
+    while(!TMR0IF);
+    TMR0IF = 0;
+    TMR0 = 0xFF - PID.SampleT;
+    PID.TotalEvents++;
+    return PID.TotalEvents;
+}
+
+void SetOutputRanges(double RangeMin, double RangMax)
+{
+
 }

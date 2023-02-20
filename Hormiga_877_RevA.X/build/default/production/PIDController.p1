@@ -1,10 +1,17 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"36 ./Hormiga877.h
-[; ;./Hormiga877.h: 36: void delay(const int milis);
-[v _pinMode `(v ~T0 @X0 0 ef2`uc`uc ]
-"38
-[; ;./Hormiga877.h: 38: void __attribute__((picinterrupt(""))) TimeCounter(void);
-[v _digitalRead `(uc ~T0 @X0 0 ef1`uc ]
+"5 PIDController.c
+[; ;PIDController.c: 5: struct Controller{
+[s S95 `d 1 `d 1 `d 1 `d 1 `uc 1 `ui 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 ]
+[n S95 Controller Kp Ki Kd HWdt SampleT TotalEvents Error LastError ErrorAcum LastInput I P D AccionControl OutMin OutMax ]
+"1255 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1255: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+"2881
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 2881: extern volatile __bit TMR0IF __attribute__((address(0x5A)));
+[v _TMR0IF `Vb ~T0 @X0 0 e@90 ]
+"59
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -209,99 +216,263 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21
 [; ;./Hormiga877.h: 21: 
 [p x CP = OFF ]
-"5 Encoder.c
-[; ;Encoder.c: 5: static unsigned int pinA, pinB;
-[v _pinA `ui ~T0 @X0 1 s ]
-[v _pinB `ui ~T0 @X0 1 s ]
-[v F931 `c ~T0 @X0 -> 4 `i t ]
-"6
-[; ;Encoder.c: 6: signed char EncoderMatrix[4][4] = {
-[v _EncoderMatrix `F931 ~T0 @X0 -> 4 `i e ]
-[i _EncoderMatrix
-:U ..
-:U ..
--> -> 0 `i `c
--> -> 1 `i `c
--> -U -> 1 `i `c
--> -> 0 `i `c
-..
-:U ..
--> -U -> 1 `i `c
--> -> 0 `i `c
--> -> 0 `i `c
--> -> 1 `i `c
-..
-:U ..
--> -> 1 `i `c
--> -> 0 `i `c
--> -> 0 `i `c
--> -U -> 1 `i `c
-..
-:U ..
--> -> 0 `i `c
--> -U -> 1 `i `c
--> -> 1 `i `c
--> -> 0 `i `c
-..
-..
-]
-"12
-[; ;Encoder.c: 12: void EncoderBegin(unsigned int A, unsigned int B)
-[v _EncoderBegin `(v ~T0 @X0 1 ef2`ui`ui ]
-"13
-[; ;Encoder.c: 13: {
-{
-[e :U _EncoderBegin ]
-"12
-[; ;Encoder.c: 12: void EncoderBegin(unsigned int A, unsigned int B)
-[v _A `ui ~T0 @X0 1 r1 ]
-[v _B `ui ~T0 @X0 1 r2 ]
-"13
-[; ;Encoder.c: 13: {
-[f ]
-"14
-[; ;Encoder.c: 14:     pinA = A;
-[e = _pinA _A ]
-"15
-[; ;Encoder.c: 15:     pinB = B;
-[e = _pinB _B ]
-"16
-[; ;Encoder.c: 16:     pinMode(B,1);
-[e ( _pinMode (2 , -> _B `uc -> -> 1 `i `uc ]
-"17
-[; ;Encoder.c: 17:     pinMode(A,1);
-[e ( _pinMode (2 , -> _A `uc -> -> 1 `i `uc ]
-"18
-[; ;Encoder.c: 18: }
-[e :UE 95 ]
-}
-"20
-[; ;Encoder.c: 20: signed char EncoderRead(void)
-[v _EncoderRead `(c ~T0 @X0 1 ef ]
-"21
-[; ;Encoder.c: 21: {
-{
-[e :U _EncoderRead ]
-[f ]
-"22
-[; ;Encoder.c: 22:     static signed char previo,actual,incremento;
-[v F936 `c ~T0 @X0 1 s previo ]
-[v F937 `c ~T0 @X0 1 s actual ]
-[v F938 `c ~T0 @X0 1 s incremento ]
-"23
-[; ;Encoder.c: 23:     actual = ((digitalRead(pinA) & 0x01) << 1) & (digitalRead(pinB) & 0x02);
-[e = F937 -> & << & -> ( _digitalRead (1 -> _pinA `uc `i -> 1 `i -> 1 `i & -> ( _digitalRead (1 -> _pinB `uc `i -> 2 `i `c ]
+"22 PIDController.c
+[; ;PIDController.c: 22: }PID;
+[v _PID `S95 ~T0 @X0 1 e ]
 "24
-[; ;Encoder.c: 24:     incremento = EncoderMatrix[previo][actual];
-[e = F938 *U + &U *U + &U _EncoderMatrix * -> -> F936 `uc `ux -> * -> # *U &U *U &U _EncoderMatrix `ui -> -> 4 `i `ui `ux * -> -> F937 `uc `ux -> -> # *U &U *U + &U _EncoderMatrix * -> -> F936 `uc `ux -> * -> # *U &U *U &U _EncoderMatrix `ui -> -> 4 `i `ui `ux `ui `ux ]
+[; ;PIDController.c: 24: double map(double data, double X2, double X1, double Y2, double Y1)
+[v _map `(d ~T0 @X0 1 ef5`d`d`d`d`d ]
 "25
-[; ;Encoder.c: 25:     previo = actual;
-[e = F936 F937 ]
+[; ;PIDController.c: 25: {
+{
+[e :U _map ]
+"24
+[; ;PIDController.c: 24: double map(double data, double X2, double X1, double Y2, double Y1)
+[v _data `d ~T0 @X0 1 r1 ]
+[v _X2 `d ~T0 @X0 1 r2 ]
+[v _X1 `d ~T0 @X0 1 r3 ]
+[v _Y2 `d ~T0 @X0 1 r4 ]
+[v _Y1 `d ~T0 @X0 1 r5 ]
+"25
+[; ;PIDController.c: 25: {
+[f ]
 "26
-[; ;Encoder.c: 26:     return incremento;
-[e ) F938 ]
-[e $UE 96  ]
+[; ;PIDController.c: 26:     double m = (Y2 - Y1) / (X2 - X1);
+[v _m `d ~T0 @X0 1 a ]
+[e = _m / - _Y2 _Y1 - _X2 _X1 ]
 "27
-[; ;Encoder.c: 27: }
+[; ;PIDController.c: 27:     return (m * data) - (m * X1) + Y1;
+[e ) + - * _m _data * _m _X1 _Y1 ]
+[e $UE 96  ]
+"28
+[; ;PIDController.c: 28: }
 [e :UE 96 ]
+}
+"30
+[; ;PIDController.c: 30: void SetSampleTime(double Sample)
+[v _SetSampleTime `(v ~T0 @X0 1 ef1`d ]
+"31
+[; ;PIDController.c: 31: {
+{
+[e :U _SetSampleTime ]
+"30
+[; ;PIDController.c: 30: void SetSampleTime(double Sample)
+[v _Sample `d ~T0 @X0 1 r1 ]
+"31
+[; ;PIDController.c: 31: {
+[f ]
+"32
+[; ;PIDController.c: 32:     PID.SampleT = Sample;
+[e = . _PID 4 -> _Sample `uc ]
+"33
+[; ;PIDController.c: 33: }
+[e :UE 97 ]
+}
+"35
+[; ;PIDController.c: 35: void SetHWSampleTime(char dt)
+[v _SetHWSampleTime `(v ~T0 @X0 1 ef1`uc ]
+"36
+[; ;PIDController.c: 36: {
+{
+[e :U _SetHWSampleTime ]
+"35
+[; ;PIDController.c: 35: void SetHWSampleTime(char dt)
+[v _dt `uc ~T0 @X0 1 r1 ]
+"36
+[; ;PIDController.c: 36: {
+[f ]
+"37
+[; ;PIDController.c: 37:     OPTION_REG &= 0xD7;
+[e =& _OPTION_REG -> -> 215 `i `Vuc ]
+"38
+[; ;PIDController.c: 38:     TMR0IF = 0;
+[e = _TMR0IF -> -> 0 `i `b ]
+"39
+[; ;PIDController.c: 39:     TMR0 = 0xFF - dt;
+[e = _TMR0 -> - -> 255 `i -> _dt `i `uc ]
+"40
+[; ;PIDController.c: 40:     PID.HWdt = dt;
+[e = . _PID 3 -> _dt `d ]
+"41
+[; ;PIDController.c: 41: }
+[e :UE 98 ]
+}
+"43
+[; ;PIDController.c: 43: unsigned char HWDelay(void)
+[v _HWDelay `(uc ~T0 @X0 1 ef ]
+"44
+[; ;PIDController.c: 44: {
+{
+[e :U _HWDelay ]
+[f ]
+"45
+[; ;PIDController.c: 45:     TMR0IF = 0;
+[e = _TMR0IF -> -> 0 `i `b ]
+"46
+[; ;PIDController.c: 46:     TMR0 = 0xFF - PID.HWdt;
+[e = _TMR0 -> - -> -> 255 `i `d . _PID 3 `uc ]
+"47
+[; ;PIDController.c: 47:     while(!TMR0IF);
+[e $U 100  ]
+[e :U 101 ]
+[e :U 100 ]
+[e $ ! _TMR0IF 101  ]
+[e :U 102 ]
+"48
+[; ;PIDController.c: 48:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 99  ]
+"49
+[; ;PIDController.c: 49: }
+[e :UE 99 ]
+}
+"51
+[; ;PIDController.c: 51: void SetProportionalTune(double value)
+[v _SetProportionalTune `(v ~T0 @X0 1 ef1`d ]
+"52
+[; ;PIDController.c: 52: {
+{
+[e :U _SetProportionalTune ]
+"51
+[; ;PIDController.c: 51: void SetProportionalTune(double value)
+[v _value `d ~T0 @X0 1 r1 ]
+"52
+[; ;PIDController.c: 52: {
+[f ]
+"53
+[; ;PIDController.c: 53:     PID.Kp = value;
+[e = . _PID 0 _value ]
+"54
+[; ;PIDController.c: 54: }
+[e :UE 103 ]
+}
+"56
+[; ;PIDController.c: 56: void SetIntegralTune(double value)
+[v _SetIntegralTune `(v ~T0 @X0 1 ef1`d ]
+"57
+[; ;PIDController.c: 57: {
+{
+[e :U _SetIntegralTune ]
+"56
+[; ;PIDController.c: 56: void SetIntegralTune(double value)
+[v _value `d ~T0 @X0 1 r1 ]
+"57
+[; ;PIDController.c: 57: {
+[f ]
+"58
+[; ;PIDController.c: 58:     PID.Ki = value;
+[e = . _PID 1 _value ]
+"59
+[; ;PIDController.c: 59: }
+[e :UE 104 ]
+}
+"61
+[; ;PIDController.c: 61: void SetDerivativeTune(double value)
+[v _SetDerivativeTune `(v ~T0 @X0 1 ef1`d ]
+"62
+[; ;PIDController.c: 62: {
+{
+[e :U _SetDerivativeTune ]
+"61
+[; ;PIDController.c: 61: void SetDerivativeTune(double value)
+[v _value `d ~T0 @X0 1 r1 ]
+"62
+[; ;PIDController.c: 62: {
+[f ]
+"63
+[; ;PIDController.c: 63:     PID.Kd = value;
+[e = . _PID 2 _value ]
+"64
+[; ;PIDController.c: 64: }
+[e :UE 105 ]
+}
+"66
+[; ;PIDController.c: 66: double AccionControl(double SetPoint, double Feedback)
+[v _AccionControl `(d ~T0 @X0 1 ef2`d`d ]
+"67
+[; ;PIDController.c: 67: {
+{
+[e :U _AccionControl ]
+"66
+[; ;PIDController.c: 66: double AccionControl(double SetPoint, double Feedback)
+[v _SetPoint `d ~T0 @X0 1 r1 ]
+[v _Feedback `d ~T0 @X0 1 r2 ]
+"67
+[; ;PIDController.c: 67: {
+[f ]
+"68
+[; ;PIDController.c: 68:     PID.Error = SetPoint - Feedback;
+[e = . _PID 6 - _SetPoint _Feedback ]
+"69
+[; ;PIDController.c: 69:     PID.ErrorAcum += (PID.Error * PID.SampleT) ;
+[e =+ . _PID 8 * . _PID 6 -> -> . _PID 4 `i `d ]
+"70
+[; ;PIDController.c: 70:     PID.P = PID.Kp * PID.Error;
+[e = . _PID 11 * . _PID 0 . _PID 6 ]
+"71
+[; ;PIDController.c: 71:     PID.I = PID.Ki * PID.ErrorAcum;
+[e = . _PID 10 * . _PID 1 . _PID 8 ]
+"72
+[; ;PIDController.c: 72:     PID.D = PID.Kd * ((PID.Error - PID.LastError) / PID.SampleT);
+[e = . _PID 12 * . _PID 2 / - . _PID 6 . _PID 7 -> -> . _PID 4 `i `d ]
+"73
+[; ;PIDController.c: 73:     PID.AccionControl = PID.P + PID.I + PID.D;
+[e = . _PID 13 + + . _PID 11 . _PID 10 . _PID 12 ]
+"74
+[; ;PIDController.c: 74:     return PID.AccionControl;
+[e ) . _PID 13 ]
+[e $UE 106  ]
+"75
+[; ;PIDController.c: 75: }
+[e :UE 106 ]
+}
+"77
+[; ;PIDController.c: 77: unsigned int EventCounter(void)
+[v _EventCounter `(ui ~T0 @X0 1 ef ]
+"78
+[; ;PIDController.c: 78: {
+{
+[e :U _EventCounter ]
+[f ]
+"79
+[; ;PIDController.c: 79:     while(!TMR0IF);
+[e $U 108  ]
+[e :U 109 ]
+[e :U 108 ]
+[e $ ! _TMR0IF 109  ]
+[e :U 110 ]
+"80
+[; ;PIDController.c: 80:     TMR0IF = 0;
+[e = _TMR0IF -> -> 0 `i `b ]
+"81
+[; ;PIDController.c: 81:     TMR0 = 0xFF - PID.SampleT;
+[e = _TMR0 -> - -> 255 `i -> . _PID 4 `i `uc ]
+"82
+[; ;PIDController.c: 82:     PID.TotalEvents++;
+[e ++ . _PID 5 -> -> 1 `i `ui ]
+"83
+[; ;PIDController.c: 83:     return PID.TotalEvents;
+[e ) . _PID 5 ]
+[e $UE 107  ]
+"84
+[; ;PIDController.c: 84: }
+[e :UE 107 ]
+}
+"86
+[; ;PIDController.c: 86: void SetOutputRanges(double RangeMin, double RangMax)
+[v _SetOutputRanges `(v ~T0 @X0 1 ef2`d`d ]
+"87
+[; ;PIDController.c: 87: {
+{
+[e :U _SetOutputRanges ]
+"86
+[; ;PIDController.c: 86: void SetOutputRanges(double RangeMin, double RangMax)
+[v _RangeMin `d ~T0 @X0 1 r1 ]
+[v _RangMax `d ~T0 @X0 1 r2 ]
+"87
+[; ;PIDController.c: 87: {
+[f ]
+"89
+[; ;PIDController.c: 89: }
+[e :UE 111 ]
 }
