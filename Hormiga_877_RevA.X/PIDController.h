@@ -11,13 +11,14 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-void SetSampleTime(char dt);
+void SetSampleTime(double Sample);
 void SetProportionalTune(double value);
 void SetIntegralTune(double value);
 void SetDerivativeTune(double value);
 double AccionControl(double SetPoint, double Feedback);
 unsigned int EventCounter(void);
 double map(double data, double X2, double X1, double Y2, double Y1);
+void SetOutputRanges(double RangeMin, double RangMax);
 
 
 

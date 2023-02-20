@@ -13,6 +13,8 @@
 [v _sprintf sprintf `(i  1 e 2 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\flneg.c
 [v ___flneg __flneg `(d  1 e 4 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\lwmod.c
@@ -61,13 +63,13 @@
 [v _WriteData WriteData `(v  1 e 1 0 ]
 "124
 [v _ByteByNibble ByteByNibble `(v  1 e 1 0 ]
-"22 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
+"24 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
 [v _map map `(d  1 e 4 0 ]
-"29
+"30
 [v _SetSampleTime SetSampleTime `(v  1 e 1 0 ]
-"53
+"66
 [v _AccionControl AccionControl `(d  1 e 4 0 ]
-"64
+"77
 [v _EventCounter EventCounter `(ui  1 e 2 0 ]
 "6 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
 [v _RS RS `DCuc  1 e 1 0 ]
@@ -309,9 +311,9 @@
 [v _d6Pin d6Pin `uc  1 e 1 0 ]
 "16
 [v _d7Pin d7Pin `uc  1 e 1 0 ]
-[s S490 Controller 51 `d 1 Kp 4 0 `d 1 Ki 4 4 `d 1 Kd 4 8 `d 1 dtC 4 12 `uc 1 SampleT 1 16 `ui 1 TotalEvents 2 17 `d 1 Error 4 19 `d 1 LastError 4 23 `d 1 ErrorAcum 4 27 `d 1 LastInput 4 31 `d 1 I 4 35 `d 1 P 4 39 `d 1 D 4 43 `d 1 AccionControl 4 47 ]
-"20 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
-[v _PID PID `S490  1 e 51 0 ]
+[s S490 Controller 59 `d 1 Kp 4 0 `d 1 Ki 4 4 `d 1 Kd 4 8 `d 1 HWdt 4 12 `uc 1 SampleT 1 16 `ui 1 TotalEvents 2 17 `d 1 Error 4 19 `d 1 LastError 4 23 `d 1 ErrorAcum 4 27 `d 1 LastInput 4 31 `d 1 I 4 35 `d 1 P 4 39 `d 1 D 4 43 `d 1 AccionControl 4 47 `d 1 OutMin 4 51 `d 1 OutMax 4 55 ]
+"22 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
+[v _PID PID `S490  1 e 59 0 ]
 "3 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\Hormiga877.c
 [v _main main `(i  1 e 2 0 ]
 {
@@ -346,29 +348,21 @@
 [v pinMode@pin pin `uc  1 a 1 3 ]
 "165
 } 0
-"29 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
+"30 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
 [v _SetSampleTime SetSampleTime `(v  1 e 1 0 ]
 {
-[v SetSampleTime@dt dt `uc  1 a 1 wreg ]
-[v SetSampleTime@dt dt `uc  1 a 1 wreg ]
-"31
-[v SetSampleTime@dt dt `uc  1 a 1 30 ]
-"36
+[v SetSampleTime@Sample Sample `d  1 p 4 0 ]
+"33
 } 0
-"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
 {
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 10 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 9 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 0 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 8 ]
-"44
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 10 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 9 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 0 ]
+"70
 } 0
 "29 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\application.c
 [v _loop loop `(v  1 e 1 0 ]
@@ -420,18 +414,18 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"22 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
+"24 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
 [v _map map `(d  1 e 4 0 ]
 {
-"24
+"26
 [v map@m m `d  1 a 4 24 ]
-"22
+"24
 [v map@data data `d  1 p 4 0 ]
 [v map@X2 X2 `d  1 p 4 4 ]
 [v map@X1 X1 `d  1 p 4 8 ]
 [v map@Y2 Y2 `d  1 p 4 12 ]
 [v map@Y1 Y1 `d  1 p 4 16 ]
-"26
+"28
 } 0
 "45 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\LCD16x2.c
 [v _lcdSetCursor lcdSetCursor `(v  1 e 1 0 ]
@@ -520,17 +514,32 @@
 [v digitalWrite@pin pin `uc  1 a 1 3 ]
 "256
 } 0
-"64 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
+"77 C:\ProjectRepositories\HORMIGA_877\Hormiga_877_RevA.X\PIDController.c
 [v _EventCounter EventCounter `(ui  1 e 2 0 ]
 {
-"71
+"84
 } 0
-"53
+"66
 [v _AccionControl AccionControl `(d  1 e 4 0 ]
 {
 [v AccionControl@SetPoint SetPoint `d  1 p 4 0 ]
 [v AccionControl@Feedback Feedback `d  1 p 4 4 ]
-"62
+"75
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\flneg.c
 [v ___flneg __flneg `(d  1 e 4 0 ]
@@ -541,17 +550,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S918 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S928 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S923 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S926 . 4 `l 1 i 4 0 `d 1 f 4 0 `S918 1 fAsBytes 4 0 `S923 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S926  1 a 4 20 ]
+[s S933 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S936 . 4 `l 1 i 4 0 `d 1 f 4 0 `S928 1 fAsBytes 4 0 `S933 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S936  1 a 4 20 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 14 ]
-[s S995 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1005 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S998 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S995 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S998  1 a 2 24 ]
+[u S1008 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1005 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1008  1 a 2 24 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 19 ]
 "11

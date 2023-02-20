@@ -1947,13 +1947,14 @@ void TimerOneInterruptDisable(void);
 
 # 1 "./PIDController.h" 1
 # 14 "./PIDController.h"
-void SetSampleTime(char dt);
+void SetSampleTime(double Sample);
 void SetProportionalTune(double value);
 void SetIntegralTune(double value);
 void SetDerivativeTune(double value);
 double AccionControl(double SetPoint, double Feedback);
 unsigned int EventCounter(void);
 double map(double data, double X2, double X1, double Y2, double Y1);
+void SetOutputRanges(double RangeMin, double RangMax);
 # 3 "application.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c90\\stdio.h" 1 3

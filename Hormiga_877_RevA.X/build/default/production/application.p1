@@ -9,8 +9,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./LCD16x2.h: 31:     void lcdPrint(char *string);
 [v _lcdPrint `(v ~T0 @X0 0 ef1`*uc ]
 "14 ./PIDController.h
-[; ;./PIDController.h: 14: void SetSampleTime(char dt);
-[v _SetSampleTime `(v ~T0 @X0 0 ef1`uc ]
+[; ;./PIDController.h: 14: void SetSampleTime(double Sample);
+[v _SetSampleTime `(v ~T0 @X0 0 ef1`d ]
 "19
 [; ;./PIDController.h: 19: unsigned int EventCounter(void);
 [v _EventCounter `(ui ~T0 @X0 0 ef ]
@@ -325,7 +325,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _lcdPrint (1 :s 1C ]
 "25
 [; ;application.c: 25:     SetSampleTime(64);
-[e ( _SetSampleTime (1 -> -> 64 `i `uc ]
+[e ( _SetSampleTime (1 -> -> 64 `i `d ]
 "26
 [; ;application.c: 26: }
 [e :UE 96 ]

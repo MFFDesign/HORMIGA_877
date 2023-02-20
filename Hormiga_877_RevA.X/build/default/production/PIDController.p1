@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "5 PIDController.c
 [; ;PIDController.c: 5: struct Controller{
-[s S95 `d 1 `d 1 `d 1 `d 1 `uc 1 `ui 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 ]
-[n S95 Controller Kp Ki Kd dtC SampleT TotalEvents Error LastError ErrorAcum LastInput I P D AccionControl ]
+[s S95 `d 1 `d 1 `d 1 `d 1 `uc 1 `ui 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 ]
+[n S95 Controller Kp Ki Kd HWdt SampleT TotalEvents Error LastError ErrorAcum LastInput I P D AccionControl OutMin OutMax ]
 "1255 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h: 1255: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
 [v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
@@ -216,199 +216,263 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21
 [; ;./Hormiga877.h: 21: 
 [p x CP = OFF ]
-"20 PIDController.c
-[; ;PIDController.c: 20: }PID;
+"22 PIDController.c
+[; ;PIDController.c: 22: }PID;
 [v _PID `S95 ~T0 @X0 1 e ]
-"22
-[; ;PIDController.c: 22: double map(double data, double X2, double X1, double Y2, double Y1)
+"24
+[; ;PIDController.c: 24: double map(double data, double X2, double X1, double Y2, double Y1)
 [v _map `(d ~T0 @X0 1 ef5`d`d`d`d`d ]
-"23
-[; ;PIDController.c: 23: {
+"25
+[; ;PIDController.c: 25: {
 {
 [e :U _map ]
-"22
-[; ;PIDController.c: 22: double map(double data, double X2, double X1, double Y2, double Y1)
+"24
+[; ;PIDController.c: 24: double map(double data, double X2, double X1, double Y2, double Y1)
 [v _data `d ~T0 @X0 1 r1 ]
 [v _X2 `d ~T0 @X0 1 r2 ]
 [v _X1 `d ~T0 @X0 1 r3 ]
 [v _Y2 `d ~T0 @X0 1 r4 ]
 [v _Y1 `d ~T0 @X0 1 r5 ]
-"23
-[; ;PIDController.c: 23: {
+"25
+[; ;PIDController.c: 25: {
 [f ]
-"24
-[; ;PIDController.c: 24:     double m = (Y2 - Y1) / (X2 - X1);
+"26
+[; ;PIDController.c: 26:     double m = (Y2 - Y1) / (X2 - X1);
 [v _m `d ~T0 @X0 1 a ]
 [e = _m / - _Y2 _Y1 - _X2 _X1 ]
-"25
-[; ;PIDController.c: 25:     return (m * data) - (m * X1) + Y1;
+"27
+[; ;PIDController.c: 27:     return (m * data) - (m * X1) + Y1;
 [e ) + - * _m _data * _m _X1 _Y1 ]
 [e $UE 96  ]
-"26
-[; ;PIDController.c: 26: }
+"28
+[; ;PIDController.c: 28: }
 [e :UE 96 ]
 }
-"29
-[; ;PIDController.c: 29: void SetSampleTime(char dt)
-[v _SetSampleTime `(v ~T0 @X0 1 ef1`uc ]
 "30
-[; ;PIDController.c: 30: {
+[; ;PIDController.c: 30: void SetSampleTime(double Sample)
+[v _SetSampleTime `(v ~T0 @X0 1 ef1`d ]
+"31
+[; ;PIDController.c: 31: {
 {
 [e :U _SetSampleTime ]
-"29
-[; ;PIDController.c: 29: void SetSampleTime(char dt)
-[v _dt `uc ~T0 @X0 1 r1 ]
 "30
-[; ;PIDController.c: 30: {
-[f ]
+[; ;PIDController.c: 30: void SetSampleTime(double Sample)
+[v _Sample `d ~T0 @X0 1 r1 ]
 "31
-[; ;PIDController.c: 31:     OPTION_REG &= 0xD7;
-[e =& _OPTION_REG -> -> 215 `i `Vuc ]
+[; ;PIDController.c: 31: {
+[f ]
 "32
-[; ;PIDController.c: 32:     TMR0IF = 0;
-[e = _TMR0IF -> -> 0 `i `b ]
+[; ;PIDController.c: 32:     PID.SampleT = Sample;
+[e = . _PID 4 -> _Sample `uc ]
 "33
-[; ;PIDController.c: 33:     TMR0 = 0xFF - dt;
-[e = _TMR0 -> - -> 255 `i -> _dt `i `uc ]
-"34
-[; ;PIDController.c: 34:     PID.SampleT = dt;
-[e = . _PID 4 _dt ]
-"35
-[; ;PIDController.c: 35:     PID.dtC = PID.SampleT * 0.000051;
-[e = . _PID 3 * -> -> . _PID 4 `i `d .0.000051 ]
-"36
-[; ;PIDController.c: 36: }
+[; ;PIDController.c: 33: }
 [e :UE 97 ]
 }
-"38
-[; ;PIDController.c: 38: void SetProportionalTune(double value)
-[v _SetProportionalTune `(v ~T0 @X0 1 ef1`d ]
-"39
-[; ;PIDController.c: 39: {
+"35
+[; ;PIDController.c: 35: void SetHWSampleTime(char dt)
+[v _SetHWSampleTime `(v ~T0 @X0 1 ef1`uc ]
+"36
+[; ;PIDController.c: 36: {
 {
-[e :U _SetProportionalTune ]
-"38
-[; ;PIDController.c: 38: void SetProportionalTune(double value)
-[v _value `d ~T0 @X0 1 r1 ]
-"39
-[; ;PIDController.c: 39: {
+[e :U _SetHWSampleTime ]
+"35
+[; ;PIDController.c: 35: void SetHWSampleTime(char dt)
+[v _dt `uc ~T0 @X0 1 r1 ]
+"36
+[; ;PIDController.c: 36: {
 [f ]
+"37
+[; ;PIDController.c: 37:     OPTION_REG &= 0xD7;
+[e =& _OPTION_REG -> -> 215 `i `Vuc ]
+"38
+[; ;PIDController.c: 38:     TMR0IF = 0;
+[e = _TMR0IF -> -> 0 `i `b ]
+"39
+[; ;PIDController.c: 39:     TMR0 = 0xFF - dt;
+[e = _TMR0 -> - -> 255 `i -> _dt `i `uc ]
 "40
-[; ;PIDController.c: 40:     PID.Kp = value;
-[e = . _PID 0 _value ]
+[; ;PIDController.c: 40:     PID.HWdt = dt;
+[e = . _PID 3 -> _dt `d ]
 "41
 [; ;PIDController.c: 41: }
 [e :UE 98 ]
 }
 "43
-[; ;PIDController.c: 43: void SetIntegralTune(double value)
-[v _SetIntegralTune `(v ~T0 @X0 1 ef1`d ]
+[; ;PIDController.c: 43: unsigned char HWDelay(void)
+[v _HWDelay `(uc ~T0 @X0 1 ef ]
 "44
 [; ;PIDController.c: 44: {
 {
-[e :U _SetIntegralTune ]
-"43
-[; ;PIDController.c: 43: void SetIntegralTune(double value)
-[v _value `d ~T0 @X0 1 r1 ]
-"44
-[; ;PIDController.c: 44: {
+[e :U _HWDelay ]
 [f ]
 "45
-[; ;PIDController.c: 45:     PID.Ki = value;
-[e = . _PID 1 _value ]
+[; ;PIDController.c: 45:     TMR0IF = 0;
+[e = _TMR0IF -> -> 0 `i `b ]
 "46
-[; ;PIDController.c: 46: }
+[; ;PIDController.c: 46:     TMR0 = 0xFF - PID.HWdt;
+[e = _TMR0 -> - -> -> 255 `i `d . _PID 3 `uc ]
+"47
+[; ;PIDController.c: 47:     while(!TMR0IF);
+[e $U 100  ]
+[e :U 101 ]
+[e :U 100 ]
+[e $ ! _TMR0IF 101  ]
+[e :U 102 ]
+"48
+[; ;PIDController.c: 48:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 99  ]
+"49
+[; ;PIDController.c: 49: }
 [e :UE 99 ]
 }
-"48
-[; ;PIDController.c: 48: void SetDerivativeTune(double value)
+"51
+[; ;PIDController.c: 51: void SetProportionalTune(double value)
+[v _SetProportionalTune `(v ~T0 @X0 1 ef1`d ]
+"52
+[; ;PIDController.c: 52: {
+{
+[e :U _SetProportionalTune ]
+"51
+[; ;PIDController.c: 51: void SetProportionalTune(double value)
+[v _value `d ~T0 @X0 1 r1 ]
+"52
+[; ;PIDController.c: 52: {
+[f ]
+"53
+[; ;PIDController.c: 53:     PID.Kp = value;
+[e = . _PID 0 _value ]
+"54
+[; ;PIDController.c: 54: }
+[e :UE 103 ]
+}
+"56
+[; ;PIDController.c: 56: void SetIntegralTune(double value)
+[v _SetIntegralTune `(v ~T0 @X0 1 ef1`d ]
+"57
+[; ;PIDController.c: 57: {
+{
+[e :U _SetIntegralTune ]
+"56
+[; ;PIDController.c: 56: void SetIntegralTune(double value)
+[v _value `d ~T0 @X0 1 r1 ]
+"57
+[; ;PIDController.c: 57: {
+[f ]
+"58
+[; ;PIDController.c: 58:     PID.Ki = value;
+[e = . _PID 1 _value ]
+"59
+[; ;PIDController.c: 59: }
+[e :UE 104 ]
+}
+"61
+[; ;PIDController.c: 61: void SetDerivativeTune(double value)
 [v _SetDerivativeTune `(v ~T0 @X0 1 ef1`d ]
-"49
-[; ;PIDController.c: 49: {
+"62
+[; ;PIDController.c: 62: {
 {
 [e :U _SetDerivativeTune ]
-"48
-[; ;PIDController.c: 48: void SetDerivativeTune(double value)
+"61
+[; ;PIDController.c: 61: void SetDerivativeTune(double value)
 [v _value `d ~T0 @X0 1 r1 ]
-"49
-[; ;PIDController.c: 49: {
+"62
+[; ;PIDController.c: 62: {
 [f ]
-"50
-[; ;PIDController.c: 50:     PID.Kd = value;
+"63
+[; ;PIDController.c: 63:     PID.Kd = value;
 [e = . _PID 2 _value ]
-"51
-[; ;PIDController.c: 51: }
-[e :UE 100 ]
+"64
+[; ;PIDController.c: 64: }
+[e :UE 105 ]
 }
-"53
-[; ;PIDController.c: 53: double AccionControl(double SetPoint, double Feedback)
+"66
+[; ;PIDController.c: 66: double AccionControl(double SetPoint, double Feedback)
 [v _AccionControl `(d ~T0 @X0 1 ef2`d`d ]
-"54
-[; ;PIDController.c: 54: {
+"67
+[; ;PIDController.c: 67: {
 {
 [e :U _AccionControl ]
-"53
-[; ;PIDController.c: 53: double AccionControl(double SetPoint, double Feedback)
+"66
+[; ;PIDController.c: 66: double AccionControl(double SetPoint, double Feedback)
 [v _SetPoint `d ~T0 @X0 1 r1 ]
 [v _Feedback `d ~T0 @X0 1 r2 ]
-"54
-[; ;PIDController.c: 54: {
+"67
+[; ;PIDController.c: 67: {
 [f ]
-"55
-[; ;PIDController.c: 55:     PID.Error = SetPoint - Feedback;
+"68
+[; ;PIDController.c: 68:     PID.Error = SetPoint - Feedback;
 [e = . _PID 6 - _SetPoint _Feedback ]
-"56
-[; ;PIDController.c: 56:     PID.ErrorAcum += (PID.Error * PID.dtC) ;
-[e =+ . _PID 8 * . _PID 6 . _PID 3 ]
-"57
-[; ;PIDController.c: 57:     PID.P = PID.Kp * PID.Error;
+"69
+[; ;PIDController.c: 69:     PID.ErrorAcum += (PID.Error * PID.SampleT) ;
+[e =+ . _PID 8 * . _PID 6 -> -> . _PID 4 `i `d ]
+"70
+[; ;PIDController.c: 70:     PID.P = PID.Kp * PID.Error;
 [e = . _PID 11 * . _PID 0 . _PID 6 ]
-"58
-[; ;PIDController.c: 58:     PID.I = PID.Ki * PID.ErrorAcum;
+"71
+[; ;PIDController.c: 71:     PID.I = PID.Ki * PID.ErrorAcum;
 [e = . _PID 10 * . _PID 1 . _PID 8 ]
-"59
-[; ;PIDController.c: 59:     PID.D = PID.Kd * ((PID.Error - PID.LastError) / PID.dtC);
-[e = . _PID 12 * . _PID 2 / - . _PID 6 . _PID 7 . _PID 3 ]
-"60
-[; ;PIDController.c: 60:     PID.AccionControl = PID.P + PID.I + PID.D;
+"72
+[; ;PIDController.c: 72:     PID.D = PID.Kd * ((PID.Error - PID.LastError) / PID.SampleT);
+[e = . _PID 12 * . _PID 2 / - . _PID 6 . _PID 7 -> -> . _PID 4 `i `d ]
+"73
+[; ;PIDController.c: 73:     PID.AccionControl = PID.P + PID.I + PID.D;
 [e = . _PID 13 + + . _PID 11 . _PID 10 . _PID 12 ]
-"61
-[; ;PIDController.c: 61:     return PID.AccionControl;
+"74
+[; ;PIDController.c: 74:     return PID.AccionControl;
 [e ) . _PID 13 ]
-[e $UE 101  ]
-"62
-[; ;PIDController.c: 62: }
-[e :UE 101 ]
+[e $UE 106  ]
+"75
+[; ;PIDController.c: 75: }
+[e :UE 106 ]
 }
-"64
-[; ;PIDController.c: 64: unsigned int EventCounter(void)
+"77
+[; ;PIDController.c: 77: unsigned int EventCounter(void)
 [v _EventCounter `(ui ~T0 @X0 1 ef ]
-"65
-[; ;PIDController.c: 65: {
+"78
+[; ;PIDController.c: 78: {
 {
 [e :U _EventCounter ]
 [f ]
-"66
-[; ;PIDController.c: 66:     while(!TMR0IF);
-[e $U 103  ]
-[e :U 104 ]
-[e :U 103 ]
-[e $ ! _TMR0IF 104  ]
-[e :U 105 ]
-"67
-[; ;PIDController.c: 67:     TMR0IF = 0;
+"79
+[; ;PIDController.c: 79:     while(!TMR0IF);
+[e $U 108  ]
+[e :U 109 ]
+[e :U 108 ]
+[e $ ! _TMR0IF 109  ]
+[e :U 110 ]
+"80
+[; ;PIDController.c: 80:     TMR0IF = 0;
 [e = _TMR0IF -> -> 0 `i `b ]
-"68
-[; ;PIDController.c: 68:     TMR0 = 0xFF - PID.SampleT;
+"81
+[; ;PIDController.c: 81:     TMR0 = 0xFF - PID.SampleT;
 [e = _TMR0 -> - -> 255 `i -> . _PID 4 `i `uc ]
-"69
-[; ;PIDController.c: 69:     PID.TotalEvents++;
+"82
+[; ;PIDController.c: 82:     PID.TotalEvents++;
 [e ++ . _PID 5 -> -> 1 `i `ui ]
-"70
-[; ;PIDController.c: 70:     return PID.TotalEvents;
+"83
+[; ;PIDController.c: 83:     return PID.TotalEvents;
 [e ) . _PID 5 ]
-[e $UE 102  ]
-"71
-[; ;PIDController.c: 71: }
-[e :UE 102 ]
+[e $UE 107  ]
+"84
+[; ;PIDController.c: 84: }
+[e :UE 107 ]
+}
+"86
+[; ;PIDController.c: 86: void SetOutputRanges(double RangeMin, double RangMax)
+[v _SetOutputRanges `(v ~T0 @X0 1 ef2`d`d ]
+"87
+[; ;PIDController.c: 87: {
+{
+[e :U _SetOutputRanges ]
+"86
+[; ;PIDController.c: 86: void SetOutputRanges(double RangeMin, double RangMax)
+[v _RangeMin `d ~T0 @X0 1 r1 ]
+[v _RangMax `d ~T0 @X0 1 r2 ]
+"87
+[; ;PIDController.c: 87: {
+[f ]
+"89
+[; ;PIDController.c: 89: }
+[e :UE 111 ]
 }
