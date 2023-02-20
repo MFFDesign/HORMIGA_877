@@ -17,6 +17,8 @@ struct Controller{
     double P;
     double D;
     double AccionControl;
+    double OutMin;
+    double OutMax;
 }PID;
 
 double map(double data, double X2, double X1, double Y2, double Y1)
@@ -79,4 +81,9 @@ unsigned int EventCounter(void)
     TMR0 = 0xFF - PID.SampleT;
     PID.TotalEvents++;
     return PID.TotalEvents;
+}
+
+void SetOutputRanges(double RangeMin, double RangMax)
+{
+    
 }
