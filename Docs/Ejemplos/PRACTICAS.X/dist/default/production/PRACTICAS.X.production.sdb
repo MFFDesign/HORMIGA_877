@@ -1,0 +1,448 @@
+[p LITE_MODE AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"7 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\PRACTICAS.c
+[e E952 Practicas `uc
+PracticaCuatro 0
+PracticaCinco 1
+PracticaSeis 2
+]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"3 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\Hormiga877.c
+[v _main main `(i  1 e 2 0 ]
+"14
+[v _Initialization Initialization `(v  1 e 1 0 ]
+"43
+[v _PWMConfiguration PWMConfiguration `(v  1 e 1 0 ]
+"57
+[v _pinMode pinMode `(v  1 e 1 0 ]
+"163
+[v _digitalWrite digitalWrite `(v  1 e 1 0 ]
+"422
+[v _PBRead PBRead `(uc  1 e 1 0 ]
+"523
+[v _SerialWrite SerialWrite `(v  1 e 1 0 ]
+"558
+[v _SerialRead SerialRead `(uc  1 e 1 0 ]
+"573
+[v _delay delay `(v  1 e 1 0 ]
+"18 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\LCD16x2.c
+[v _lcdBegin lcdBegin `(v  1 e 1 0 ]
+"41
+[v _lcdClear lcdClear `(v  1 e 1 0 ]
+"45
+[v _lcdSetCursor lcdSetCursor `(v  1 e 1 0 ]
+"63
+[v _lcdWrite lcdWrite `(v  1 e 1 0 ]
+"69
+[v _lcdPrint lcdPrint `(v  1 e 1 0 ]
+"78
+[v _WriteInstruction WriteInstruction `(v  1 e 1 0 ]
+"101
+[v _WriteData WriteData `(v  1 e 1 0 ]
+"124
+[v _ByteByNibble ByteByNibble `(v  1 e 1 0 ]
+"6 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\PracticaCuatro.c
+[v _PracticaIV PracticaIV `(v  1 e 1 0 ]
+"35
+[v _Movimiento Movimiento `(v  1 e 1 0 ]
+"20 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\PRACTICAS.c
+[v _setup setup `(v  1 e 1 0 ]
+"36
+[v _loop loop `(v  1 e 1 0 ]
+[s S189 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"181 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
+[u S196 . 1 `S189 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES196  1 e 1 @5 ]
+[s S147 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"233
+[u S156 . 1 `S147 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES156  1 e 1 @6 ]
+[s S126 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"295
+[u S135 . 1 `S126 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES135  1 e 1 @7 ]
+[s S168 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"357
+[u S177 . 1 `S168 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES177  1 e 1 @8 ]
+"402
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+[s S260 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+]
+"414
+[u S264 . 1 `S260 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES264  1 e 1 @9 ]
+"737
+[v _T2CON T2CON `VEuc  1 e 1 @18 ]
+"892
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+"906
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @23 ]
+"1059
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1066
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1080
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @27 ]
+"1094
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @29 ]
+"1152
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1159
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+[s S206 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 GO_nDONE 1 0 :1:2 
+`uc 1 CHS 1 0 :3:3 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1190
+[s S212 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO 1 0 :1:2 
+`uc 1 CHS0 1 0 :1:3 
+`uc 1 CHS1 1 0 :1:4 
+`uc 1 CHS2 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S220 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nDONE 1 0 :1:2 
+]
+[s S223 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO_DONE 1 0 :1:2 
+]
+[u S226 . 1 `S206 1 . 1 0 `S212 1 . 1 0 `S220 1 . 1 0 `S223 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES226  1 e 1 @31 ]
+[s S109 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1340
+[u S116 . 1 `S109 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES116  1 e 1 @133 ]
+[s S67 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1392
+[u S76 . 1 `S67 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES76  1 e 1 @134 ]
+[s S46 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1454
+[u S55 . 1 `S46 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES55  1 e 1 @135 ]
+[s S88 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1516
+[u S97 . 1 `S88 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES97  1 e 1 @136 ]
+"1561
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"1816
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"2080
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2222
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"2229
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2416
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
+"2452
+[v _CCP1X CCP1X `VEb  1 e 0 @189 ]
+"2455
+[v _CCP1Y CCP1Y `VEb  1 e 0 @188 ]
+"2476
+[v _CCP2X CCP2X `VEb  1 e 0 @237 ]
+"2479
+[v _CCP2Y CCP2Y `VEb  1 e 0 @236 ]
+"2515
+[v _CREN CREN `VEb  1 e 0 @196 ]
+"2563
+[v _FERR FERR `VEb  1 e 0 @194 ]
+"2614
+[v _OERR OERR `VEb  1 e 0 @193 ]
+"2743
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"2812
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"2842
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"2977
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"2980
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"3016
+[v _TRMT TRMT `VEb  1 e 0 @1217 ]
+"3031
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"3037
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
+"10 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\LCD16x2.c
+[v _RSPin RSPin `uc  1 e 1 0 ]
+"11
+[v _ENPin ENPin `uc  1 e 1 0 ]
+"12
+[v _RWPin RWPin `uc  1 e 1 0 ]
+"13
+[v _d4Pin d4Pin `uc  1 e 1 0 ]
+"14
+[v _d5Pin d5Pin `uc  1 e 1 0 ]
+"15
+[v _d6Pin d6Pin `uc  1 e 1 0 ]
+"16
+[v _d7Pin d7Pin `uc  1 e 1 0 ]
+"7 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\PRACTICAS.c
+[v _Practica Practica `E952  1 e 1 0 ]
+"8
+[v _MenuA MenuA `uc  1 e 1 0 ]
+"11
+[v _RS RS `DCuc  1 e 1 0 ]
+"12
+[v _En En `DCuc  1 e 1 0 ]
+"13
+[v _RnW RnW `DCuc  1 e 1 0 ]
+"14
+[v _D4 D4 `DCuc  1 e 1 0 ]
+"15
+[v _D5 D5 `DCuc  1 e 1 0 ]
+"16
+[v _D6 D6 `DCuc  1 e 1 0 ]
+"17
+[v _D7 D7 `DCuc  1 e 1 0 ]
+"3 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\Hormiga877.c
+[v _main main `(i  1 e 2 0 ]
+{
+"12
+} 0
+"20 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\PRACTICAS.c
+[v _setup setup `(v  1 e 1 0 ]
+{
+"28
+[v setup@i i `uc  1 a 1 12 ]
+"34
+} 0
+"18 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\LCD16x2.c
+[v _lcdBegin lcdBegin `(v  1 e 1 0 ]
+{
+[v lcdBegin@RS RS `uc  1 a 1 wreg ]
+[v lcdBegin@RS RS `uc  1 a 1 wreg ]
+[v lcdBegin@EN EN `uc  1 p 1 0 ]
+[v lcdBegin@R_W R_W `uc  1 p 1 1 ]
+[v lcdBegin@d4 d4 `uc  1 p 1 2 ]
+[v lcdBegin@d5 d5 `uc  1 p 1 3 ]
+[v lcdBegin@d6 d6 `uc  1 p 1 4 ]
+[v lcdBegin@d7 d7 `uc  1 p 1 5 ]
+"20
+[v lcdBegin@RS RS `uc  1 a 1 13 ]
+"40
+} 0
+"57 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\Hormiga877.c
+[v _pinMode pinMode `(v  1 e 1 0 ]
+{
+[v pinMode@pin pin `uc  1 a 1 wreg ]
+[v pinMode@pin pin `uc  1 a 1 wreg ]
+[v pinMode@mode mode `uc  1 p 1 0 ]
+[v pinMode@pin pin `uc  1 a 1 3 ]
+"162
+} 0
+"36 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\PRACTICAS.c
+[v _loop loop `(v  1 e 1 0 ]
+{
+"108
+} 0
+"6 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\PracticaCuatro.c
+[v _PracticaIV PracticaIV `(v  1 e 1 0 ]
+{
+"8
+[v PracticaIV@MenuB MenuB `uc  1 a 1 3 ]
+"32
+} 0
+"45 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\LCD16x2.c
+[v _lcdSetCursor lcdSetCursor `(v  1 e 1 0 ]
+{
+[v lcdSetCursor@row row `uc  1 a 1 wreg ]
+"47
+[v lcdSetCursor@location location `uc  1 a 1 1 ]
+"45
+[v lcdSetCursor@row row `uc  1 a 1 wreg ]
+[v lcdSetCursor@column column `uc  1 p 1 12 ]
+"47
+[v lcdSetCursor@row row `uc  1 a 1 0 ]
+"62
+} 0
+"69
+[v _lcdPrint lcdPrint `(v  1 e 1 0 ]
+{
+[v lcdPrint@string string `*.24uc  1 a 1 wreg ]
+"71
+[v lcdPrint@i i `i  1 a 2 0 ]
+"69
+[v lcdPrint@string string `*.24uc  1 a 1 wreg ]
+"71
+[v lcdPrint@string string `*.24uc  1 a 1 2 ]
+"75
+} 0
+"63
+[v _lcdWrite lcdWrite `(v  1 e 1 0 ]
+{
+[v lcdWrite@data data `uc  1 a 1 wreg ]
+[v lcdWrite@data data `uc  1 a 1 wreg ]
+"65
+[v lcdWrite@data data `uc  1 a 1 12 ]
+"67
+} 0
+"101
+[v _WriteData WriteData `(v  1 e 1 0 ]
+{
+[v WriteData@data data `uc  1 a 1 wreg ]
+"103
+[v WriteData@MSNibble MSNibble `uc  1 a 1 11 ]
+"104
+[v WriteData@LSNibble LSNibble `uc  1 a 1 9 ]
+"101
+[v WriteData@data data `uc  1 a 1 wreg ]
+"103
+[v WriteData@data data `uc  1 a 1 10 ]
+"122
+} 0
+"41
+[v _lcdClear lcdClear `(v  1 e 1 0 ]
+{
+"44
+} 0
+"78
+[v _WriteInstruction WriteInstruction `(v  1 e 1 0 ]
+{
+[v WriteInstruction@instruction instruction `uc  1 a 1 wreg ]
+"80
+[v WriteInstruction@MSNibble MSNibble `uc  1 a 1 11 ]
+"81
+[v WriteInstruction@LSNibble LSNibble `uc  1 a 1 9 ]
+"78
+[v WriteInstruction@instruction instruction `uc  1 a 1 wreg ]
+"80
+[v WriteInstruction@instruction instruction `uc  1 a 1 10 ]
+"99
+} 0
+"124
+[v _ByteByNibble ByteByNibble `(v  1 e 1 0 ]
+{
+[v ByteByNibble@NibbleValue NibbleValue `uc  1 a 1 wreg ]
+[v ByteByNibble@NibbleValue NibbleValue `uc  1 a 1 wreg ]
+[v ByteByNibble@NibbleValue NibbleValue `uc  1 a 1 6 ]
+"225
+} 0
+"163 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\Hormiga877.c
+[v _digitalWrite digitalWrite `(v  1 e 1 0 ]
+{
+[v digitalWrite@pin pin `uc  1 a 1 wreg ]
+[v digitalWrite@pin pin `uc  1 a 1 wreg ]
+[v digitalWrite@value value `uc  1 p 1 0 ]
+[v digitalWrite@pin pin `uc  1 a 1 3 ]
+"253
+} 0
+"422
+[v _PBRead PBRead `(uc  1 e 1 0 ]
+{
+[v PBRead@pin pin `uc  1 a 1 wreg ]
+[v PBRead@pin pin `uc  1 a 1 wreg ]
+[v PBRead@pin pin `uc  1 a 1 9 ]
+"460
+} 0
+"573
+[v _delay delay `(v  1 e 1 0 ]
+{
+"578
+[v delay@i i `i  1 a 2 5 ]
+"575
+[v delay@j j `i  1 a 2 3 ]
+"573
+[v delay@milis milis `DCi  1 p 2 0 ]
+"583
+} 0
+"35 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\PracticaCuatro.c
+[v _Movimiento Movimiento `(v  1 e 1 0 ]
+{
+[v Movimiento@Mode Mode `uc  1 a 1 wreg ]
+[v Movimiento@Mode Mode `uc  1 a 1 wreg ]
+[v Movimiento@Mode Mode `uc  1 a 1 2 ]
+"49
+} 0
+"14 C:\Users\ToncheLAP\Desktop\PRACTICAS.X\Hormiga877.c
+[v _Initialization Initialization `(v  1 e 1 0 ]
+{
+"41
+} 0
+"43
+[v _PWMConfiguration PWMConfiguration `(v  1 e 1 0 ]
+{
+"49
+} 0

@@ -1,0 +1,543 @@
+[p LITE_MODE AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"14 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\Application.c
+[v _setup setup `(v  1 e 1 0 ]
+"36
+[v _loop loop `(v  1 e 1 0 ]
+"47
+[v _ISR ISR `II(v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"500 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"63 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\LCD16x2.c
+[v _lcdWrite lcdWrite `(v  1 e 1 0 ]
+"124
+[v _WriteInstruction WriteInstruction `(v  1 e 1 0 ]
+"147
+[v _WriteData WriteData `(v  1 e 1 0 ]
+"170
+[v _ByteByNibble ByteByNibble `(v  1 e 1 0 ]
+"7 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\source.c
+[v _main main `(i  1 e 2 0 ]
+"18
+[v _Initialization Initialization `(v  1 e 1 0 ]
+"43
+[v _PWMConfiguration PWMConfiguration `(v  1 e 1 0 ]
+"57
+[v _pinMode pinMode `(v  1 e 1 0 ]
+"222
+[v _digitalWrite digitalWrite `(v  1 e 1 0 ]
+"568
+[v _SerialBegin SerialBegin `(uc  1 e 1 0 ]
+"640
+[v _SerialWrite SerialWrite `(v  1 e 1 0 ]
+"661
+[v _SerialPrintLn SerialPrintLn `(v  1 e 1 0 ]
+"675
+[v _SerialRead SerialRead `(uc  1 e 1 0 ]
+"716
+[v _I2CMasterWaiting I2CMasterWaiting `(v  1 e 1 0 ]
+"755
+[v _delay delay `(v  1 e 1 0 ]
+"5 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\Application.c
+[v _data data `[30]uc  1 e 30 0 ]
+"6
+[v _buffer buffer `ui  1 e 2 0 ]
+"7
+[v _New New `VEui  1 e 2 0 ]
+"8
+[v _Last Last `VEui  1 e 2 0 ]
+"9
+[v _Period Period `VEf  1 e 4 0 ]
+"10
+[v _Decenas Decenas `ui  1 e 2 0 ]
+"11
+[v _Unidades Unidades `uc  1 e 1 0 ]
+"12
+[v _RPMs RPMs `ui  1 e 2 0 ]
+[s S270 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"181 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f877a.h
+[u S277 . 1 `S270 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES277  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S228 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"233
+[u S237 . 1 `S228 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES237  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S207 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"295
+[u S216 . 1 `S207 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES216  1 e 1 @7 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S249 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"357
+[u S258 . 1 `S249 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES258  1 e 1 @8 ]
+"402
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+[s S344 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+]
+"414
+[u S348 . 1 `S344 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES348  1 e 1 @9 ]
+"634
+[v _TMR1 TMR1 `VEus  1 e 2 @14 ]
+"737
+[v _T2CON T2CON `VEuc  1 e 1 @18 ]
+"808
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"815
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+"892
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+"906
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @23 ]
+"1059
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1066
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1080
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @27 ]
+"1087
+[v _CCPR2H CCPR2H `VEuc  1 e 1 @28 ]
+"1094
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @29 ]
+"1152
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1159
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+[s S290 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 GO_nDONE 1 0 :1:2 
+`uc 1 CHS 1 0 :3:3 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1190
+[s S296 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO 1 0 :1:2 
+`uc 1 CHS0 1 0 :1:3 
+`uc 1 CHS1 1 0 :1:4 
+`uc 1 CHS2 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S304 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nDONE 1 0 :1:2 
+]
+[s S307 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO_DONE 1 0 :1:2 
+]
+[u S310 . 1 `S290 1 . 1 0 `S296 1 . 1 0 `S304 1 . 1 0 `S307 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES310  1 e 1 @31 ]
+[s S187 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1340
+[u S194 . 1 `S187 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES194  1 e 1 @133 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+[s S145 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1392
+[u S154 . 1 `S145 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES154  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+[s S124 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1454
+[u S133 . 1 `S124 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES133  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+[s S166 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1516
+[u S175 . 1 `S166 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES175  1 e 1 @136 ]
+"1561
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"1754
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+"1816
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"1823
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"1830
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+"2080
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2222
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"2229
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2374
+[v _ACKDT ACKDT `VEb  1 e 0 @1165 ]
+"2377
+[v _ACKEN ACKEN `VEb  1 e 0 @1164 ]
+"2416
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
+"2452
+[v _CCP1X CCP1X `VEb  1 e 0 @189 ]
+"2455
+[v _CCP1Y CCP1Y `VEb  1 e 0 @188 ]
+"2458
+[v _CCP2IE CCP2IE `VEb  1 e 0 @1128 ]
+"2461
+[v _CCP2IF CCP2IF `VEb  1 e 0 @104 ]
+"2464
+[v _CCP2M0 CCP2M0 `VEb  1 e 0 @232 ]
+"2467
+[v _CCP2M1 CCP2M1 `VEb  1 e 0 @233 ]
+"2470
+[v _CCP2M2 CCP2M2 `VEb  1 e 0 @234 ]
+"2473
+[v _CCP2M3 CCP2M3 `VEb  1 e 0 @235 ]
+"2476
+[v _CCP2X CCP2X `VEb  1 e 0 @237 ]
+"2479
+[v _CCP2Y CCP2Y `VEb  1 e 0 @236 ]
+"2515
+[v _CREN CREN `VEb  1 e 0 @196 ]
+"2563
+[v _FERR FERR `VEb  1 e 0 @194 ]
+"2569
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2614
+[v _OERR OERR `VEb  1 e 0 @193 ]
+"2629
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"2632
+[v _PEN PEN `VEb  1 e 0 @1162 ]
+"2737
+[v _RCEN RCEN `VEb  1 e 0 @1163 ]
+"2743
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"2791
+[v _RSEN RSEN `VEb  1 e 0 @1161 ]
+"2806
+[v _SEN SEN `VEb  1 e 0 @1160 ]
+"2812
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"2821
+[v _SSPIE SSPIE `VEb  1 e 0 @1123 ]
+"2824
+[v _SSPIF SSPIF `VEb  1 e 0 @99 ]
+"2842
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"2857
+[v _T1CKPS0 T1CKPS0 `VEb  1 e 0 @132 ]
+"2860
+[v _T1CKPS1 T1CKPS1 `VEb  1 e 0 @133 ]
+"2884
+[v _TMR1CS TMR1CS `VEb  1 e 0 @129 ]
+"2893
+[v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
+"2962
+[v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
+"2968
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
+"2971
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
+"2977
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"2980
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"3016
+[v _TRMT TRMT `VEb  1 e 0 @1217 ]
+"3031
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"3037
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
+"358 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
+[v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
+"10 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\LCD16x2.c
+[v _RSPin RSPin `i  1 e 2 0 ]
+"11
+[v _ENPin ENPin `i  1 e 2 0 ]
+"12
+[v _RWPin RWPin `i  1 e 2 0 ]
+"13
+[v _d4Pin d4Pin `i  1 e 2 0 ]
+"14
+[v _d5Pin d5Pin `i  1 e 2 0 ]
+"15
+[v _d6Pin d6Pin `i  1 e 2 0 ]
+"16
+[v _d7Pin d7Pin `i  1 e 2 0 ]
+"7 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\source.c
+[v _main main `(i  1 e 2 0 ]
+{
+"16
+} 0
+"14 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\Application.c
+[v _setup setup `(v  1 e 1 0 ]
+{
+"34
+} 0
+"568 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\source.c
+[v _SerialBegin SerialBegin `(uc  1 e 1 0 ]
+{
+"573
+[v SerialBegin@x x `ui  1 a 2 27 ]
+"568
+[v SerialBegin@BaudRate BaudRate `DCl  1 p 4 19 ]
+"604
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 15 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 14 ]
+[v ___aldiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 4 ]
+[v ___aldiv@dividend dividend `l  1 p 4 8 ]
+"41
+} 0
+"36 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\Application.c
+[v _loop loop `(v  1 e 1 0 ]
+{
+"45
+} 0
+"500 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"540
+[v sprintf@val val `ui  1 a 2 30 ]
+"507
+[v sprintf@c c `uc  1 a 1 34 ]
+"516
+[v sprintf@prec prec `c  1 a 1 32 ]
+"502
+[v sprintf@ap ap `[1]*.4v  1 a 1 29 ]
+"520
+[v sprintf@flag flag `uc  1 a 1 28 ]
+"500
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.24DCuc  1 p 1 18 ]
+"545
+[v sprintf@sp sp `*.4uc  1 a 1 33 ]
+"1560
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 17 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 12 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 14 ]
+"25
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 9 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 11 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 4 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 6 ]
+"30
+} 0
+"755 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\source.c
+[v _delay delay `(v  1 e 1 0 ]
+{
+"760
+[v delay@i i `i  1 a 2 9 ]
+"757
+[v delay@j j `i  1 a 2 7 ]
+"755
+[v delay@milis milis `DCi  1 p 2 4 ]
+"765
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 40 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 39 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 30 ]
+"70
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 24 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 17 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 22 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 29 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 28 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 21 ]
+"8
+[v ___fldiv@a a `d  1 p 4 4 ]
+[v ___fldiv@b b `d  1 p 4 8 ]
+"185
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 6 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 4 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 7 ]
+"51
+} 0
+"661 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\source.c
+[v _SerialPrintLn SerialPrintLn `(v  1 e 1 0 ]
+{
+[v SerialPrintLn@dataText dataText `*.4uc  1 a 1 wreg ]
+"663
+[v SerialPrintLn@i i `ui  1 a 2 6 ]
+"661
+[v SerialPrintLn@dataText dataText `*.4uc  1 a 1 wreg ]
+"664
+[v SerialPrintLn@dataText dataText `*.4uc  1 a 1 8 ]
+"669
+} 0
+"640
+[v _SerialWrite SerialWrite `(v  1 e 1 0 ]
+{
+[v SerialWrite@dataWrite dataWrite `uc  1 a 1 wreg ]
+[v SerialWrite@dataWrite dataWrite `uc  1 a 1 wreg ]
+[v SerialWrite@dataWrite dataWrite `uc  1 a 1 4 ]
+"644
+} 0
+"18
+[v _Initialization Initialization `(v  1 e 1 0 ]
+{
+"42
+} 0
+"43
+[v _PWMConfiguration PWMConfiguration `(v  1 e 1 0 ]
+{
+"49
+} 0
+"47 C:\Users\ToncheLAP\Desktop\TACHOMETER.X\Application.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"57
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0

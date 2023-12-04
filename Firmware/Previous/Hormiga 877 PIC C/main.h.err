@@ -1,0 +1,4 @@
+>>> Warning 203 "C:\Users\MikyDesktop\Google Drive\PC Escritorio\PIC16F877A\Hormiga877.h" Line 36(1,1): Condition always TRUE
+>>> Warning 202 "main.c" Line 16(20,25): Variable never used:   Valor
+      Memory usage:   ROM=10%      RAM=4% - 8%
+      0 Errors,  2 Warnings.
